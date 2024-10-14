@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Data Input</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Repetition</th>
+    </tr>
+    <tr th:each="set:${sets}">
+        <td th:text="${set.getStartTime()}"></td>
+        <td th:text="${set.getEndTime()}"></td>
+        <td th:text="${set.getRepCount()}"></td>
+    </tr>
+</table>
+</body>
+</html>

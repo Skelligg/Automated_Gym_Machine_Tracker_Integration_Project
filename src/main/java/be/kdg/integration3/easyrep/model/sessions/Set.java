@@ -10,7 +10,13 @@ public class Set {
     //private int weightCount; -- commented cause we're testing for the Tracer Bullet
 
 
-    public Set(LocalTime startTime, LocalTime endTime, int repCount) {
+//    public Set(LocalTime startTime, LocalTime endTime, int repCount) {
+//        this.startTime = startTime;
+//        this.endTime = endTime;
+//        this.repCount = repCount;
+//    }
+
+    public Set(int repCount) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.repCount = repCount;
