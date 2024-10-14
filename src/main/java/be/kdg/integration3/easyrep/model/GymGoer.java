@@ -1,6 +1,4 @@
-package be.kdg.integration3.easyrep.domain;
-
-import be.kdg.integration3.easyrep.domain.sessions.RoutineSession;
+package be.kdg.integration3.easyrep.model;
 
 import java.util.ArrayList;
 import java.util.List;

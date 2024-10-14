@@ -1,7 +1,7 @@
-package be.kdg.integration3.easyrep.domain.sessions;
+package be.kdg.integration3.easyrep.model.sessions;
 
-import be.kdg.integration3.easyrep.domain.Machine;
-import be.kdg.integration3.easyrep.domain.Routine;
+import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.model.Routine;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

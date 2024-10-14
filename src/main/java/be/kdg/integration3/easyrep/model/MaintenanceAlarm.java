@@ -1,4 +1,4 @@
-package be.kdg.integration3.easyrep.domain;
+package be.kdg.integration3.easyrep.model;
 
 import java.time.LocalDate;
 
