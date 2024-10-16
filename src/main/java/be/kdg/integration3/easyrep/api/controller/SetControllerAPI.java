@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalTime;
 
-@RestController
+@RestController 
 @RequestMapping("/setInput")
 public class SetControllerAPI {
 
