@@ -19,10 +19,10 @@
         <th>End Time</th>
         <th>Repetition</th>
     </tr>
-    <tr th:each="set:${sets}">
-        <td th:text="${set.getStartTime()}"></td>
-        <td th:text="${set.getEndTime()}"></td>
-        <td th:text="${set.getRepCount()}"></td>
+    <tr th:each="machineSet:${machineSets}">
+        <td th:text="${machineSet.getStartTime()}"></td>
+        <td th:text="${machineSet.getEndTime()}"></td>
+        <td th:text="${machineSet.getRepCount()}"></td>
     </tr>
 </table>
 </body>

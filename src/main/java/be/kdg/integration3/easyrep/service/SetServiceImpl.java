@@ -1,13 +1,12 @@
 package be.kdg.integration3.easyrep.service;
 
 
-import be.kdg.integration3.easyrep.model.sessions.Set;
+import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalTime;
 import java.util.List;
 
 @Service
@@ -27,12 +26,12 @@ public class SetServiceImpl implements SetService {
 //    }
 
     @Override
-    public Set addSet(int repCount){
-        return setRepository.createSet(new Set(repCount));
+    public MachineSet addSet(int repCount){
+        return setRepository.createSet(new MachineSet(repCount));
     }
 
     @Override
-    public List<Set> getSets(){
+    public List<MachineSet> getSets(){
         logger.debug("Getting sets");
         return setRepository.getSets();
     }

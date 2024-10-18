@@ -2,7 +2,7 @@ package be.kdg.integration3.easyrep.model.sessions;
 
 import java.time.LocalTime;
 
-public class Set {
+public class MachineSet {
     private long id;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -16,7 +16,7 @@ public class Set {
 //        this.repCount = repCount;
 //    }
 
-    public Set(int repCount) {
+    public MachineSet(int repCount) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.repCount = repCount;

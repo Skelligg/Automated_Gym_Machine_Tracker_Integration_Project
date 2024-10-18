@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
-import be.kdg.integration3.easyrep.model.sessions.Set;
+import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.service.SetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +26,8 @@ public class SetController {
     @GetMapping
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
-        List<Set> sets = setService.getSets();
-        model.addAttribute("sets", sets);
+        List<MachineSet> machineSets = setService.getSets();
+        model.addAttribute("sets", machineSets);
         return "sets";
     }
 }
