@@ -4,6 +4,7 @@ import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.service.SetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ public class SetController {
 
     private SetService setService;
 
+    @Autowired
     public SetController(SetService setService) {
         this.setService = setService;
     }
@@ -27,7 +29,8 @@ public class SetController {
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
         List<MachineSet> machineSets = setService.getSets();
-        model.addAttribute("sets", machineSets);
+        logger.debug(machineSets.toString());
+        model.addAttribute("machineSets", machineSets);
         return "sets";
     }
 }

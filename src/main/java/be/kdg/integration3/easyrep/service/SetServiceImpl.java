@@ -36,4 +36,10 @@ public class SetServiceImpl implements SetService {
         return setRepository.getSets();
     }
 
+    @Override
+    public void emptyRepository(){
+        logger.debug("Cleaning the repository");
+        setRepository.emptyList();
+    }
+
 }

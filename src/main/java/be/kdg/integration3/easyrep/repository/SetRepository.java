@@ -8,4 +8,6 @@ public interface SetRepository {
     MachineSet createSet(MachineSet machineSet);
 
     List<MachineSet> getSets();
+
+    void emptyList();
 }

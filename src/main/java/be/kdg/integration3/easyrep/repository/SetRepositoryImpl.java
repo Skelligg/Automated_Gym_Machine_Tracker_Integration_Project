@@ -22,4 +22,9 @@ public class SetRepositoryImpl implements SetRepository {
     public List<MachineSet> getSets(){
         return machineSets;
     }
+
+    @Override
+    public void emptyList(){
+        machineSets.clear();
+    }
 }
