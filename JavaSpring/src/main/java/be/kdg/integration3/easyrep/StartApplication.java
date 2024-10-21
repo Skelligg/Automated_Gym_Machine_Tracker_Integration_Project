@@ -2,7 +2,7 @@ package be.kdg.integration3.easyrep;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+//test
 @SpringBootApplication
 public class StartApplication {
 
