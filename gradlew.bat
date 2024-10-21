@@ -24,42 +24,42 @@
 @rem Set local scope for the variables with windows NT shell
 if "%OS%"=="Windows_NT" setlocal
 
-machineSet DIRNAME=%~dp0
-if "%DIRNAME%" == "" machineSet DIRNAME=.
-machineSet APP_BASE_NAME=%~n0
-machineSet APP_HOME=%DIRNAME%
+Set DIRNAME=%~dp0
+if "%DIRNAME%" == "" Set DIRNAME=.
+Set APP_BASE_NAME=%~n0
+Set APP_HOME=%DIRNAME%
 
 @rem Resolve any "." and ".." in APP_HOME to make it shorter.
-for %%i in ("%APP_HOME%") do machineSet APP_HOME=%%~fi
+for %%i in ("%APP_HOME%") do Set APP_HOME=%%~fi
 
 @rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-machineSet DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
+Set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
 
 @rem Find java.exe
 if defined JAVA_HOME goto findJavaFromJavaHome
 
-machineSet JAVA_EXE=java.exe
+Set JAVA_EXE=java.exe
 %JAVA_EXE% -version >NUL 2>&1
 if "%ERRORLEVEL%" == "0" goto execute
 
 echo.
-echo ERROR: JAVA_HOME is not machineSet and no 'java' command could be found in your PATH.
+echo ERROR: JAVA_HOME is not Set and no 'java' command could be found in your PATH.
 echo.
-echo Please machineSet the JAVA_HOME variable in your environment to match the
+echo Please Set the JAVA_HOME variable in your environment to match the
 echo location of your Java installation.
 
 goto fail
 
 :findJavaFromJavaHome
-machineSet JAVA_HOME=%JAVA_HOME:"=%
-machineSet JAVA_EXE=%JAVA_HOME%/bin/java.exe
+Set JAVA_HOME=%JAVA_HOME:"=%
+Set JAVA_EXE=%JAVA_HOME%/bin/java.exe
 
 if exist "%JAVA_EXE%" goto execute
 
 echo.
-echo ERROR: JAVA_HOME is machineSet to an invalid directory: %JAVA_HOME%
+echo ERROR: JAVA_HOME is Set to an invalid directory: %JAVA_HOME%
 echo.
-echo Please machineSet the JAVA_HOME variable in your environment to match the
+echo Please Set the JAVA_HOME variable in your environment to match the
 echo location of your Java installation.
 
 goto fail
@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-machineSet CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+Set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 
 
 @rem Execute Gradle

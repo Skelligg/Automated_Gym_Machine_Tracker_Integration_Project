@@ -38,18 +38,19 @@ public class HomeController {
 
         setService.emptyRepository();
 
-        // Trigger the Arduino
-//        String arduinoUrl = "http://10.134.178.163/trigger";
-//        RestTemplate restTemplate = new RestTemplate();
-//        try {
-//            // Send an HTTP POST request to the Arduino
-//            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
-//            logger.debug("Arduino Response: " + response);
-//            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
-//        } catch (Exception e) {
-//            logger.error("Error triggering Arduino: " + e.getMessage());
-//            model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
-//        }
+        //Trigger the Arduino
+        String arduinoUrl = "http://10.134.217.4/trigger";
+        RestTemplate restTemplate = new RestTemplate();
+        try {
+            // Send an HTTP POST request to the Arduino
+            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
+            logger.debug("Arduino Response: " + response);
+            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
+            logger.debug("Sending API request");
+        } catch (Exception e) {
+            logger.error("Error triggering Arduino: " + e.getMessage());
+            model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
+        }
 
         return "redirect:/sets";
     }
