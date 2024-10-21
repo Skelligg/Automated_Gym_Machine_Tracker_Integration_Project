@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Data Input</title>
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <script defer th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}">
+
+    <!-- this is for static view-->
+    <link rel="stylesheet" th:href="@{/css/sets.css}" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<table>
+    <tr>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Repetition</th>
+    </tr>
+    <tr th:each="machineSet:${machineSets}">
+        <td th:text="${machineSet.getStartTime()}"></td>
+        <td th:text="${machineSet.getEndTime()}"></td>
+        <td th:text="${machineSet.getRepCount()}"></td>
+    </tr>
+</table>
+</body>
+</html>
