@@ -3,48 +3,40 @@ package be.kdg.integration3.easyrep.model.sessions;
 import java.time.LocalTime;
 
 public class MachineSet {
-    private long id;
-    private LocalTime startTime;
-    private LocalTime endTime;
+    private int setNumber;
+    private long id; //does set need an ID?
+    private String setTime; //make this a LocalTime
     private int repCount;
-    //private int weightCount; -- commented cause we're testing for the Tracer Bullet
+    //private double weightCount; -- commented cause we're testing for the Tracer Bullet
 
-
-//    public Set(LocalTime startTime, LocalTime endTime, int repCount) {
-//        this.startTime = startTime;
-//        this.endTime = endTime;
+//    public MachineSet(int setNumber, int setTime, double weightCount, int repCount) {
+//        this.setNumber = setNumber;
+//        this.setTime = setTime;
+//        this.weightCount = weightCount;
 //        this.repCount = repCount;
 //    }
 
-    public MachineSet(int repCount) {
-        this.startTime = startTime;
-        this.endTime = endTime;
+
+    public MachineSet(int setNumber, String setTime, int repCount) {
+        this.setNumber = setNumber;
+        this.setTime = setTime;
         this.repCount = repCount;
     }
 
-
-    public long getId() {
-        return id;
+    public int getSetNumber() {
+        return setNumber;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setSetNumber(int setNumber) {
+        this.setNumber = setNumber;
     }
 
-    public LocalTime getStartTime() {
-        return startTime;
+    public String getSetTime() {
+        return setTime;
     }
 
-    public void setStartTime(LocalTime startTime) {
-        this.startTime = startTime;
-    }
-
-    public LocalTime getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(LocalTime endTime) {
-        this.endTime = endTime;
+    public void setSetTime(String setTime) {
+        this.setTime = setTime;
     }
 
     public int getRepCount() {

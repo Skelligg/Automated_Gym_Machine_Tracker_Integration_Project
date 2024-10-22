@@ -5,7 +5,7 @@
     <title>Testing Data Input</title>
 
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
-    <script defer th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}">
+    <script defer th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
     <!-- this is for static view-->
     <link rel="stylesheet" th:href="@{/css/sets.css}" type="text/css"/>
@@ -13,15 +13,15 @@
 
 </head>
 <body>
-<table>
+<table class="table">
     <tr>
-        <th>Start Time</th>
-        <th>End Time</th>
-        <th>Repetition</th>
+        <th scope="col">Set</th>
+        <th scope="col">Time</th>
+        <th scope="col">Reps</th>
     </tr>
     <tr th:each="machineSet:${machineSets}">
-        <td th:text="${machineSet.getStartTime()}"></td>
-        <td th:text="${machineSet.getEndTime()}"></td>
+        <td th:text="${machineSet.getSetNumber()}"></td>
+        <td th:text="${machineSet.getSetTime()}"></td>
         <td th:text="${machineSet.getRepCount()}"></td>
     </tr>
 </table>

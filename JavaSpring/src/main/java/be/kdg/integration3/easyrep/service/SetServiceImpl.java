@@ -26,8 +26,8 @@ public class SetServiceImpl implements SetService {
 //    }
 
     @Override
-    public MachineSet addSet(int repCount){
-        return setRepository.createSet(new MachineSet(repCount));
+    public MachineSet addSet(int setNumber, String setTime, int repCount){
+        return setRepository.createSet(new MachineSet(setNumber, setTime, repCount));
     }
 
     @Override

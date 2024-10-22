@@ -13,7 +13,7 @@ public class SetRepositoryImpl implements SetRepository {
 
     @Override
     public MachineSet createSet(MachineSet machineSet){
-        machineSet.setId(machineSets.size());
+//        machineSet.setId(machineSets.size());
         machineSets.add(machineSet);
         return machineSet;
     }
