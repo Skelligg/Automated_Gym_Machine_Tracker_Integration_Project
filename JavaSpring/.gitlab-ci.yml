@@ -1,24 +1,24 @@
-stages:
-  - build
-  - deploy
-
-build_job:
-  stage: build
-  script:
-    - ./gradlew clean build
-  tags:
-    - gym-accessory  # Use the tag you registered with the runner
-  artifacts:
-    paths:
-      - build/libs/EasyRep-0.0.1-SNAPSHOT.jar
-
-deploy_job:
-  stage: deploy
-  script:
-    - cp build/libs/EasyRep-0.0.1-SNAPSHOT.jar /opt/apps/  # Copy JAR to the desired location
-    - nohup java -jar /opt/apps/EasyRep-0.0.1-SNAPSHOT.jar &  # Run the JAR file
-  tags:
-    - gym-accessory
-  only:
-    - main  # Deploy only from the main branch
-
+#stages:
+#  - build
+#  - deploy
+#
+#build_job:
+#  stage: build
+#  script:
+#    - ./gradlew clean build
+#  tags:
+#    - gym-accessory  # Use the tag you registered with the runner
+#  artifacts:
+#    paths:
+#      - build/libs/EasyRep-0.0.1-SNAPSHOT.jar
+#
+#deploy_job:
+#  stage: deploy
+#  script:
+#    - cp build/libs/EasyRep-0.0.1-SNAPSHOT.jar /opt/apps/  # Copy JAR to the desired location
+#    - nohup java -jar /opt/apps/EasyRep-0.0.1-SNAPSHOT.jar &  # Run the JAR file
+#  tags:
+#    - gym-accessory
+#  only:
+#    - main  # Deploy only from the main branch
+#
