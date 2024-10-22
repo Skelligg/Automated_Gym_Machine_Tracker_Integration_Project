@@ -52,7 +52,7 @@ public class HomeController {
             model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
         }
 
-        return "redirect:/sets";
+        return "redirect:sets";
     }
 
 }

@@ -31,6 +31,6 @@ public class SetController {
         List<MachineSet> machineSets = setService.getSets();
         logger.debug(machineSets.toString());
         model.addAttribute("machineSets", machineSets);
-        return "/GymGoer/sets";
+        return "sets";
     }
 }
