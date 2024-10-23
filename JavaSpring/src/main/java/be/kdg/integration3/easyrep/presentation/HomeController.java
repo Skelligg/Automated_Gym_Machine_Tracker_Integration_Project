@@ -38,6 +38,7 @@ public class HomeController {
 
         setService.emptyRepository();
 
+        logger.debug("Trying to access API C++");
         //Trigger the Arduino
         String arduinoUrl = "http://10.134.217.4/trigger";
         RestTemplate restTemplate = new RestTemplate();
@@ -51,6 +52,9 @@ public class HomeController {
             logger.error("Error triggering Arduino: " + e.getMessage());
             model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
         }
+
+        logger.debug("API worked");
+
 
         return "redirect:sets";
     }
