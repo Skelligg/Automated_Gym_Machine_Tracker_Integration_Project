@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@RequestMapping("/registerIP")
-@RequestMapping("/")
+@RequestMapping("/registerIP")
+//@RequestMapping("/")
 public class ArduinoIPDefiner {
     private Logger logger = LoggerFactory.getLogger(ArduinoIPDefiner.class);
     public ArduinoService arduinoService;
@@ -27,8 +27,12 @@ public class ArduinoIPDefiner {
     //adding checking id with database
     @GetMapping("/registerIP")
     public void registerIP(@RequestParam String id, @RequestParam String arduinoIP) {
-        arduinoService.setArduinoInfo(id, arduinoIP);
-        logger.info("Registered IP for ID: {}", id);
+        try {
+            arduinoService.setArduinoInfo(id, arduinoIP);
+            logger.info("Registered IP {} for ID: {}", arduinoService.getIpAddress(id), id);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
     }
 
 }
