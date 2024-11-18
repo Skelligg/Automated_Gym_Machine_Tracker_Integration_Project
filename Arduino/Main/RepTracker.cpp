@@ -57,3 +57,7 @@ void RepTracker::init()
   int RepTracker::getRepCount(){
     return repCount;
   }
+
+  void RepTracker::resetRepCount(){
+    repCount=0;
+  }

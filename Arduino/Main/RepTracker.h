@@ -19,6 +19,8 @@ class RepTracker {
   void scan();
 
   int getRepCount();
+
+   void resetRepCount();
 };
 
 
