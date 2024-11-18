@@ -10,7 +10,7 @@ import java.util.Set;
 public class ArduinoRepositoryImpl {
 
     // this would retrieve from the database the MACHINE_ID and the ipaddress from the machine/arduino
-    private Map<String, String> arduinoInfo = new HashMap<>(Map.of("5000", ""));
+    private Map<String, String> arduinoInfo = new HashMap<>(Map.of("row", ""));
 
     public void createArduinoInfo(String id, String ipAddress) {
         arduinoInfo.put(id, ipAddress);
