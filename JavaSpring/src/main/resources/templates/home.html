@@ -13,7 +13,8 @@
     <h1>Welcome to EasyRep</h1>
     <form th:action="@{/sets}" method="post">
     <!-- this page/button represents the rowing machine and should return the rowing machine id -->
-      <button type="submit" name="deviceId" value="5000" class="btn btn-primary btn-lg" th:text="${buttonText}">Test button</button>
+      <input type="hidden" name="deviceId" value="5000" />
+      <button type="submit" class="btn btn-primary btn-lg" th:text="${buttonText}">Test button</button>
     </form>
     <p>Test for git runner</p>
   </div>
