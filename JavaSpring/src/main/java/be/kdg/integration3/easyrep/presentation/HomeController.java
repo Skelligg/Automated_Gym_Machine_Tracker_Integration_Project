@@ -39,23 +39,23 @@ public class HomeController {
         logger.debug("PostMapping received, trying to get you to /sets");
         logger.debug("Device id: {}",  deviceId);
 
-//        setService.emptyRepository();
+        setService.emptyRepository();
 //
-//        logger.debug("Trying to access API C++");
-//        //Trigger the Arduino
-//        String arduinoUrl = "http://" + arduinoService.getIpAddress(deviceId) + "/trigger";
-//        RestTemplate restTemplate = new RestTemplate();
-//        try {
-//            // Send an HTTP POST request to the Arduino
-//            logger.debug("Sending API request");
-//            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
-//            logger.debug("Arduino Response: {}", response);
-//            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
-//            logger.debug("API worked");
-//        } catch (Exception e) {
-//            logger.error("Error triggering Arduino: {}", e.getMessage());
-//            model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
-//        }
+        logger.debug("Trying to access API C++");
+        //Trigger the Arduino
+        String arduinoUrl = "http://" + arduinoService.getIpAddress(deviceId) + "/trigger";
+        RestTemplate restTemplate = new RestTemplate();
+        try {
+            // Send an HTTP POST request to the Arduino
+            logger.debug("Sending API request");
+            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
+            logger.debug("Arduino Response: {}", response);
+            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
+            logger.debug("API worked");
+        } catch (Exception e) {
+            logger.error("Error triggering Arduino: {}", e.getMessage());
+            model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
+        }
 
         return "redirect:sets";
     }
