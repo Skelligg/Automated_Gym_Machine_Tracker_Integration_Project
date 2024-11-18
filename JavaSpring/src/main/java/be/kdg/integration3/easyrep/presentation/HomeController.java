@@ -38,28 +38,25 @@ public class HomeController {
     @PostMapping("/sets")
     public String setsPage(Model model){
         logger.debug("PostMapping received, trying to get you to /sets");
-        logger.debug("Accessing API C++");
 
         setService.emptyRepository();
 
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
-        //10.134.217.4 - campus gp
-        //10.134.217.13 - campus pothoek
-        String arduinoUrl = arduinoIpAddress + "/trigger";
+        String arduinoUrl = "http://" + arduinoIpAddress + "/trigger";
         RestTemplate restTemplate = new RestTemplate();
         try {
             // Send an HTTP POST request to the Arduino
-            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
-            logger.debug("Arduino Response: " + response);
-            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
             logger.debug("Sending API request");
+            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
+            logger.debug("Arduino Response: {}", response);
+            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
+            logger.debug("API worked");
         } catch (Exception e) {
-            logger.error("Error triggering Arduino: " + e.getMessage());
+            logger.error("Error triggering Arduino: {}", e.getMessage());
             model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
         }
 
-        logger.debug("API worked");
 
 
         return "redirect:sets";
