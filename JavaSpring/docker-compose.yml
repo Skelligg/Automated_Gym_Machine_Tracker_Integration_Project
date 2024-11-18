@@ -1,0 +1,27 @@
+#version: "3.8"
+#
+#services:
+#  psql-db:
+#    image: postgres
+#    container_name: 10.134.178.163
+#    restart: always
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=IP3dbP@ss
+#      - POSTGRES_DB=postgres
+#    ports:
+#      - '5432:5432'
+#  spring-app:
+#    container_name: spring-app
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - '8080:8080'
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://10.134.178.163:5432/postgres
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=IP3dbP@ss
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#    depends_on:
+#      - psql-db

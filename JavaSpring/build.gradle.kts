@@ -20,8 +20,11 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.webjars:bootstrap:5.3.2")
+    runtimeOnly("org.postgresql:postgresql")
 }
 
 tasks.withType<Test> {
@@ -31,3 +34,4 @@ tasks.withType<Test> {
 tasks.getByName("bootRun", JavaExec::class) {
     standardInput = System.`in`
 }
+
