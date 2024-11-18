@@ -35,7 +35,7 @@ public class HomeController {
     }
 
     @PostMapping("/sets")
-    public String setsPage(@RequestParam String deviceId, Model model){
+    public String setsPage(@RequestParam("deviceId") String deviceId, Model model){
         logger.debug("PostMapping received, trying to get you to /sets");
         logger.debug("Device id: {}",  deviceId);
 
