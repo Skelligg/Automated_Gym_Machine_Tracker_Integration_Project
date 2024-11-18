@@ -40,7 +40,9 @@ public class HomeController {
 
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
-        String arduinoUrl = "http://10.134.217.4/trigger";
+        //10.134.217.4 - campus x
+        //10.134.217.13 - campus poethok
+        String arduinoUrl = "http://10.134.217.13/trigger";
         RestTemplate restTemplate = new RestTemplate();
         try {
             // Send an HTTP POST request to the Arduino
