@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.service.ArduinoService;
 import be.kdg.integration3.easyrep.service.SetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,11 +18,12 @@ public class HomeController {
 
     private final Logger logger = LoggerFactory.getLogger(HomeController.class);
     public SetService setService;
-    public ArduinoIPDefiner arduinoIPDefiner;
+    public ArduinoService arduinoService;
 
     @Autowired
-    public HomeController(SetService setService) {
+    public HomeController(SetService setService, ArduinoService arduinoService) {
         this.setService = setService;
+        this.arduinoService = arduinoService;
     }
 
     @GetMapping
@@ -39,7 +41,7 @@ public class HomeController {
 
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
-        String arduinoUrl = "http://" + arduinoIPDefiner.getArduinoIpAddress() + "/trigger";
+        String arduinoUrl = "http://" + arduinoService.getIpAddress("5000") + "/trigger";
         RestTemplate restTemplate = new RestTemplate();
         try {
             // Send an HTTP POST request to the Arduino
