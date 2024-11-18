@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/registerIP")
-//@RequestMapping("/")
+//@RequestMapping("/registerIP")
+@RequestMapping("/")
 public class ArduinoIPDefiner {
     private Logger logger = LoggerFactory.getLogger(ArduinoIPDefiner.class);
     public ArduinoService arduinoService;
