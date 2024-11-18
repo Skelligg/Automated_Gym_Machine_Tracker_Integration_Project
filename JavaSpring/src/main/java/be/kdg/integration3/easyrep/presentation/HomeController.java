@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
@@ -34,14 +35,15 @@ public class HomeController {
     }
 
     @PostMapping("/sets")
-    public String setsPage(Model model){
+    public String setsPage(@RequestParam String deviceId, Model model){
         logger.debug("PostMapping received, trying to get you to /sets");
+        logger.debug("Device id: {}",  deviceId);
 
         setService.emptyRepository();
 
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
-        String arduinoUrl = "http://" + arduinoService.getIpAddress("5000") + "/trigger";
+        String arduinoUrl = "http://" + arduinoService.getIpAddress(deviceId) + "/trigger";
         RestTemplate restTemplate = new RestTemplate();
         try {
             // Send an HTTP POST request to the Arduino
@@ -54,8 +56,6 @@ public class HomeController {
             logger.error("Error triggering Arduino: {}", e.getMessage());
             model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
         }
-
-
 
         return "redirect:sets";
     }
