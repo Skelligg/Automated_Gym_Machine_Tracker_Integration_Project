@@ -25,7 +25,7 @@ public class SetControllerAPI {
     }
 
     @GetMapping
-    public void inputSet(@RequestParam int setNumber, String setTime, int repCount){
+    public void inputSet(@RequestParam int setNumber, @RequestParam String setTime, @RequestParam int repCount){
 //    public void inputSet(@RequestParam String startTime, String endTime, int repCount){
 //        String[] startTimeParts = startTime.split(":");
 //        int startHour = Integer.parseInt(startTimeParts[0]);

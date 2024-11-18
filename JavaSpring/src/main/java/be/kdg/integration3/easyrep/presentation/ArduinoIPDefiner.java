@@ -11,15 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/registerIP")
 public class ArduinoIPDefiner {
     private Logger logger = LoggerFactory.getLogger(ArduinoIPDefiner.class);
-    public HomeController homeController;
     private String id;
+    private String arduinoIpAddress;
 //  database class
-
 
     //adding checking id with database
     @GetMapping
-    public void registerIP(@RequestParam String id, String arduinoIP) {
-        homeController.setArduinoIpAddress(arduinoIP);
+    public void registerIP(@RequestParam String id, @RequestParam String arduinoIP) {
+        this.arduinoIpAddress = arduinoIP;
+    }
+
+
+    public String getArduinoIpAddress() {
+        return arduinoIpAddress;
     }
 
 }

@@ -15,17 +15,13 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/")
 public class HomeController {
 
-    private Logger logger = LoggerFactory.getLogger(HomeController.class);
+    private final Logger logger = LoggerFactory.getLogger(HomeController.class);
     public SetService setService;
-    private String arduinoIpAddress;
+    public ArduinoIPDefiner arduinoIPDefiner;
 
     @Autowired
     public HomeController(SetService setService) {
         this.setService = setService;
-    }
-
-    public void setArduinoIpAddress(String arduinoIpAddress) {
-        this.arduinoIpAddress = arduinoIpAddress;
     }
 
     @GetMapping
@@ -43,7 +39,7 @@ public class HomeController {
 
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
-        String arduinoUrl = "http://" + arduinoIpAddress + "/trigger";
+        String arduinoUrl = "http://" + arduinoIPDefiner.getArduinoIpAddress() + "/trigger";
         RestTemplate restTemplate = new RestTemplate();
         try {
             // Send an HTTP POST request to the Arduino
