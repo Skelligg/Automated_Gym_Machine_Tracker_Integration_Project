@@ -1,7 +1,5 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
-import java.time.LocalTime;
-
 public class MachineSet {
     private int setNumber;
     private long id; //does set need an ID?
