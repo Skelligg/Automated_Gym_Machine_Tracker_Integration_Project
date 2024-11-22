@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.repository;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.Set;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -9,22 +9,22 @@ import java.util.List;
 @Repository
 public class SetRepositoryImpl implements SetRepository {
 
-    private static List<MachineSet> machineSets = new ArrayList<MachineSet>();
+    private static List<Set> sets = new ArrayList<Set>();
 
     @Override
-    public MachineSet createSet(MachineSet machineSet){
+    public Set createSet(Set set){
 //        machineSet.setId(machineSets.size());
-        machineSets.add(machineSet);
-        return machineSet;
+        sets.add(set);
+        return set;
     }
 
     @Override
-    public List<MachineSet> getSets(){
-        return machineSets;
+    public List<Set> getSets(){
+        return sets;
     }
 
     @Override
     public void emptyList(){
-        machineSets.clear();
+        sets.clear();
     }
 }

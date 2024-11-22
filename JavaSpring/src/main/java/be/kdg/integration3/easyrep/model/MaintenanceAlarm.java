@@ -8,6 +8,13 @@ public class MaintenanceAlarm {
     private int usageLimit;
     private LocalDate dateLimit;
 
+    public MaintenanceAlarm(boolean isActive, LocalDate lastMaintenance, int usageLimit, LocalDate dateLimit) {
+        this.isActive = isActive;
+        this.lastMaintenance = lastMaintenance;
+        this.usageLimit = usageLimit;
+        this.dateLimit = dateLimit;
+    }
+
     public void alarmNotify() {
         System.out.println("MAINTAIN THIS MACHINE");
     }

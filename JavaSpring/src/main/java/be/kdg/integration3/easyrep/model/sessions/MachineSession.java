@@ -11,5 +11,5 @@ public class MachineSession {
     private Machine machine;
     private LocalTime startTime;
     private LocalTime endTime;
-    private List<MachineSet> machineSets = new ArrayList<>();
+    private List<Set> sets = new ArrayList<>();
 }
