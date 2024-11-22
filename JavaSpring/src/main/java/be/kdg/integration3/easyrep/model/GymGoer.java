@@ -3,25 +3,28 @@ package be.kdg.integration3.easyrep.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GymGoer extends User {
+public class GymGoer {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String emailAddress;
+    private String password;
     private List<Routine> routines = new ArrayList<>();
-    private List<GymGoer> friends = new ArrayList<>();
-    private Routine activeRoutine = new Routine();
 
-    public GymGoer(long id, String firstName, String lastName, String emailAddress, String password) {
-        super(id, firstName, lastName, emailAddress, password);
+    public GymGoer(int id, String firstName, String lastName, String emailAddress, String password) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailAddress = emailAddress;
+        this.password = password;
     }
 
-    public void addFriend(GymGoer newFriend) {
-        friends.add(newFriend);
+
+    public List<Routine> getRoutines() {
+        return routines;
     }
 
-    public void beginRoutineSession(Routine routine) {
-        activeRoutine = routine;
-        activeRoutine.beginNewSession();
-    }
-
-    public void endRoutineSession() {
-        activeRoutine.endCurrentSession();
+    public void addToRoutine(Routine routine) {
+        routines.add(routine);
     }
 }

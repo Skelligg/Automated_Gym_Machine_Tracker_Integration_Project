@@ -6,16 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Routine {
-    private long id;
+    private int id;
     private String name;
     private List<Machine> machines = new ArrayList<>();
-    private List<RoutineSession> routineSessions = new ArrayList<>();
 
-    public void beginNewSession() {
-
+    public Routine(int id, String name, List<Machine> machines) {
+        this.id = id;
+        this.name = name;
+        this.machines = machines;
     }
 
-    public void endCurrentSession() {
-
+    public Routine() {
     }
+
 }
