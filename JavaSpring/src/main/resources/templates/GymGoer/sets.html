@@ -48,10 +48,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="set:${sets}">
-                        <td th:text="${set.getSetNumber()}"></td>
-                        <td th:text="${set.getSetTime()}"></td>
-                        <td th:text="${set.getRepCount()}"></td>
+                    <tr th:each="machineSet:${machineSets}">
+                        <td th:text="${machineSet.getSetNumber()}"></td>
+                        <td th:text="${machineSet.getSetTime()}"></td>
+                        <td th:text="${machineSet.getRepCount()}"></td>
                     </tr>
                     </tbody>
                 </table>

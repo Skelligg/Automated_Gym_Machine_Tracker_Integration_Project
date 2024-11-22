@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
-public class Set {
+public class MachineSet {
     private int setNumber;
     private long id; //does set need an ID?
     private String setTime; //make this a LocalTime
@@ -15,7 +15,7 @@ public class Set {
 //    }
 
 
-    public Set(int setNumber, String setTime, int repCount) {
+    public MachineSet(int setNumber, String setTime, int repCount) {
         this.setNumber = setNumber;
         this.setTime = setTime;
         this.repCount = repCount;
