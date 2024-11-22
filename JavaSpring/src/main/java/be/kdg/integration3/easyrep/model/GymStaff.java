@@ -3,10 +3,10 @@ package be.kdg.integration3.easyrep.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GymOwner extends User {
+public class GymStaff extends User {
     private List<Machine> machines = new ArrayList<>();
 
-    public GymOwner(long id, String firstName, String lastName, String emailAddress, String password) {
+    public GymStaff(long id, String firstName, String lastName, String emailAddress, String password) {
         super(id, firstName, lastName, emailAddress, password);
     }
 
