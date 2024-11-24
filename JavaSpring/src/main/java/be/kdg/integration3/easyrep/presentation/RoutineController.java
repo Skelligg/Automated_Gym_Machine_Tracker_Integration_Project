@@ -19,34 +19,34 @@ import java.util.List;
 @Controller
 @RequestMapping("/myRoutines")
 public class RoutineController {
-
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    private RoutineService routineService;
-
-
-    public RoutineController(RoutineService routineService) {
-        this.routineService = routineService;
-    }
-
-    @GetMapping
-    public String getRoutineView(Model model){
-        logger.info("getRoutineView");
-        List<Routine> routines = routineService.getAllRoutines();
-        model.addAttribute("routines", routines);
-        return "GymGoer/routines";
-    }
-
-
-    @GetMapping("/add")
-    public String addRoutine(Model model){
-        logger.info("addRoutine");
-        model.addAttribute("routine", new Routine());
-        return "GymGoer/addRoutine";
-    }
-
-    @PostMapping("/add")
-    public String processAddRoutine(@RequestParam int id, @RequestParam String name, @RequestParam List<Machine> machines){
-
-    }
+//
+//    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+//
+//    private RoutineService routineService;
+//
+//
+//    public RoutineController(RoutineService routineService) {
+//        this.routineService = routineService;
+//    }
+//
+//    @GetMapping
+//    public String getRoutineView(Model model){
+//        logger.info("getRoutineView");
+//        List<Routine> routines = routineService.getAllRoutines();
+//        model.addAttribute("routines", routines);
+//        return "GymGoer/routines";
+//    }
+//
+//
+//    @GetMapping("/add")
+//    public String addRoutine(Model model){
+//        logger.info("addRoutine");
+//        model.addAttribute("routine", new Routine());
+//        return "GymGoer/addRoutine";
+//    }
+//
+//    @PostMapping("/add")
+//    public String processAddRoutine(@RequestParam int id, @RequestParam String name, @RequestParam List<Machine> machines){
+//
+//    }
 }
