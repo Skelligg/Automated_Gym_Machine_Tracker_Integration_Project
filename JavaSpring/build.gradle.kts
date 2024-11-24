@@ -27,6 +27,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
 }
 
+
 tasks.withType<Test> {
     useJUnitPlatform()
 }
