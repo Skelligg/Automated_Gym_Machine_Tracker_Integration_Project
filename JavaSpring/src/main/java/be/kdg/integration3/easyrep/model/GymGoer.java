@@ -11,16 +11,13 @@ public class GymGoer {
     private String lastName;
     private Gender gender;
     private String address;
-    private int phone;
     private List<Routine> routines = new ArrayList<>();
 
-    public GymGoer(int phone, String address, Gender gender, String lastName, String firstName, int userId) {
-        this.phone = phone;
-        this.address = address;
-        this.gender = gender;
-        this.lastName = lastName;
+    public GymGoer(String firstName, String lastName, Gender gender, String address) {
         this.firstName = firstName;
-        this.userId = userId;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.address = address;
     }
 
     public List<Routine> getRoutines() {
@@ -71,11 +68,4 @@ public class GymGoer {
         this.address = address;
     }
 
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
 }

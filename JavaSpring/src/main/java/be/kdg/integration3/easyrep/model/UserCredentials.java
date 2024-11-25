@@ -8,15 +8,12 @@ public class UserCredentials {
     private String username;
     private String password;
     private String email;
-    private String gym;
     private LocalDate dateCreated;
 
-    public UserCredentials(int userId, String username, String password, String email, String gym, LocalDate dateCreated) {
-        this.userId = userId;
+    public UserCredentials( String username, String password, String email, LocalDate dateCreated) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.gym = gym;
         this.dateCreated = dateCreated;
     }
 
@@ -50,14 +47,6 @@ public class UserCredentials {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getGym() {
-        return gym;
-    }
-
-    public void setGym(String gym) {
-        this.gym = gym;
     }
 
     public LocalDate getDateCreated() {
