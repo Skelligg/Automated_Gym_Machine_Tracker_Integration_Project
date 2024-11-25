@@ -3,22 +3,28 @@ package be.kdg.integration3.easyrep.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GymStaff extends User {
-    private List<Machine> machines = new ArrayList<>();
+public class GymStaff {
+    private int userId;
+    private int gymId;
 
-    public GymStaff(long id, String firstName, String lastName, String emailAddress, String password) {
-        super(id, firstName, lastName, emailAddress, password);
+    public GymStaff(int userId, int gymId) {
+        this.userId = userId;
+        this.gymId = gymId;
     }
 
-    public void addMachine(Machine newMachine) {
-        machines.add(newMachine);
+    public int getUserId() {
+        return userId;
     }
 
-    public void setMaintenanceAlarm(Machine machine) {
-        machine.alarmSet();
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String retrieveUsageData() {
-        return "yehaw";
+    public int getGymId() {
+        return gymId;
+    }
+
+    public void setGymId(int gymId) {
+        this.gymId = gymId;
     }
 }
