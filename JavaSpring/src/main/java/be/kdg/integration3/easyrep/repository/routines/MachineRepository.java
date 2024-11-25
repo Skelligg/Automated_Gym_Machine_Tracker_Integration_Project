@@ -13,6 +13,9 @@ public class MachineRepository {
 
     public MachineRepository() {
         machines.add(new Machine(1, "row machine", "/static/images/machinesPics/MachineRow.mp4"));
+        machines.add(new Machine(2, "bench press", "/static/images/machinesPics/MachineRow.mp4"));
+        machines.add(new Machine(3, "squat machine", "/static/images/machinesPics/MachineRow.mp4"));
+        machines.add(new Machine(4, "unilateral jerk", "/static/images/machinesPics/MachineRow.mp4"));
     }
 
     public Machine createMachine(Machine machine){
@@ -26,6 +29,16 @@ public class MachineRepository {
     
     public void emptyMachines() {
         machines.clear();
+    }
+
+    public List<Machine> findByNameIn(List<String> names) {
+        List<Machine> machines = new ArrayList<>();
+        for (Machine machine : machines) {
+            if (names.contains(machine.getName())) {
+                machines.add(machine);
+            }
+        }
+        return machines;
     }
 
 }

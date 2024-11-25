@@ -11,42 +11,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
 <div class="mobile-container">
     <div class="container">
         <h1 class="text-center mt-4">Create Routine</h1>
-        <!--        hard-coded friends list-->
-        <div class="routine-list list-group">
-            <input type="text" placeholder="Routine title"></input>
+        <form method="get" th:action="@{/myroutines/exerciseselection}">
+            <!-- Routine Name -->
+            <input type="text" name="routineName" placeholder="Routine title" class="form-control mb-3" required />
 
-
-            <div class="routine-item" th:each="routine : ${routines}">
-                <div class="info">
-                    <div class="d-flex justify-content-between">
-                        <div class="name">{routine.getName()}</div>
-                    </div>
-                    <div class="view-arrow">
-                        <a href="#" class="view-link">
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+            <!-- Add Exercises Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white">
+                    + Add Exercises
+                </button>
             </div>
-
-        </div>
-    </div>
-
-
-    <div class="text-center mt-4">
-        <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
-           th:href="@{/myroutines/exerciseselection}">
-            + Add exercise
-        </a>
+        </form>
     </div>
 
     <div th:insert="fragments/bottomButtons :: bottomButtons"></div>
 </div>
 
 </body>
+
 </html>

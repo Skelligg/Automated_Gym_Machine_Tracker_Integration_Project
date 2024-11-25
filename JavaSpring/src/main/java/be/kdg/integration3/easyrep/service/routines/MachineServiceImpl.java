@@ -35,4 +35,10 @@ public class MachineServiceImpl implements MachineService {
         machineRepository.emptyMachines();
     }
 
+    @Override
+    public List<Machine> findMachinesByNames(List<String> names) {
+        return machineRepository.findByNameIn(names); // Assuming JPA repository
+    }
+
+
 }

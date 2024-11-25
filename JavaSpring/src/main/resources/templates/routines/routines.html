@@ -18,20 +18,20 @@
     <h1 class="text-center mt-4">My Routines</h1>
 
     <div class="routine-list list-group">
-
-      <div class="routine-item" th:each="routine : ${routines}">
-        <div class="info">
-          <div class="d-flex justify-content-between">
-            <div class="name" th:text="${routine.getName()}">Chest Day</div>
-          </div>
-          <div class="view-arrow">
-            <a href="#" class="view-link">
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+      <a th:href="@{/activesession}" class="text-decoration-none text-reset">
+        <div class="routine-item" th:each="routine : ${routines}">
+            <div class="info">
+              <div class="d-flex justify-content-between">
+                <div class="name" th:text="${routine.getName()}">Chest Day</div>
+              </div>
+              <div class="view-arrow">
+                <a href="#" class="view-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
         </div>
-      </div>
-
+      </a>
     </div>
 
 

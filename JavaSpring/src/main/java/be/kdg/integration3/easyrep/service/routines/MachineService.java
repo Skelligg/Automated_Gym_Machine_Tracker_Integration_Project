@@ -9,4 +9,5 @@ public interface MachineService {
     Machine createMachine(Machine machine);
     List<Machine> getAllMachines();
     void emptyRoutines();
+    List<Machine> findMachinesByNames(List<String> names);
 }
