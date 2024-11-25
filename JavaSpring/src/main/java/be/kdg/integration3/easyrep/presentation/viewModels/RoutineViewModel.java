@@ -8,7 +8,7 @@ import java.util.List;
 public class RoutineViewModel {
     private int id;
     private String name;
-    private List<Machine> machines = new ArrayList<>();
+    private List<Machine> machines = new ArrayList<Machine>();
 
     public RoutineViewModel() {}
 
