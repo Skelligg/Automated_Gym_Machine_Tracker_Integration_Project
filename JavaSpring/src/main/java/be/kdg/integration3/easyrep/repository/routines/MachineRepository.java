@@ -13,7 +13,7 @@ public class MachineRepository {
     private static List<Machine> machines = new ArrayList<Machine>();
 
     public MachineRepository() {
-        machines.add(new Machine(1, "Machine Row", new MaintenanceAlarm(), "static/images/machinesPics/MachineRow.mp4"));
+        machines.add(new Machine(1, "row machine", "/static/images/machinesPics/MachineRow.mp4"));
     }
 
     public Machine createMachine(Machine machine){

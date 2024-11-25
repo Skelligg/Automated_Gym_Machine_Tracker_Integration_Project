@@ -9,10 +9,10 @@ import java.util.List;
 @Service
 public interface RoutineService {
 
-    public Routine createRoutine(Routine routine);
+    Routine createRoutine(Routine routine);
 
-    public List<Routine> getAllRoutines();
+    List<Routine> getAllRoutines();
 
-    public void emptyRoutines();
+    void emptyRoutines();
 
 }
