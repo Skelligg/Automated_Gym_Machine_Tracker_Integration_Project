@@ -1,19 +1,15 @@
 package be.kdg.integration3.easyrep.presentation;
 
 
-import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.Routine;
+import be.kdg.integration3.easyrep.presentation.viewModels.RoutineViewModel;
 import be.kdg.integration3.easyrep.service.RoutineService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -21,7 +17,6 @@ import java.util.List;
 public class RoutineController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
     private RoutineService routineService;
 
 
@@ -39,14 +34,19 @@ public class RoutineController {
 
 
     @GetMapping("/add")
-    public String addRoutine(Model model){
-        logger.info("addRoutine");
-        model.addAttribute("routine", new Routine());
+    public String showAddRoutine(Model model){
+        logger.info("Add a new Routine");
+        model.addAttribute("routine", new RoutineViewModel());
         return "GymGoer/addRoutine";
     }
 
-    @PostMapping("/add")
-    public String processAddRoutine(@RequestParam int id, @RequestParam String name, @RequestParam List<Machine> machines){
-
-    }
+//    @PostMapping("/addRoutine")
+//    public String addRoutine(@Valid @ModelAttribute ("routine") RoutineViewModel vm, BindingResult errors){
+//        if (errors.hasErrors()) {
+//            errors.getAllErrors().forEach(error -> logger.error(error.toString()));
+//            return "GymGoer/routines";
+//        }
+//        routineService.createRoutine(new Routine(vm.getId(), vm.getName(), vm.getMachines()));
+//        return "redirect:addRoutine";
+//    }
 }

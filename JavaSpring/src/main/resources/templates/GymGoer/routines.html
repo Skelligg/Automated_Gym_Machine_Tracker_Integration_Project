@@ -6,96 +6,15 @@
   <title>Routines</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/routines-style.css}" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  <style>
-    body {
-      background-color: #212529;
-      color: white;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .mobile-container {
-      width: 60vh; /* Force mobile-ish width based on viewport height */
-      margin: 0 auto;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .routine-list {
-      margin: 20px;
-      flex: 1;
-    }
-    .routine-item {
-      display: flex;
-      align-items: center;
-      background-color: #343a40;
-      color: white;
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-    .routine-item img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-    .routine-item .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .routine-item .info .name {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    .routine-item .info .workout-name {
-      font-size: 1.1rem;
-      margin-top: 5px;
-    }
-    .routine-item .info .workout-details {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      color: #adb5bd;
-    }
-    .routine-item .info .view-arrow {
-      display: flex;
-      justify-content: flex-end;
-    }
-    .routine-item .info .view-arrow a {
-      color: #007bff;
-      font-size: 1.2rem;
-      text-decoration: none;
-    }
-    .button-container {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      background-color: #343a40;
-    }
-    .button-container .btn {
-      flex: 1;
-      margin: 0 5px;
-      min-width: 60px;
-    }
-    .btn-workout {
-      background-color: #007bff;
-      color: white;
-    }
-  </style>
 </head>
 <body>
 
 <div class="mobile-container">
   <div class="container">
     <h1 class="text-center mt-4">My Routines</h1>
-    <!--        hard-coded friends list-->
     <div class="routine-list list-group">
       <div class="routine-item">
         <div class="info">
@@ -110,14 +29,20 @@
         </div>
       </div>
     </div>
+
+
+    <div class="text-center mt-4">
+      <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
+         th:href="@{/myRoutines/add}">
+        + Add Routine
+      </a>
+    </div>
+
+
   </div>
 
   <!-- bottom buttons -->
-  <div class="button-container">
-    <button class="btn btn-secondary">Home</button>
-    <button class="btn btn-workout">Begin Session</button>
-    <button class="btn btn-secondary">Profile</button>
-  </div>
+  <div th:insert="fragments/bottomButtons :: bottomButtons"></div>
 </div>
 
 </body>
