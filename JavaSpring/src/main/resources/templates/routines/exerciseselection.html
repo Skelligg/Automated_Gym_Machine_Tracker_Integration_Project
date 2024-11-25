@@ -21,17 +21,11 @@
 
 
       <div class="routine-item" th:each="exercise : ${exercises}">
-        <div class="info">
-          <div class="d-flex justify-content-between">
-            <div class="name" th:text="${exercise.getName()}">Row</div>
-          </div>
-          <div class="view-arrow">
-            <a href="#" class="view-link">
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        <a href="#" class="list-group-item list-group-item-action" th:text="${exercise.getName()}">
+          Machine name
+        </a>
       </div>
+
 
     </div>
   </div>

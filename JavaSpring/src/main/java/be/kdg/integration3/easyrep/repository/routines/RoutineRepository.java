@@ -1,4 +1,4 @@
-package be.kdg.integration3.easyrep.repository;
+package be.kdg.integration3.easyrep.repository.routines;
 
 
 import be.kdg.integration3.easyrep.model.Routine;

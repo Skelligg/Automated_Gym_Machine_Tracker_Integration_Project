@@ -1,7 +1,6 @@
-package be.kdg.integration3.easyrep.repository;
+package be.kdg.integration3.easyrep.repository.routines;
 
 import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.model.MaintenanceAlarm;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

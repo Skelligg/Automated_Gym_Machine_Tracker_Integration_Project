@@ -1,4 +1,4 @@
-package be.kdg.integration3.easyrep.service;
+package be.kdg.integration3.easyrep.service.routines;
 
 import be.kdg.integration3.easyrep.model.Machine;
 
