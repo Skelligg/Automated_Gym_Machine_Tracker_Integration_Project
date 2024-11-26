@@ -1,7 +1,5 @@
 package be.kdg.integration3.easyrep.model;
 
-import be.kdg.integration3.easyrep.model.sessions.Gender;
-
 import java.util.ArrayList;
 import java.util.List;
 

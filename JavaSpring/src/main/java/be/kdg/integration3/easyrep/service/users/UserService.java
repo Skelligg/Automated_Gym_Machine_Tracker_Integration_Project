@@ -15,7 +15,7 @@ public interface UserService {
     void addGymGoer(GymGoer gymGoer);
 
     // Find user credentials by ID
-    UserCredentials getUserCredentialsById(int id);
+    UserCredentials getUserCredentialsByUsernameOrEmail(String usernameOrEmail);
 
     // Find gym staff by user ID
     GymStaff getGymStaffByUserId(int userId);

@@ -19,7 +19,7 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100">
-<main class="form-signin w-50 mt-5"> <!-- Added 'mt-5' for top margin -->
+<main class="form-signin w-50 mt-5">
     <form class="text-center" th:action="@{/user/userdetails}" method="post" th:object="${gymgoer}">
         <h1 class="display-3 mb-4" style="font-family: 'Michroma', sans-serif;">EasyRep</h1>
         <h1 class="h3 mb-3 fw-normal">Create an account</h1>
@@ -29,12 +29,14 @@
         <div class="form-floating mb-2">
             <input type="text" th:field="*{firstName}" class="form-control rounded-pill px-4" id="firstName" placeholder="First Name" required>
             <label for="firstName" class="px-4">First Name</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
         </div>
 
         <!-- Last Name Input -->
         <div class="form-floating mb-2">
             <input type="text" th:field="*{lastName}" class="form-control rounded-pill px-4" id="lastName" placeholder="Last Name" required>
             <label for="lastName" class="px-4">Last Name</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
         </div>
 
         <!-- Gender Dropdown -->
@@ -46,12 +48,14 @@
                 <option value="OTHER">Other</option>
             </select>
             <label for="gender" class="px-4">Gender</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></div>
         </div>
 
         <!-- Address Input -->
         <div class="form-floating mb-2">
             <input type="text" th:field="*{address}" class="form-control rounded-pill px-4" id="address" placeholder="Address">
             <label for="address" class="px-4">Address</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></div>
         </div>
 
         <!-- Next Button -->
@@ -59,7 +63,6 @@
 
         <p class="mt-5 mb-3 text-body-secondary">© 2024</p>
     </form>
-
 </main>
 </body>
 </html>

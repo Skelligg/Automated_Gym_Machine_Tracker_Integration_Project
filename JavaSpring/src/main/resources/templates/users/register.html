@@ -19,7 +19,7 @@
 
 <body class="d-flex justify-content-center align-items-center vh-100">
 <main class="form-signin w-50 "> <!-- Added top margin 'mt-5' -->
-    <form th:action="@{/user/register}" method="post" th:object="${userCred}">
+    <form class="text-center" th:action="@{/user/register}" method="post" th:object="${userCred}">
 
         <h1 class="display-3" style="font-family: 'Michroma', sans-serif;">EasyRep</h1>
         <h1 class="h3 mb-3 mt-3 fw-normal">Create an account</h1>
@@ -27,27 +27,32 @@
 
         <!-- Username Input -->
         <div class="form-floating mb-2">
-            <input type="text" th:field="*{username}" class="form-control rounded-pill px-4" id="username" placeholder="username" required>
+            <input type="text" th:field="*{username}" class="form-control rounded-pill px-4" id="username" placeholder="username">
             <label for="username" class="px-4">Username</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
         </div>
 
         <!-- Email Input -->
         <div class="form-floating mb-2">
-            <input type="email" th:field="*{email}" class="form-control rounded-pill px-4" id="email" placeholder="name@example.com" required>
+            <input type="email" th:field="*{email}" class="form-control rounded-pill px-4" id="email" placeholder="name@example.com">
             <label for="email" class="px-4">Email Address</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
 
         <!-- Password Input -->
         <div class="form-floating mb-2">
-            <input type="password" th:field="*{password}" class="form-control rounded-pill px-4" id="password" placeholder="password" required>
+            <input type="password" th:field="*{password}" class="form-control rounded-pill px-4" id="password" placeholder="password">
             <label for="password" class="px-4">Password</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
         </div>
 
         <!-- Confirm Password Input -->
         <div class="form-floating mb-2">
-            <input type="password" th:field="*{confirmPassword}" class="form-control rounded-pill px-4" id="confirmPassword" placeholder="confirm password" required>
+            <input type="password" th:field="*{confirmPassword}" class="form-control rounded-pill px-4" id="confirmPassword" placeholder="confirm password">
             <label for="confirmPassword" class="px-4">Confirm Password</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></div>
         </div>
+
 
         <!-- Register Button -->
         <button class="btn btn-dark w-25 py-2 rounded-pill mt-3" type="submit">Register</button>

@@ -1,0 +1,59 @@
+/* General alignment for the navbar buttons */
+.navbar .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the workout button in the middle */
+.workout-btn {
+    width: 110px;
+    height: 110px;
+    border-radius: 50% !important;
+    margin-top: -70px; /* Elevate above the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+
+/* Ensure consistency for all buttons */
+.btn-dark {
+    width: 60px;
+    height: 60px;
+}
+
+/* Adjust icon sizes for better visibility */
+.fa-lg {
+    font-size: 1.5rem;
+}
+
+.fa-2x {
+    font-size: 2rem;
+}
+
+
+.icon-size {
+    font-size: 30px !important;/* Default font size */
+}
+
+/* For small screens (Mobile devices) */
+@media (max-width: 576px) {
+    .icon-size {
+        font-size: 20px !important; /* Smaller size for mobile */
+    }
+}
+
+/* For medium screens (Tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .icon-size {
+        font-size: 25px !important; /* Medium size for tablets */
+    }
+}
+
+/* For larger screens (Desktops) */
+@media (min-width: 769px) {
+    .icon-size {
+        font-size: 30px !important; /* Larger size for desktops */
+    }
+}

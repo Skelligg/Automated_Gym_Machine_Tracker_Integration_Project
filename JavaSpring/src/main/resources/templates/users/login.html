@@ -18,24 +18,27 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100">
-<main class="form-signin w-50 "> <!-- Added top margin 'mt-5' -->
-    <form class="text-center"> <!-- Centered all content -->
+<main class="form-signin w-50 ">
+    <form class="text-center" th:action="@{/user/login}" method="post" th:object="${user}">
+
         <!-- Logo -->
         <h1 class="display-3" style="font-family: 'Michroma', sans-serif;">EasyRep</h1>
 
         <!-- Title -->
         <h1 class="h3 mt-3 mb-3 fw-normal">Log in</h1>
 
-        <!-- username -->
+        <!-- Username or Email -->
         <div class="form-floating mb-2">
-            <input type="text" class="form-control rounded-pill px-4" id="usernameEmail" placeholder="username or email">
-            <label for="usernameEmail" class="px-4">Username or Email</label>
+            <input type="text" th:field="*{usernameOrEmail}" class="form-control rounded-pill px-4" id="usernameOrEmail" placeholder="username or email">
+            <label for="usernameOrEmail" class="px-4">Username or Email</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('usernameOrEmail')}" th:errors="*{usernameOrEmail}"></div>
         </div>
 
         <!-- Password Input -->
         <div class="form-floating mb-2">
-            <input type="password" class="form-control rounded-pill px-4" id="floatingPassword" placeholder="password">
-            <label for="floatingPassword" class="px-4">password</label>
+            <input type="password" th:field="*{password}" class="form-control rounded-pill px-4" id="floatingPassword" placeholder="password">
+            <label for="floatingPassword" class="px-4">Password</label>
+            <div class="text-danger small" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
         </div>
 
         <!-- Submit Button -->

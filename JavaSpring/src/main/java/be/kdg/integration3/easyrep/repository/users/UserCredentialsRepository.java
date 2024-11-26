@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserCredentialsRepository {
     void save(UserCredentials userCredentials);
 
-    UserCredentials findById(int id);
+    UserCredentials findByUsernameOrEmail(String usernameOrEmail);
 
     List<UserCredentials> findAll();
 }

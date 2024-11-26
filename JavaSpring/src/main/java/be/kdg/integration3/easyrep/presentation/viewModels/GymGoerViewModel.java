@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.presentation.viewModels;
 
-import be.kdg.integration3.easyrep.model.sessions.Gender;
+import be.kdg.integration3.easyrep.model.Gender;
 import jakarta.validation.constraints.*;
 
 public class GymGoerViewModel {

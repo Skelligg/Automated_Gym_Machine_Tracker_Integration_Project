@@ -5,6 +5,7 @@ import be.kdg.integration3.easyrep.model.GymStaff;
 import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
 import be.kdg.integration3.easyrep.presentation.viewModels.UserCredentialsViewModel;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
 import be.kdg.integration3.easyrep.service.users.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -29,8 +30,34 @@ public class UserController {
 
     @GetMapping("/login")
     public String getLogIn(Model model) {
+        model.addAttribute("user", new UserLogin());
         return "users/login";
     }
+
+    @PostMapping("/login")
+    public String attemptLogIn(@Valid @ModelAttribute("user") UserLogin user, BindingResult br, Model model) {
+        if (br.hasErrors()) {
+            return "users/login";
+        }
+
+        // Search by username or email
+        UserCredentials userCheck = userService.getUserCredentialsByUsernameOrEmail(user.getUsernameOrEmail());
+
+        if (userCheck == null) {
+            br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
+            return "users/login";
+        }
+
+        if (!userCheck.getPassword().equals(user.getPassword())) { // Check the password
+            br.rejectValue("password", "password.incorrect", "Incorrect password");
+            return "users/login";
+        }
+
+        // Redirect to user's home page if successful
+        return "redirect:/"+ userCheck.getUsername() +"/home";
+    }
+
+
 
     @GetMapping("/userdetails")
     public String getUserDetails(Model model) {
@@ -101,36 +128,16 @@ public class UserController {
 
 
 
-    @GetMapping("/{id}/credentials")
-    public UserCredentials getUserCredentials(@PathVariable int id) {
-        return userService.getUserCredentialsById(id);
-    }
-
-    @GetMapping("/{id}/staff")
-    public GymStaff getGymStaff(@PathVariable int id) {
-        return userService.getGymStaffByUserId(id);
-    }
-
-    @GetMapping("/{id}/goer")
+    @GetMapping("/{id}/user")
     public GymGoer getGymGoer(@PathVariable int id) {
         return userService.getGymGoerByUserId(id);
     }
 
 
-    @PostMapping("/add-credentials")
-    public void addUserCredentials(@RequestBody UserCredentials userCredentials) {
-        userService.addUserCredentials(userCredentials);
-    }
 
-    @PostMapping("/add-staff")
-    public void addGymStaff(@RequestBody GymStaff gymStaff) {
-        userService.addGymStaff(gymStaff);
-    }
 
-    @PostMapping("/add-goer")
-    public void addGymGoer(@RequestBody GymGoer gymGoer) {
-        userService.addGymGoer(gymGoer);
-    }
+
+
 
 
 }

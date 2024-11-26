@@ -40,8 +40,8 @@ public class UserServiceImp implements UserService {
 
     // Find user credentials by ID
     @Override
-    public UserCredentials getUserCredentialsById(int id) {
-        return userCredentialsRepository.findById(id);
+    public UserCredentials getUserCredentialsByUsernameOrEmail(String usernameOrEmail) {
+        return userCredentialsRepository.findByUsernameOrEmail(usernameOrEmail);
     }
 
     // Find gym staff by user ID
