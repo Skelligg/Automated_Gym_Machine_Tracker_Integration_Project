@@ -3,16 +3,12 @@ package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.Routine;
-import be.kdg.integration3.easyrep.presentation.viewModels.ExerciseViewModel;
-import be.kdg.integration3.easyrep.presentation.viewModels.RoutineViewModel;
 import be.kdg.integration3.easyrep.service.routines.MachineService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
-import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -65,18 +61,17 @@ public class RoutineController {
 
         logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
 
-        // Create a new Routine object
-        Routine routine = new Routine();
 
+        Routine routine = new Routine();
         //this line below will query the routines database asking for the nextID
         int routineId = 1;
         routine.setName(routineName);
         routine.setMachines(machineService.findMachinesByNames(exerciseNames)); // Map exercises to machines
 
-        // Save the routine
+        // stop routine in database
         routineService.createRoutine(routine);
 
-        return "redirect:/myroutines"; // Redirect to the routines list
+        return "redirect:/myroutines";
     }
 
 }

@@ -1,36 +1,33 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
-import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.model.Routine;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoutineSession {
+public class Session {
     private int id;
     private LocalDateTime startSession;
     private LocalDateTime endSession;
     private String status;
     private List<MachineSet> machineSet = new ArrayList<>();
 
-    public RoutineSession() {
+    public Session() {
     }
 
-    public RoutineSession(LocalDateTime startSession, LocalDateTime endSession, String status) {
+    public Session(LocalDateTime startSession, LocalDateTime endSession, String status) {
         this.startSession = startSession;
         this.endSession = endSession;
         this.status = status;
     }
 
-    public RoutineSession(LocalDateTime startSession, LocalDateTime endSession, String status, List<MachineSet> machineSet) {
+    public Session(LocalDateTime startSession, LocalDateTime endSession, String status, List<MachineSet> machineSet) {
         this.startSession = startSession;
         this.endSession = endSession;
         this.status = status;
         this.machineSet = machineSet;
     }
 
-    public RoutineSession(int id, LocalDateTime startSession, LocalDateTime endSession, String status, List<MachineSet> machineSet) {
+    public Session(int id, LocalDateTime startSession, LocalDateTime endSession, String status, List<MachineSet> machineSet) {
         this.id = id;
         this.startSession = startSession;
         this.endSession = endSession;
@@ -81,7 +78,7 @@ public class RoutineSession {
 
     @Override
     public String toString() {
-        return "RoutineSession{" +
+        return "Session{" +
                 "id=" + id +
                 ", startDateTime=" + startSession +
                 ", endDateTime=" + endSession +

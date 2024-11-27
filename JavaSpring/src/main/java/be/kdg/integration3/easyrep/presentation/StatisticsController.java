@@ -1,7 +1,7 @@
 //package be.kdg.integration3.easyrep.presentation;
 //
 //import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
-//import be.kdg.integration3.easyrep.model.sessions.RoutineSession;
+//import be.kdg.integration3.easyrep.model.sessions.Session;
 //import be.kdg.integration3.easyrep.service.StatisticsService;
 //import be.kdg.integration3.easyrep.service.StatisticsServiceImpl;
 //import org.slf4j.Logger;
