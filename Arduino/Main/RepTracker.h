@@ -10,7 +10,7 @@ class RepTracker {
   private:
     String targetMacAddress = "5b:f5:b7:26:ca:2d";
     int repCount;
-    const int CUTOFF = -100;
+    const int CUTOFF = -60;
   public:
   RepTracker(){ }
 
