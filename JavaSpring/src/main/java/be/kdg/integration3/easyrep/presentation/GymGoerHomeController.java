@@ -30,7 +30,7 @@ public class GymGoerHomeController {
         }
 
         model.addAttribute("user", user);
-        return "GymGoer/home"; // The view for the user's homepage
+        return "GymGoer/profile"; // The view for the user's homepage
     }
 
 
