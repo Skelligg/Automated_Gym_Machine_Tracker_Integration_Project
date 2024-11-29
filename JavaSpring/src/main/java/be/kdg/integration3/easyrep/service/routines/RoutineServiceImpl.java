@@ -1,7 +1,7 @@
-package be.kdg.integration3.easyrep.service;
+package be.kdg.integration3.easyrep.service.routines;
 
 import be.kdg.integration3.easyrep.model.Routine;
-import be.kdg.integration3.easyrep.repository.RoutineRepository;
+import be.kdg.integration3.easyrep.repository.routines.RoutineRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

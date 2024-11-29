@@ -14,14 +14,18 @@ public class Machine {
         alarm.alarmSet();
     };
 
-    public Machine(int machineId, String name, MaintenanceAlarm alarm, String imageAddress, MachineSet machineSetId, Arduino arduino) {
+    public Machine(int machineId, String name, String imageAddress, MachineSet machineSetId, Arduino arduino) {
         this.machineId = machineId;
         this.name = name;
-        this.alarm = alarm;
         this.imageAddress = imageAddress;
         this.machineSetId = machineSetId;
         this.arduino = arduino;
+    }
 
+    public Machine(int machineId, String name, String imageAddress) {
+        this.machineId = machineId;
+        this.name = name;
+        this.imageAddress = imageAddress;
     }
 
     public int getMachineId() {

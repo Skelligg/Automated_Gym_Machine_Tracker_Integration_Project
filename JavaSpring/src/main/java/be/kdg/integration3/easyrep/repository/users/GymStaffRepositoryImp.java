@@ -8,11 +8,15 @@ import java.util.List;
 
 @Repository
 public class GymStaffRepositoryImp implements GymStaffRepository {
-    private List<GymStaff> gymStaffList = new ArrayList<>();
+    private static List<GymStaff> gymStaffList = new ArrayList<>();
 
     @Override
     public void save(GymStaff gymStaff) {
         gymStaffList.add(gymStaff);
+    }
+
+    static {
+        gymStaffList.add(new GymStaff(1,1));
     }
 
     @Override

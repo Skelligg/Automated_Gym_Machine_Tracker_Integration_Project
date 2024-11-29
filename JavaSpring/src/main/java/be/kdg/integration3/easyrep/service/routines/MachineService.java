@@ -1,0 +1,13 @@
+package be.kdg.integration3.easyrep.service.routines;
+
+import be.kdg.integration3.easyrep.model.Machine;
+
+import java.util.List;
+
+public interface MachineService {
+
+    Machine createMachine(Machine machine);
+    List<Machine> getAllMachines();
+    void emptyRoutines();
+    List<Machine> findMachinesByNames(List<String> names);
+}

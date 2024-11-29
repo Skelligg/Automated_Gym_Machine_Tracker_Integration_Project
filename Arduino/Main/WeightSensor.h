@@ -6,7 +6,7 @@
 
 class WeightSensor {
   private:
-
+    float calibrationValue = 23.49; //31.84; // calibration value (see example file "Calibration.ino")
     const int calVal_eepromAdress = 0;
     unsigned long t = 0;
     float max_weight;
@@ -21,6 +21,7 @@ class WeightSensor {
     float getWeight();
     void setWeight();
     void resetWeight();
+    void setTare();
   };
 
 #endif

@@ -16,7 +16,7 @@ void WeightSensor::setup() {
  
   LoadCell.begin();
   //LoadCell.setReverseOutput(); //uncomment to turn a negative output value to positive
-  float calibrationValue = 31.84; // calibration value (see example file "Calibration.ino")
+  //float calibrationValue = 31.84; // calibration value (see example file "Calibration.ino")
   //31.84
 #if defined(ESP32)
   EEPROM.begin(512); //to fetch the calibration value from eeprom
@@ -29,9 +29,34 @@ void WeightSensor::setup() {
   max_weight = 0;
   weight = 0;
 }
+ 
+void WeightSensor::scan() {
+  static boolean newDataReady = 0;
+  const int serialPrintInterval = 100; // Adjust this interval as needed
 
-/*void tareSet(boolean setTare){
-    boolean _tare = setTare; 
+  // Get current time
+  unsigned long currentMillis = millis();
+
+  // Check if it's time to perform a new weight reading
+  if (currentMillis - t >= serialPrintInterval) {
+    if (LoadCell.update()) newDataReady = true;
+
+    if (newDataReady) {
+      weight = LoadCell.getData();  // Get the weight data
+
+      // Print to the serial monitor for debugging purposes
+      Serial.print("Load cell output val: ");
+      Serial.println(weight);
+
+      newDataReady = 0;
+      t = currentMillis;  // Update last check time
+    }
+  }
+}
+
+void WeightSensor::setTare(){
+    unsigned long stabilizingtime = 1000; // preciscion right after power-up can be improved by adding a few seconds of stabilizing time
+    boolean _tare = true; //set this to false if you don't want tare to be performed in the next step
   LoadCell.start(stabilizingtime, _tare);
   if (LoadCell.getTareTimeoutFlag()) {
     Serial.println("Timeout, check MCU>HX711 wiring and pin designations");
@@ -39,48 +64,21 @@ void WeightSensor::setup() {
   }
   else {
     LoadCell.setCalFactor(calibrationValue); // set calibration value (float)
-    Serial.println("Startup is complete");
-  } 
-}*/
- 
-void WeightSensor::scan() {
-  static boolean newDataReady = 0;
-  const int serialPrintInterval = 100; //increase value to slow down serial print activity
-  // check for new data/start next conversion:
-  if (LoadCell.update()) newDataReady = true;
- 
-  // get smoothed value from the dataset:
-  if (newDataReady) {
-    if (millis() > t + serialPrintInterval) {
-      weight = LoadCell.getData();
-      
-      Serial.print("Load_cell output val: ");
-      Serial.println(weight);
-      //setWeight();
-      newDataReady = 0;
-      
-      delay(400);    
-      if (millis() > t + serialPrintInterval) {
-        t = millis(); //keep track of the time
-      }
-    }
+    //Serial.println("Startup is complete");
   }
-}
-
+  }
 
 void WeightSensor::setWeight(){
-      if (weight > 5){
+      if (weight > 10){
         // keep max weight
       if (weight>max_weight){
             max_weight = weight;
         }
       }
-      if (weight<5){
+      if (weight<10){
          max_weight = 0;
       }
-      
-      Serial.print("Max Weight output val: ");
-      Serial.println(max_weight);
+      scan();
   }
 
 
