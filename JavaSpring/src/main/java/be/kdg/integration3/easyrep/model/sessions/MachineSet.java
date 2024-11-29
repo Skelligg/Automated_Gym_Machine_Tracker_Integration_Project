@@ -44,4 +44,12 @@ public class MachineSet {
     public void setRepCount(int repCount) {
         this.repCount = repCount;
     }
+
+    public double getWeightCount() {
+        return weightCount;
+    }
+
+    public void setWeightCount(double weightCount) {
+        this.weightCount = weightCount;
+    }
 }

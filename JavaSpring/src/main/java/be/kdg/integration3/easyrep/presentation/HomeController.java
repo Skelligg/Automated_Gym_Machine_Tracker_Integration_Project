@@ -34,9 +34,9 @@ public class HomeController {
         return "home";
     }
 
-    @PostMapping("/sets")
+    @PostMapping("/machineSets")
     public String setsPage(@RequestParam("deviceId") String deviceId, Model model){
-        logger.debug("PostMapping received, trying to get you to /sets");
+        logger.debug("PostMapping received, trying to get you to /machineSets");
         logger.debug("Device id: {}",  deviceId);
 
         setService.emptyRepository();
@@ -57,7 +57,7 @@ public class HomeController {
             model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
         }
 
-        return "redirect:sets";
+        return "redirect:GymGoer/machineSets";
     }
 
 }

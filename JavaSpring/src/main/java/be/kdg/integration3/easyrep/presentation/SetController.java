@@ -8,12 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/sets")
+@RequestMapping("/machineSets")
 public class SetController {
 
     private static Logger logger = LoggerFactory.getLogger(SetController.class);
@@ -25,12 +26,12 @@ public class SetController {
         this.setService = setService;
     }
 
-    @GetMapping
+    @PostMapping
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
         List<MachineSet> machineSets = setService.getSets();
         logger.debug(machineSets.toString());
         model.addAttribute("machineSets", machineSets);
-        return "GymGoer/sets";
+        return "GymGoer/machineSets";
     }
 }

@@ -44,7 +44,7 @@ public class SetControllerAPI {
 
 //        setService.addSet(startLocalTime, endLocalTime, repCount);
         logger.debug("Inputting values");
-        setService.addSet(setNumber, setTime, repCount, weight);
+        setService.addSet(setNumber, setTime, repCount,(double) weight);
     }
 
 }
