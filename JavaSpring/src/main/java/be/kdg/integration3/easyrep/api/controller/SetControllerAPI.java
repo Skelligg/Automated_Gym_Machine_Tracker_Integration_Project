@@ -42,7 +42,7 @@ public class SetControllerAPI {
 
 //        machineSetService.addSet(startLocalTime, endLocalTime, repCount);
         logger.debug("Inputting values");
-        machineSetService.addSet(setNumber, setTime, repCount);
+        machineSetService.addSet(setNumber, setTime, repCount, weightCount);
     }
 
 }

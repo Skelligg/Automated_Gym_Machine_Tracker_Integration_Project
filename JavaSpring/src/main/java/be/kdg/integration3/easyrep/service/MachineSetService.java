@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MachineSetService {
     //    Set addSet(LocalTime startTime, LocalTime endTime, int repCount);
-    MachineSet addSet(int setNumber, String setTime, int repCount);
+    MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount);
 
     List<MachineSet> getSets();
 

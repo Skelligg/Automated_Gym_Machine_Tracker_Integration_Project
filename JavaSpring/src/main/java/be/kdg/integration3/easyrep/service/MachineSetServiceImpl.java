@@ -5,6 +5,7 @@ import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class MachineSetServiceImpl implements MachineSetService {
     private SetRepository setRepository;
     private DataProcessor dataProcessor;
 
-    public MachineSetServiceImpl(DataProcessor dataProcessor) {
+    public MachineSetServiceImpl(@Qualifier("compositeMachineSet") DataProcessor dataProcessor) {
         logger.debug("Initializing Set Repository");
         this.dataProcessor = dataProcessor;
     }
@@ -26,8 +27,8 @@ public class MachineSetServiceImpl implements MachineSetService {
 //    }
 
     @Override
-    public MachineSet addSet(int setNumber, String setTime, int repCount){
-        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount);
+    public MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount){
+        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount, weightCount);
          dataProcessor.process(tempMachineSet);
          return tempMachineSet;
     }
