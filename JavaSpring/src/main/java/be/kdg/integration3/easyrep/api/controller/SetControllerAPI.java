@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.api.controller;
 
 
-import be.kdg.integration3.easyrep.service.SetService;
+import be.kdg.integration3.easyrep.service.MachineSetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,18 +10,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalTime;
-
 @RestController 
 @RequestMapping("/setInput")
 public class SetControllerAPI {
 
     Logger logger = LoggerFactory.getLogger(SetControllerAPI.class);
-    private SetService setService;
+    private MachineSetService machineSetService;
 
     @Autowired
-    public SetControllerAPI(SetService setService) {
-        this.setService = setService;
+    public SetControllerAPI(MachineSetService machineSetService) {
+        this.machineSetService = machineSetService;
     }
 
     @GetMapping
@@ -42,9 +40,9 @@ public class SetControllerAPI {
 //        LocalTime endLocalTime = LocalTime.of(endHour, endMinute, endSecond);
 
 
-//        setService.addSet(startLocalTime, endLocalTime, repCount);
+//        machineSetService.addSet(startLocalTime, endLocalTime, repCount);
         logger.debug("Inputting values");
-        setService.addSet(setNumber, setTime, repCount);
+        machineSetService.addSet(setNumber, setTime, repCount);
     }
 
 }

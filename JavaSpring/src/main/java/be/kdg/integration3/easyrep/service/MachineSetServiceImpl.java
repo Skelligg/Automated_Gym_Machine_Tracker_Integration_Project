@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class SetServiceImpl implements SetService {
-    private Logger logger = LoggerFactory.getLogger(SetServiceImpl.class);
+public class MachineSetServiceImpl implements MachineSetService {
+    private Logger logger = LoggerFactory.getLogger(MachineSetServiceImpl.class);
     private SetRepository setRepository;
+    private DataProcessor dataProcessor;
 
-
-    public SetServiceImpl(SetRepository setRepository) {
+    public MachineSetServiceImpl(DataProcessor dataProcessor) {
         logger.debug("Initializing Set Repository");
-        this.setRepository = setRepository;
+        this.dataProcessor = dataProcessor;
     }
 
 //    @Override
@@ -27,7 +27,9 @@ public class SetServiceImpl implements SetService {
 
     @Override
     public MachineSet addSet(int setNumber, String setTime, int repCount){
-        return setRepository.createSet(new MachineSet(setNumber, setTime, repCount));
+        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount);
+         dataProcessor.process(tempMachineSet);
+         return tempMachineSet;
     }
 
     @Override
