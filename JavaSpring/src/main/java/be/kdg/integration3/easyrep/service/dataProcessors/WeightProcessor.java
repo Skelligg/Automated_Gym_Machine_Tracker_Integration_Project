@@ -1,4 +1,4 @@
-package be.kdg.integration3.easyrep.service;
+package be.kdg.integration3.easyrep.service.dataProcessors;
 
 import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import org.springframework.stereotype.Component;

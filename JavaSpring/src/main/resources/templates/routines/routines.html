@@ -22,33 +22,18 @@
         <h1 class="text-center mt-4">My Routines</h1>
 
         <div class="routine-list list-group my-3">
-            <div class="routine-item d-flex align-items-center bg-gradient rounded p-3 mb-3">
-                <div class="info w-100 d-flex justify-content-between">
-                    <div class="name fw-bold fs-5">Chest Day</div>
-                    <div class="view-arrow">
-                        <a href="#" class="text-primary">
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             <div class="routine-list list-group">
-                <a th:href="@{/activesession}" class="text-decoration-none text-reset">
-                    <div class="routine-item" th:each="routine : ${routines}">
-                        <div class="info">
-                            <div class="d-flex justify-content-between">
-                                <div class="name" th:text="${routine.getName()}">Chest Day</div>
-                            </div>
-                            <div class="view-arrow">
-                                <a href="#" class="view-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
+                <a th:href="@{/activesession}" class="routine-item d-flex align-items-center bg-gradient rounded p-3 mb-3 text-decoration-none text-reset" th:each="routine : ${routines}">
+                    <div class="info w-100 d-flex justify-content-between">
+                        <div class="name fw-bold fs-5" th:text="${routine.getName()}">Chest Day</div>
+                        <div class="view-arrow">
+                            <i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
                 </a>
             </div>
+
         </div>
 
         <div class="text-center mt-4">

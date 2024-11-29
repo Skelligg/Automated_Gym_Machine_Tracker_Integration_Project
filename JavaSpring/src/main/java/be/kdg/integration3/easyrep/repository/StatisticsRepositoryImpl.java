@@ -1,10 +1,8 @@
 package be.kdg.integration3.easyrep.repository;
 
 import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
-import be.kdg.integration3.easyrep.model.sessions.RoutineSession;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.TypedQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

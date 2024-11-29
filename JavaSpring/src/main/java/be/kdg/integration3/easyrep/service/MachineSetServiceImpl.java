@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
+import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

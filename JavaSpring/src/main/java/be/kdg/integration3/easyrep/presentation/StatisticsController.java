@@ -1,9 +1,7 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
-import be.kdg.integration3.easyrep.model.sessions.RoutineSession;
 import be.kdg.integration3.easyrep.service.StatisticsService;
-import be.kdg.integration3.easyrep.service.StatisticsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Controller

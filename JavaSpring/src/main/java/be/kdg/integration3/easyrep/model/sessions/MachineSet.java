@@ -5,7 +5,8 @@ public class MachineSet {
     private int id; //does set need an ID?
     private String setTime; //make this a LocalTime
     private int repCount;
-    private double weightCount; //-- commented cause we're testing for the Tracer Bullet
+    private double weightCount;
+    private String previousSet;
 
 //    public MachineSet(int setNumber, int setTime, double weightCount, int repCount) {
 //        this.setNumber = setNumber;
@@ -60,5 +61,13 @@ public class MachineSet {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getPreviousSet() {
+        return previousSet;
+    }
+
+    public void setPreviousSet(String previousSet) {
+        this.previousSet = previousSet;
     }
 }
