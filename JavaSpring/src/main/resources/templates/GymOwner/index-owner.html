@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <div class="container">
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <a class="navbar-brand dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                gym_name
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+        <!-- Navbar Links Next to Dropdown -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-5">
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="#">Machines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Toggler for Small Screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row align-items-center">
+        <div class="col-6">
+            <h1 class="display-5">Dashboard</h1>
+        </div>
+
+        <div class="col-6 text-end">
+            <p class="fs-5" id="current-date"></p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Notifications Panel -->
+        <div class="col-md-5">
+            <h3>Notifications</h3>
+            <ul class="list-group" style="max-height: 300px; overflow-y: auto;">
+                <li class="list-group-item">Cable Row is out of order <span class="badge bg-primary">New</span></li>
+                <li class="list-group-item">Shoulder Press is due for maintenance <span class="badge bg-primary">New</span></li>
+                <li class="list-group-item">Welcome to your dashboard!</li>
+            </ul>
+        </div>
+        <!-- Machine Usage -->
+        <div class="col-md-7">
+            <h3>Machine Usage</h3>
+            <canvas id="machineUsageChart"></canvas>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <!-- Total Activity -->
+        <div class="col-md-5" style="margin-top: -16vh;">
+            <h3>Total Activity</h3>
+            <div style="position: relative; height: 45vh;">
+                <canvas id="totalActivityChart"></canvas>
+            </div>
+        </div>
+        <!-- Subscriptions Purchased -->
+        <div class="col-md-7">
+            <h3>Subscriptions Purchased</h3>
+            <canvas id="subscriptionsChart" style="max-height: 29vh"></canvas>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = currentDate.toLocaleDateString(undefined, options);
+    });
+    const ctx1 = document.getElementById('machineUsageChart').getContext('2d');
+    const machineUsageChart = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Crunch', 'Shoulder Press', 'Bicep Curl', 'Fly', 'Hip Thrust', 'Lat Pulldown', 'Row', 'Leg Press', 'Chest Press'],
+            datasets: [{
+                label: 'Usage',
+                data: [20, 40, 50, 60, 80, 90, 100, 120, 140],
+                backgroundColor: 'rgba(0, 0, 0, 0.8)'
+            }]
+        }
+    });
+
+    const ctx2 = document.getElementById('totalActivityChart').getContext('2d');
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            datasets: [{
+                label: 'Total Activity (Units)',
+                data: [25, 48, 77, 101, 145, 108, 99, 89, 60, 53, 26, 45, 50, 59, 22], // Placeholder data
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                tension: 0.3,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            // Enforce height constraint on the canvas
+            maintainAspectRatio: false, // Allow flexible height based on container
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Time of Day'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Activity Level'
+                    },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx3 = document.getElementById('subscriptionsChart').getContext('2d');
+    new Chart(ctx3, {
+        type: 'scatter',
+        data: {
+            datasets: [
+                {
+                    label: 'Standard Membership',
+                    data: [
+                        {x: 'June', y: 30},
+                        {x: 'July', y: 50},
+                        {x: 'August', y: 70},
+                        {x: 'September', y: 90},
+                        {x: 'October', y: 100}
+                    ],
+                    backgroundColor: 'rgba(128, 128, 128, 1)',
+                    pointRadius: 5
+                },
+                {
+                    label: 'Premium Membership',
+                    data: [
+                        {x: 'June', y: 20},
+                        {x: 'July', y: 30},
+                        {x: 'August', y: 60},
+                        {x: 'September', y: 70},
+                        {x: 'October', y: 90}
+                    ],
+                    backgroundColor: 'rgba(0, 0, 0, 1)',
+                    pointRadius: 5
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'right'
+                }
+            },
+            scales: {
+                x: {
+                    type: 'category',
+                    labels: ['June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    title: {
+                        display: true,
+                        text: 'Month'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Subscriptions'
+                    },
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+</script>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
