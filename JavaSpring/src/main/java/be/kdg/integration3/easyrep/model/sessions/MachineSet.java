@@ -5,14 +5,14 @@ public class MachineSet {
     private long id; //does set need an ID?
     private String setTime; //make this a LocalTime
     private int repCount;
-    //private double weightCount; -- commented cause we're testing for the Tracer Bullet
+    private double weightCount; // commented cause we're testing for the Tracer Bullet
 
-//    public MachineSet(int setNumber, int setTime, double weightCount, int repCount) {
-//        this.setNumber = setNumber;
-//        this.setTime = setTime;
-//        this.weightCount = weightCount;
-//        this.repCount = repCount;
-//    }
+    public MachineSet(int setNumber, String setTime, int repCount, double weightCount) {
+        this.setNumber = setNumber;
+        this.setTime = setTime;
+        this.weightCount = weightCount;
+        this.repCount = repCount;
+    }
 
 
     public MachineSet(int setNumber, String setTime, int repCount) {

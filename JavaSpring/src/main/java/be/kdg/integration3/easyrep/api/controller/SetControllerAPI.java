@@ -25,7 +25,7 @@ public class SetControllerAPI {
     }
 
     @GetMapping
-    public void inputSet(@RequestParam int setNumber, @RequestParam String setTime, @RequestParam int repCount){
+    public void inputSet(@RequestParam int setNumber, @RequestParam String setTime, @RequestParam int repCount, @RequestParam float weight) {
 //    public void inputSet(@RequestParam String startTime, String endTime, int repCount){
 //        String[] startTimeParts = startTime.split(":");
 //        int startHour = Integer.parseInt(startTimeParts[0]);
@@ -44,7 +44,7 @@ public class SetControllerAPI {
 
 //        setService.addSet(startLocalTime, endLocalTime, repCount);
         logger.debug("Inputting values");
-        setService.addSet(setNumber, setTime, repCount);
+        setService.addSet(setNumber, setTime, repCount, weight);
     }
 
 }
