@@ -45,16 +45,16 @@ public class StatisticsController {
         return "redirect:/";
     }
 
-        @GetMapping("/GymOwner/machine_review")
-        public String getMachineReview(Model model) {
-            logger.info("Get Mapping to a machine review");
-            model.addAttribute("LocalDate", LocalDate.now());
-            String lastMaintained = "12/08/2021"; // Example value, can be dynamic
-            model.addAttribute("lastMainteinedDate", lastMaintained);
-            logger.info("lastMainteinedDate: {}", lastMaintained);
+    @GetMapping("/GymOwner/machine_review")
+    public String getMachineReview(Model model) {
+        logger.info("Get Mapping to a machine review");
+        model.addAttribute("LocalDate", LocalDate.now());
+        String lastMaintained = "12/08/2021"; // Example value, can be dynamic
+        model.addAttribute("lastMainteinedDate", lastMaintained);
+        logger.info("lastMainteinedDate: {}", lastMaintained);
 
-            return "GymOwner/machine_review";
-        }
+        return "GymOwner/machine_review";
+    }
 
 
 

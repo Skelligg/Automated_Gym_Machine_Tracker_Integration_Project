@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Statistics</title>
@@ -22,7 +22,7 @@
 <body>
 
 <div class="d-flex justify-content-between align-items-center">
-<h1>Statistics</h1>
+    <h1>Statistics</h1>
     <form action="/GymGoer/statistics" method="post">
         <button type="submit" class="btn d-flex flex-column align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
@@ -89,17 +89,17 @@
 
 
 <div class="d-flex justify-content-center mt-3">
-<div class="btn-group btn-group-toggle " data-toggle="buttons">
-    <label class="btn btn-light active" onclick="showTable('weightTable',this)">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> By Weight
-    </label>
-    <label class="btn btn-light" onclick="showTable('volumeTable',this)">
-        <input type="radio" name="options" id="option2" autocomplete="off"> By Volume
-    </label>
-    <label class="btn btn-light" onclick="showTable('repsTable',this)">
-        <input type="radio" name="options" id="option3" autocomplete="off"> By Reps
-    </label>
-</div>
+    <div class="btn-group btn-group-toggle " data-toggle="buttons">
+        <label class="btn btn-light active" onclick="showTable('weightTable',this)">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> By Weight
+        </label>
+        <label class="btn btn-light" onclick="showTable('volumeTable',this)">
+            <input type="radio" name="options" id="option2" autocomplete="off"> By Volume
+        </label>
+        <label class="btn btn-light" onclick="showTable('repsTable',this)">
+            <input type="radio" name="options" id="option3" autocomplete="off"> By Reps
+        </label>
+    </div>
 </div>
 
 <h4 class="text-center">History</h4>
@@ -126,25 +126,25 @@
 <div id="weightTable">
     <table class="table">
         <thead>
-            <tr>
-                <th>Name</th>
-                <th>Total Weight</th>
-                <th>Date</th>
+        <tr>
+            <th>Name</th>
+            <th>Total Weight</th>
+            <th>Date</th>
 
-            </tr>
+        </tr>
         </thead>
         <tbody>
         <tr>
             <td th:utext="Username"></td>
             <td th:text="25"></td>
-                <td th:text="${LocalDate}"></td>
+            <td th:text="${LocalDate}"></td>
 
         </tr>
-<!--        <tr th:each="stat : ${statistics}">-->
-<!--            <td th:text="${stat.username}"></td>-->
-<!--            <td th:text="${stat.totalWeight}"></td>-->
-<!--            <td th:text="${LocalDate}"></td>-->
-<!--        </tr>-->
+        <!--        <tr th:each="stat : ${statistics}">-->
+        <!--            <td th:text="${stat.username}"></td>-->
+        <!--            <td th:text="${stat.totalWeight}"></td>-->
+        <!--            <td th:text="${LocalDate}"></td>-->
+        <!--        </tr>-->
         </tbody>
     </table>
 </div>
