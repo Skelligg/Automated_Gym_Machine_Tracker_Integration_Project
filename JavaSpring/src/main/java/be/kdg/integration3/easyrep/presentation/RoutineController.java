@@ -36,7 +36,7 @@ public class RoutineController {
     }
 
 
-    //do i need to display all routines?????
+    //do I need to display all routines????? Not while adding
     @GetMapping("/add")
     public String showAddRoutine(Model model){
         logger.info("Accessing page to create new Routine");

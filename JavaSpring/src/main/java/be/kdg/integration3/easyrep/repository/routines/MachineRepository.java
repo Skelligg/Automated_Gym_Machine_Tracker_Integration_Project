@@ -1,6 +1,8 @@
 package be.kdg.integration3.easyrep.repository.routines;
 
 import be.kdg.integration3.easyrep.model.Machine;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,17 +10,20 @@ import java.util.List;
 
 @Repository
 public class MachineRepository {
+    private Logger logger = LoggerFactory.getLogger(MachineRepository.class);
 
     private static List<Machine> machines = new ArrayList<Machine>();
 
+    //test
     public MachineRepository() {
-        machines.add(new Machine(1, "row machine", "/static/images/machinesPics/MachineRow.mp4"));
-        machines.add(new Machine(2, "bench press", "/static/images/machinesPics/MachineRow.mp4"));
-        machines.add(new Machine(3, "squat machine", "/static/images/machinesPics/MachineRow.mp4"));
-        machines.add(new Machine(4, "unilateral jerk", "/static/images/machinesPics/MachineRow.mp4"));
+        createMachine(new Machine("row machine", "/images/machinesPics/MachineRow.gif"));
+        createMachine(new Machine("bench press", "/images/machinesPics/MachineRow.gif"));
+        createMachine(new Machine("squat machine", "/images/machinesPics/MachineRow.gif"));
+        createMachine(new Machine("unilateral jerk", "/images/machinesPics/MachineRow.gif"));
     }
 
     public Machine createMachine(Machine machine){
+        machine.setMachineId(machines.size());
         machines.add(machine);
         return machine;
     }
@@ -39,6 +44,11 @@ public class MachineRepository {
             }
         }
         return machines;
+    }
+
+    public Machine readMachine(int machineId) {
+        logger.debug("Reading Machine with id: {}", machineId);
+        return machines.get(machineId);
     }
 
 }

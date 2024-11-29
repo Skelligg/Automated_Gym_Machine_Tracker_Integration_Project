@@ -1,0 +1,18 @@
+@temp_sourceId = e42c2327-e503-45b7-822c-51fb60365ccb
+@hum_sourceId = 21e21dd9-7872-472f-92f7-858ecd083e7c
+@dist_sourceId = 2e6b2dce-e684-46ff-9c7c-5090c1eca38d
+@occu_sourceId = 4146961c-b157-4c80-92f3-66d98eb5d7dc
+@baseUrl = http://localhost:8080/
+@eventId = event-id-placeholder
+
+### 1. Create a new Event (example with TemperatureEvent)
+POST {{baseUrl}}/publish
+    Content-Type: application/json
+{
+"@type": "TemperatureEvent",
+"source": {
+ "id": "{{temp_sourceId}}"
+ },
+  "value": 13.5,
+"unit": "CELSIUS"
+}

@@ -1,8 +1,10 @@
-package be.kdg.integration3.easyrep.model;
+package be.kdg.integration3.easyrep.presentation.viewModels;
 
+import be.kdg.integration3.easyrep.model.Arduino;
+import be.kdg.integration3.easyrep.model.MaintenanceAlarm;
 import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 
-public class Machine {
+public class MachineViewModel {
     private int machineId;
     private String name;
     private MaintenanceAlarm alarm;
@@ -10,25 +12,7 @@ public class Machine {
     private MachineSet machineSetId;
     private Arduino arduino;
 
-    public void alarmSet() {
-        alarm.alarmSet();
-    };
-
-    public Machine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino) {
-        this.name = name;
-        this.imageAddress = imageAddress;
-        this.machineSetId = machineSetId;
-        this.arduino = arduino;
-    }
-    public Machine(String name, String imageAddress,  Arduino arduino) {
-        this.name = name;
-        this.imageAddress = imageAddress;
-        this.arduino = arduino;
-    }
-
-    public Machine( String name, String imageAddress) {
-        this.name = name;
-        this.imageAddress = imageAddress;
+    public MachineViewModel() {
     }
 
     public int getMachineId() {
@@ -78,5 +62,4 @@ public class Machine {
     public void setArduino(Arduino arduino) {
         this.arduino = arduino;
     }
-
 }
