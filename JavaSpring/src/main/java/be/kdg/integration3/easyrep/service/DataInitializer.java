@@ -24,26 +24,26 @@ public class DataInitializer {
 
     private void initializeData() {
         // Create machines
-        Machine machine11 = new Machine(11, "row machine", "/static/images/machinesPics/MachineRow.mp4");
-        Machine machine12 = new Machine(12, "bench press", "/static/images/machinesPics/MachineBenchPress.mp4");
-        Machine machine13 = new Machine(13, "squat machine", "/static/images/machinesPics/MachineSquat.mp4");
-        Machine machine14 = new Machine(14, "unilateral jerk", "/static/images/machinesPics/MachineJerk.mp4");
+        Machine machine1 = new Machine("row machine", "/images/machinesPics/MachineRow.gif");
+        Machine machine2 = new Machine("bench press", "/images/machinesPics/MachineRow.gif");
+        Machine machine3 = new Machine("squat machine", "/images/machinesPics/MachineRow.gif");
+        Machine machine4 = new Machine("unilateral jerk", "/images/machinesPics/MachineRow.gif");
 
         // Add machines to the repository
-        machineRepository.createMachine(machine11);
-        machineRepository.createMachine(machine12);
-        machineRepository.createMachine(machine13);
-        machineRepository.createMachine(machine14);
+        machineRepository.createMachine(machine1);
+        machineRepository.createMachine(machine2);
+        machineRepository.createMachine(machine3);
+        machineRepository.createMachine(machine4);
 
         // Create gyms
         Gym gym1 = new Gym("Fasic Bit", 4, "Streetname 34, 2000 Antwerp", new Date(2021, 7, 14));
         Gym gym2 = new Gym("Fasic Bit", 5, "Streetname 71, 2050 Antwerp", new Date(2022, 11, 20));
 
         // Assign machines to gyms
-        gym1.addMachine(machine11);
-        gym1.addMachine(machine12);
-        gym1.addMachine(machine13);
-        gym1.addMachine(machine14);
+        gym1.addMachine(machine1);
+        gym1.addMachine(machine2);
+        gym1.addMachine(machine3);
+        gym1.addMachine(machine4);
 
         // Add gyms to the repository
         gymRepository.save(gym1);

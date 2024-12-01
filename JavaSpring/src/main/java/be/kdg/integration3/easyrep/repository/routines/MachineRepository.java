@@ -14,14 +14,6 @@ public class MachineRepository {
 
     private static List<Machine> machines = new ArrayList<Machine>();
 
-    //test
-    public MachineRepository() {
-        createMachine(new Machine("row machine", "/images/machinesPics/MachineRow.gif"));
-        createMachine(new Machine("bench press", "/images/machinesPics/MachineRow.gif"));
-        createMachine(new Machine("squat machine", "/images/machinesPics/MachineRow.gif"));
-        createMachine(new Machine("unilateral jerk", "/images/machinesPics/MachineRow.gif"));
-    }
-
     public Machine createMachine(Machine machine){
         machine.setMachineId(machines.size());
         machines.add(machine);
