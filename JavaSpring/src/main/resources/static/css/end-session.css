@@ -1,0 +1,39 @@
+.exercise-table {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+}
+
+.exercise-table td {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.exercise-table .weight {
+    text-align: left;
+}
+
+.exercise-table .unit {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.exercise-table .reps {
+    text-align: right;
+}
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-circle svg {
+    width: 24px;
+    height: 24px;
+}

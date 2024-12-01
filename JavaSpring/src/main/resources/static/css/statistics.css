@@ -1,0 +1,23 @@
+.btn-group .btn {
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 3d effect */
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.btn-group .btn.active,
+.btn-group .btn:hover {
+    background-color: #e0e0e0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+.btn-group .btn input[type="radio"] {
+    display: none;
+}
+
+.btn-group .btn.active {
+    color: black;
+}

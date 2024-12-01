@@ -19,14 +19,15 @@ public class StatisticsServiceImpl implements StatisticsService {
         this.statisticsRepository = statisticsRepository;
     }
 
+
+
     @Override
     public void addRoutineSession(LocalDateTime startSession, LocalDateTime endSession, String status) {
         RoutineSession rs = new RoutineSession(startSession,endSession,status);
-
     }
 
     @Override
     public List<PlayerStatisticsDTO> getPlayerStatistics() {
-        return  statisticsRepository.getPlayerStatistics();
+        return null;
     }
 }
