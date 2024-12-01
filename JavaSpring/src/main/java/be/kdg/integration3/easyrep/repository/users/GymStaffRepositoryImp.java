@@ -15,9 +15,9 @@ public class GymStaffRepositoryImp implements GymStaffRepository {
         gymStaffList.add(gymStaff);
     }
 
-    static {
-        gymStaffList.add(new GymStaff(1,1));
-    }
+//    static {
+//        gymStaffList.add(new GymStaff(1,1));
+//    }
 
     @Override
     public GymStaff findByUserId(int userId) {

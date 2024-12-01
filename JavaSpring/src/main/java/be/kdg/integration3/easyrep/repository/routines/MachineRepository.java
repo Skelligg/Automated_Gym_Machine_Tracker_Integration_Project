@@ -16,10 +16,10 @@ public class MachineRepository {
 
     //test
     public MachineRepository() {
-        createMachine(new Machine("row machine", "/images/machinesPics/MachineRow.gif"));
-        createMachine(new Machine("bench press", "/images/machinesPics/MachineRow.gif"));
-        createMachine(new Machine("squat machine", "/images/machinesPics/MachineRow.gif"));
-        createMachine(new Machine("unilateral jerk", "/images/machinesPics/MachineRow.gif"));
+        createMachine(new Machine("row machine"));
+        createMachine(new Machine("bench press"));
+        createMachine(new Machine("squat machine"));
+        createMachine(new Machine("unilateral jerk"));
     }
 
     public Machine createMachine(Machine machine){

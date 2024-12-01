@@ -1,13 +1,13 @@
 package be.kdg.integration3.easyrep.presentation.viewModels;
 
 import be.kdg.integration3.easyrep.model.Arduino;
-import be.kdg.integration3.easyrep.model.MaintenanceAlarm;
+
 import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 
 public class MachineViewModel {
     private int machineId;
     private String name;
-    private MaintenanceAlarm alarm;
+
     private String imageAddress;
     private MachineSet machineSetId;
     private Arduino arduino;
@@ -31,13 +31,7 @@ public class MachineViewModel {
         this.name = name;
     }
 
-    public MaintenanceAlarm getAlarm() {
-        return alarm;
-    }
 
-    public void setAlarm(MaintenanceAlarm alarm) {
-        this.alarm = alarm;
-    }
 
     public String getImageAddress() {
         return imageAddress;

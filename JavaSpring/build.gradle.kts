@@ -2,6 +2,7 @@ plugins {
     java
     id("org.springframework.boot") version "3.3.4"
     id("io.spring.dependency-management") version "1.1.6"
+    id("application")
 }
 
 group = "be.kdg.integration3"
@@ -11,6 +12,9 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
+}
+application {
+    mainClass = "be.kdg.integration3.easyrep.StartApplication"
 }
 
 repositories {
@@ -26,6 +30,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.webjars:bootstrap:5.3.2")
     runtimeOnly("org.postgresql:postgresql")
+
 }
 
 

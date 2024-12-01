@@ -1,16 +1,25 @@
 package be.kdg.integration3.easyrep.model;
 
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Table
+@Entity(name = "USER_CREDENTIALS")
 public class UserCredentials {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     private String username;
     private String password;
     private String email;
     private LocalDate dateCreated;
 
-    public UserCredentials( String username, String password, String email, LocalDate dateCreated) {
+    protected UserCredentials() {
+    }
+
+    public UserCredentials(String username, String password, String email, LocalDate dateCreated) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -56,4 +65,5 @@ public class UserCredentials {
     public void setDateCreated(LocalDate dateCreated) {
         this.dateCreated = dateCreated;
     }
+
 }

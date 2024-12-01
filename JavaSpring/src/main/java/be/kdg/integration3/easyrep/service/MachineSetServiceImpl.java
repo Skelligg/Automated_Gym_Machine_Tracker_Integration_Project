@@ -3,11 +3,13 @@ package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
+import be.kdg.integration3.easyrep.repository.routines.MachineSetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -15,6 +17,7 @@ public class MachineSetServiceImpl implements MachineSetService {
     private Logger logger = LoggerFactory.getLogger(MachineSetServiceImpl.class);
     private SetRepository setRepository;
     private DataProcessor dataProcessor;
+    private MachineSetRepository machineSetRepository;
 
     public MachineSetServiceImpl(@Qualifier("compositeMachineSet") DataProcessor dataProcessor) {
         logger.debug("Initializing Set Repository");
@@ -26,12 +29,17 @@ public class MachineSetServiceImpl implements MachineSetService {
 //        return setRepository.createSet(new Set(startTime, endTime, repCount));
 //    }
 
+
     @Override
-    public MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount){
-        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount, weightCount);
-         dataProcessor.process(tempMachineSet);
-         return tempMachineSet;
+    public MachineSet addSet(LocalDateTime startTime, LocalDateTime endTime, double weightCount) {
+        return null;
     }
+
+    public MachineSet saveMachineSet(MachineSet machineSet) {
+        // You can add additional business logic here if needed
+        return machineSetRepository.createMachineSet(machineSet);
+    }
+
 
     @Override
     public List<MachineSet> getSets(){

@@ -4,6 +4,7 @@ import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class MachineSetRepository {
         return machineSet;
     }
 
+
     public List<MachineSet> getMachineSets() {
         return machineSets;
     }
@@ -33,11 +35,12 @@ public class MachineSetRepository {
     public List<MachineSet> getMachineSetsById(int id) {
         List<MachineSet> filteredById = new ArrayList<>();
         for (MachineSet machineSet : machineSets) {
-            if(machineSet.getId() == id){
+            if(machineSet.getSetId() == id){
                 filteredById.add(machineSet);
             }
         }
         return filteredById;
     }
+
 
 }

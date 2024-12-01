@@ -25,7 +25,7 @@ public class SetControllerAPI {
     @GetMapping
     public void inputSet(@RequestParam int setNumber, @RequestParam String setTime, @RequestParam int repCount, @RequestParam float weightCount){
         logger.debug("Inputting values");
-        machineSetService.addSet(setNumber, setTime, repCount, weightCount);
+//        machineSetService.addSet( weightCount);
     }
 
 }

@@ -118,7 +118,7 @@ public class UserController {
 
         logger.debug("Usercred : {}",userCred);
 
-        userService.addGymGoer(new GymGoer(gymgoer.getFirstName(),gymgoer.getFirstName(),gymgoer.getGender(),gymgoer.getAddress()));
+//        userService.addGymGoer(new GymGoer(gymgoer.getFirstName(),gymgoer.getFirstName(),gymgoer.getGender(),gymgoer.getAddress()));
         userService.addUserCredentials(new UserCredentials(userCred.getUsername(),userCred.getPassword(),userCred.getEmail(), LocalDate.now()));
 
         // Process the registration (e.g., save to database)

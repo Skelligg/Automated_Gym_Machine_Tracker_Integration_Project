@@ -1,20 +1,44 @@
 package be.kdg.integration3.easyrep.model;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 import java.util.List;
 
+@Entity
+@Table(name="GYM")
 public class Gym {
-    private String name;
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int gymId;
+    private String name;
     private String location;
-    private Date startDate;
+    private Date openedOn;
+
+    @OneToMany(mappedBy = "gym",cascade = CascadeType.ALL)
+    private List<GymStaff> gymStaff;
+    @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL)
     private List<Machine> machines;
 
-    public Gym(String name, int gymId, String location, Date startDate, List<Machine> machines) {
-        this.name = name;
+
+    protected Gym() {
+    }
+
+    public Gym(int gymId, String name, String location, Date openedOn, List<GymStaff> gymStaff, List<Machine> machines) {
         this.gymId = gymId;
+        this.name = name;
         this.location = location;
-        this.startDate = startDate;
+        this.openedOn = openedOn;
+        this.gymStaff = gymStaff;
+        this.machines = machines;
+    }
+
+    public Gym(String name, String location, Date openedOn, List<GymStaff> gymStaff, List<Machine> machines) {
+        this.name = name;
+        this.location = location;
+        this.openedOn = openedOn;
+        this.gymStaff = gymStaff;
         this.machines = machines;
     }
 
@@ -42,11 +66,27 @@ public class Gym {
         this.location = location;
     }
 
-    public Date getStartDate() {
-        return startDate;
+    public Date getOpenedOn() {
+        return openedOn;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
+    public void setOpenedOn(Date openedOn) {
+        this.openedOn = openedOn;
+    }
+
+    public List<GymStaff> getGymStaff() {
+        return gymStaff;
+    }
+
+    public void setGymStaff(List<GymStaff> gymStaff) {
+        this.gymStaff = gymStaff;
+    }
+
+    public List<Machine> getMachines() {
+        return machines;
+    }
+
+    public void setMachines(List<Machine> machines) {
+        this.machines = machines;
     }
 }

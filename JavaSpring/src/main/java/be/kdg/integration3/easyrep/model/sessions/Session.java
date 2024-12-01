@@ -1,38 +1,47 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import be.kdg.integration3.easyrep.model.Routine;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "SESSION")
 public class Session {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @OneToMany(mappedBy = "session",cascade = CascadeType.ALL)
+    private List<MachineSet> machineSet = new ArrayList<>();
     private LocalDateTime startSession;
     private LocalDateTime endSession;
     private String status;
-    private List<MachineSet> machineSet = new ArrayList<>();
+    @OneToMany(mappedBy = "session",cascade = CascadeType.ALL)
+    private List<Routine> routines;
+
+
 
     public Session() {
     }
 
-    public Session(LocalDateTime startSession, LocalDateTime endSession, String status) {
-        this.startSession = startSession;
-        this.endSession = endSession;
-        this.status = status;
-    }
 
-    public Session(LocalDateTime startSession, LocalDateTime endSession, String status, List<MachineSet> machineSet) {
-        this.startSession = startSession;
-        this.endSession = endSession;
-        this.status = status;
-        this.machineSet = machineSet;
-    }
-
-    public Session(int id, LocalDateTime startSession, LocalDateTime endSession, String status, List<MachineSet> machineSet) {
+    public Session(int id, List<MachineSet> machineSet, LocalDateTime startSession, LocalDateTime endSession, String status, List<Routine> routines) {
         this.id = id;
+        this.machineSet = machineSet;
         this.startSession = startSession;
         this.endSession = endSession;
         this.status = status;
+        this.routines = routines;
+    }
+
+    public Session(List<MachineSet> machineSet, LocalDateTime startSession, LocalDateTime endSession, String status, List<Routine> routines) {
         this.machineSet = machineSet;
+        this.startSession = startSession;
+        this.endSession = endSession;
+        this.status = status;
+        this.routines = routines;
     }
 
     public int getId() {
@@ -80,10 +89,11 @@ public class Session {
     public String toString() {
         return "Session{" +
                 "id=" + id +
-                ", startDateTime=" + startSession +
-                ", endDateTime=" + endSession +
-                ", status='" + status + '\'' +
                 ", machineSet=" + machineSet +
+                ", startSession=" + startSession +
+                ", endSession=" + endSession +
+                ", status='" + status + '\'' +
+                ", routines=" + routines +
                 '}';
     }
 }

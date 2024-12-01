@@ -60,16 +60,16 @@ public class RoutineController {
                               @RequestParam List<String> exerciseNames, Model model) {
 
         logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
-
-
-        Routine routine = new Routine();
-        //this line below will query the routines database asking for the nextID
-        int routineId = 1;
-        routine.setName(routineName);
-        routine.setMachines(machineService.findMachinesByNames(exerciseNames)); // Map exercises to machines
+//
+//
+//        Routine routine =
+//        //this line below will query the routines database asking for the nextID
+//        int routineId = 1;
+//        routine.setRoutineName(routineName);
+//        routine.setMachines(machineService.findMachinesByNames(exerciseNames)); // Map exercises to machines
 
         // stop routine in database
-        routineService.createRoutine(routine);
+//        routineService.createRoutine(routine);
 
         return "redirect:/myroutines";
     }

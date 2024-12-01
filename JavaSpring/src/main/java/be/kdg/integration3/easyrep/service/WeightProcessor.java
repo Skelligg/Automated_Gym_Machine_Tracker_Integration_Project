@@ -9,13 +9,13 @@ public class WeightProcessor implements DataProcessor {
     @Override
     public void process(MachineSet machineSet) {
         // Convert weight from grams to kilograms
-        double weightInKg = machineSet.getWeightCount() / 1000.0;
+        double weightInKg = machineSet.getWeight() / 1000.0;
 
         // Round to the nearest 0.25
         double roundedWeight = roundToNearestQuarter(weightInKg);
 
         // Set the rounded weight back to the machineSet object
-        machineSet.setWeightCount(roundedWeight);
+        machineSet.setWeight(roundedWeight);
     }
 
     /**
