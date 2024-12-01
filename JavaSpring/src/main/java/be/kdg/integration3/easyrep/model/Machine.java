@@ -26,6 +26,12 @@ public class Machine {
         this.arduino = arduino;
     }
 
+    public Machine(int machineId, String name, String imageAddress) {
+        this.machineId = machineId;
+        this.name = name;
+        this.imageAddress = imageAddress;
+    }
+
     public Machine( String name, String imageAddress) {
         this.name = name;
         this.imageAddress = imageAddress;

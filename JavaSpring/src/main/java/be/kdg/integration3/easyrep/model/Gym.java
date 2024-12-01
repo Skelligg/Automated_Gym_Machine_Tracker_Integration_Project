@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -16,6 +17,14 @@ public class Gym {
         this.location = location;
         this.startDate = startDate;
         this.machines = machines;
+    }
+
+    public Gym(String name, int gymId, String location, Date startDate) {
+        this.name = name;
+        this.gymId = gymId;
+        this.location = location;
+        this.startDate = startDate;
+        this.machines = new ArrayList<>();
     }
 
     public String getName() {
@@ -48,5 +57,9 @@ public class Gym {
 
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
+    }
+
+    public void addMachine(Machine machine) {
+        machines.add(machine);
     }
 }
