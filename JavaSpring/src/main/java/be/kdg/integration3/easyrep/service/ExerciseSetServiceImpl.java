@@ -1,9 +1,10 @@
 package be.kdg.integration3.easyrep.service;
 
 
-import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
-import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
+import be.kdg.integration3.easyrep.repository.StatisticsRepository;
+import be.kdg.integration3.easyrep.repository.StatisticsRepositoryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,14 +29,14 @@ public class MachineSetServiceImpl implements MachineSetService {
 //    }
 
     @Override
-    public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
-        ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
-         dataProcessor.process(tempExerciseSet);
-         return tempExerciseSet;
+    public MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount){
+        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount, weightCount);
+         dataProcessor.process(tempMachineSet);
+         return tempMachineSet;
     }
 
     @Override
-    public List<ExerciseSet> getSets(){
+    public List<MachineSet> getSets(){
         logger.debug("Getting sets");
         return setRepository.getSets();
     }
@@ -44,6 +45,11 @@ public class MachineSetServiceImpl implements MachineSetService {
     public void emptyRepository(){
         logger.debug("Cleaning the repository");
         setRepository.emptyList();
+    }
+
+    @Override
+    public List<MachineSet> getAllMachineSets() {
+        return StatisticsRepositoryImpl.createDummyData();
     }
 
 }

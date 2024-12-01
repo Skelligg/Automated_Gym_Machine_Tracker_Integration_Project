@@ -3,7 +3,7 @@ package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.Routine;
-import be.kdg.integration3.easyrep.service.routines.MachineService;
+import be.kdg.integration3.easyrep.service.MachineService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +36,7 @@ public class RoutineController {
     }
 
 
-    //do i need to display all routines?????
+    //do I need to display all routines????? Not while adding
     @GetMapping("/add")
     public String showAddRoutine(Model model){
         logger.info("Accessing page to create new Routine");

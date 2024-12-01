@@ -1,29 +1,38 @@
 package be.kdg.integration3.easyrep.model;
 
-import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 
 public class Machine {
     private int machineId;
     private String name;
     private MaintenanceAlarm alarm;
     private String imageAddress;
-    private ExerciseSet exerciseSetId;
+    private MachineSet machineSetId;
     private Arduino arduino;
 
     public void alarmSet() {
         alarm.alarmSet();
     };
 
-    public Machine(int machineId, String name, String imageAddress, ExerciseSet exerciseSetId, Arduino arduino) {
-        this.machineId = machineId;
+    public Machine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino) {
         this.name = name;
         this.imageAddress = imageAddress;
-        this.exerciseSetId = exerciseSetId;
+        this.machineSetId = machineSetId;
+        this.arduino = arduino;
+    }
+    public Machine(String name, String imageAddress,  Arduino arduino) {
+        this.name = name;
+        this.imageAddress = imageAddress;
         this.arduino = arduino;
     }
 
     public Machine(int machineId, String name, String imageAddress) {
         this.machineId = machineId;
+        this.name = name;
+        this.imageAddress = imageAddress;
+    }
+
+    public Machine( String name, String imageAddress) {
         this.name = name;
         this.imageAddress = imageAddress;
     }
@@ -60,12 +69,12 @@ public class Machine {
         this.imageAddress = imageAddress;
     }
 
-    public ExerciseSet getSetId() {
-        return exerciseSetId;
+    public MachineSet getSetId() {
+        return machineSetId;
     }
 
-    public void setSetId(ExerciseSet exerciseSetId) {
-        this.exerciseSetId = exerciseSetId;
+    public void setSetId(MachineSet machineSetId) {
+        this.machineSetId = machineSetId;
     }
 
     public Arduino getArduino() {
@@ -76,15 +85,4 @@ public class Machine {
         this.arduino = arduino;
     }
 
-    @Override
-    public String toString() {
-        return "Machine{" +
-                "machineId=" + machineId +
-                ", name='" + name + '\'' +
-                ", alarm=" + alarm +
-                ", imageAddress='" + imageAddress + '\'' +
-                ", exerciseSetId=" + exerciseSetId +
-                ", arduino=" + arduino +
-                '}';
-    }
 }

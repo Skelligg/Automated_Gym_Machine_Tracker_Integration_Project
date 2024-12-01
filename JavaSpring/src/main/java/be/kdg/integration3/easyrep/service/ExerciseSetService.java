@@ -12,4 +12,6 @@ public interface MachineSetService {
 
     void emptyRepository();
 
+    public List<ExerciseSet> getAllMachineSets();
+
 }

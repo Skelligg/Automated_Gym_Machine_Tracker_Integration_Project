@@ -12,6 +12,11 @@ public class ArduinoRepositoryImpl {
     // this would retrieve from the database the MACHINE_ID and the ipaddress from the machine/arduino
     private static Map<String, String> arduinoInfo = new HashMap<>(Map.of("row", ""));
 
+//    private ArduinoRepositoryImpl() {
+//        createArduinoInfo("Test-ID", "127.0.0.1");
+//        createArduinoInfo("Test-ID2", "127.0.0.2");
+//    }
+
     public void createArduinoInfo(String id, String ipAddress) {
         arduinoInfo.put(id, ipAddress);
     }

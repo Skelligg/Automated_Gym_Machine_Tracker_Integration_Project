@@ -2,6 +2,44 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <body>
 <!-- fragments/navbar.html -->
+<div th:fragment="header">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+            <!-- Dropdown -->
+            <div class="dropdown">
+                <a class="navbar-brand dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    gym_name
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+            </div>
+
+            <!-- Navbar Links Next to Dropdown -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/GymOwner}">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/GymOwner/machines}">Machines</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/GymOwner/settings}">Settings</a>
+                    </li>-->
+                </ul>
+            </div>
+
+            <!-- Toggler for Small Screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</div>
+
 <div th:fragment="bottomNavbar">
     <nav class="navbar navbar-dark bg-dark navbar-expand fixed-bottom p-0">
         <div class="container-fluid d-flex justify-content-around align-items-center">
