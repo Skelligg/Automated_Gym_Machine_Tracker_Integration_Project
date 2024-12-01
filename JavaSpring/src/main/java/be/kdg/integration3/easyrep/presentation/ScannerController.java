@@ -2,8 +2,6 @@ package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.Gym;
 import be.kdg.integration3.easyrep.service.GymService;
-import be.kdg.integration3.easyrep.service.routines.MachineService;
-import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

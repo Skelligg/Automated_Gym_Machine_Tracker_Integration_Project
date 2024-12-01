@@ -9,13 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class MachineRepository {
-    private Logger logger = LoggerFactory.getLogger(MachineRepository.class);
+public class ExerciseRepository {
+    private Logger logger = LoggerFactory.getLogger(ExerciseRepository.class);
 
     private static List<Machine> machines = new ArrayList<Machine>();
 
     public Machine createMachine(Machine machine){
         machine.setMachineId(machines.size());
+        logger.info("Creating Machine with name: {}", machine.getMachineId());
         machines.add(machine);
         return machine;
     }

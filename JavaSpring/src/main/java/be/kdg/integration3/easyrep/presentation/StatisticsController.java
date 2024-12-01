@@ -1,9 +1,9 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
-import be.kdg.integration3.easyrep.model.sessions.RoutineSession;
+import be.kdg.integration3.easyrep.service.MachineService;
 import be.kdg.integration3.easyrep.service.StatisticsService;
-import be.kdg.integration3.easyrep.service.StatisticsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +12,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Controller
 @RequestMapping("/")
 public class StatisticsController {
     private final Logger logger = LoggerFactory.getLogger(StatisticsController.class);
-
+    private MachineService machineService;
     private final StatisticsService statisticsService;
 
     @Autowired
-    public StatisticsController(StatisticsService statisticsService) {
+    public StatisticsController(StatisticsService statisticsService, MachineService machineService) {
         this.statisticsService = statisticsService;
+        this.machineService = machineService;
     }
 
     @GetMapping("/GymGoer/statistics")
@@ -45,13 +45,16 @@ public class StatisticsController {
         return "redirect:/";
     }
 
-    @GetMapping("/GymOwner/machine_review")
-    public String getMachineReview(Model model) {
+    @GetMapping("/GymOwner/machines/machine_review")
+    public String getMachineReview(@RequestParam("idMachine") int idMachine, Model model) {
         logger.info("Get Mapping to a machine review");
         model.addAttribute("LocalDate", LocalDate.now());
         String lastMaintained = "12/08/2021"; // Example value, can be dynamic
         model.addAttribute("lastMainteinedDate", lastMaintained);
         logger.info("lastMainteinedDate: {}", lastMaintained);
+        Machine machine = machineService.findMachineById(idMachine);
+        logger.debug("View Machine: " + machine);
+        model.addAttribute("machine", machine);
 
         return "GymOwner/machine_review";
     }

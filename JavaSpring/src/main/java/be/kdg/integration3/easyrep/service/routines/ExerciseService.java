@@ -6,11 +6,12 @@ import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 
 import java.util.List;
 
-public interface MachineService {
+public interface ExerciseService {
 
     Machine createMachine(Machine machine);
     List<Machine> getAllMachines();
     void addMachine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino);
     void emptyMachines();
     List<Machine> findMachinesByNames(List<String> names);
+    Machine findMachineById(int id);
 }

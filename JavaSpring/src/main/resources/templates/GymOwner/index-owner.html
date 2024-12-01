@@ -9,39 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
-    <div class="container">
-        <!-- Dropdown -->
-        <div class="dropdown">
-            <a class="navbar-brand dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                gym_name
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Log Out</a></li>
-            </ul>
-        </div>
 
-        <!-- Navbar Links Next to Dropdown -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-5">
-                <li class="nav-item">
-                    <a class="nav-link me-5" href="#">Overview</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link me-5" href="#">Machines</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
-                </li>
-            </ul>
-        </div>
+<div th:insert="~{fragments/navbar :: header}">header</div>
 
-        <!-- Toggler for Small Screens -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</nav>
 
 <div class="container mt-4">
     <div class="row align-items-center">
