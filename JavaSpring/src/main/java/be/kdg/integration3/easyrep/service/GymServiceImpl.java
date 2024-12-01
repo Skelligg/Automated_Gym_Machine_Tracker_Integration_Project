@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class GymServiceImpl implements GymService {
-    private Logger logger = LoggerFactory.getLogger(SetServiceImpl.class);
+    private Logger logger = LoggerFactory.getLogger(GymServiceImpl.class);
     private GymRepository gymRepository;
 
     public GymServiceImpl(GymRepository gymRepository) {
