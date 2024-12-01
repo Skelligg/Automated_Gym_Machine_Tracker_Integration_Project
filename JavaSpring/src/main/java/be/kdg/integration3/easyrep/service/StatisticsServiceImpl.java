@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
-import be.kdg.integration3.easyrep.model.sessions.RoutineSession;
+import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.repository.StatisticsRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class StatisticsServiceImpl implements StatisticsService {
 
     @Override
     public void addRoutineSession(LocalDateTime startSession, LocalDateTime endSession, String status) {
-        RoutineSession rs = new RoutineSession(startSession,endSession,status);
+        Session rs = new Session(startSession,endSession,status);
     }
 
     @Override

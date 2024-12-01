@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.service.ArduinoService;
-import be.kdg.integration3.easyrep.service.MachineSetService;
+import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +18,12 @@ import org.springframework.web.client.RestTemplate;
 public class HomeController {
 
     private final Logger logger = LoggerFactory.getLogger(HomeController.class);
-    public MachineSetService machineSetService;
+    public ExerciseSetService exerciseSetService;
     public ArduinoService arduinoService;
 
     @Autowired
-    public HomeController(MachineSetService machineSetService, ArduinoService arduinoService) {
-        this.machineSetService = machineSetService;
+    public HomeController(ExerciseSetService exerciseSetService, ArduinoService arduinoService) {
+        this.exerciseSetService = exerciseSetService;
         this.arduinoService = arduinoService;
     }
 
@@ -39,7 +39,7 @@ public class HomeController {
         logger.debug("PostMapping received, trying to get you to /machineSets");
         logger.debug("Device id: {}",  deviceId);
 
-        machineSetService.emptyRepository();
+        exerciseSetService.emptyRepository();
 //
         logger.debug("Trying to access API C++");
         //Trigger the Arduino

@@ -2,7 +2,6 @@ package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.Arduino;
 import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import be.kdg.integration3.easyrep.repository.MachineRepository;
 import be.kdg.integration3.easyrep.repository.routines.ExerciseRepository;
 import be.kdg.integration3.easyrep.service.routines.RoutineServiceImpl;
@@ -29,19 +28,11 @@ public class MachineService{
         return machine;
     }
 
-    public void addMachine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino){
-        Machine machine = new Machine(name, imageAddress, machineSetId, arduino);
-        logger.info("Creating a machine {}", machine);
-        machineRepository.createMachine(machine);
-    }
-
-    //I don't understand why MachineSet is in Machine so i create the add Machine without it
     public void addMachine(String name, String imageAddress, Arduino arduino){
         Machine machine = new Machine(name, imageAddress, arduino);
         logger.info("Creating a machine {}", machine);
         machineRepository.createMachine(machine);
     }
-
 
     public List<Machine> getAllMachines() {
         return machineRepository.getMachines();

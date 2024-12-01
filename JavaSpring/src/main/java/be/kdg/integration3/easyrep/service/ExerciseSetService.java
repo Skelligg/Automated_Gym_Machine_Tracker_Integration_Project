@@ -4,7 +4,7 @@ import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 
 import java.util.List;
 
-public interface MachineSetService {
+public interface ExerciseSetService {
     //    Set addSet(LocalTime startTime, LocalTime endTime, int repCount);
     ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount);
 
@@ -12,6 +12,6 @@ public interface MachineSetService {
 
     void emptyRepository();
 
-    public List<ExerciseSet> getAllMachineSets();
+    public List<ExerciseSet> getAllExerciseSets();
 
 }

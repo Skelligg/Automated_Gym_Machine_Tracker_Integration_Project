@@ -1,8 +1,6 @@
 package be.kdg.integration3.easyrep.repository;
 
 import be.kdg.integration3.easyrep.model.Gym;
-import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

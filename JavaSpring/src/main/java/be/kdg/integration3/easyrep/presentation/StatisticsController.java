@@ -1,11 +1,9 @@
 package be.kdg.integration3.easyrep.presentation;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
-import be.kdg.integration3.easyrep.service.MachineSetService;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
 import be.kdg.integration3.easyrep.service.MachineService;
-import be.kdg.integration3.easyrep.service.StatisticsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +21,14 @@ import java.util.*;
 public class StatisticsController {
     private final Logger logger = LoggerFactory.getLogger(StatisticsController.class);
     private MachineService machineService;
-    private final MachineSetService machineSetService;
+    private final ExerciseSetService exerciseSetService;
 
 
 
     @Autowired
-    public StatisticsController(MachineSetService machineSetService, MachineService machineService) {
+    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService) {
         this.machineService = machineService;
-        this.machineSetService = machineSetService;
+        this.exerciseSetService = exerciseSetService;
     }
 
 
@@ -38,14 +36,14 @@ public class StatisticsController {
     @GetMapping("/GymGoer/statistics")
     public String getPlayerStatistics(Model model) {
         logger.info("Mapping the statistics from the gym");
-        List<MachineSet> statistics = machineSetService.getAllMachineSets();
+        List<ExerciseSet> statistics = exerciseSetService.getAllExerciseSets();
 
         logger.info("Gym goer statistics: {}", statistics);
         List<Map<String, Object>> volumeData = new ArrayList<>();
-        for (MachineSet machineSet : statistics) {
+        for (ExerciseSet exerciseSet : statistics) {
             Map<String, Object> volumeMap = new HashMap<>();
-            volumeMap.put("volume", machineSet.getRepCount() * machineSet.getWeightCount());
-            volumeMap.put("dateTime", machineSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
+            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
+            volumeMap.put("dateTime", exerciseSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
             volumeData.add(volumeMap);
         }
 
@@ -62,7 +60,7 @@ public class StatisticsController {
     public List<Map<String, Object>> getChartData(@PathVariable String chartType) {
         List<Map<String, Object>> chartData = new ArrayList<>();
 
-        for (MachineSet set : machineSetService.getAllMachineSets()) {
+        for (ExerciseSet set : exerciseSetService.getAllExerciseSets()) {
             Map<String, Object> dataPoint = new HashMap<>();
 
             dataPoint.put("dateTime", set.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));

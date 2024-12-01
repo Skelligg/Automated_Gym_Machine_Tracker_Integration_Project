@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class CompositeMachineSet implements DataProcessor{
+public class CompositeExerciseSet implements DataProcessor{
 
 
     List<DataProcessor> processors;

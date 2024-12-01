@@ -1,11 +1,15 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import java.time.LocalDateTime;
+
 public class ExerciseSet {
     private int setNumber;
     private int repCount;
     private double weightCount;
     private boolean isCompleted;
-    private String setTime; //make this a LocalTime
+    private String setTime; //make this a LocalTime]
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 
 //    public ExerciseSet(int setNumber, int setTime, double weightCount, int repCount) {
 //        this.setNumber = setNumber;
@@ -62,5 +66,21 @@ public class ExerciseSet {
 
     public void setCompleted(boolean completed) {
         isCompleted = completed;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
     }
 }

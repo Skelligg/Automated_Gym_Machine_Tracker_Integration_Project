@@ -1,8 +1,7 @@
 package be.kdg.integration3.easyrep.repository;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.model.sessions.PlayerStatisticsDTO;
-import be.kdg.integration3.easyrep.model.sessions.RoutineSession;
 import be.kdg.integration3.easyrep.model.sessions.Session;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -20,37 +19,37 @@ import java.util.List;
 public class StatisticsRepositoryImpl implements StatisticsRepository {
     private final Logger logger = LoggerFactory.getLogger(StatisticsRepositoryImpl.class);
 
-    public static List<MachineSet> machineSets = new ArrayList<MachineSet>();
+    public static List<ExerciseSet> machineSets = new ArrayList<ExerciseSet>();
 
 //    @PersistenceContext
 //    private EntityManager entityManager;
 
-    public static List<MachineSet> createDummyData() {
-        List<MachineSet> machineSets = new ArrayList<>();
+    public static List<ExerciseSet> createDummyData() {
+        List<ExerciseSet> machineSets = new ArrayList<>();
 
         // Add dummy data
-        machineSets.add(new MachineSet(12, 45.0,
-                LocalDateTime.of(2024, 12, 1, 9, 0),
-                LocalDateTime.of(2024, 12, 1, 9, 5)));
-        machineSets.add(new MachineSet(10, 50.0,
-                LocalDateTime.of(2024, 12, 3, 9, 10),
-                LocalDateTime.of(2024, 12, 3, 9, 15)));
-        machineSets.add(new MachineSet(15, 40.0,
-                LocalDateTime.of(2024, 12, 2, 9, 20),
-                LocalDateTime.of(2024, 12, 2, 9, 30)));
-        machineSets.add(new MachineSet(8, 60.0,
-                LocalDateTime.of(2024, 12, 4, 10, 0),
-                LocalDateTime.of(2024, 12, 4, 10, 10)));
-        machineSets.add(new MachineSet(20, 55.0,
-                LocalDateTime.of(2024, 12, 5, 11, 30),
-                LocalDateTime.of(2024, 12, 5, 11, 40)));
+//        machineSets.add(new ExerciseSet(12, 45.0,
+//                LocalDateTime.of(2024, 12, 1, 9, 0),
+//                LocalDateTime.of(2024, 12, 1, 9, 5)));
+//        machineSets.add(new ExerciseSet(10, 50.0,
+//                LocalDateTime.of(2024, 12, 3, 9, 10),
+//                LocalDateTime.of(2024, 12, 3, 9, 15)));
+//        machineSets.add(new ExerciseSet(15, 40.0,
+//                LocalDateTime.of(2024, 12, 2, 9, 20),
+//                LocalDateTime.of(2024, 12, 2, 9, 30)));
+//        machineSets.add(new ExerciseSet(8, 60.0,
+//                LocalDateTime.of(2024, 12, 4, 10, 0),
+//                LocalDateTime.of(2024, 12, 4, 10, 10)));
+//        machineSets.add(new ExerciseSet(20, 55.0,
+//                LocalDateTime.of(2024, 12, 5, 11, 30),
+//                LocalDateTime.of(2024, 12, 5, 11, 40)));
 
 
         return machineSets;
     }
 
     @Override
-    public List<MachineSet> getPlayerStatistics() {
+    public List<ExerciseSet> getPlayerStatistics() {
 
 
 //        String jpql ="""

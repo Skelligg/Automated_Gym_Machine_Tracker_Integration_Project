@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
-import be.kdg.integration3.easyrep.service.MachineSetService;
+import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,17 +20,17 @@ public class MachineSetController {
 
     private static Logger logger = LoggerFactory.getLogger(MachineSetController.class);
 
-    private MachineSetService machineSetService;
+    private ExerciseSetService exerciseSetService;
 
     @Autowired
-    public MachineSetController(MachineSetService machineSetService) {
-        this.machineSetService = machineSetService;
+    public MachineSetController(ExerciseSetService exerciseSetService) {
+        this.exerciseSetService = exerciseSetService;
     }
 
     @GetMapping
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
-        List<ExerciseSet> exerciseSets = machineSetService.getSets();
+        List<ExerciseSet> exerciseSets = exerciseSetService.getSets();
         logger.debug(exerciseSets.toString());
         model.addAttribute("machineSets", exerciseSets);
         return "GymGoer/sets";

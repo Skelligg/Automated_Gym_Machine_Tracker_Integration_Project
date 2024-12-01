@@ -1,8 +1,8 @@
 package be.kdg.integration3.easyrep.presentation;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 
-import be.kdg.integration3.easyrep.service.MachineSetService;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,17 +20,17 @@ import java.util.List;
 public class SessionEndController {
     private final Logger logger = LoggerFactory.getLogger(SessionEndController.class);
 
-    private final MachineSetService machineSetService;
+    private final ExerciseSetService exerciseSetService;
 
     @Autowired
-    public SessionEndController(MachineSetService machineSetService) {
-        this.machineSetService = machineSetService;
+    public SessionEndController(ExerciseSetService exerciseSetService) {
+        this.exerciseSetService = exerciseSetService;
     }
 
     @GetMapping("/session/end")
     public String getSessionEnd(Model model) {
         logger.info("Mapping the end screen");
-        List<MachineSet> statistics = machineSetService.getAllMachineSets();
+        List<ExerciseSet> statistics = exerciseSetService.getAllExerciseSets();
         logger.info("Found {} statistics", statistics);
         model.addAttribute("statistics", statistics);
         return "GymGoer/end_screen_session";

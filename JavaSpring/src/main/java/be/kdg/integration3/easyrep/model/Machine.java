@@ -1,26 +1,19 @@
 package be.kdg.integration3.easyrep.model;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 
 public class Machine {
     private int machineId;
     private String name;
     private MaintenanceAlarm alarm;
     private String imageAddress;
-    private MachineSet machineSetId;
     private Arduino arduino;
 
     public void alarmSet() {
         alarm.alarmSet();
     };
 
-    public Machine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino) {
-        this.name = name;
-        this.imageAddress = imageAddress;
-        this.machineSetId = machineSetId;
-        this.arduino = arduino;
-    }
-    public Machine(String name, String imageAddress,  Arduino arduino) {
+    public Machine(String name, String imageAddress, Arduino arduino) {
         this.name = name;
         this.imageAddress = imageAddress;
         this.arduino = arduino;
@@ -67,14 +60,6 @@ public class Machine {
 
     public void setImageAddress(String imageAddress) {
         this.imageAddress = imageAddress;
-    }
-
-    public MachineSet getSetId() {
-        return machineSetId;
-    }
-
-    public void setSetId(MachineSet machineSetId) {
-        this.machineSetId = machineSetId;
     }
 
     public Arduino getArduino() {

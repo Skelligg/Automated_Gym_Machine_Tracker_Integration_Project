@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.api.controller;
 
 
-import be.kdg.integration3.easyrep.service.MachineSetService;
+import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +15,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class SetControllerAPI {
 
     Logger logger = LoggerFactory.getLogger(SetControllerAPI.class);
-    private MachineSetService machineSetService;
+    private ExerciseSetService exerciseSetService;
 
     @Autowired
-    public SetControllerAPI(MachineSetService machineSetService) {
-        this.machineSetService = machineSetService;
+    public SetControllerAPI(ExerciseSetService exerciseSetService) {
+        this.exerciseSetService = exerciseSetService;
     }
 
     @GetMapping
     public void inputSet(@RequestParam int setNumber, @RequestParam String setTime, @RequestParam int repCount, @RequestParam float weightCount){
         logger.debug("Inputting values");
-        machineSetService.addSet(setNumber, setTime, repCount, weightCount);
+        exerciseSetService.addSet(setNumber, setTime, repCount, weightCount);
     }
 
 }

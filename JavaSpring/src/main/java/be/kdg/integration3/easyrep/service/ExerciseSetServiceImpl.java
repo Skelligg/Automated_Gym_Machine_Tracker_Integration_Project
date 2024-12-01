@@ -1,10 +1,10 @@
 package be.kdg.integration3.easyrep.service;
 
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
-import be.kdg.integration3.easyrep.repository.StatisticsRepository;
 import be.kdg.integration3.easyrep.repository.StatisticsRepositoryImpl;
+import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,12 +13,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MachineSetServiceImpl implements MachineSetService {
-    private Logger logger = LoggerFactory.getLogger(MachineSetServiceImpl.class);
+public class ExerciseSetServiceImpl implements ExerciseSetService {
+    private Logger logger = LoggerFactory.getLogger(ExerciseSetServiceImpl.class);
     private SetRepository setRepository;
     private DataProcessor dataProcessor;
 
-    public MachineSetServiceImpl(@Qualifier("compositeMachineSet") DataProcessor dataProcessor) {
+    public ExerciseSetServiceImpl(@Qualifier("compositeExerciseSet") DataProcessor dataProcessor) {
         logger.debug("Initializing Set Repository");
         this.dataProcessor = dataProcessor;
     }
@@ -29,14 +29,14 @@ public class MachineSetServiceImpl implements MachineSetService {
 //    }
 
     @Override
-    public MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount){
-        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount, weightCount);
-         dataProcessor.process(tempMachineSet);
-         return tempMachineSet;
+    public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
+        ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
+         dataProcessor.process(tempExerciseSet);
+         return tempExerciseSet;
     }
 
     @Override
-    public List<MachineSet> getSets(){
+    public List<ExerciseSet> getSets(){
         logger.debug("Getting sets");
         return setRepository.getSets();
     }
@@ -48,7 +48,7 @@ public class MachineSetServiceImpl implements MachineSetService {
     }
 
     @Override
-    public List<MachineSet> getAllMachineSets() {
+    public List<ExerciseSet> getAllExerciseSets() {
         return StatisticsRepositoryImpl.createDummyData();
     }
 

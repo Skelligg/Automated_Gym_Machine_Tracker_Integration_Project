@@ -1,7 +1,6 @@
 package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.Gym;
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
 
 import java.util.List;
 

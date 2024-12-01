@@ -1,8 +1,9 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.Routine;
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.Session;
-import be.kdg.integration3.easyrep.service.routines.MachineService;
+import be.kdg.integration3.easyrep.service.routines.ExerciseService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.session.SessionService;
 import org.slf4j.Logger;
@@ -22,12 +23,12 @@ public class SessionController {
 
         Logger logger = LoggerFactory.getLogger(SessionController.class);
         SessionService sessionService;
-        MachineService machineService;
+        ExerciseService exerciseService;
         RoutineService routineService;
 
-        public SessionController(SessionService sessionService, MachineService machineService, RoutineService routineService) {
+        public SessionController(SessionService sessionService, ExerciseService exerciseService, RoutineService routineService) {
             this.sessionService = sessionService;
-            this.machineService = machineService;
+            this.exerciseService = exerciseService;
             this.routineService = routineService;
         }
 
@@ -36,10 +37,10 @@ public class SessionController {
         public String getUserSession(@RequestParam("userRoutines") String routineName, Model model) {
             Routine routine = routineService.getRoutineByName(routineName);
             logger.info("Starting user session");
-            List<String> machineNames = routine.getMachines().getName();
+//            List<String> machineNames = routine.getMachines().getName();
             //create exercises here with the name of the machine ---
 
-            model.addAttribute("exercises", exercises);
+//            model.addAttribute("exercises", exercises);
             model.addAttribute("userSelectedRoutine", routine);
             model.addAttribute("session", new Session());
             return "session/session";
