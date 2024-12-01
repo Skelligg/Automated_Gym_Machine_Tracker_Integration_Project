@@ -70,7 +70,7 @@ public class RoutineController {
         routine.setMachines(machineService.findMachinesByNames(exerciseNames)); // Map exercises to machines
 
 
-        logger.info("{}", machineService.findMachinesByNames(exerciseNames).toString());
+        logger.info("!!The machines are {}", machineService.findMachinesByNames(exerciseNames).toString());
 
         // input routine in database
         routineService.createRoutine(routine);

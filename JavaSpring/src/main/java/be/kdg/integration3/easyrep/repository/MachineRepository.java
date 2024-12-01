@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class MachineRepository {
@@ -30,13 +31,9 @@ public class MachineRepository {
     }
 
     public List<Machine> findByNameIn(List<String> names) {
-        List<Machine> machines = new ArrayList<>();
-        for (Machine machine : machines) {
-            if (names.contains(machine.getName())) {
-                machines.add(machine);
-            }
-        }
-        return machines;
+        return machines.stream()
+                .filter(machine -> names.contains(machine.getName()))
+                .collect(Collectors.toList());
     }
 
     public Machine readMachine(int machineId) {

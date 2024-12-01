@@ -54,7 +54,14 @@ public class UserController {
         }
 
         // Redirect to user's home page if successful
-        return "redirect:/"+ userCheck.getUsername() +"/home";
+        if(userCheck.getUsername().contains("gymstaff")){
+            return "redirect:/GymOwner";
+
+        }
+        else{
+            return "redirect:/"+ userCheck.getUsername() +"/home";
+
+        }
     }
 
 

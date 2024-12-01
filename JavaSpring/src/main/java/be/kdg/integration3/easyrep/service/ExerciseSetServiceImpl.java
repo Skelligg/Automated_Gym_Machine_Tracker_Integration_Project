@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
+import be.kdg.integration3.easyrep.repository.SetRepositoryImpl;
 import be.kdg.integration3.easyrep.repository.StatisticsRepositoryImpl;
 import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
 import org.slf4j.Logger;
@@ -21,6 +22,7 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     public ExerciseSetServiceImpl(@Qualifier("compositeExerciseSet") DataProcessor dataProcessor) {
         logger.debug("Initializing Set Repository");
         this.dataProcessor = dataProcessor;
+        this.setRepository = new SetRepositoryImpl();
     }
 
 //    @Override

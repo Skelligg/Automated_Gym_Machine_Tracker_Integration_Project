@@ -22,9 +22,10 @@
         <h1 class="text-center mt-4">My Routines</h1>
 
         <div class="routine-list list-group my-3">
-
             <div class="routine-list list-group">
-                <a th:href="@{/activesession/usersession(userRoutines=${routine.getName()})}" th:each="routine : ${routines}" class="routine-item d-flex align-items-center bg-gradient rounded p-3 mb-3 text-decoration-none text-reset">
+                <a th:href="@{/activesession/startSession(userRoutines=${routine.getName()})}"
+                   th:each="routine : ${routines}"
+                   class="routine-item d-flex align-items-center bg-gradient rounded p-3 mb-3 text-decoration-none text-reset">
                     <div class="info w-100 d-flex justify-content-between">
                         <div class="name fw-bold fs-5" th:text="${routine.getName()}">Chest Day</div>
                         <div class="view-arrow">
@@ -33,7 +34,6 @@
                     </div>
                 </a>
             </div>
-
         </div>
 
         <div class="text-center mt-4">

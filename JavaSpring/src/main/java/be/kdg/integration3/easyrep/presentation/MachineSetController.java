@@ -33,6 +33,6 @@ public class MachineSetController {
         List<ExerciseSet> exerciseSets = exerciseSetService.getSets();
         logger.debug(exerciseSets.toString());
         model.addAttribute("machineSets", exerciseSets);
-        return "GymGoer/sets";
+        return "session/session";
     }
 }

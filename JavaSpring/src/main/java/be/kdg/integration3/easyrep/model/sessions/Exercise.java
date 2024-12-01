@@ -14,6 +14,7 @@ public class Exercise {
         this.previousSet = previousSet;
     }
 
+
     public Exercise(String name) {
         this.name = name;
     }

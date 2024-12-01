@@ -1,8 +1,11 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.model.sessions.Session;
+import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.service.routines.ExerciseService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.session.SessionService;
@@ -11,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -21,73 +25,79 @@ import java.util.List;
 @RequestMapping("/activesession")
 public class SessionController {
 
-        Logger logger = LoggerFactory.getLogger(SessionController.class);
-        SessionService sessionService;
-        ExerciseService exerciseService;
-        RoutineService routineService;
+    Logger logger = LoggerFactory.getLogger(SessionController.class);
+    private final SessionService sessionService;
+    private final ExerciseSetService exerciseSetService;
+    private final RoutineService routineService;
 
-        public SessionController(SessionService sessionService, ExerciseService exerciseService, RoutineService routineService) {
-            this.sessionService = sessionService;
-            this.exerciseService = exerciseService;
-            this.routineService = routineService;
+    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService) {
+        this.sessionService = sessionService;
+        this.exerciseSetService = exerciseSetService;
+        this.routineService = routineService;
+    }
+
+    @GetMapping("/startSession")
+    public String startSession(@RequestParam("userRoutines") String routineName, Model model) {
+        // Fetch the routine by name
+        Routine routine = routineService.getRoutineByName(routineName);
+        logger.info("Starting session for routine: " + routineName);
+
+        // Map machines to exercises
+        List<Exercise> exercises = new ArrayList<>();
+        for (Machine machine : routine.getMachines()) {
+            logger.debug(machine.toString());
+            exercises.add(new Exercise(machine.getName()));
         }
 
+        // Create and save the session
+        Session session = new Session();
+        session.setExercises(exercises);
+        session.setId(1);
+        sessionService.createSession(session);
 
-        @GetMapping("/usersession")
-        public String getUserSession(@RequestParam("userRoutines") String routineName, Model model) {
-            Routine routine = routineService.getRoutineByName(routineName);
-            logger.info("Starting user session");
-//            List<String> machineNames = routine.getMachines().getName();
-            //create exercises here with the name of the machine ---
+        // Redirect to the first exercise
+        int sessionId = session.getId();
+        return "redirect:/activesession/nextExercise?sessionId=" + sessionId + "&exerciseIndex=-1";
+    }
 
-//            model.addAttribute("exercises", exercises);
-            model.addAttribute("userSelectedRoutine", routine);
-            model.addAttribute("session", new Session());
-            return "session/session";
-        }
+    @GetMapping("/nextExercise")
+    public String getNextExercise(@RequestParam("sessionId") int sessionId,
+                                  @RequestParam("exerciseIndex") int exerciseIndex,
+                                  Model model) {
+        // Fetch the session by ID
+        Session session = sessionService.getSessionById(sessionId);
+        exerciseIndex++;
 
+        // Get the current exercise
+        Exercise currentExercise = session.getExercises().get(exerciseIndex);
 
-//        //adding this so every exercise will log the sets
-//        @PostMapping("/usersession")
-//        public String postUserSession(@RequestParam("userRoutines") String routineName, Session session, Model model) {
-//
-//        }
+        // Add attributes to the model
+        model.addAttribute("exercise", currentExercise);
+        model.addAttribute("sessionId", sessionId);
+        model.addAttribute("sessionSize", session.getExercises().size());
+        model.addAttribute("exerciseIndex", exerciseIndex);
 
-//    @GetMapping("/usersession")
-//    public String getUserSession(@RequestParam("userRoutines") String routineName,
-//                                 @RequestParam(value = "index", defaultValue = "0") int currentExerciseIndex,
-//                                 Model model) {
-//        Routine routine = routineService.getRoutineByName(routineName);
-//        logger.info("Starting user session");
-//
-//        // Make sure the current exercise index is passed to the view
-//        model.addAttribute("userSelectedRoutine", routine);
-//        model.addAttribute("currentExerciseIndex", currentExerciseIndex);
-//        model.addAttribute("session", new Session());
-//
-//        return "session/session";
-//    }
-//
-//    @PostMapping("/usersession")
-//    public String postUserSession(@RequestParam("userRoutines") String routineName,
-//                                  @RequestParam(value = "index", defaultValue = "0") int currentExerciseIndex,
-//                                  Session session, Model model) {
-//        // Handle saving the session data (e.g., sets, weights, reps, etc.)
-//        sessionService.createSession(session);
-//
-//        // Proceed to the next exercise
-//        currentExerciseIndex++;  // Increment the exercise index
-//        Routine routine = routineService.getRoutineByName(routineName);
-//        model.addAttribute("userSelectedRoutine", routine);
-//        model.addAttribute("currentExerciseIndex", currentExerciseIndex);
-//        model.addAttribute("session", session);
-//
-//        return "session/session";  // Render the same page with updated exercise
-//    }
+        return "GymGoer/currentExercise";
+    }
 
+    @GetMapping("/end")
+    public String getSessionEnd(@RequestParam("sessionId") int sessionId,Model model) {
+        logger.info("Mapping the end screen");
+        List<ExerciseSet> statistics = exerciseSetService.getAllExerciseSets();
+        logger.info("Found {} statistics", statistics);
+        model.addAttribute("statistics", statistics);
+        return "GymGoer/end_screen_session";
+    }
 
-
-
-
-
+    @PostMapping("/GymGoer/statistics/open")
+    public String getStatistics(){
+        logger.info("Mapping the statistics screen");
+        return "redirect:GymGoer/statistics";
+    }
 }
+
+
+
+
+
+

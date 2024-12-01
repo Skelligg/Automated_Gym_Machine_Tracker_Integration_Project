@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.repository.routines;
 
-import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class ExerciseRepository {
         exercises.add(new Exercise("unilateral jerk"));
     }
 
-    public void createMachine(Exercise exercise){
+    public void createExercise(Exercise exercise){
         exercises.add(exercise);
     }
 
@@ -30,19 +30,19 @@ public class ExerciseRepository {
         return exercises;
     }
     
-    public void emptyMachines() {
+    public void emptyExercises() {
         exercises.clear();
     }
 
     public List<Exercise> findByNameIn(List<String> names) {
         log.info("trying to find the machines {}", names);
-        List<Exercise> findingMachines = new ArrayList<>();
+        List<Exercise> findingExercises = new ArrayList<>();
         for (Exercise exercise : exercises) {
             if (names.contains(exercise.getName())) {
-                findingMachines.add(exercise);
+                findingExercises.add(exercise);
             }
         }
-        return findingMachines;
+        return findingExercises;
     }
 
 }

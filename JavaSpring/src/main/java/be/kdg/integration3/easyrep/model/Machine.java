@@ -70,4 +70,11 @@ public class Machine {
         this.arduino = arduino;
     }
 
+    @Override
+    public String toString() {
+        return "Machine{" +
+                "machineId=" + machineId +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
