@@ -20,22 +20,23 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
         <div class="col " th:each="machine : ${machines}">
-            <!-- <a href="Machines/detailMachine.html" th:href="@{/Machines/detailMachine(idMac=${machine.getMachineId()})}" class="text-decoration-none">-->
+            <a href="detailMachine.html" th:href="@{/machines/detailMachine(idMachine=${machine.getMachineId()})}" class="text-decoration-none">
                 <div class="card h-100 shadow-sm rounded text-center">
                     <img th:src="${machine.getImageAddress()}" class="card-img-top" alt="machine image">
                     <div class="card-body">
                         <h5 class="card-title"  th:text="${machine.getName()}">Machine</h5>
                     </div>
                 </div>
+            </a>
         </div>
         </div>
 
-        <div class="text-center mt-4">
+        <!--<div class="text-center mt-4">
             <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
                th:href="@{/machines/add}">
                 + Add Machine
             </a>
-        </div>
+        </div>-->
     </div>
 
 
