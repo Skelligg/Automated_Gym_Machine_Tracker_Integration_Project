@@ -1,13 +1,13 @@
 package be.kdg.integration3.easyrep.repository;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 
 import java.util.List;
 
 public interface SetRepository {
-    MachineSet createSet(MachineSet machineSet);
+    ExerciseSet createSet(ExerciseSet exerciseSet);
 
-    List<MachineSet> getSets();
+    List<ExerciseSet> getSets();
 
     void emptyList();
 }

@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.service.routines;
 
 import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.repository.routines.MachineRepository;
+import be.kdg.integration3.easyrep.repository.routines.ExerciseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -12,32 +12,32 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService {
 
     Logger logger = LoggerFactory.getLogger(RoutineServiceImpl.class);
-    private MachineRepository machineRepository;
+    private ExerciseRepository exerciseRepository;
 
 
-    public MachineServiceImpl(MachineRepository machineRepository) {
-        this.machineRepository = machineRepository;
+    public MachineServiceImpl(ExerciseRepository exerciseRepository) {
+        this.exerciseRepository = exerciseRepository;
     }
 
     @Override
     public Machine createMachine(Machine machine) {
-        machineRepository.createMachine(machine);
+        exerciseRepository.createMachine(machine);
         return machine;
     }
 
     @Override
     public List<Machine> getAllMachines() {
-        return machineRepository.getMachines();
+        return exerciseRepository.getMachines();
     }
 
     @Override
     public void emptyRoutines() {
-        machineRepository.emptyMachines();
+        exerciseRepository.emptyMachines();
     }
 
     @Override
     public List<Machine> findMachinesByNames(List<String> names) {
-        return machineRepository.findByNameIn(names); // Assuming JPA repository
+        return exerciseRepository.findByNameIn(names); // Assuming JPA repository
     }
 
 

@@ -1,24 +1,24 @@
 package be.kdg.integration3.easyrep.model;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 
 public class Machine {
     private int machineId;
     private String name;
     private MaintenanceAlarm alarm;
     private String imageAddress;
-    private MachineSet machineSetId;
+    private ExerciseSet exerciseSetId;
     private Arduino arduino;
 
     public void alarmSet() {
         alarm.alarmSet();
     };
 
-    public Machine(int machineId, String name, String imageAddress, MachineSet machineSetId, Arduino arduino) {
+    public Machine(int machineId, String name, String imageAddress, ExerciseSet exerciseSetId, Arduino arduino) {
         this.machineId = machineId;
         this.name = name;
         this.imageAddress = imageAddress;
-        this.machineSetId = machineSetId;
+        this.exerciseSetId = exerciseSetId;
         this.arduino = arduino;
     }
 
@@ -60,12 +60,12 @@ public class Machine {
         this.imageAddress = imageAddress;
     }
 
-    public MachineSet getSetId() {
-        return machineSetId;
+    public ExerciseSet getSetId() {
+        return exerciseSetId;
     }
 
-    public void setSetId(MachineSet machineSetId) {
-        this.machineSetId = machineSetId;
+    public void setSetId(ExerciseSet exerciseSetId) {
+        this.exerciseSetId = exerciseSetId;
     }
 
     public Arduino getArduino() {
@@ -76,4 +76,15 @@ public class Machine {
         this.arduino = arduino;
     }
 
+    @Override
+    public String toString() {
+        return "Machine{" +
+                "machineId=" + machineId +
+                ", name='" + name + '\'' +
+                ", alarm=" + alarm +
+                ", imageAddress='" + imageAddress + '\'' +
+                ", exerciseSetId=" + exerciseSetId +
+                ", arduino=" + arduino +
+                '}';
+    }
 }

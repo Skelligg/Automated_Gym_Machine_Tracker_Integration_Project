@@ -40,4 +40,14 @@ public class Routine {
     public void setMachines(List<Machine> machines) {
         this.machines = machines;
     }
+
+
+    @Override
+    public String toString() {
+        return "Routine{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", machines=" + machines +
+                '}';
+    }
 }

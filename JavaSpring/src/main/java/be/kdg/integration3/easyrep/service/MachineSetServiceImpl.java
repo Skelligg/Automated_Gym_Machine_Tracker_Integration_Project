@@ -1,7 +1,7 @@
 package be.kdg.integration3.easyrep.service;
 
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
 import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
 import org.slf4j.Logger;
@@ -28,14 +28,14 @@ public class MachineSetServiceImpl implements MachineSetService {
 //    }
 
     @Override
-    public MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount){
-        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount, weightCount);
-         dataProcessor.process(tempMachineSet);
-         return tempMachineSet;
+    public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
+        ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
+         dataProcessor.process(tempExerciseSet);
+         return tempExerciseSet;
     }
 
     @Override
-    public List<MachineSet> getSets(){
+    public List<ExerciseSet> getSets(){
         logger.debug("Getting sets");
         return setRepository.getSets();
     }

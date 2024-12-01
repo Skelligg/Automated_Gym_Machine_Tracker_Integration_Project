@@ -1,22 +1,23 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
-public class MachineSet {
+public class ExerciseSet {
     private int setNumber;
-    private int id; //does set need an ID?
-    private String setTime; //make this a LocalTime
     private int repCount;
     private double weightCount;
-    private String previousSet;
+    private boolean isCompleted;
+    private String setTime; //make this a LocalTime
 
-//    public MachineSet(int setNumber, int setTime, double weightCount, int repCount) {
+//    public ExerciseSet(int setNumber, int setTime, double weightCount, int repCount) {
 //        this.setNumber = setNumber;
 //        this.setTime = setTime;
 //        this.weightCount = weightCount;
 //        this.repCount = repCount;
 //    }
 
+    public ExerciseSet(){}
 
-    public MachineSet(int setNumber, String setTime, int repCount, double weightCount) {
+
+    public ExerciseSet(int setNumber, String setTime, int repCount, double weightCount) {
         this.setNumber = setNumber;
         this.setTime = setTime;
         this.repCount = repCount;
@@ -47,10 +48,6 @@ public class MachineSet {
         this.repCount = repCount;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public double getWeightCount() {
         return weightCount;
     }
@@ -59,15 +56,11 @@ public class MachineSet {
         this.weightCount = weightCount;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public boolean isCompleted() {
+        return isCompleted;
     }
 
-    public String getPreviousSet() {
-        return previousSet;
-    }
-
-    public void setPreviousSet(String previousSet) {
-        this.previousSet = previousSet;
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
     }
 }

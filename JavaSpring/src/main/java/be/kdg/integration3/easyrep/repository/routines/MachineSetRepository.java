@@ -1,7 +1,6 @@
 package be.kdg.integration3.easyrep.repository.routines;
 
-import be.kdg.integration3.easyrep.model.Machine;
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -14,27 +13,27 @@ import java.util.List;
 public class MachineSetRepository {
 
     Logger logger = LoggerFactory.getLogger(MachineSetRepository.class.getName());
-    List<MachineSet> machineSets = new ArrayList<MachineSet>();
+    List<ExerciseSet> exerciseSets = new ArrayList<ExerciseSet>();
 
 
-    public MachineSet createMachineSet(MachineSet machineSet) {
-        machineSets.add(machineSet);
-        return machineSet;
+    public ExerciseSet createMachineSet(ExerciseSet exerciseSet) {
+        exerciseSets.add(exerciseSet);
+        return exerciseSet;
     }
 
-    public List<MachineSet> getMachineSets() {
-        return machineSets;
+    public List<ExerciseSet> getMachineSets() {
+        return exerciseSets;
     }
 
     public void emptyMachines() {
-        machineSets.clear();
+        exerciseSets.clear();
     }
 
-    public List<MachineSet> getMachineSetsById(int id) {
-        List<MachineSet> filteredById = new ArrayList<>();
-        for (MachineSet machineSet : machineSets) {
-            if(machineSet.getId() == id){
-                filteredById.add(machineSet);
+    public List<ExerciseSet> getMachineSetsById(int id) {
+        List<ExerciseSet> filteredById = new ArrayList<>();
+        for (ExerciseSet exerciseSet : exerciseSets) {
+            if(exerciseSet.getId() == id){
+                filteredById.add(exerciseSet);
             }
         }
         return filteredById;

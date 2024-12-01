@@ -14,60 +14,62 @@
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossorigin="anonymous"></script>
 </head>
-<body>
+<body th:object="${userSelectedRoutine}">
 
 <!-- Wrapper to center the content with limited width -->
 <div class="container-fluid">
   <div class="container col-xxl-6 col-xl-8 col-lg-10 col-md-12 mx-auto">
-    <h1 class="text-center mt-4">Today's Session</h1>
+    <h1 class="text-center mt-4" th:text="${userSelectedRoutine.name}">Today's Session</h1>
 
-    <div class="routine-list list-group my-3">
-      <!-- Routine Items -->
-      <div class="routine-list list-group">
-        <!-- Each Routine -->
-        <a th:href="@{/activesession}"
-           class="routine-item d-flex align-items-center bg-gradient rounded p-3 mb-3 text-decoration-none text-reset"
-           th:each="routine : ${routines}">
-          <div class="info w-100 d-flex justify-content-between">
-            <div class="name fw-bold fs-5" th:text="${routine.getName()}">Chest Day</div>
-          </div>
-        </a>
+    <!-- List of Exercises in the Routine -->
+    <div class="exercise-list my-4">
+      <div th:each="exercise, exerciseStat : ${userSelectedRoutine.getMachines()}">
+        <!-- Exercise Header -->
+        <div class="bg-secondary exercise-header d-flex justify-content-between align-items-center bg-light text-dark p-3 rounded mt-3">
+          <h3 th:text="${exercise.name}">Exercise Name</h3>
+<!--          <button class="btn btn-success btn-sm" onclick="addSet(this, [[${exerciseStat.index}]])">+ Add Set</button>-->
+        </div>
 
-        <!-- Machine Sets for Each Routine -->
-        <div class="machine-sets">
-          <!-- Header Row -->
-          <div class="set-header d-flex justify-content-between fw-bold mt-2">
+        <!-- Sets for the Exercise -->
+        <div class="set-list mt-2">
+          <div class="set-header d-flex justify-content-between fw-bold">
             <span>#</span>
-            <span>Previous</span>
             <span>Kg</span>
             <span>Reps</span>
-            <span>Complete</span>
+<!--            <span>Complete</span>-->
           </div>
-          <!-- Each Machine Set -->
+
+          <!-- Set Items -->
           <div class="set-item d-flex justify-content-between align-items-center mt-1"
-               th:each="set, iterStat : ${session.machineSets}">
+               th:each="exerciseSet, iterStat : ${session}">
             <span th:text="${iterStat.count}">1</span>
-            <span th:text="${set.previous}">50kg x 8 reps</span>
-            <span th:text="${set.kg}">50</span>
-            <span th:text="${set.reps}">8</span>
-            <input type="checkbox" th:checked="${set.completed}" />
+            <span th:text="${exerciseSet.getWeight}">50</span>
+            <span th:text="${exerciseSet.getWeightCount}">8</span>
+<!--            <label>-->
+<!--              <input type="checkbox" th:checked="${exerciseSet.isCompleted}" />-->
+<!--            </label>-->
           </div>
+
+
         </div>
       </div>
     </div>
 
-    <!-- Add Routine Button -->
+    <!-- Add Exercise Button -->
     <div class="text-center mt-4">
-      <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
-         th:href="@{/myroutines/add}">
-        + Add Routine
+      <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none d-inline-flex align-items-center"
+         th:href="@{/myroutines/addExercise}">
+        Next Exercise
+        <i class="fas fa-arrow-right ms-2"></i>
       </a>
     </div>
+
   </div>
 </div>
 
 <!-- Navbar Fragment -->
 <div th:insert="~{fragments/navbar :: bottomNavbar}"></div>
+
 
 </body>
 </html>

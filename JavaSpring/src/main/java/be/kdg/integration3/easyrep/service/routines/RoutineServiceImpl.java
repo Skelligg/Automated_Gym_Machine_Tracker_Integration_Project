@@ -34,4 +34,11 @@ public class RoutineServiceImpl implements RoutineService {
     public void emptyRoutines() {
         routineRepository.emptyRoutines();
     }
+
+
+    @Override
+    public Routine getRoutineByName(String name) {
+        logger.info("in service getting routine repo");
+        return routineRepository.getRoutineByName(name);
+    }
 }

@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.service.MachineSetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,9 +30,9 @@ public class MachineSetController {
     @GetMapping
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
-        List<MachineSet> machineSets = machineSetService.getSets();
-        logger.debug(machineSets.toString());
-        model.addAttribute("machineSets", machineSets);
+        List<ExerciseSet> exerciseSets = machineSetService.getSets();
+        logger.debug(exerciseSets.toString());
+        model.addAttribute("machineSets", exerciseSets);
         return "GymGoer/sets";
     }
 }

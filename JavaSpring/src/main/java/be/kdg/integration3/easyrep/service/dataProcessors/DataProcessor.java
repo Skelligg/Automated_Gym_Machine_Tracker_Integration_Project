@@ -1,10 +1,10 @@
 package be.kdg.integration3.easyrep.service.dataProcessors;
 
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 
 public interface DataProcessor {
 
-    void process(MachineSet machineSet);
+    void process(ExerciseSet exerciseSet);
 
 }

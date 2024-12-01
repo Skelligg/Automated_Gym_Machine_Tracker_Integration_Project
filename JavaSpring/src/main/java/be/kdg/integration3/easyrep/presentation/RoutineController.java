@@ -61,14 +61,18 @@ public class RoutineController {
 
         logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
 
-
         Routine routine = new Routine();
         //this line below will query the routines database asking for the nextID
         int routineId = 1;
         routine.setName(routineName);
+
+        //it's not finding the machines
         routine.setMachines(machineService.findMachinesByNames(exerciseNames)); // Map exercises to machines
 
-        // stop routine in database
+
+        logger.info("{}", machineService.findMachinesByNames(exerciseNames).toString());
+
+        // input routine in database
         routineService.createRoutine(routine);
 
         return "redirect:/myroutines";

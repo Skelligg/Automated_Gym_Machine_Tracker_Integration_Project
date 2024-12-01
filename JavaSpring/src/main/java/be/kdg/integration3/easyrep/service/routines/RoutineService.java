@@ -15,4 +15,5 @@ public interface RoutineService {
 
     void emptyRoutines();
 
+    Routine getRoutineByName(String name);
 }

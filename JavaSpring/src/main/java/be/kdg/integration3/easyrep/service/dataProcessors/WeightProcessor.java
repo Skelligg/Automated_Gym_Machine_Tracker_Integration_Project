@@ -1,21 +1,21 @@
 package be.kdg.integration3.easyrep.service.dataProcessors;
 
-import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import org.springframework.stereotype.Component;
 
 @Component
 public class WeightProcessor implements DataProcessor {
 
     @Override
-    public void process(MachineSet machineSet) {
+    public void process(ExerciseSet exerciseSet) {
         // Convert weight from grams to kilograms
-        double weightInKg = machineSet.getWeightCount() / 1000.0;
+        double weightInKg = exerciseSet.getWeightCount() / 1000.0;
 
         // Round to the nearest 0.25
         double roundedWeight = roundToNearestQuarter(weightInKg);
 
-        // Set the rounded weight back to the machineSet object
-        machineSet.setWeightCount(roundedWeight);
+        // Set the rounded weight back to the exerciseSet object
+        exerciseSet.setWeightCount(roundedWeight);
     }
 
     /**
