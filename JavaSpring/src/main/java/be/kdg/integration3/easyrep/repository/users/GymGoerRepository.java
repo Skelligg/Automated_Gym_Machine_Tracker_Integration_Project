@@ -10,4 +10,6 @@ public interface GymGoerRepository {
     GymGoer findByUserId(int userId);
 
     List<GymGoer> findAll();
+
+    void deleteGymGoer(GymGoer gymGoer);
 }

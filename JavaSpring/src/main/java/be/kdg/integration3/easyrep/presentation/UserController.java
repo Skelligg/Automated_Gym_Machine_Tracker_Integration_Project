@@ -40,30 +40,46 @@ public class UserController {
             return "users/login";
         }
 
-        // Search by username or email
-        UserCredentials userCheck = userService.getUserCredentialsByUsernameOrEmail(user.getUsernameOrEmail());
+        // Call the service for login validation and get the redirection path
+        String redirectPath = userService.attemptLogIn(user, br);
 
-        if (userCheck == null) {
-            br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
+        if (br.hasErrors()) {
             return "users/login";
         }
 
-        if (!userCheck.getPassword().equals(user.getPassword())) { // Check the password
-            br.rejectValue("password", "password.incorrect", "Incorrect password");
-            return "users/login";
-        }
-
-        // Redirect to user's home page if successful
-        if(userCheck.getUsername().contains("gymstaff")){
-            return "redirect:/GymOwner";
-
-        }
-        else{
-            return "redirect:/"+ userCheck.getUsername() +"/home";
-
-        }
+        return redirectPath; // Redirect if successful
     }
 
+
+//    @PostMapping("/login")
+//    public String attemptLogIn(@Valid @ModelAttribute("user") UserLogin user, BindingResult br, Model model) {
+//        if (br.hasErrors()) {
+//            return "users/login";
+//        }
+//
+//        // Search by username or email
+//        UserCredentials userCheck = userService.getUserCredentialsByUsernameOrEmail(user.getUsernameOrEmail());
+//
+//        if (userCheck == null) {
+//            br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
+//            return "users/login";
+//        }
+//
+//        if (!userCheck.getPassword().equals(user.getPassword())) { // Check the password
+//            br.rejectValue("password", "password.incorrect", "Incorrect password");
+//            return "users/login";
+//        }
+//
+//        // Redirect to user's home page if successful
+//        if(userCheck.getUsername().contains("gymstaff")){
+//            return "redirect:/GymOwner";
+//
+//        }
+//        else{
+//            return "redirect:/"+ userCheck.getUsername() +"/home";
+//
+//        }
+//    }
 
 
     @GetMapping("/userdetails")
@@ -94,7 +110,6 @@ public class UserController {
     }
 
 
-
     @PostMapping("/register")
     public String processRegistration(
             @Valid @ModelAttribute("userCred") UserCredentialsViewModel userCred,
@@ -123,10 +138,10 @@ public class UserController {
             return "users/register";
         }
 
-        logger.debug("Usercred : {}",userCred);
+        logger.debug("Usercred : {}", userCred);
 
-        userService.addGymGoer(new GymGoer(gymgoer.getFirstName(),gymgoer.getFirstName(),gymgoer.getGender(),gymgoer.getAddress()));
-        userService.addUserCredentials(new UserCredentials(userCred.getUsername(),userCred.getPassword(),userCred.getEmail(), LocalDate.now()));
+        userService.addGymGoer(new GymGoer(gymgoer.getFirstName(), gymgoer.getFirstName(), gymgoer.getGender(), gymgoer.getAddress()));
+        userService.addUserCredentials(new UserCredentials(userCred.getUsername(), userCred.getPassword(), userCred.getEmail(), LocalDate.now()));
 
         // Process the registration (e.g., save to database)
         // Redirect to success page or login
@@ -134,17 +149,14 @@ public class UserController {
     }
 
 
-
     @GetMapping("/{id}/user")
     public GymGoer getGymGoer(@PathVariable int id) {
         return userService.getGymGoerByUserId(id);
     }
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+

@@ -1,7 +1,6 @@
 package be.kdg.integration3.easyrep.service.session;
 
 
-import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.repository.session.SessionRepository;
 import org.slf4j.Logger;
@@ -22,18 +21,13 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     public Session createSession(Session session) {
-        sessionRepository.createSession(session);
+        sessionRepository.saveSession(session);
         return session;
     }
 
     @Override
     public List<Session> getAllSessions() {
         return sessionRepository.getAllSessions();
-    }
-
-    @Override
-    public void emptyRoutines() {
-        sessionRepository.emptySessions();
     }
 
 

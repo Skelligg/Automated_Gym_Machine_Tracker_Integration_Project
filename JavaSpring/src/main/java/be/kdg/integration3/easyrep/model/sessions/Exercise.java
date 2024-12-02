@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.model.sessions;
 import java.util.List;
 
 public class Exercise {
+    private int id;
     private String name;
     private List<ExerciseSet> sets;
     private String previousSet;
@@ -17,6 +18,14 @@ public class Exercise {
 
     public Exercise(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

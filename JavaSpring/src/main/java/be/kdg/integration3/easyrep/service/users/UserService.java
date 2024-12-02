@@ -3,6 +3,8 @@ package be.kdg.integration3.easyrep.service.users;
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.GymStaff;
 import be.kdg.integration3.easyrep.model.UserCredentials;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
+import org.springframework.validation.BindingResult;
 
 public interface UserService {
     // Add a new user
@@ -22,4 +24,8 @@ public interface UserService {
 
     // Find gym goer by user ID
     GymGoer getGymGoerByUserId(int userId);
+
+    String attemptLogIn(UserLogin user, BindingResult br);
 }
+
+

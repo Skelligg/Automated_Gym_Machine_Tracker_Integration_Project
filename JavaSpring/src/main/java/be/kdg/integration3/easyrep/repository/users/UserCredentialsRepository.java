@@ -10,4 +10,8 @@ public interface UserCredentialsRepository {
     UserCredentials findByUsernameOrEmail(String usernameOrEmail);
 
     List<UserCredentials> findAll();
+
+    UserCredentials findUserById(int id);
+
+    void deleteUserCredentials(UserCredentials userCredentials);
 }
