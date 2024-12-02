@@ -1,45 +1,64 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import jakarta.persistence.*;
+
 import java.util.List;
 
+@Entity
+@Table(name = "EXERCISE")
 public class Exercise {
-    private String name;
-    private List<ExerciseSet> sets;
-    private String previousSet;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int exerciseId;
+    @OneToMany
+    private List<ExerciseSet> exerciseSetId;
+    @Column(nullable = false, length = 50)
+    private String exerciseName;
 
-
-    public Exercise(String name, List<ExerciseSet> sets, String previousSet) {
-        this.name = name;
-        this.sets = sets;
-        this.previousSet = previousSet;
+    public Exercise() {
     }
 
-
-    public Exercise(String name) {
-        this.name = name;
+    public Exercise(int exerciseId, List<ExerciseSet> exerciseSetId, String exerciseName) {
+        this.exerciseId = exerciseId;
+        this.exerciseSetId = exerciseSetId;
+        this.exerciseName = exerciseName;
     }
 
-    public String getName() {
-        return name;
+    public Exercise(List<ExerciseSet> exerciseSetId, String exerciseName) {
+        this.exerciseSetId = exerciseSetId;
+        this.exerciseName = exerciseName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getExerciseId() {
+        return exerciseId;
     }
 
-    public List<ExerciseSet> getSets() {
-        return sets;
+    public void setExerciseId(int exerciseId) {
+        this.exerciseId = exerciseId;
     }
 
-    public void setSets(List<ExerciseSet> sets) {
-        this.sets = sets;
+    public List<ExerciseSet> getExerciseSetId() {
+        return exerciseSetId;
     }
 
-    public String getPreviousSet() {
-        return previousSet;
+    public void setExerciseSetId(List<ExerciseSet> exerciseSetId) {
+        this.exerciseSetId = exerciseSetId;
     }
 
-    public void setPreviousSet(String previousSet) {
-        this.previousSet = previousSet;
+    public String getExerciseName() {
+        return exerciseName;
+    }
+
+    public void setExerciseName(String exerciseName) {
+        this.exerciseName = exerciseName;
+    }
+
+    @Override
+    public String toString() {
+        return "Exercise{" +
+                "exerciseId=" + exerciseId +
+                ", exerciseSetId=" + exerciseSetId +
+                ", exerciseName='" + exerciseName + '\'' +
+                '}';
     }
 }

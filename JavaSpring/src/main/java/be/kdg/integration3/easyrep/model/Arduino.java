@@ -1,8 +1,19 @@
 package be.kdg.integration3.easyrep.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "ARDUINO")
 public class Arduino {
-    private String ipAddress;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false, length = 20)
+    private String ipAddress;
+
+    public Arduino() {
+    }
 
     public Arduino(String ipAddress, int id) {
         this.ipAddress = ipAddress;

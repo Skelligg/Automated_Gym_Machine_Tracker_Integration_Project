@@ -1,14 +1,24 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "SESSION")
 public class Session {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false)
     private LocalDateTime startSession;
+    @Column(nullable = false)
     private LocalDateTime endSession;
+    @Column(nullable = false)
     private String status;
+    @OneToMany
     private List<Exercise> exercises = new ArrayList<>();
 
     public Session() {

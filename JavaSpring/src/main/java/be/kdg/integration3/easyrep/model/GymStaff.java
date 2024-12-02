@@ -1,11 +1,22 @@
 package be.kdg.integration3.easyrep.model;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class GymStaff {
+@Entity
+@Table(name = "GYM_GOER")
+public class GymStaff  {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     private int gymId;
+
+    public GymStaff() {
+    }
 
     public GymStaff(int userId, int gymId) {
         this.userId = userId;
@@ -26,5 +37,13 @@ public class GymStaff {
 
     public void setGymId(int gymId) {
         this.gymId = gymId;
+    }
+
+    @Override
+    public String toString() {
+        return "GymStaff{" +
+                "userId=" + userId +
+                ", gymId=" + gymId +
+                '}';
     }
 }
