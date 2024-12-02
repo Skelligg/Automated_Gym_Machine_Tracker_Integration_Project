@@ -2,9 +2,9 @@ package be.kdg.integration3.easyrep.model;
 
 public class Arduino {
     private String ipAddress;
-    private int id;
+    private String id;
 
-    public Arduino(String ipAddress, int id) {
+    public Arduino(String ipAddress, String id) {
         this.ipAddress = ipAddress;
         this.id = id;
     }
@@ -17,11 +17,11 @@ public class Arduino {
         this.ipAddress = ipAddress;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 }

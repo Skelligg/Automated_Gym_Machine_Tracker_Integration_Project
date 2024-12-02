@@ -13,26 +13,41 @@ import java.util.Date;
 @Component
 public class DataInitializer {
     private final GymRepository gymRepository;
-    private final MachineRepository machineRepository;
+    private final MachineService machineService;
+    private final MachineService ourmachineService;
 
-    public DataInitializer(GymRepository gymRepository, MachineRepository machineRepository, RoutineRepository routineRepository) {
+    public DataInitializer(GymRepository gymRepository, MachineService machineService, MachineService ourmachineService) {
         this.gymRepository = gymRepository;
-        this.machineRepository = machineRepository;
+        this.machineService = machineService;
+        this.ourmachineService = ourmachineService;
         initializeData();
     }
 
     private void initializeData() {
+
+        // Create our machines
+        Machine machine10 = new Machine("Our row machine", "/images/machinesPics/MachineRow.gif");
+        Machine machine20 = new Machine("Our bench press", "/images/machinesPics/MachineRow.gif");
+        Machine machine30 = new Machine("Our squat machine", "/images/machinesPics/MachineRow.gif");
+        Machine machine40 = new Machine("Our unilateral jerk", "/images/machinesPics/MachineRow.gif");
+
+        ourmachineService.createOurMachines(machine10);
+        ourmachineService.createOurMachines(machine20);
+        ourmachineService.createOurMachines(machine30);
+        ourmachineService.createOurMachines(machine40);
+
+
         // Create machines
-        Machine machine1 = new Machine("row machine", "/images/machinesPics/MachineRow.gif");
-        Machine machine2 = new Machine("bench press", "/images/machinesPics/MachineRow.gif");
-        Machine machine3 = new Machine("squat machine", "/images/machinesPics/MachineRow.gif");
-        Machine machine4 = new Machine("unilateral jerk", "/images/machinesPics/MachineRow.gif");
+        Machine machine1 = new Machine("Row machine", "/images/machinesPics/MachineRow.gif");
+        Machine machine2 = new Machine("Bench press", "/images/machinesPics/MachineRow.gif");
+        Machine machine3 = new Machine("Squat machine", "/images/machinesPics/MachineRow.gif");
+        Machine machine4 = new Machine("Unilateral jerk", "/images/machinesPics/MachineRow.gif");
 
         // Add machines to the repository
-        machineRepository.createMachine(machine1);
-        machineRepository.createMachine(machine2);
-        machineRepository.createMachine(machine3);
-        machineRepository.createMachine(machine4);
+        machineService.createMachine(machine1);
+        machineService.createMachine(machine2);
+        machineService.createMachine(machine3);
+        machineService.createMachine(machine4);
 
         // Create gyms
         Gym gym1 = new Gym("Fasic Bit", 4, "Streetname 34, 2000 Antwerp", new Date(2021, 7, 14));

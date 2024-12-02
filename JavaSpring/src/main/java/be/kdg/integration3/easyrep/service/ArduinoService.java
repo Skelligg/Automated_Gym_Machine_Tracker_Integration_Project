@@ -1,5 +1,7 @@
 package be.kdg.integration3.easyrep.service;
 
+import be.kdg.integration3.easyrep.model.Arduino;
+import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.repository.ArduinoRepositoryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +19,15 @@ public class ArduinoService {
     public ArduinoService(ArduinoRepositoryImpl arduinoRepository) {
         this.arduinoRepository = arduinoRepository;
     }
+
+
+    public Arduino createArduino(Arduino arduino) {
+        logger.info("Creating a machine {}", arduino);
+        arduinoRepository.createArduino(arduino);
+        return arduino;
+    }
+
+
 
     public void setArduinoInfo(String id, String ipAddress) {
         try {

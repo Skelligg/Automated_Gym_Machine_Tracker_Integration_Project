@@ -13,7 +13,7 @@ public class MachineRepository {
     private Logger logger = LoggerFactory.getLogger(MachineRepository.class);
 
     private static List<Machine> machines = new ArrayList<Machine>();
-
+    private static List<Machine> ourMachines = new ArrayList<Machine>();
     public Machine createMachine(Machine machine){
         machine.setMachineId(machines.size());
         logger.info("Creating Machine with name: {}", machine.getMachineId());
@@ -21,10 +21,21 @@ public class MachineRepository {
         return machine;
     }
 
+    public Machine createOurMachines(Machine machine){
+        machine.setMachineId(ourMachines.size());
+        logger.info("Creating Machine with name: {}", machine.getMachineId());
+        ourMachines.add(machine);
+        return machine;
+    }
+
     public List<Machine> getMachines() {
         return machines;
     }
-    
+
+    public List<Machine> getOurMachines() {
+        return ourMachines;
+    }
+
     public void emptyMachines() {
         machines.clear();
     }
@@ -42,6 +53,11 @@ public class MachineRepository {
     public Machine readMachine(int machineId) {
         logger.debug("Reading Machine with id: {}", machineId);
         return machines.get(machineId);
+    }
+
+    public Machine readOurMachine(int machineId) {
+        logger.debug("Reading Machine with id: {}", machineId);
+        return ourMachines.get(machineId);
     }
 
 }
