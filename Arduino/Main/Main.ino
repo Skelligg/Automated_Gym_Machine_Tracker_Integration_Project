@@ -10,8 +10,10 @@ const char* ssid = "KdG-iDev";
 const char* password = "Gdpc9Swt3phH9ujG";
 
 WebServer server(80);  // Set up web server on port 80
+//WebServer server(8080);
 
-String serverName = "http://10.134.178.163:80/setInput";  
+String serverName = "http://10.134.178.163:80/setInput";
+//String serverName = "http://localhost:8080/setInput";
 float _tare = 0;
 
 // Timer variables
@@ -43,9 +45,10 @@ void sendRegistrationPostRequest() {
 
   // Construct the URL with query parameters
   String registrationServerPath = "http://10.134.178.163:80/registerIP";
+  //String registrationServerPath = "http://localhost:8080/registerIP";
   registrationServerPath += "?id=" + String(id);
-  registrationServerPath += "&arduinoIP=" + WiFi.localIP().toString(); 
-  
+  registrationServerPath += "&arduinoIP=" + WiFi.localIP().toString();
+
   // Begin the HTTP request
   http.begin(registrationServerPath);
   Serial.println(registrationServerPath);
@@ -85,12 +88,12 @@ void handleTrigger() {
 }
 
 void setup() {
-  Serial.begin(115200); 
+  Serial.begin(115200);
   rt.init();
-  
+
   //set up weigth sensor
   ws.setup();
-  
+
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   Serial.println("Connecting to WiFi");
@@ -118,7 +121,8 @@ void setup() {
   }
 
   // Define route to handle POST requests
-  server.on("/trigger", HTTP_POST, handleTrigger);
+  //server.on("/trigger", HTTP_POST, handleTrigger);
+  readyToRun= !readyToRun;
 
   // Start the web server
   server.begin();
@@ -126,19 +130,19 @@ void setup() {
 }
 
 // Function to send HTTP POST request
-void sendPostRequest(int setNumber, int setTime, int repCount) {
-  //void sendPostRequest(int setNumber, int setTime, int repCount, float maxWeight) {
+//void sendPostRequest(int setNumber, int setTime, int repCount) {
+void sendPostRequest(int setNumber, int setTime, int repCount, float maxWeight) {
   HTTPClient http;
 
-  String serverPath = serverName + "?setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount);
-   //String serverPath = serverName + "?setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount) + "&maxWeight=" + String(maxWeight);
- 
+  //String serverPath = serverName + "?setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount);
+   String serverPath = serverName + "?setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount) + "&weight=" + String(maxWeight);
+
   // Your Domain name with URL path or IP address with path
   http.begin(serverPath.c_str());
-        
+
   // Send HTTP GET request
   int httpResponseCode = http.GET();
-  
+
   if (httpResponseCode > 0) {
     Serial.print("HTTP Response code: ");
     Serial.println(httpResponseCode);
@@ -155,17 +159,17 @@ void sendPostRequest(int setNumber, int setTime, int repCount) {
 
 // Your main program logic goes here
 void runRestOfProgram() {
-   
+
   while(setStarted){
-  
-  // Example: scanning and getting rep counts
+
+  // Example: scanning anrequestsd getting rep counts
   rt.scan();
   currentRepCount = rt.getRepCount();
-     
+
     if(currentRepCount == 1){
-        startSetTime = millis(); 
+        startSetTime = millis();
         if(firstRound){
-          startTime = millis(); 
+          startTime = millis();
           ws.setTare();
           firstRound = false;
         }
@@ -192,19 +196,19 @@ void runRestOfProgram() {
     Serial.println(elapsedSetTime / 1000);
     //anna time
     Serial.println((lastRepChangeTime-startTime) / 1000);
-    
-    currentTime = millis(); 
+
+    currentTime = millis();
     while(millis()-currentTime < gettingWeightDelay){
       //get the max value of weight after the set
       ws.setWeight();
     }
-    
+
     // Send POST request if the rep count is unchanged for 5 seconds
     //Michael Code
     //sendPostRequest(setNumber,(elapsedSetTime / 1000),lastRepCount);
     //Anna Code
-    sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount);
-    //sendPostRequest(setNumber,(elapsedSetTime / 1000),lastRepCount, ws.getWeight());
+    //sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount);
+    sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount, ws.getWeight());
 
     Serial.print("Weight: ");
     Serial.println(ws.getWeight());
