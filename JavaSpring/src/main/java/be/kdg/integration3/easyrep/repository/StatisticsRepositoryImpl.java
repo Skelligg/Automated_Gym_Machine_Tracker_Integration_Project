@@ -19,33 +19,27 @@ import java.util.List;
 public class StatisticsRepositoryImpl implements StatisticsRepository {
     private final Logger logger = LoggerFactory.getLogger(StatisticsRepositoryImpl.class);
 
-    public static List<ExerciseSet> machineSets = new ArrayList<ExerciseSet>();
+    public static List<ExerciseSet> exerciseSets = new ArrayList<ExerciseSet>();
 
 //    @PersistenceContext
 //    private EntityManager entityManager;
 
     public static List<ExerciseSet> createDummyData() {
-        List<ExerciseSet> machineSets = new ArrayList<>();
+        List<ExerciseSet> exerciseSets = new ArrayList<>();
 
-        // Add dummy data
-//        machineSets.add(new ExerciseSet(12, 45.0,
-//                LocalDateTime.of(2024, 12, 1, 9, 0),
-//                LocalDateTime.of(2024, 12, 1, 9, 5)));
-//        machineSets.add(new ExerciseSet(10, 50.0,
-//                LocalDateTime.of(2024, 12, 3, 9, 10),
-//                LocalDateTime.of(2024, 12, 3, 9, 15)));
-//        machineSets.add(new ExerciseSet(15, 40.0,
-//                LocalDateTime.of(2024, 12, 2, 9, 20),
-//                LocalDateTime.of(2024, 12, 2, 9, 30)));
-//        machineSets.add(new ExerciseSet(8, 60.0,
-//                LocalDateTime.of(2024, 12, 4, 10, 0),
-//                LocalDateTime.of(2024, 12, 4, 10, 10)));
-//        machineSets.add(new ExerciseSet(20, 55.0,
-//                LocalDateTime.of(2024, 12, 5, 11, 30),
-//                LocalDateTime.of(2024, 12, 5, 11, 40)));
+        //adding the dummy data
+        exerciseSets.add(new ExerciseSet(45.0, LocalDateTime.of(2024, 12, 1, 9, 0),
+                LocalDateTime.of(2024, 12, 1, 9, 10),12));
+        exerciseSets.add(new ExerciseSet(55.0, LocalDateTime.of(2024, 12, 2, 9, 0),
+                LocalDateTime.of(2024, 12, 2, 9, 20),11));
+        exerciseSets.add(new ExerciseSet(20.0, LocalDateTime.of(2024, 12, 3, 9, 0),
+                LocalDateTime.of(2024, 12, 3, 9, 30),8));
+        exerciseSets.add(new ExerciseSet(35.5, LocalDateTime.of(2024, 12, 4, 9, 0),
+                LocalDateTime.of(2024, 12, 4, 9, 40),6));
+        exerciseSets.add(new ExerciseSet(60.4, LocalDateTime.of(2024, 12, 5, 9, 0),
+                LocalDateTime.of(2024, 12, 5, 9, 50),16));
 
-
-        return machineSets;
+        return exerciseSets;
     }
 
     @Override
@@ -62,6 +56,6 @@ public class StatisticsRepositoryImpl implements StatisticsRepository {
 //                """;
 //        TypedQuery<PlayerStatisticsDTO> query = entityManager.createQuery(jpql, PlayerStatisticsDTO.class);
 //        return query.getResultList();
-        return machineSets ;
+        return exerciseSets ;
     }
 }

@@ -28,6 +28,13 @@ public class ExerciseSet {
         this.weightCount = weightCount;
     }
 
+    public ExerciseSet(double weightCount, LocalDateTime startTime, LocalDateTime endTime, int repCount) {
+        this.repCount = repCount;
+        this.weightCount = weightCount;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
     public int getSetNumber() {
         return setNumber;
     }

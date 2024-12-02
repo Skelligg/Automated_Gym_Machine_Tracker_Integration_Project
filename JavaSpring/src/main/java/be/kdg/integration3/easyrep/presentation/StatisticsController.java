@@ -76,10 +76,11 @@ public class StatisticsController {
         return chartData;
     }
 
-    @PostMapping("/GymGoer/statisticsClose")
+
+    @PostMapping("/statisticsClose")
     public String exitPlayerStatistics() {
         logger.info("Exiting the page");
-        return "redirect:/";
+        return "GymGoer/end_screen_session";
     }
 
     @GetMapping("/GymOwner/machines/machine_review")
@@ -95,6 +96,8 @@ public class StatisticsController {
 
         return "GymOwner/machine_review";
     }
+
+
 
 
 

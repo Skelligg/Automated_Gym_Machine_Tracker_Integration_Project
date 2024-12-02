@@ -90,7 +90,7 @@ public class SessionController {
     }
 
     @PostMapping("/GymGoer/statistics/open")
-    public String getStatistics(){
+    public String getStatistics() {
         logger.info("Mapping the statistics screen");
         return "redirect:GymGoer/statistics";
     }

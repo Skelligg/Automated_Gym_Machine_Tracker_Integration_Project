@@ -15,7 +15,7 @@ import java.util.List;
 
 //gonna mix this class with "SET CONTROLLER API"
 @Controller
-@RequestMapping("/sets")
+@RequestMapping("/machineSets")
 public class MachineSetController {
 
     private static Logger logger = LoggerFactory.getLogger(MachineSetController.class);
@@ -32,7 +32,7 @@ public class MachineSetController {
         logger.debug("getting SetsView");
         List<ExerciseSet> exerciseSets = exerciseSetService.getSets();
         logger.debug(exerciseSets.toString());
-        model.addAttribute("machineSets", exerciseSets);
-        return "session/session";
+        model.addAttribute("exerciseSets", exerciseSets);
+        return "GymGoer/machineSets";
     }
 }
