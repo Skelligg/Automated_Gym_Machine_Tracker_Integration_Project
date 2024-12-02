@@ -1,78 +1,52 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
-import java.time.LocalDateTime;
+import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Entity
+@Table(name = "SET")
 public class ExerciseSet {
-    private int setNumber;
-    private int repCount;
-    private double weightCount;
-    private boolean isCompleted;
-    private String setTime; //make this a LocalTime]
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int setId;
+    @OneToMany
+    private List<Repetition> repetitionId;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
+    @Column(length = 50)
+    private String previousSet;
+    @Column(nullable = false)
+    private double weightCount;
 
-//    public ExerciseSet(int setNumber, int setTime, double weightCount, int repCount) {
-//        this.setNumber = setNumber;
-//        this.setTime = setTime;
-//        this.weightCount = weightCount;
-//        this.repCount = repCount;
-//    }
 
     public ExerciseSet(){}
 
 
-    public ExerciseSet(int setNumber, String setTime, int repCount, double weightCount) {
-        this.setNumber = setNumber;
-        this.setTime = setTime;
-        this.repCount = repCount;
-        this.weightCount = weightCount;
-    }
-
-    public ExerciseSet(double weightCount, LocalDateTime startTime, LocalDateTime endTime, int repCount) {
-        this.repCount = repCount;
-        this.weightCount = weightCount;
+    public ExerciseSet(int setId, List<Repetition> repetitionId, LocalDateTime startTime, LocalDateTime endTime, String previousSet, double weightCount) {
+        this.setId = setId;
+        this.repetitionId = repetitionId;
         this.startTime = startTime;
         this.endTime = endTime;
-    }
-
-    public int getSetNumber() {
-        return setNumber;
-    }
-
-    public void setSetNumber(int setNumber) {
-        this.setNumber = setNumber;
-    }
-
-    public String getSetTime() {
-        return setTime;
-    }
-
-    public void setSetTime(String setTime) {
-        this.setTime = setTime;
-    }
-
-    public int getRepCount() {
-        return repCount;
-    }
-
-    public void setRepCount(int repCount) {
-        this.repCount = repCount;
-    }
-
-    public double getWeightCount() {
-        return weightCount;
-    }
-
-    public void setWeightCount(double weightCount) {
+        this.previousSet = previousSet;
         this.weightCount = weightCount;
     }
 
-    public boolean isCompleted() {
-        return isCompleted;
+    public int getSetId() {
+        return setId;
     }
 
-    public void setCompleted(boolean completed) {
-        isCompleted = completed;
+    public void setSetId(int setId) {
+        this.setId = setId;
+    }
+
+    public List<Repetition> getRepetitionId() {
+        return repetitionId;
+    }
+
+    public void setRepetitionId(List<Repetition> repetitionId) {
+        this.repetitionId = repetitionId;
     }
 
     public LocalDateTime getStartTime() {
@@ -89,5 +63,33 @@ public class ExerciseSet {
 
     public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
+    }
+
+    public String getPreviousSet() {
+        return previousSet;
+    }
+
+    public void setPreviousSet(String previousSet) {
+        this.previousSet = previousSet;
+    }
+
+    public double getWeightCount() {
+        return weightCount;
+    }
+
+    public void setWeightCount(double weightCount) {
+        this.weightCount = weightCount;
+    }
+
+    @Override
+    public String toString() {
+        return "ExerciseSet{" +
+                "setId=" + setId +
+                ", repetitionId=" + repetitionId +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", previousSet='" + previousSet + '\'' +
+                ", weightCount=" + weightCount +
+                '}';
     }
 }

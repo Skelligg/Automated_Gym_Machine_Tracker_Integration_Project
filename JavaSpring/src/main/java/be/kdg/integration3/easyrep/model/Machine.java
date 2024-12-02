@@ -1,33 +1,41 @@
 package be.kdg.integration3.easyrep.model;
 
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "MACHINE")
 public class Machine {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int machineId;
+    @ManyToOne
+    private Gym gymId;
+    @OneToOne
+    private Arduino arduinoId;
+    @Column(nullable = false,length = 30)
     private String name;
-    private MaintenanceAlarm alarm;
-    private String imageAddress;
-    private Arduino arduino;
+    private LocalDateTime lastTimeChecked;
 
-    public void alarmSet() {
-        alarm.alarmSet();
-    };
-
-    public Machine(String name, String imageAddress, Arduino arduino) {
-        this.name = name;
-        this.imageAddress = imageAddress;
-        this.arduino = arduino;
+    public Machine() {
     }
 
-    public Machine(int machineId, String name, String imageAddress) {
+    public Machine(int machineId, Gym gymId, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
         this.machineId = machineId;
+        this.gymId = gymId;
+        this.arduinoId = arduinoId;
         this.name = name;
-        this.imageAddress = imageAddress;
+        this.lastTimeChecked = lastTimeChecked;
     }
 
-    public Machine( String name, String imageAddress) {
+    public Machine(Gym gymId, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+        this.gymId = gymId;
+        this.arduinoId = arduinoId;
         this.name = name;
-        this.imageAddress = imageAddress;
+        this.lastTimeChecked = lastTimeChecked;
     }
 
     public int getMachineId() {
@@ -38,6 +46,22 @@ public class Machine {
         this.machineId = machineId;
     }
 
+    public Gym getGymId() {
+        return gymId;
+    }
+
+    public void setGymId(Gym gymId) {
+        this.gymId = gymId;
+    }
+
+    public Arduino getArduinoId() {
+        return arduinoId;
+    }
+
+    public void setArduinoId(Arduino arduinoId) {
+        this.arduinoId = arduinoId;
+    }
+
     public String getName() {
         return name;
     }
@@ -46,35 +70,11 @@ public class Machine {
         this.name = name;
     }
 
-    public MaintenanceAlarm getAlarm() {
-        return alarm;
+    public LocalDateTime getLastTimeChecked() {
+        return lastTimeChecked;
     }
 
-    public void setAlarm(MaintenanceAlarm alarm) {
-        this.alarm = alarm;
-    }
-
-    public String getImageAddress() {
-        return imageAddress;
-    }
-
-    public void setImageAddress(String imageAddress) {
-        this.imageAddress = imageAddress;
-    }
-
-    public Arduino getArduino() {
-        return arduino;
-    }
-
-    public void setArduino(Arduino arduino) {
-        this.arduino = arduino;
-    }
-
-    @Override
-    public String toString() {
-        return "Machine{" +
-                "machineId=" + machineId +
-                ", name='" + name + '\'' +
-                '}';
+    public void setLastTimeChecked(LocalDateTime lastTimeChecked) {
+        this.lastTimeChecked = lastTimeChecked;
     }
 }

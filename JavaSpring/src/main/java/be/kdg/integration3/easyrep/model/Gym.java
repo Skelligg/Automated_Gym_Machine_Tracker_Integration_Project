@@ -1,30 +1,42 @@
 package be.kdg.integration3.easyrep.model;
 
+import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Entity
+@Table(name = "GYM")
 public class Gym {
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int gymId;
+    @Column(nullable = false, length = 32)
+    private String name;
+    @Column(nullable = false, length = 50)
     private String location;
-    private Date startDate;
+    private LocalDateTime openedOn;
+    @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL)
     private List<Machine> machines;
 
-    public Gym(String name, int gymId, String location, Date startDate, List<Machine> machines) {
-        this.name = name;
+    public Gym() {
+    }
+
+    public Gym(int gymId, String name, String location, LocalDateTime openedOn, List<Machine> machines) {
         this.gymId = gymId;
+        this.name = name;
         this.location = location;
-        this.startDate = startDate;
+        this.openedOn = openedOn;
         this.machines = machines;
     }
 
-    public Gym(String name, int gymId, String location, Date startDate) {
+    public Gym(String name, String location, LocalDateTime openedOn, List<Machine> machines) {
         this.name = name;
-        this.gymId = gymId;
         this.location = location;
-        this.startDate = startDate;
-        this.machines = new ArrayList<>();
+        this.openedOn = openedOn;
+        this.machines = machines;
     }
 
     public String getName() {
@@ -51,15 +63,34 @@ public class Gym {
         this.location = location;
     }
 
-    public Date getStartDate() {
-        return startDate;
+    public LocalDateTime getOpenedOn() {
+        return openedOn;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
+    public void setOpenedOn(LocalDateTime openedOn) {
+        this.openedOn = openedOn;
+    }
+
+    public List<Machine> getMachines() {
+        return machines;
+    }
+
+    public void setMachines(List<Machine> machines) {
+        this.machines = machines;
     }
 
     public void addMachine(Machine machine) {
         machines.add(machine);
+    }
+
+    @Override
+    public String toString() {
+        return "Gym{" +
+                "gymId=" + gymId +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", openedOn=" + openedOn +
+                ", machines=" + machines +
+                '}';
     }
 }
