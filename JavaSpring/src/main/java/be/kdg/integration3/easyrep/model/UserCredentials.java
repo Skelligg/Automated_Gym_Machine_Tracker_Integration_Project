@@ -4,10 +4,12 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "USER_CREDENTIAL")
+@DiscriminatorColumn(name = "user_ID")
 public class UserCredentials {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id",insertable = false, updatable = false)
     private int userId;
     @Column(unique = true, nullable = false, length = 32)
     private String username;
@@ -15,6 +17,7 @@ public class UserCredentials {
     private String password;
     @Column(unique = true, nullable = false)
     private String email;
+
     private LocalDate dateCreated;
 
     public UserCredentials() {

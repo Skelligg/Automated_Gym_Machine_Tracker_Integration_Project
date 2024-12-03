@@ -24,16 +24,37 @@ public class ExerciseServiceImpl implements ExerciseService {
 
     @Override
     public Exercise createExercise(Exercise exercise) {
-        logger.info("Creating a exercise {}", exercise);
-        exerciseRepository.createExercise(exercise);
-        return exercise;
+        logger.info("Creating exercise " + exercise);
+        return null;
+//        return exerciseRepository.createExercise(exercise);
     }
 
-    public void addExercise(String name){
-        Exercise exercise = new Exercise(name);
-        logger.info("Creating a exercise {}", exercise);
-        exerciseRepository.createExercise(exercise);
+    @Override
+    public List<Exercise> getAllExercises() {
+        return List.of();
     }
+
+    @Override
+    public Exercise getExercise(int id) {
+        return null;
+    }
+
+
+    @Override
+    public void deleteExercise(int id) {
+
+    }
+
+    @Override
+    public void updateExercise(Exercise exercise) {
+
+    }
+
+    @Override
+    public List<Exercise> findExercisesByNames(List<String> names) {
+        return List.of();
+    }
+
 
 //    //I don't understand why ExerciseSet is in Exercise so i create the add Exercise without it
 //    public void addExercise(String name, String imageAddress, Arduino arduino){
@@ -42,20 +63,7 @@ public class ExerciseServiceImpl implements ExerciseService {
 //        exerciseRepository.createExercise(exercise);
 //    }
 
-    @Override
-    public List<Exercise> getAllExercises() {
-        return exerciseRepository.getExercises();
-    }
 
-    @Override
-    public void emptyExercises() {
-        exerciseRepository.emptyExercises();
-    }
-
-    @Override
-    public List<Exercise> findExercisesByNames(List<String> names) {
-        return exerciseRepository.findByNameIn(names); // Assuming JPA repository
-    }
 
 
 

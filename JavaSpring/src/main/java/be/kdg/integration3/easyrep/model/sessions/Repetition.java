@@ -15,6 +15,9 @@ public class Repetition {
     @Column(nullable = false)
     private LocalDateTime endRep;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
+    private ExerciseSet exerciseSet;
+
     public Repetition() {
     }
 

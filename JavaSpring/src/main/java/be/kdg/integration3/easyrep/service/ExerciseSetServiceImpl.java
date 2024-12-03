@@ -4,7 +4,6 @@ package be.kdg.integration3.easyrep.service;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.repository.SetRepository;
 import be.kdg.integration3.easyrep.repository.SetRepositoryImpl;
-import be.kdg.integration3.easyrep.repository.StatisticsRepositoryImpl;
 import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,28 +29,37 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
 //        return setRepository.createSet(new Set(startTime, endTime, repCount));
 //    }
 
+//    @Override
+//    public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
+////        ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
+//         dataProcessor.process(tempExerciseSet);
+//         return tempExerciseSet;
+//    }
+
     @Override
-    public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
-        ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
-         dataProcessor.process(tempExerciseSet);
-         return tempExerciseSet;
+    public List<ExerciseSet> findAllExerciseSet() {
+        return setRepository.findAllExerciseSet();
     }
 
     @Override
-    public List<ExerciseSet> getSets(){
-        logger.debug("Getting sets");
-        return setRepository.getSets();
+    public ExerciseSet findExerciseSetById(int id) {
+        return setRepository.findExerciseSetById(id);
     }
 
     @Override
-    public void emptyRepository(){
-        logger.debug("Cleaning the repository");
-        setRepository.emptyList();
+    public ExerciseSet createExerciseSet(ExerciseSet exerciseSet) {
+        return setRepository.createExerciseSet(exerciseSet);
     }
 
     @Override
-    public List<ExerciseSet> getAllExerciseSets() {
-        return StatisticsRepositoryImpl.createDummyData();
+    public void delete(int id) {
+        logger.debug("Deleting exercise set with id {}", id);
+        ExerciseSet exerciseSet = setRepository.findExerciseSetById(id);
+        setRepository.delete(exerciseSet);
     }
 
+    @Override
+    public void update(ExerciseSet exerciseSet) {
+        setRepository.updateSet(exerciseSet);
+    }
 }

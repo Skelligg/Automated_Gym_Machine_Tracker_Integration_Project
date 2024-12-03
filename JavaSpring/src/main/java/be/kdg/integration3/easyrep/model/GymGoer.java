@@ -10,7 +10,6 @@ import java.util.List;
 @Table(name = "GYM_GOER")
 public class GymGoer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     @Column(nullable = false, length = 50)
     private String firstName;
@@ -22,8 +21,13 @@ public class GymGoer {
     private String address;
     @Column(nullable = false, length = 50)
     private String phone;
-    @OneToMany(mappedBy = "gym_goer",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "gymID",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Routine> routines = new ArrayList<>();
+
+    @MapsId
+    @OneToOne
+    @JoinColumn(name = "user_Id",insertable = false, updatable = false)
+    private UserCredentials userCredentials;
 
     public GymGoer() {
     }
@@ -101,6 +105,14 @@ public class GymGoer {
 
     public void setRoutines(List<Routine> routines) {
         this.routines = routines;
+    }
+
+    public UserCredentials getUserCredentials() {
+        return userCredentials;
+    }
+
+    public void setUserCredentials(UserCredentials userCredentials) {
+        this.userCredentials = userCredentials;
     }
 
     @Override

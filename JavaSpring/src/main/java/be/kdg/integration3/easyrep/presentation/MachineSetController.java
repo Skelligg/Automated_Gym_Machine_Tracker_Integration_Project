@@ -30,7 +30,7 @@ public class MachineSetController {
     @GetMapping
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
-        List<ExerciseSet> exerciseSets = exerciseSetService.getSets();
+        List<ExerciseSet> exerciseSets = exerciseSetService.findAllExerciseSet();
         logger.debug(exerciseSets.toString());
         model.addAttribute("exerciseSets", exerciseSets);
         return "GymGoer/machineSets";

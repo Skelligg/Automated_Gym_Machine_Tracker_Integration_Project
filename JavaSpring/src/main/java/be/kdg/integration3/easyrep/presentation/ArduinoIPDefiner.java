@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.Arduino;
 import be.kdg.integration3.easyrep.repository.ArduinoRepositoryImpl;
 import be.kdg.integration3.easyrep.service.ArduinoService;
 import org.slf4j.Logger;
@@ -26,10 +27,11 @@ public class ArduinoIPDefiner {
 
     //adding checking id with database
     @GetMapping("/registerIP")
-    public void registerIP(@RequestParam String id, @RequestParam String arduinoIP) {
+    public void registerIP(@RequestParam int id, @RequestParam String arduinoIP) {
         try {
-            arduinoService.setArduinoInfo(id, arduinoIP);
-            logger.info("Registered IP {} for ID: {}", arduinoService.getIpAddress(id), id);
+            Arduino arduino = new Arduino(arduinoIP,id);
+            arduinoService.createArduino(arduino);
+            logger.info("Arduino was registered successfully");
         } catch (Exception e) {
             logger.error(e.getMessage());
         }

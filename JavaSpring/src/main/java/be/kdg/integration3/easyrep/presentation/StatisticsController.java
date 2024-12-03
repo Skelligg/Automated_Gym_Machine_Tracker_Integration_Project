@@ -36,13 +36,13 @@ public class StatisticsController {
     @GetMapping("/GymGoer/statistics")
     public String getPlayerStatistics(Model model) {
         logger.info("Mapping the statistics from the gym");
-        List<ExerciseSet> statistics = exerciseSetService.getAllExerciseSets();
+        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
 
         logger.info("Gym goer statistics: {}", statistics);
         List<Map<String, Object>> volumeData = new ArrayList<>();
         for (ExerciseSet exerciseSet : statistics) {
             Map<String, Object> volumeMap = new HashMap<>();
-            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
+//            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
             volumeMap.put("dateTime", exerciseSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
             volumeData.add(volumeMap);
         }
@@ -60,15 +60,16 @@ public class StatisticsController {
     public List<Map<String, Object>> getChartData(@PathVariable String chartType) {
         List<Map<String, Object>> chartData = new ArrayList<>();
 
-        for (ExerciseSet set : exerciseSetService.getAllExerciseSets()) {
+        for (ExerciseSet set : exerciseSetService.findAllExerciseSet()) {
             Map<String, Object> dataPoint = new HashMap<>();
 
             dataPoint.put("dateTime", set.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
             switch (chartType){
                 case "weights": dataPoint.put("value",set.getWeightCount()); break;
-                case "volume" : double volume = set.getWeightCount() * set.getRepCount();
+//                case "volume" : double volume = set.getWeightCount() * set.getRepCount();
+                case "volume" : double volume = set.getWeightCount();
                 dataPoint.put("value", volume); break;
-                case "reps":dataPoint.put("value", set.getRepCount()); break;
+//                case "reps":dataPoint.put("value", set.getRepCount()); break;
                 default: throw new IllegalArgumentException("Invalid chart " + chartType);
             }
             chartData.add(dataPoint);

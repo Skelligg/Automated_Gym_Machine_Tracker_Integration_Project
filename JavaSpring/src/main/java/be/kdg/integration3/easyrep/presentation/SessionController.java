@@ -46,7 +46,8 @@ public class SessionController {
         List<Exercise> exercises = new ArrayList<>();
         for (Machine machine : routine.getMachines()) {
             logger.debug(machine.toString());
-            exercises.add(new Exercise(machine.getName()));
+            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
+//            exercises.add(new Exercise(machine.getName()));
         }
 
         // Create and save the session
@@ -83,7 +84,7 @@ public class SessionController {
     @GetMapping("/end")
     public String getSessionEnd(@RequestParam("sessionId") int sessionId,Model model) {
         logger.info("Mapping the end screen");
-        List<ExerciseSet> statistics = exerciseSetService.getAllExerciseSets();
+        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
         logger.info("Found {} statistics", statistics);
         model.addAttribute("statistics", statistics);
         return "GymGoer/end_screen_session";

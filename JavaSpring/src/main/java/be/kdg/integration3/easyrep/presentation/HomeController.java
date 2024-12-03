@@ -39,7 +39,7 @@ public class HomeController {
         logger.debug("PostMapping received, trying to get you to /machineSets");
         logger.debug("Device id: {}",  deviceId);
 
-        exerciseSetService.emptyRepository();
+//        exerciseSetService.emptyRepository(); it is supposed to be delete
 //
         logger.debug("Trying to access API C++");
         //Trigger the Arduino

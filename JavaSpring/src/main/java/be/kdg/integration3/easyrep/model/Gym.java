@@ -12,14 +12,22 @@ import java.util.List;
 public class Gym {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "gym_id")
     private int gymId;
+
     @Column(nullable = false, length = 32)
     private String name;
+
     @Column(nullable = false, length = 50)
     private String location;
     private LocalDateTime openedOn;
-    @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Machine> machines;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private GymStaff gymStaff;
+
 
     public Gym() {
     }

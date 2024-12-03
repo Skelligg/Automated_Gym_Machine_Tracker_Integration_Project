@@ -14,11 +14,14 @@ public class Session {
     private int id;
     @Column(nullable = false)
     private LocalDateTime startSession;
+
     @Column(nullable = false)
     private LocalDateTime endSession;
+
     @Column(nullable = false)
     private String status;
-    @OneToMany
+
+    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Exercise> exercises = new ArrayList<>();
 
     public Session() {

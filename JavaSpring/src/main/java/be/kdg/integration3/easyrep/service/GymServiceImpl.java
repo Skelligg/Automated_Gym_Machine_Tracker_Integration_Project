@@ -19,24 +19,39 @@ public class GymServiceImpl implements GymService {
     }
 
     @Override
-    public Gym addGym(Gym gym) {
-        return gymRepository.save(gym);
-    }
-
-    @Override
-    public List<Gym> getGyms() {
-        logger.debug("Getting gyms");
-        return gymRepository.getGyms();
-    }
-
-    @Override
     public Gym findGymByQrCode(String qrCode) {
-        return gymRepository.findById(qrCode);
+        return null;
     }
 
     @Override
-    public void emptyRepository() {
-        logger.debug("Cleaning the repository");
-        gymRepository.emptyList();
+    public List<Gym> findAllGyms() {
+        logger.debug("Finding All Gyms");
+        return gymRepository.findAllGyms();
     }
+
+    @Override
+    public Gym findGymById(int id) {
+        logger.debug("Find Gym by id: {}", id);
+        return gymRepository.findById(id);
+    }
+
+    @Override
+    public Gym createGym(Gym gym) {
+        logger.debug("Creating Gym: {}", gym);
+        return gymRepository.create(gym);
+    }
+
+    @Override
+    public void updateGym(Gym gym) {
+        logger.debug("Updating Gym: {}", gym);
+        gymRepository.update(gym);
+    }
+
+    @Override
+    public void delete(int id) {
+        logger.debug("Deleting Gym: {}", id);
+        Gym gym = gymRepository.findById(id);
+        gymRepository.delete(gym);
+    }
+
 }

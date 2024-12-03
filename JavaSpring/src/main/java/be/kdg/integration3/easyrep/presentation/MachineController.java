@@ -28,7 +28,7 @@ public class MachineController {
     @GetMapping
     public String getMachineView(Model model){
         logger.info("get Machine view");
-        List<Machine> machines = machineService.getAllMachines();
+        List<Machine> machines = machineService.findAllMachines();
         model.addAttribute("machines", machines);
         return "GymOwner/machines-overview";
     }

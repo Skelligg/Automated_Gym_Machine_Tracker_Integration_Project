@@ -15,10 +15,12 @@ public class Routine {
     @OneToMany
     private List<Session> sessionId;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "owner_user_Id")
     private GymGoer gymID;
+
     @OneToMany
     private List<Machine> machines = new ArrayList<>();
+
     @Column(nullable = false,length = 50)
     private String routineName;
 

@@ -10,8 +10,6 @@ public interface SessionService {
 
     List<Session> getAllSessions();
 
-    void emptyRoutines();
-
     Session getSessionById(int id);
 
 }
