@@ -16,6 +16,7 @@ public class UserCredentialsRepositoryImp implements UserCredentialsRepository {
 
     static {
         userCredentialsList.add(new UserCredentials("gymstaff","1234","gymstaff@basicfit.com", LocalDate.now()));
+        userCredentialsList.add(new UserCredentials("Michael","1234","temp",LocalDate.now()));
     }
 
     @Override

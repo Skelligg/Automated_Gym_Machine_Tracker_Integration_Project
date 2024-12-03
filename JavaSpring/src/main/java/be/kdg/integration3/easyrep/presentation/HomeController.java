@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.service.ArduinoService;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import org.slf4j.Logger;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/test")
 public class HomeController {
@@ -21,7 +24,6 @@ public class HomeController {
     public ExerciseSetService exerciseSetService;
     public ArduinoService arduinoService;
 
-    @Autowired
     public HomeController(ExerciseSetService exerciseSetService, ArduinoService arduinoService) {
         this.exerciseSetService = exerciseSetService;
         this.arduinoService = arduinoService;
@@ -34,30 +36,38 @@ public class HomeController {
         return "home";
     }
 
-    @PostMapping("/machineSets")
+    @GetMapping("/sets")
+    public String getSetsView(Model model){
+        logger.debug("getting SetsView");
+        List<ExerciseSet> exerciseSets = exerciseSetService.getSets();
+        logger.debug(exerciseSets.toString());
+        model.addAttribute("exerciseSets", exerciseSets);
+        return "GymGoer/machineSets";
+    }
+
+    @PostMapping("/sets")
     public String setsPage(@RequestParam("deviceId") String deviceId, Model model){
-        logger.debug("PostMapping received, trying to get you to /machineSets");
+        logger.debug("PostMapping received, trying to get you to /sets");
         logger.debug("Device id: {}",  deviceId);
 
         exerciseSetService.emptyRepository();
-//
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
-        String arduinoUrl = "http://" + arduinoService.getIpAddress(deviceId) + "/trigger";
-        RestTemplate restTemplate = new RestTemplate();
-        try {
-            // Send an HTTP POST request to the Arduino
-            logger.debug("Sending API request");
-            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
-            logger.debug("Arduino Response: {}", response);
-            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
-            logger.debug("API worked");
-        } catch (Exception e) {
-            logger.error("Error triggering Arduino: {}", e.getMessage());
-            model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
-        }
+//        String arduinoUrl = "http://" + arduinoService.getIpAddress(deviceId) + "/trigger";
+//        RestTemplate restTemplate = new RestTemplate();
+//        try {
+//            // Send an HTTP POST request to the Arduino
+//            logger.debug("Sending API request");
+//            String response = restTemplate.postForObject(arduinoUrl, null, String.class);
+//            logger.debug("Arduino Response: {}", response);
+//            model.addAttribute("arduinoResponse", "Arduino Response: " + response);
+//            logger.debug("API worked");
+//        } catch (Exception e) {
+//            logger.error("Error triggering Arduino: {}", e.getMessage());
+//            model.addAttribute("arduinoResponse", "Error triggering Arduino: " + e.getMessage());
+//        }
 
-        return "redirect:GymGoer/machineSets";
+        return "redirect:/test/sets";
     }
 
 }

@@ -33,7 +33,8 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     @Override
     public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
         ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
-         dataProcessor.process(tempExerciseSet);
+         //dataProcessor.process(tempExerciseSet);
+        setRepository.createSet(tempExerciseSet);
          return tempExerciseSet;
     }
 
