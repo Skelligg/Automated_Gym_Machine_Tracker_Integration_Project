@@ -1,6 +1,13 @@
 package be.kdg.integration3.easyrep.repository.users;
 
+import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.GymStaff;
+import be.kdg.integration3.easyrep.model.UserCredentials;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
