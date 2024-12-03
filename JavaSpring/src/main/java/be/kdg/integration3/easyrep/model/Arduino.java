@@ -8,16 +8,19 @@ public class Arduino {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int arduinoId;
     @Column(nullable = false, length = 20)
     private String ipAddress;
+
+    @OneToOne
+    private Machine machine;
 
     public Arduino() {
     }
 
-    public Arduino(String ipAddress, int id) {
+    public Arduino(String ipAddress, int arduinoId) {
         this.ipAddress = ipAddress;
-        this.id = id;
+        this.arduinoId = arduinoId;
     }
 
     public String getIpAddress() {
@@ -29,10 +32,10 @@ public class Arduino {
     }
 
     public int getId() {
-        return id;
+        return arduinoId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.arduinoId = id;
     }
 }

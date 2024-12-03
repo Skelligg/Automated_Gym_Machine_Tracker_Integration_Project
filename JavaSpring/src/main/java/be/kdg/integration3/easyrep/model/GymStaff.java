@@ -7,18 +7,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "GYM_GOER")
+@Table(name = "GYM_STAFF")
 public class GymStaff  {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
-    private int gymId;
+
+    @OneToMany
+    @JoinColumn(name = "gym_ID")
+    private List<Gym> gymId;
+
+    @MapsId
+    @OneToOne
+    @JoinColumn(name = "user_id",insertable = false, updatable = false)
+    private UserCredentials userCredentials;
+
+
 
     public GymStaff() {
     }
 
-    public GymStaff(int userId, int gymId) {
+    public GymStaff(int userId, List<Gym> gymId) {
         this.userId = userId;
         this.gymId = gymId;
     }
@@ -31,12 +40,20 @@ public class GymStaff  {
         this.userId = userId;
     }
 
-    public int getGymId() {
+    public List<Gym> getGymId() {
         return gymId;
     }
 
-    public void setGymId(int gymId) {
+    public void setGymId(List<Gym> gymId) {
         this.gymId = gymId;
+    }
+
+    public UserCredentials getUserCredentials() {
+        return userCredentials;
+    }
+
+    public void setUserCredentials(UserCredentials userCredentials) {
+        this.userCredentials = userCredentials;
     }
 
     @Override

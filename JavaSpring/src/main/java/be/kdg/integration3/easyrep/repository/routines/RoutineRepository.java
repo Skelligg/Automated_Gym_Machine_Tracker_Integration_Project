@@ -2,6 +2,9 @@ package be.kdg.integration3.easyrep.repository.routines;
 
 
 import be.kdg.integration3.easyrep.model.Routine;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
@@ -14,25 +17,57 @@ import java.util.stream.Collectors;
 public class RoutineRepository {
 
     private static final Logger log = LogManager.getLogger(RoutineRepository.class);
-    private static List<Routine> routines = new ArrayList<>();
 
-    public Routine createRoutine(Routine routine) {
-        routines.add(routine);
-        return routine;
+    @PersistenceContext
+    private EntityManager em;
+
+    @Transactional
+    public void createRoutine(Routine routine) {
+        em.persist(routine);
+    }
+
+    @Transactional
+    public void removeRoutine(Routine routine) {
+        Routine managedRoutine = em.find(Routine.class, routine.getId());
+        if (managedRoutine != null) {
+            em.remove(managedRoutine);
+        } else {
+            throw new IllegalArgumentException("Routine with ID " + routine.getId() + " not found, cannot remove.");
+        }
+    }
+
+
+    @Transactional
+    public Routine getRoutine(int id) {
+        return em.find(Routine.class, id);
     }
 
     public List<Routine> getAllRoutines() {
-        return routines;
+        log.info("Retrieving all Routines");
+        return em.createQuery("select r from Routine r", Routine.class).getResultList();
     }
 
-    public void emptyRoutines() {
-        routines.clear();
+
+    @Transactional
+    public void updateRoutineExercises(Routine routine) {
+        Routine routineTemp = em.find(Routine.class, routine.getId());
+        if (routineTemp != null) {
+            routineTemp.setMachines(routine.getMachines());
+            log.info("Updated routine with ID: {}", routine.getId());
+        } else {
+            log.warn("Routine with ID {} not found. Update failed.", routine.getId());
+            throw new IllegalArgumentException("Routine with ID " + routine.getId() + " not found");
+        }
     }
+
 
     public Routine getRoutineByName(String routineName) {
-        return routines.stream()
-                .filter(routine -> routine.getName().toLowerCase().contains(routineName.toLowerCase())) // Case-insensitive partial match
-                .findFirst() // Find the first match
+        String jpql = "SELECT r FROM Routine r WHERE LOWER(r.name) LIKE LOWER(:routineName)";
+        return em.createQuery(jpql, Routine.class)
+                .setParameter("routineName", "%" + routineName + "%") // Partial match with wildcards
+                .getResultStream()
+                .findFirst()
                 .orElse(null); // Return null if no match is found
     }
+
 }

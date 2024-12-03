@@ -1,6 +1,9 @@
 package be.kdg.integration3.easyrep.repository;
 
 import be.kdg.integration3.easyrep.model.Machine;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -13,32 +16,36 @@ import java.util.stream.Collectors;
 public class MachineRepository {
     private Logger logger = LoggerFactory.getLogger(MachineRepository.class);
 
-    private static List<Machine> machines = new ArrayList<Machine>();
+    @PersistenceContext
+    private EntityManager em;
+
+    public List<Machine> findAll() {
+        logger.info("Find all machines");
+        return em.createQuery("select m from Machine m", Machine.class).getResultList();
+    }
+    public Machine findById(int id) {
+        logger.info("Find Machine by id: " + id);
+        return em.find(Machine.class, id);
+    }
 
     public Machine createMachine(Machine machine){
-        machine.setMachineId(machines.size());
-        logger.info("Creating Machine with name: {}", machine.getMachineId());
-        machines.add(machine);
+        logger.info("Create machine: " + machine);
+        em.persist(machine);
         return machine;
     }
 
-    public List<Machine> getMachines() {
-        return machines;
+    @Transactional
+    public void delete (Machine machine){
+        logger.info("Delete machine: " + machine);
+        em.remove(machine);
     }
-    
-    public void emptyMachines() {
-        machines.clear();
-    }
-
-    public List<Machine> findByNameIn(List<String> names) {
-        return machines.stream()
-                .filter(machine -> names.contains(machine.getName()))
-                .collect(Collectors.toList());
+    @Transactional
+    public void update (Machine machine){
+        em.merge(machine);
     }
 
-    public Machine readMachine(int machineId) {
-        logger.debug("Reading Machine with id: {}", machineId);
-        return machines.get(machineId);
+    public Machine findByName(String name) {
+        return em.find(Machine.class, name);
     }
 
 }

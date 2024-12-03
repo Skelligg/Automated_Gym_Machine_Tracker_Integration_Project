@@ -9,11 +9,12 @@ import java.util.List;
 @Service
 public interface RoutineService {
 
-    Routine createRoutine(Routine routine);
+    void createRoutine(Routine routine);
 
     List<Routine> getAllRoutines();
+    Routine getRoutine(int id);
 
-    void emptyRoutines();
-
+    void removeRoutine(int id);
     Routine getRoutineByName(String name);
+    void updateRoutineExercise(Routine routine);
 }

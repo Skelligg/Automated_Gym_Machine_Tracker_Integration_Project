@@ -5,8 +5,11 @@ import be.kdg.integration3.easyrep.model.Gym;
 import java.util.List;
 
 public interface GymService {
-    Gym addGym(Gym gym);
-    List<Gym> getGyms();
+
     Gym findGymByQrCode(String qrCode);
-    void emptyRepository();
+    List<Gym> findAllGyms();
+    Gym findGymById(int id);
+    Gym createGym(Gym gym);
+    void updateGym(Gym gym);
+    void delete(int id);
 }

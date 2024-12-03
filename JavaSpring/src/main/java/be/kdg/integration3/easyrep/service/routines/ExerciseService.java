@@ -7,13 +7,10 @@ import java.util.List;
 
 public interface ExerciseService {
 
-    Exercise createExercise(Exercise machine);
-
+    Exercise createExercise(Exercise exercise);
     List<Exercise> getAllExercises();
-
-    void addExercise(String name);
-
-    void emptyExercises();
-
+    Exercise getExercise(int id);
+    void deleteExercise(int id);
+    void updateExercise(Exercise exercise);
     List<Exercise> findExercisesByNames(List<String> names);
 }

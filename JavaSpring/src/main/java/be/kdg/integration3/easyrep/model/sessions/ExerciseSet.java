@@ -6,23 +6,29 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "SET")
+@Table(name = "EXERCISE_SET")
 public class ExerciseSet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "set_id")
     private int setId;
-    @OneToMany
+
+    @OneToMany(mappedBy = "exerciseSet", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Repetition> repetitionId;
+
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     @Column(length = 50)
     private String previousSet;
+
     @Column(nullable = false)
     private double weightCount;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
+    @JoinColumn(name = "exercise_id")
+    private Exercise exercise;
 
     public ExerciseSet(){}
-
 
     public ExerciseSet(int setId, List<Repetition> repetitionId, LocalDateTime startTime, LocalDateTime endTime, String previousSet, double weightCount) {
         this.setId = setId;

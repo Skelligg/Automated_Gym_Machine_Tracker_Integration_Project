@@ -9,11 +9,17 @@ import java.util.List;
 public class Exercise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "exercise_id")
     private int exerciseId;
-    @OneToMany
+    @OneToMany(mappedBy = "exercise", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<ExerciseSet> exerciseSetId;
     @Column(nullable = false, length = 50)
     private String exerciseName;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "session_id", nullable = false)
+    private Session session;
+
 
     public Exercise() {
     }

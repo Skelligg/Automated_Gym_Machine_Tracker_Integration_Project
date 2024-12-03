@@ -12,27 +12,34 @@ public class Machine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int machineId;
-    @ManyToOne
-    private Gym gymId;
-    @OneToOne
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "gym_id") //FK
+    private Gym gym;
+
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "arduino_id") //FK
     private Arduino arduinoId;
+
     @Column(nullable = false,length = 30)
     private String name;
+
     private LocalDateTime lastTimeChecked;
+
 
     public Machine() {
     }
 
-    public Machine(int machineId, Gym gymId, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+    public Machine(int machineId, Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
         this.machineId = machineId;
-        this.gymId = gymId;
+        this.gym = gym;
         this.arduinoId = arduinoId;
         this.name = name;
         this.lastTimeChecked = lastTimeChecked;
     }
 
-    public Machine(Gym gymId, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
-        this.gymId = gymId;
+    public Machine(Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+        this.gym = gym;
         this.arduinoId = arduinoId;
         this.name = name;
         this.lastTimeChecked = lastTimeChecked;
@@ -46,12 +53,12 @@ public class Machine {
         this.machineId = machineId;
     }
 
-    public Gym getGymId() {
-        return gymId;
+    public Gym getGym() {
+        return gym;
     }
 
-    public void setGymId(Gym gymId) {
-        this.gymId = gymId;
+    public void setGym(Gym gym) {
+        this.gym = gym;
     }
 
     public Arduino getArduinoId() {

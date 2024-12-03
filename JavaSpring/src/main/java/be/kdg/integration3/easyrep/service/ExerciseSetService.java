@@ -5,13 +5,14 @@ import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import java.util.List;
 
 public interface ExerciseSetService {
-    //    Set addSet(LocalTime startTime, LocalTime endTime, int repCount);
-    ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount);
 
-    List<ExerciseSet> getSets();
+//    ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount);
 
-    void emptyRepository();
-
-    public List<ExerciseSet> getAllExerciseSets();
+    List<ExerciseSet> findAllExerciseSet();
+    ExerciseSet findExerciseSetById(int id);
+    ExerciseSet createExerciseSet(ExerciseSet exerciseSet);
+    void delete(int id);
+    void update(ExerciseSet exerciseSet);
+//    List<ExerciseSet> getAllExerciseSets();
 
 }

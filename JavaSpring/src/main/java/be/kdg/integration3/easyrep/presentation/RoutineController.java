@@ -47,7 +47,7 @@ public class RoutineController {
     @GetMapping("/exerciseselection")
     public String showExerciseSelection(@RequestParam ("routineName") String routineName, Model model){
         logger.info("Displaying exercise selection for routine: {}", routineName);
-        List<Machine> availableGymMachines = machineService.getAllMachines();
+        List<Machine> availableGymMachines = machineService.findAllMachines();
         model.addAttribute("exercises", availableGymMachines);
         model.addAttribute("routineName", routineName);
         return "routines/exerciseselection";
@@ -64,13 +64,14 @@ public class RoutineController {
         Routine routine = new Routine();
         //this line below will query the routines database asking for the nextID
         int routineId = 1;
-        routine.setName(routineName);
+        routine.setRoutineName(routineName);
 
         //it's not finding the machines
-        routine.setMachines(machineService.findMachinesByNames(exerciseNames)); // Map exercises to machines
+        routine.setMachines(machineService.findAllMachines());
+//        routine.setMachines(machineService.findMachinesByNames(routineName)); // Map exercises to machines
 
 
-        logger.info("!!The machines are {}", machineService.findMachinesByNames(exerciseNames).toString());
+        logger.info("!!The machines are {}", machineService.findMachinesByNames(routineName).toString());
 
         // input routine in database
         routineService.createRoutine(routine);

@@ -10,4 +10,7 @@ public interface GymStaffRepository {
     GymStaff findByUserId(int userId);
 
     List<GymStaff> findAll();
+
+    void remove(GymStaff gymStaff);
+
 }
