@@ -3,12 +3,16 @@ package be.kdg.integration3.easyrep.service.users;
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.GymStaff;
 import be.kdg.integration3.easyrep.model.UserCredentials;
+import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserCredentialsViewModel;
 import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
 import be.kdg.integration3.easyrep.repository.users.GymGoerRepository;
 import be.kdg.integration3.easyrep.repository.users.GymStaffRepository;
 import be.kdg.integration3.easyrep.repository.users.UserCredentialsRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
+
+import java.time.LocalDate;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -82,6 +86,31 @@ public class UserServiceImp implements UserService {
         } else {
             return "redirect:/" + userCheck.getUsername() + "/home";
         }
+    }
+
+    @Override
+    public void processRegistration(GymGoerViewModel gymgoer, UserCredentialsViewModel userCred) {
+        // Save UserCredentials details
+        UserCredentials userCredentialsEntity = new UserCredentials(
+                userCred.getUsername(),
+                userCred.getPassword(),
+                userCred.getEmail(),
+                LocalDate.now()
+        );
+        userCredentialsRepository.save(userCredentialsEntity);
+
+
+        // Save GymGoer details
+        GymGoer gymGoerEntity = new GymGoer(
+                gymgoer.getFirstName(),
+                gymgoer.getLastName(),
+                gymgoer.getGender(),
+                gymgoer.getAddress(),
+                userCredentialsEntity
+        );
+        gymGoerRepository.save(gymGoerEntity);
+
+
     }
 
 }

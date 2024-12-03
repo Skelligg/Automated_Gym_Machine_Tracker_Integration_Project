@@ -11,44 +11,37 @@ import java.util.List;
 public class GymGoer {
     @Id
     private int userId;
-    @Column(nullable = false, length = 50)
+
+    @Column(nullable = false, length = 32)
     private String firstName;
+
+    @Column(nullable = false, length = 32)
     private String lastName;
+
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "gender", nullable = false, length = 6)
     private Gender gender;
+
     @Column(nullable = false, length = 100)
     private String address;
-    @Column(nullable = false, length = 50)
-    private String phone;
+
     @OneToMany(mappedBy = "gymID",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Routine> routines = new ArrayList<>();
 
     @MapsId
     @OneToOne
-    @JoinColumn(name = "user_Id",insertable = false, updatable = false)
+    @JoinColumn(name = "user_Id")
     private UserCredentials userCredentials;
 
     public GymGoer() {
     }
 
-    public GymGoer(int userId, String firstName, String lastName, Gender gender, String address, String phone, List<Routine> routines) {
-        this.userId = userId;
+    public GymGoer(String firstName, String lastName, Gender gender, String address, UserCredentials userCredentials) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.address = address;
-        this.phone = phone;
-        this.routines = routines;
-    }
-
-    public GymGoer(String firstName, String lastName, Gender gender, String address, String phone, List<Routine> routines) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.address = address;
-        this.phone = phone;
-        this.routines = routines;
+        this.userCredentials = userCredentials;
     }
 
     public int getUserId() {
@@ -91,14 +84,6 @@ public class GymGoer {
         this.address = address;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public List<Routine> getRoutines() {
         return routines;
     }
@@ -123,7 +108,6 @@ public class GymGoer {
                 ", lastName='" + lastName + '\'' +
                 ", gender=" + gender +
                 ", address='" + address + '\'' +
-                ", phone='" + phone + '\'' +
                 ", routines=" + routines +
                 '}';
     }
