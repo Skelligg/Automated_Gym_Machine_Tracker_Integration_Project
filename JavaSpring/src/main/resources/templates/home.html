@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <h1>Welcome to EasyRep</h1>
-    <form th:action="@{/machineSets}" method="get">
+    <form th:action="@{/test/sets}" method="post">
       <input type="hidden" name="deviceId" value="row" />
       <button type="submit" class="btn btn-primary btn-lg" th:text="${buttonText}">Test button</button>
     </form>
