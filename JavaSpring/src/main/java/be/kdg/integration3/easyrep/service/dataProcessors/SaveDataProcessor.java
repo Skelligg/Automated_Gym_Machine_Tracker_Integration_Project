@@ -15,6 +15,6 @@ public class SaveDataProcessor implements DataProcessor {
 
     @Override
     public void process(ExerciseSet exerciseSet) {
-        setRepository.createSet(exerciseSet);
+        setRepository.createExerciseSet(exerciseSet);
     }
 }

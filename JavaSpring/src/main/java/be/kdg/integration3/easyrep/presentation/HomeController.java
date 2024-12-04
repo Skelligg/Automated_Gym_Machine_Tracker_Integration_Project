@@ -39,7 +39,7 @@ public class HomeController {
     @GetMapping("/sets")
     public String getSetsView(Model model){
         logger.debug("getting SetsView");
-        List<ExerciseSet> exerciseSets = exerciseSetService.getSets();
+        List<ExerciseSet> exerciseSets = exerciseSetService.findAllExerciseSet();
         logger.debug(exerciseSets.toString());
         model.addAttribute("exerciseSets", exerciseSets);
         return "GymGoer/machineSets";
@@ -50,7 +50,7 @@ public class HomeController {
         logger.debug("PostMapping received, trying to get you to /sets");
         logger.debug("Device id: {}",  deviceId);
 
-        exerciseSetService.emptyRepository();
+        //exerciseSetService.emptyRepository(); - used with static list
         logger.debug("Trying to access API C++");
         //Trigger the Arduino
 //        String arduinoUrl = "http://" + arduinoService.getIpAddress(deviceId) + "/trigger";
