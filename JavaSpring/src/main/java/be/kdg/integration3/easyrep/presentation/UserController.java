@@ -1,11 +1,9 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.GymGoer;
-import be.kdg.integration3.easyrep.model.GymStaff;
-import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
 import be.kdg.integration3.easyrep.presentation.viewModels.UserCredentialsViewModel;
-import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserLoginViewModel;
 import be.kdg.integration3.easyrep.service.users.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -15,8 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
 
 @Controller
 @RequestMapping("/user")
@@ -30,38 +26,13 @@ public class UserController {
 
     @GetMapping("/login")
     public String getLogIn(Model model) {
-        model.addAttribute("user", new UserLogin());
+        model.addAttribute("user", new UserLoginViewModel());
         return "users/login";
     }
 
     @PostMapping("/login")
-    public String attemptLogIn(@Valid @ModelAttribute("user") UserLogin user, BindingResult br, Model model) {
-        if (br.hasErrors()) {
-            return "users/login";
-        }
-
-        // Search by username or email
-        UserCredentials userCheck = userService.getUserCredentialsByUsernameOrEmail(user.getUsernameOrEmail());
-
-        if (userCheck == null) {
-            br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
-            return "users/login";
-        }
-
-        if (!userCheck.getPassword().equals(user.getPassword())) { // Check the password
-            br.rejectValue("password", "password.incorrect", "Incorrect password");
-            return "users/login";
-        }
-
-        // Redirect to user's home page if successful
-        if(userCheck.getUsername().contains("gymstaff")){
-            return "redirect:/GymOwner";
-
-        }
-        else{
-            return "redirect:/"+ userCheck.getUsername() +"/home";
-
-        }
+    public String attemptLogIn(@Valid @ModelAttribute("user") UserLoginViewModel user, BindingResult br, Model model) {
+        return userService.attemptLogIn(user, br);
     }
 
 
@@ -110,8 +81,7 @@ public class UserController {
             return "users/gymgoerdetails"; // Return to gymgoer details page if session expired
         }
 
-        // Now, you can set the gymgoer fields into userCred or process them as needed
-        // Optionally, set gymgoer details into userCred (if you want to pass it forward)
+        // Optionally set gymgoer details into userCred
         userCred.setGymgoer(gymgoer);
 
         if (!userCred.getPassword().equals(userCred.getConfirmPassword())) {
@@ -123,16 +93,15 @@ public class UserController {
             return "users/register";
         }
 
-        logger.debug("Usercred : {}",userCred);
+        logger.debug("UserCred : {}", userCred);
 
-        //NEED TO FIX
-//        userService.addGymGoer(new GymGoer(gymgoer.getFirstName(),gymgoer.getFirstName(),gymgoer.getGender(),gymgoer.getAddress()));
-        userService.addUserCredentials(new UserCredentials(userCred.getUsername(),userCred.getPassword(),userCred.getEmail(), LocalDate.now()));
+        // Delegate registration logic to the service
+        userService.processRegistration(gymgoer, userCred);
 
-        // Process the registration (e.g., save to database)
         // Redirect to success page or login
         return "redirect:/user/login";
     }
+
 
 
 

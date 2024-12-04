@@ -1,23 +1,27 @@
 package be.kdg.integration3.easyrep.model;
+
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "USER_CREDENTIAL")
-@DiscriminatorColumn(name = "user_ID")
 public class UserCredentials {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id",insertable = false, updatable = false)
+    @Column(name = "user_id", insertable = false, updatable = false)
     private int userId;
+
     @Column(unique = true, nullable = false, length = 32)
     private String username;
-    @Column(unique = true, nullable = false, length = 32)
+
+    @Column(unique = false, nullable = false, length = 255)
     private String password;
-    @Column(unique = true, nullable = false)
+
+    @Column(unique = true, nullable = false, length = 32)
     private String email;
 
+    @Column(name = "date_created", nullable = false)
     private LocalDate dateCreated;
 
     public UserCredentials() {
@@ -32,10 +36,6 @@ public class UserCredentials {
 
     public int getUserId() {
         return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public String getUsername() {

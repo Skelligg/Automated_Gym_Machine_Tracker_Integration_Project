@@ -23,7 +23,7 @@ public class GymGoerHomeController {
     @GetMapping("/{username}/home")
     public String userHome(@PathVariable String username, Model model) {
         // Example: Fetch additional user-specific data to display on the homepage
-        UserCredentials user = userService.getUserCredentialsByUsernameOrEmail(username);
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
 
         if (user == null) {
             return "error/404"; // Return a 404 error page if the user is not found

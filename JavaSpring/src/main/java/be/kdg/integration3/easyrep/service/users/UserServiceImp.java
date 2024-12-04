@@ -3,12 +3,17 @@ package be.kdg.integration3.easyrep.service.users;
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.GymStaff;
 import be.kdg.integration3.easyrep.model.UserCredentials;
-import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
+import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserCredentialsViewModel;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserLoginViewModel;
 import be.kdg.integration3.easyrep.repository.users.GymGoerRepository;
 import be.kdg.integration3.easyrep.repository.users.GymStaffRepository;
 import be.kdg.integration3.easyrep.repository.users.UserCredentialsRepository;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
+
+import java.time.LocalDate;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -42,8 +47,8 @@ public class UserServiceImp implements UserService {
 
     // Find user credentials by ID
     @Override
-    public UserCredentials getUserCredentialsByUsernameOrEmail(String usernameOrEmail) {
-        return userCredentialsRepository.findByUsernameOrEmail(usernameOrEmail);
+    public UserCredentials getUserCredentialsByUsername(String username) {
+        return userCredentialsRepository.findByUsername(username);
     }
 
     // Find gym staff by user ID
@@ -59,29 +64,70 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public String attemptLogIn(UserLogin user, BindingResult br) {
-        // Search by username or email
-        UserCredentials userCheck = userCredentialsRepository.findByUsernameOrEmail(user.getUsernameOrEmail());
+    public String attemptLogIn(UserLoginViewModel user, BindingResult br) {
+        try {
+            // Search by username or email
+            UserCredentials userCheck = userCredentialsRepository.findByUsername(user.getUsernameOrEmail());
 
-        if (userCheck == null) {
-            br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
-            return null; // Return null if validation fails
+            if (userCheck == null) {
+                br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
+                return "users/login";
+            }
+
+            // Validate the password
+            if (!userCheck.getPassword().equals(user.getPassword())) {
+                br.rejectValue("password", "password.incorrect", "Incorrect password");
+                return "users/login";
+            }
+
+            // Check if the user is a gym staff member
+            GymStaff gymStaff = gymStaffRepository.findByUserId(userCheck.getUserId());
+
+            // Determine the redirection path
+            if (gymStaff != null) {
+                return "redirect:/" + gymStaff.getGymId() + "/GymOwner";
+            } else {
+                return "redirect:/" + userCheck.getUsername() + "/home";
+            }
+        } catch (NullPointerException e) {
+            // Handle potential null pointer exceptions
+            br.reject("error.null.pointer", "An unexpected error occurred. Please try again.");
+            return null;
+        } catch (DataAccessException e) {
+            // Handle database access issues
+            br.reject("error.database.access", "A database error occurred. Please try again later.");
+            return null;
+        } catch (Exception e) {
+            // Catch any other unexpected exceptions
+            br.reject("error.general", "An unexpected error occurred. Please contact support.");
+            return null;
         }
+    }
 
-        // Validate the password
-        if (!userCheck.getPassword().equals(user.getPassword())) {
-            br.rejectValue("password", "password.incorrect", "Incorrect password");
-            return null; // Return null if validation fails
-        }
 
-        GymStaff gymStaff = gymStaffRepository.findByUserId(userCheck.getUserId());
+    @Override
+    public void processRegistration(GymGoerViewModel gymgoer, UserCredentialsViewModel userCred) {
+        // Save UserCredentials details
+        UserCredentials userCredentialsEntity = new UserCredentials(
+                userCred.getUsername(),
+                userCred.getPassword(),
+                userCred.getEmail(),
+                LocalDate.now()
+        );
+        userCredentialsRepository.save(userCredentialsEntity);
 
-        // Determine the redirection path
-        if (gymStaff != null) {
-            return "redirect:/" + gymStaff.getGymId() + "GymOwner";
-        } else {
-            return "redirect:/" + userCheck.getUsername() + "/home";
-        }
+
+        // Save GymGoer details
+        GymGoer gymGoerEntity = new GymGoer(
+                gymgoer.getFirstName(),
+                gymgoer.getLastName(),
+                gymgoer.getGender(),
+                gymgoer.getAddress(),
+                userCredentialsEntity
+        );
+        gymGoerRepository.save(gymGoerEntity);
+
+
     }
 
 }

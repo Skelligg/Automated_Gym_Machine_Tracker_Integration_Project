@@ -3,7 +3,9 @@ package be.kdg.integration3.easyrep.service.users;
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.GymStaff;
 import be.kdg.integration3.easyrep.model.UserCredentials;
-import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
+import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserCredentialsViewModel;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserLoginViewModel;
 import org.springframework.validation.BindingResult;
 
 public interface UserService {
@@ -17,7 +19,7 @@ public interface UserService {
     void addGymGoer(GymGoer gymGoer);
 
     // Find user credentials by ID
-    UserCredentials getUserCredentialsByUsernameOrEmail(String usernameOrEmail);
+    UserCredentials getUserCredentialsByUsername(String usernameOrEmail);
 
     // Find gym staff by user ID
     GymStaff getGymStaffByUserId(int userId);
@@ -25,7 +27,9 @@ public interface UserService {
     // Find gym goer by user ID
     GymGoer getGymGoerByUserId(int userId);
 
-    String attemptLogIn(UserLogin user, BindingResult br);
+    String attemptLogIn(UserLoginViewModel user, BindingResult br);
+
+    void processRegistration(GymGoerViewModel gymgoer, UserCredentialsViewModel userCred);
 }
 
 
