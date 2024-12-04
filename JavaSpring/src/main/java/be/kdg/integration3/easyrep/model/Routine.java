@@ -82,6 +82,10 @@ public class Routine {
         this.routineName = routineName;
     }
 
+    public void addMachine(Machine machine) {
+        machines.add(machine);
+    }
+
     @Override
     public String toString() {
         return "Routine{" +

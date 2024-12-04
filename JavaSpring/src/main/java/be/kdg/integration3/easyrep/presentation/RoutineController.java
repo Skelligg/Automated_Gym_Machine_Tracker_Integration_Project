@@ -47,8 +47,12 @@ public class RoutineController {
     @GetMapping("/exerciseselection")
     public String showExerciseSelection(@RequestParam ("routineName") String routineName, Model model){
         logger.info("Displaying exercise selection for routine: {}", routineName);
-        List<Machine> availableGymMachines = machineService.findAllMachines();
-        model.addAttribute("exercises", availableGymMachines);
+        List<Machine> exercises = machineService.findAllMachines();
+        int midIndex = exercises.size()/2;
+        List<Machine> leftColumnExercises = exercises.subList(0, midIndex);
+        List<Machine> rightColumnExercises = exercises.subList(midIndex, exercises.size());
+        model.addAttribute("leftColumnExercises", leftColumnExercises);
+        model.addAttribute("rightColumnExercises", rightColumnExercises);
         model.addAttribute("routineName", routineName);
         return "routines/exerciseselection";
 
@@ -57,25 +61,39 @@ public class RoutineController {
 
     @PostMapping("/exerciseselection")
     public String addExercise(@RequestParam("routineName") String routineName,
-                              @RequestParam List<String> exerciseNames, Model model) {
+                              @RequestParam("exerciseNames") String exerciseNames) {
 
         logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
 
         Routine routine = new Routine();
-        //this line below will query the routines database asking for the nextID
-        int routineId = 1;
         routine.setRoutineName(routineName);
 
-        //it's not finding the machines
-        routine.setMachines(machineService.findAllMachines());
-//        routine.setMachines(machineService.findMachinesByNames(routineName)); // Map exercises to machines
+        // Split string into list
+        List<String> exerciseList = List.of(exerciseNames.split(","));
+//        routine.setMachines(machineService.findMachinesByNames(exerciseList)); // Map exercises to machines
 
+        for (String exerciseName : exerciseList) {
+            Machine machine = machineService.findMachineByName(exerciseName);
+            if (machine != null) {
+                routine.addMachine(machine);
+            } else {
+                logger.warn("Machine with name '{}' not found", exerciseName);
+            }
+        }
 
-        logger.info("!!The machines are {}", machineService.findMachinesByNames(routineName).toString());
+//        logger.info("!!The machines are {}", machineService.findMachinesByNames(exerciseList).toString());
+        logger.info(routine.toString());
 
-        // input routine in database
         routineService.createRoutine(routine);
 
+        return "redirect:/myroutines";
+    }
+
+
+    @PostMapping("/delete")
+    public String deleteRoutine(@RequestParam("routineId") int routineId) {
+        logger.info("Deleting routine with ID: {}", routineId);
+        routineService.removeRoutine(routineId);
         return "redirect:/myroutines";
     }
 

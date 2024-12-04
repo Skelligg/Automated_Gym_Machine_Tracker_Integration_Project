@@ -38,6 +38,10 @@ public class MachineService{
         return machineRepository.findByName(name);
     }
 
+    public Machine findMachineByName(String name) {
+        return machineRepository.findByName(name);
+    }
+
     public List<Machine> findAllMachines() {
         logger.info("Getting all machines");
         return machineRepository.findAll();
