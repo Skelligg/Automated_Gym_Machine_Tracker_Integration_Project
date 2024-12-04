@@ -7,6 +7,7 @@ import be.kdg.integration3.easyrep.repository.SetRepositoryImpl;
 import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -18,11 +19,17 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     private SetRepository setRepository;
     private DataProcessor dataProcessor;
 
-    public ExerciseSetServiceImpl(@Qualifier("compositeExerciseSet") DataProcessor dataProcessor) {
-        logger.debug("Initializing Set Repository");
-        this.dataProcessor = dataProcessor;
-        this.setRepository = new SetRepositoryImpl();
+//    public ExerciseSetServiceImpl(@Qualifier("compositeExerciseSet") DataProcessor dataProcessor) {
+//        logger.debug("Initializing Set Repository");
+//        this.dataProcessor = dataProcessor;
+//        this.setRepository = new SetRepositoryImpl();
+//    }
+
+    @Autowired
+    public ExerciseSetServiceImpl(SetRepository setRepository) {
+        this.setRepository = setRepository;
     }
+
 
 //    @Override
 //    public Set addSet(LocalTime startTime, LocalTime endTime, int repCount){

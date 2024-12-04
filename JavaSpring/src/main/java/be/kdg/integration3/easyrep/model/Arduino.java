@@ -8,19 +8,30 @@ public class Arduino {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "arduino_id")
     private int arduinoId;
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 20, name = "ip_address")
     private String ipAddress;
 
-    @OneToOne
+    @OneToOne(mappedBy = "arduinoId",cascade = CascadeType.ALL)
     private Machine machine;
 
     public Arduino() {
     }
 
-    public Arduino(String ipAddress, int arduinoId) {
-        this.ipAddress = ipAddress;
+    public Arduino(int arduinoId, String ipAddress, Machine machine) {
         this.arduinoId = arduinoId;
+        this.ipAddress = ipAddress;
+        this.machine = machine;
+    }
+
+    public Arduino(int arduinoId, String ipAddress) {
+        this.arduinoId = arduinoId;
+        this.ipAddress = ipAddress;
+    }
+
+    public Arduino(String ipAddress) {
+        this.ipAddress = ipAddress;
     }
 
     public String getIpAddress() {
@@ -31,11 +42,19 @@ public class Arduino {
         this.ipAddress = ipAddress;
     }
 
-    public int getId() {
+    public int getArduinoId() {
         return arduinoId;
     }
 
-    public void setId(int id) {
-        this.arduinoId = id;
+    public void setArduinoId(int arduinoId) {
+        this.arduinoId = arduinoId;
+    }
+
+    public Machine getMachine() {
+        return machine;
+    }
+
+    public void setMachine(Machine machine) {
+        this.machine = machine;
     }
 }

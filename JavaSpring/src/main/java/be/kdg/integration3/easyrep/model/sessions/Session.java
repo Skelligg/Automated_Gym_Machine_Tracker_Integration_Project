@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import be.kdg.integration3.easyrep.model.Routine;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -22,30 +23,36 @@ public class Session {
     private String status;
 
     @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Exercise> exercises = new ArrayList<>();
+    private List<Exercise> exercises;
+
+    @ManyToOne
+    @JoinColumn(name = "routine_id", nullable = false)
+    private Routine routine;
 
     public Session() {
+    }
+
+    public Session(int id, LocalDateTime startSession, LocalDateTime endSession, String status, List<Exercise> exercises, Routine routine) {
+        this.id = id;
+        this.startSession = startSession;
+        this.endSession = endSession;
+        this.status = status;
+        this.exercises = exercises;
+        this.routine = routine;
+    }
+
+    public Session(LocalDateTime startSession, LocalDateTime endSession, String status, List<Exercise> exercises, Routine routine) {
+        this.startSession = startSession;
+        this.endSession = endSession;
+        this.status = status;
+        this.exercises = exercises;
+        this.routine = routine;
     }
 
     public Session(LocalDateTime startSession, LocalDateTime endSession, String status) {
         this.startSession = startSession;
         this.endSession = endSession;
         this.status = status;
-    }
-
-    public Session(LocalDateTime startSession, LocalDateTime endSession, String status, List<Exercise> exercise) {
-        this.startSession = startSession;
-        this.endSession = endSession;
-        this.status = status;
-        this.exercises = exercise;
-    }
-
-    public Session(int id, LocalDateTime startSession, LocalDateTime endSession, String status, List<Exercise> exercise) {
-        this.id = id;
-        this.startSession = startSession;
-        this.endSession = endSession;
-        this.status = status;
-        this.exercises = exercise;
     }
 
     public int getId() {
@@ -89,7 +96,13 @@ public class Session {
         this.exercises = exercises;
     }
 
+    public Routine getRoutine() {
+        return routine;
+    }
 
+    public void setRoutine(Routine routine) {
+        this.routine = routine;
+    }
 
     @Override
     public String toString() {

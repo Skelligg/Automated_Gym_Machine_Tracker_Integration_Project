@@ -13,7 +13,7 @@ public class Exercise {
     private int exerciseId;
     @OneToMany(mappedBy = "exercise", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<ExerciseSet> exerciseSetId;
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50,name = "exercise_name")
     private String exerciseName;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -24,14 +24,20 @@ public class Exercise {
     public Exercise() {
     }
 
-    public Exercise(int exerciseId, List<ExerciseSet> exerciseSetId, String exerciseName) {
+    public Exercise(int exerciseId, List<ExerciseSet> exerciseSetId, String exerciseName, Session session) {
         this.exerciseId = exerciseId;
         this.exerciseSetId = exerciseSetId;
         this.exerciseName = exerciseName;
+        this.session = session;
     }
 
-    public Exercise(List<ExerciseSet> exerciseSetId, String exerciseName) {
+    public Exercise(List<ExerciseSet> exerciseSetId, String exerciseName, Session session) {
         this.exerciseSetId = exerciseSetId;
+        this.exerciseName = exerciseName;
+        this.session = session;
+    }
+
+    public Exercise(String exerciseName) {
         this.exerciseName = exerciseName;
     }
 
@@ -57,6 +63,14 @@ public class Exercise {
 
     public void setExerciseName(String exerciseName) {
         this.exerciseName = exerciseName;
+    }
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
     }
 
     @Override

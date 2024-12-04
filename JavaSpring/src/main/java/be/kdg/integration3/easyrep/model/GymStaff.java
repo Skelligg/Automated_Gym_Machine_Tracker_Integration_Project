@@ -13,8 +13,7 @@ public class GymStaff  {
     @Id
     private int userId;
 
-    @OneToMany
-    @JoinColumn(name = "gym_ID")
+    @OneToMany(mappedBy = "gymStaff",cascade = CascadeType.ALL)
     private List<Gym> gymId;
 
     @MapsId
@@ -27,10 +26,17 @@ public class GymStaff  {
     public GymStaff() {
     }
 
+    public GymStaff(int userId, List<Gym> gymId, UserCredentials userCredentials) {
+        this.userId = userId;
+        this.gymId = gymId;
+        this.userCredentials = userCredentials;
+    }
+
     public GymStaff(int userId, List<Gym> gymId) {
         this.userId = userId;
         this.gymId = gymId;
     }
+
 
     public int getUserId() {
         return userId;

@@ -39,18 +39,18 @@ public class StatisticsController {
         List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
 
         logger.info("Gym goer statistics: {}", statistics);
-        List<Map<String, Object>> volumeData = new ArrayList<>();
-        for (ExerciseSet exerciseSet : statistics) {
-            Map<String, Object> volumeMap = new HashMap<>();
-//            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
-            volumeMap.put("dateTime", exerciseSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
-            volumeData.add(volumeMap);
-        }
+//        List<Map<String, Object>> volumeData = new ArrayList<>();
+//        for (ExerciseSet exerciseSet : statistics) {
+//            Map<String, Object> volumeMap = new HashMap<>();
+////            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
+//            volumeMap.put("dateTime", exerciseSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
+//            volumeData.add(volumeMap);
+//        }
 
         model.addAttribute("statistics", statistics);
-        model.addAttribute("volumeData", volumeData);
+//        model.addAttribute("volumeData", volumeData);
         model.addAttribute("LocalDate", LocalDate.now());
-        model.addAttribute("volume", "10");
+//        model.addAttribute("volume", "10");
 
         return "GymGoer/statistics";
     }

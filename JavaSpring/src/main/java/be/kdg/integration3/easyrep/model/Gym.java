@@ -20,31 +20,49 @@ public class Gym {
 
     @Column(nullable = false, length = 50)
     private String location;
+    @Column(name = "opened_on")
     private LocalDateTime openedOn;
 
-    @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "gym", cascade = CascadeType.ALL)
     private List<Machine> machines;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+//    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "gym_staff_user_id")
     private GymStaff gymStaff;
 
 
     public Gym() {
     }
 
-    public Gym(int gymId, String name, String location, LocalDateTime openedOn, List<Machine> machines) {
+    public Gym(int gymId, String name, String location, LocalDateTime openedOn, List<Machine> machines, GymStaff gymStaff) {
         this.gymId = gymId;
         this.name = name;
         this.location = location;
         this.openedOn = openedOn;
         this.machines = machines;
+        this.gymStaff = gymStaff;
     }
 
-    public Gym(String name, String location, LocalDateTime openedOn, List<Machine> machines) {
+    public Gym(int gymId, String name, String location, LocalDateTime openedOn) {
+        this.gymId = gymId;
         this.name = name;
         this.location = location;
         this.openedOn = openedOn;
-        this.machines = machines;
+    }
+
+    public Gym(String name, String location, LocalDateTime openedOn, GymStaff gymStaff) {
+        this.name = name;
+        this.location = location;
+        this.openedOn = openedOn;
+        this.gymStaff = gymStaff;
+    }
+
+    public Gym(String name, LocalDateTime openedOn, String location, GymStaff gymStaff) {
+        this.name = name;
+        this.openedOn = openedOn;
+        this.location = location;
+        this.gymStaff = gymStaff;
     }
 
     public String getName() {
@@ -89,6 +107,14 @@ public class Gym {
 
     public void addMachine(Machine machine) {
         machines.add(machine);
+    }
+
+    public GymStaff getGymStaff() {
+        return gymStaff;
+    }
+
+    public void setGymStaff(GymStaff gymStaff) {
+        this.gymStaff = gymStaff;
     }
 
     @Override

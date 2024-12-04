@@ -10,9 +10,11 @@ import java.util.List;
 @Table(name = "GYM_GOER")
 public class GymGoer {
     @Id
+    @Column(name = "user_id")
     private int userId;
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50,name = "first_name")
     private String firstName;
+    @Column(nullable = false, length = 50, name = "last_name")
     private String lastName;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -21,18 +23,21 @@ public class GymGoer {
     private String address;
     @Column(nullable = false, length = 50)
     private String phone;
-    @OneToMany(mappedBy = "gymID",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "gymGoer",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Routine> routines = new ArrayList<>();
 
-    @MapsId
+
     @OneToOne
+    @MapsId
     @JoinColumn(name = "user_Id",insertable = false, updatable = false)
     private UserCredentials userCredentials;
+
 
     public GymGoer() {
     }
 
-    public GymGoer(int userId, String firstName, String lastName, Gender gender, String address, String phone, List<Routine> routines) {
+    public GymGoer(int userId, String firstName, String lastName, Gender gender, String address, String phone, List<Routine> routines, UserCredentials userCredentials) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,15 +45,25 @@ public class GymGoer {
         this.address = address;
         this.phone = phone;
         this.routines = routines;
+        this.userCredentials = userCredentials;
     }
 
-    public GymGoer(String firstName, String lastName, Gender gender, String address, String phone, List<Routine> routines) {
+    public GymGoer(int userId, String firstName, String lastName, Gender gender, String address, String phone, UserCredentials userCredentials) {
+        this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.address = address;
         this.phone = phone;
-        this.routines = routines;
+        this.userCredentials = userCredentials;
+    }
+
+    public GymGoer(String firstName, String lastName, Gender gender, String address, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
     }
 
     public int getUserId() {
@@ -114,6 +129,7 @@ public class GymGoer {
     public void setUserCredentials(UserCredentials userCredentials) {
         this.userCredentials = userCredentials;
     }
+
 
     @Override
     public String toString() {

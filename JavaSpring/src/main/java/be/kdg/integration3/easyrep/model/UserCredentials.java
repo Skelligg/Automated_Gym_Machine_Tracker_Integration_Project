@@ -18,9 +18,33 @@ public class UserCredentials {
     @Column(unique = true, nullable = false)
     private String email;
 
+    @Column(name = "date_created")
     private LocalDate dateCreated;
 
+    @OneToOne(mappedBy = "userCredentials",cascade = CascadeType.ALL)
+    private GymGoer gymGoer;
+    @OneToOne(mappedBy = "userCredentials",cascade = CascadeType.ALL)
+    private GymStaff gymStaff;
+
     public UserCredentials() {
+    }
+
+    public UserCredentials(int userId, String username, String password, String email, LocalDate dateCreated, GymGoer gymGoer, GymStaff gymStaff) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.dateCreated = dateCreated;
+        this.gymGoer = gymGoer;
+        this.gymStaff = gymStaff;
+    }
+
+    public UserCredentials(int userId, String username, String password, String email, LocalDate dateCreated) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.dateCreated = dateCreated;
     }
 
     public UserCredentials(String username, String password, String email, LocalDate dateCreated) {
@@ -68,5 +92,21 @@ public class UserCredentials {
 
     public void setDateCreated(LocalDate dateCreated) {
         this.dateCreated = dateCreated;
+    }
+
+    public GymGoer getGymGoer() {
+        return gymGoer;
+    }
+
+    public void setGymGoer(GymGoer gymGoer) {
+        this.gymGoer = gymGoer;
+    }
+
+    public GymStaff getGymStaff() {
+        return gymStaff;
+    }
+
+    public void setGymStaff(GymStaff gymStaff) {
+        this.gymStaff = gymStaff;
     }
 }

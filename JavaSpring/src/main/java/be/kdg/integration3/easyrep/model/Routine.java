@@ -11,34 +11,39 @@ import java.util.List;
 public class Routine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "routine_id")
     private int id;
-    @OneToMany
+    @OneToMany(mappedBy = "routine",cascade = CascadeType.ALL)
     private List<Session> sessionId;
     @ManyToOne
-    @JoinColumn(name = "owner_user_Id")
-    private GymGoer gymID;
+    @JoinColumn(name = "owner_user_Id",nullable = false)
+    private GymGoer gymGoer;
 
-    @OneToMany
-    private List<Machine> machines = new ArrayList<>();
+    @ManyToMany(mappedBy = "routines")
+    private List<Machine> machines;
 
-    @Column(nullable = false,length = 50)
+    @Column(nullable = false,length = 50,name = "routine_name")
     private String routineName;
 
     public Routine() {
     }
 
-    public Routine(int id, List<Session> sessionId, GymGoer gymID, List<Machine> machines, String routineName) {
+    public Routine(int id, List<Session> sessionId, GymGoer gymGoer, List<Machine> machines, String routineName) {
         this.id = id;
         this.sessionId = sessionId;
-        this.gymID = gymID;
+        this.gymGoer = gymGoer;
         this.machines = machines;
         this.routineName = routineName;
     }
 
-    public Routine(List<Session> sessionId, GymGoer gymID, List<Machine> machines, String routineName) {
+    public Routine(List<Session> sessionId, GymGoer gymGoer, List<Machine> machines, String routineName) {
         this.sessionId = sessionId;
-        this.gymID = gymID;
+        this.gymGoer = gymGoer;
         this.machines = machines;
+        this.routineName = routineName;
+    }
+
+    public Routine(String routineName) {
         this.routineName = routineName;
     }
 
@@ -58,12 +63,12 @@ public class Routine {
         this.sessionId = sessionId;
     }
 
-    public GymGoer getGymID() {
-        return gymID;
+    public GymGoer getGymGoer() {
+        return gymGoer;
     }
 
-    public void setGymID(GymGoer gymID) {
-        this.gymID = gymID;
+    public void setGymGoer(GymGoer gymID) {
+        this.gymGoer = gymID;
     }
 
     public List<Machine> getMachines() {
@@ -82,12 +87,13 @@ public class Routine {
         this.routineName = routineName;
     }
 
+
     @Override
     public String toString() {
         return "Routine{" +
                 "id=" + id +
                 ", sessionId=" + sessionId +
-                ", gymID=" + gymID +
+                ", gymID=" + gymGoer +
                 ", machines=" + machines +
                 ", routineName='" + routineName + '\'' +
                 '}';

@@ -29,7 +29,7 @@ public class ArduinoIPDefiner {
     @GetMapping("/registerIP")
     public void registerIP(@RequestParam int id, @RequestParam String arduinoIP) {
         try {
-            Arduino arduino = new Arduino(arduinoIP,id);
+            Arduino arduino = new Arduino(id, arduinoIP);
             arduinoService.createArduino(arduino);
             logger.info("Arduino was registered successfully");
         } catch (Exception e) {

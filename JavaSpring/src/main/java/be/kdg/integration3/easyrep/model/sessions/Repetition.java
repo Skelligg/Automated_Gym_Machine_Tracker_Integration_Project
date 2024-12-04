@@ -9,16 +9,25 @@ import java.time.LocalDateTime;
 public class Repetition {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "repetition_id")
     private int repetitionId;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "start_rep")
     private LocalDateTime startRep;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "end_rep")
     private LocalDateTime endRep;
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "exercise_set_set_id")
     private ExerciseSet exerciseSet;
 
     public Repetition() {
+    }
+
+    public Repetition(int repetitionId, LocalDateTime startRep, LocalDateTime endRep, ExerciseSet exerciseSet) {
+        this.repetitionId = repetitionId;
+        this.startRep = startRep;
+        this.endRep = endRep;
+        this.exerciseSet = exerciseSet;
     }
 
     public Repetition(int repetitionId, LocalDateTime startRep, LocalDateTime endRep) {
@@ -54,6 +63,14 @@ public class Repetition {
 
     public void setEndRep(LocalDateTime endRep) {
         this.endRep = endRep;
+    }
+
+    public ExerciseSet getExerciseSet() {
+        return exerciseSet;
+    }
+
+    public void setExerciseSet(ExerciseSet exerciseSet) {
+        this.exerciseSet = exerciseSet;
     }
 
     @Override
