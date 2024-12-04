@@ -1,11 +1,9 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.GymGoer;
-import be.kdg.integration3.easyrep.model.GymStaff;
-import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
 import be.kdg.integration3.easyrep.presentation.viewModels.UserCredentialsViewModel;
-import be.kdg.integration3.easyrep.presentation.viewModels.UserLogin;
+import be.kdg.integration3.easyrep.presentation.viewModels.UserLoginViewModel;
 import be.kdg.integration3.easyrep.service.users.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -15,8 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
 
 @Controller
 @RequestMapping("/user")
@@ -30,12 +26,12 @@ public class UserController {
 
     @GetMapping("/login")
     public String getLogIn(Model model) {
-        model.addAttribute("user", new UserLogin());
+        model.addAttribute("user", new UserLoginViewModel());
         return "users/login";
     }
 
     @PostMapping("/login")
-    public String attemptLogIn(@Valid @ModelAttribute("user") UserLogin user, BindingResult br, Model model) {
+    public String attemptLogIn(@Valid @ModelAttribute("user") UserLoginViewModel user, BindingResult br, Model model) {
         return userService.attemptLogIn(user, br);
     }
 

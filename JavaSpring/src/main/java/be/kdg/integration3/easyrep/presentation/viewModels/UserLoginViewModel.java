@@ -1,9 +1,8 @@
 package be.kdg.integration3.easyrep.presentation.viewModels;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
-public class UserLogin {
+public class UserLoginViewModel {
     @NotBlank(message = "Username or Email is required")
     private String usernameOrEmail;
 

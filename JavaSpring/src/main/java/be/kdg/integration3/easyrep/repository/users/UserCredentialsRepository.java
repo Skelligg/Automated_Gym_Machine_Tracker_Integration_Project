@@ -1,17 +1,14 @@
 package be.kdg.integration3.easyrep.repository.users;
 
 import be.kdg.integration3.easyrep.model.UserCredentials;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface UserCredentialsRepository {
-    void save(UserCredentials userCredentials);
+@Repository
+public interface UserCredentialsRepository extends JpaRepository<UserCredentials, Integer> {
 
-    UserCredentials findByUsernameOrEmail(String usernameOrEmail);
+    UserCredentials findByUsername(String usernameOrEmail);
 
-    List<UserCredentials> findAll();
-
-    UserCredentials findUserById(int id);
-
-    void deleteUserCredentials(UserCredentials userCredentials);
 }

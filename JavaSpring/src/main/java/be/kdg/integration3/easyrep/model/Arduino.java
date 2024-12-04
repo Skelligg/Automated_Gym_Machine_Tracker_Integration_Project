@@ -12,9 +12,6 @@ public class Arduino {
     @Column(nullable = false, length = 20)
     private String ipAddress;
 
-    @OneToOne
-    private Machine machine;
-
     public Arduino() {
     }
 

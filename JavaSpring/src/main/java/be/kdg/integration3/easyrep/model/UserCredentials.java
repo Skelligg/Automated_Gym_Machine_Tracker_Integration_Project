@@ -15,7 +15,7 @@ public class UserCredentials {
     @Column(unique = true, nullable = false, length = 32)
     private String username;
 
-    @Column(unique = true, nullable = false, length = 255) // Increased length for hashed passwords
+    @Column(unique = false, nullable = false, length = 255)
     private String password;
 
     @Column(unique = true, nullable = false, length = 32)
