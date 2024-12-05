@@ -17,7 +17,7 @@ public class MachineService{
     Logger logger = LoggerFactory.getLogger(RoutineServiceImpl.class);
 
     private MachineRepository machineRepository;
-
+    private final int ourMachines = 20; //amount of machines that we offer, so the ones that are in gym 0, this can change if we add more machines
 
     public MachineService(MachineRepository machineRepository) {
         this.machineRepository = machineRepository;
@@ -32,11 +32,6 @@ public class MachineService{
     public Machine findMachineById(int id) {
         logger.info("Finding machine with id {}", id);
         return machineRepository.findById(id);
-    }
-
-    public Machine findMachinesByNames(String name) {
-        logger.info("Finding machines by names {}", name);
-        return machineRepository.findByName(name);
     }
 
     public Machine findMachineByName(String name) {
@@ -63,8 +58,8 @@ public class MachineService{
 
 
     public List<Machine> findOurMachines() {
-        logger.info("Finding our machines until id {}", 20);
-        return machineRepository.findByIdLessThan(20);
+        logger.info("Finding our machines until id {}", ourMachines);
+        return machineRepository.findByIdLessThan(ourMachines);
     }
 
 

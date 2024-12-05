@@ -11,9 +11,6 @@ import java.util.List;
 public interface MachineRepository extends JpaRepository<Machine, Integer> {
     @Transactional
     void delete(Machine machine);
-/*
-    @Transactional
-    void update(Machine machine);*/
 
     @Query("SELECT m FROM Machine m WHERE (m.machineId <= :LastId)")
     List<Machine> findByIdLessThan(int LastId);

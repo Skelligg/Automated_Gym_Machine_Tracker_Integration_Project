@@ -89,4 +89,8 @@ public class Machine {
     public void setLastTimeChecked(LocalDateTime lastTimeChecked) {
         this.lastTimeChecked = lastTimeChecked;
     }
+
+    public void setArduino(Arduino arduinoId) {
+        this.arduinoId = arduinoId;
+    }
 }

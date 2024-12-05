@@ -14,7 +14,6 @@ public class MachineViewModel {
     private String name;
     private LocalDateTime lastTimeChecked;
 
-
     public MachineViewModel() {
     }
 
@@ -26,10 +25,8 @@ public class MachineViewModel {
         this.lastTimeChecked = lastTimeChecked;
     }
 
-    public MachineViewModel(Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
-        this.arduinoId = arduinoId;
+    public MachineViewModel(String name) {
         this.name = name;
-        this.lastTimeChecked = lastTimeChecked;
     }
 
     public MachineViewModel(Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
@@ -64,7 +61,7 @@ public class MachineViewModel {
     }
 
     public String getImageUrl(){
-        String imageUrl = "/image/" + getName().replaceAll(" ", "").concat(".gif");
+        String imageUrl = "/images/machinesPics" + getName().replaceAll(" ", "").concat(".gif");
         return imageUrl;
     }
 
