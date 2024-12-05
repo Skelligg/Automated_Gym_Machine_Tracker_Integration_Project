@@ -1,14 +1,20 @@
 package be.kdg.integration3.easyrep.repository;
 
 import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.model.UserCredentials;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
 
-@Repository
 public interface MachineRepository extends JpaRepository<Machine, Integer> {
+    @Transactional
+    void delete(Machine machine);
 
-    Machine findByName(String machineName);
+    @Query("SELECT m FROM Machine m WHERE (m.machineId <= :LastId)")
+    List<Machine> findByIdLessThan(int LastId);
 
+    Machine findByName(String name);
     Machine findById(int id);
 }

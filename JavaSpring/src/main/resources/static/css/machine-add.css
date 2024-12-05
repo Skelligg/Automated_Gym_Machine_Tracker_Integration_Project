@@ -1,0 +1,14 @@
+.card {
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card input[type="radio"] {
+    display: none;
+}
+
+.card input[type="radio"]:checked + .card-body{
+    border: 3px solid #007bff; /* Vora de color blau */
+    border-radius: 2px;
+}

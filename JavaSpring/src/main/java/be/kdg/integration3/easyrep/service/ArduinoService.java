@@ -40,6 +40,7 @@ public class ArduinoService {
         logger.info("Updating arduino: " + arduino);
         arduinoRepository.updateArduino(arduino);
     }
+
     @Transactional
     public void deleteArduino(int id) {
         logger.info("Deleting arduino: " + id);

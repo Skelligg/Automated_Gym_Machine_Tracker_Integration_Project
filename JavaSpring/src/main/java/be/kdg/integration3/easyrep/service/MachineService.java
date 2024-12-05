@@ -17,7 +17,7 @@ public class MachineService{
     Logger logger = LoggerFactory.getLogger(RoutineServiceImpl.class);
 
     private MachineRepository machineRepository;
-
+    private final int ourMachines = 20; //amount of machines that we offer, so the ones that are in gym 0, this can change if we add more machines
 
     public MachineService(MachineRepository machineRepository) {
         this.machineRepository = machineRepository;
@@ -34,11 +34,6 @@ public class MachineService{
         return machineRepository.findById(id);
     }
 
-    public Machine findMachinesByNames(String name) {
-        logger.info("Finding machines by names {}", name);
-        return machineRepository.findByName(name);
-    }
-
     public Machine findMachineByName(String name) {
         return machineRepository.findByName(name);
     }
@@ -48,21 +43,24 @@ public class MachineService{
         return machineRepository.findAll();
     }
 
-//    @Transactional
-//    public void deleteMachine(int id){
-//        logger.info("Deleting machine {}", id);
-//        Optional<Machine> machine = findMachineById(id);
-//        machineRepository.delete(machine);
-//    }
-//    @Transactional
-//    public void updateMachine(Machine machine) {
-//        logger.info("Updating machine {}", machine);
-//        machineRepository.update(machine);
-//    }
+    @Transactional
+    public void deleteMachine(int id){
+        logger.info("Deleting machine {}", id);
+        Machine machine = findMachineById(id);
+        machineRepository.delete(machine);
+    }
+    @Transactional
+    public void updateMachine(Machine machine) {
+        logger.info("Updating machine {}", machine);
+        machineRepository.save(machine);
+    }
 
 
 
-
+    public List<Machine> findOurMachines() {
+        logger.info("Finding our machines until id {}", ourMachines);
+        return machineRepository.findByIdLessThan(ourMachines);
+    }
 
 
 

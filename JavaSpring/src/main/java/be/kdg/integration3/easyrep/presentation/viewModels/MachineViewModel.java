@@ -1,38 +1,23 @@
-package be.kdg.integration3.easyrep.model;
+package be.kdg.integration3.easyrep.presentation.viewModels;
 
-import be.kdg.integration3.easyrep.model.sessions.Exercise;
-import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.model.Arduino;
+import be.kdg.integration3.easyrep.model.Gym;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "MACHINE")
-public class Machine {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "machine_id")
+public class MachineViewModel {
+
     private int machineId;
-
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "arduino_id") //FK
-    private Arduino arduinoId;
-
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "gym_id") //FK
     private Gym gym;
-
-
-    @Column(nullable = false,length = 30)
+    private Arduino arduinoId;
     private String name;
-
     private LocalDateTime lastTimeChecked;
 
-
-    public Machine() {
+    public MachineViewModel() {
     }
 
-    public Machine(int machineId, Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+    public MachineViewModel(int machineId, Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
         this.machineId = machineId;
         this.gym = gym;
         this.arduinoId = arduinoId;
@@ -40,7 +25,11 @@ public class Machine {
         this.lastTimeChecked = lastTimeChecked;
     }
 
-    public Machine(Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+    public MachineViewModel(String name) {
+        this.name = name;
+    }
+
+    public MachineViewModel(Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
         this.gym = gym;
         this.arduinoId = arduinoId;
         this.name = name;
@@ -53,11 +42,6 @@ public class Machine {
 
     public void setMachineId(int machineId) {
         this.machineId = machineId;
-    }
-
-    public String getImageUrl(){
-        String imageUrl = "/images/machinesPics/" + getName().replaceAll(" ", "").concat(".gif");
-        return imageUrl;
     }
 
     public Gym getGym() {
@@ -76,6 +60,11 @@ public class Machine {
         this.arduinoId = arduinoId;
     }
 
+    public String getImageUrl(){
+        String imageUrl = "/images/machinesPics" + getName().replaceAll(" ", "").concat(".gif");
+        return imageUrl;
+    }
+
     public String getName() {
         return name;
     }
@@ -90,9 +79,5 @@ public class Machine {
 
     public void setLastTimeChecked(LocalDateTime lastTimeChecked) {
         this.lastTimeChecked = lastTimeChecked;
-    }
-
-    public void setArduino(Arduino arduinoId) {
-        this.arduinoId = arduinoId;
     }
 }
