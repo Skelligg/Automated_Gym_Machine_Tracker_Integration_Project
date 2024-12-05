@@ -7,20 +7,14 @@ public class Machine {
     private String name;
     private MaintenanceAlarm alarm;
     private String imageAddress;
-    private MachineSet machineSetId;
-    private Arduino arduino;
+    private int arduino;
 
     public void alarmSet() {
         alarm.alarmSet();
     };
 
-    public Machine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino) {
-        this.name = name;
-        this.imageAddress = imageAddress;
-        this.machineSetId = machineSetId;
-        this.arduino = arduino;
-    }
-    public Machine(String name, String imageAddress,  Arduino arduino) {
+
+    public Machine(String name, String imageAddress,  int arduino) {
         this.name = name;
         this.imageAddress = imageAddress;
         this.arduino = arduino;
@@ -69,19 +63,12 @@ public class Machine {
         this.imageAddress = imageAddress;
     }
 
-    public MachineSet getSetId() {
-        return machineSetId;
-    }
 
-    public void setSetId(MachineSet machineSetId) {
-        this.machineSetId = machineSetId;
-    }
-
-    public Arduino getArduino() {
+    public int getArduino() {
         return arduino;
     }
 
-    public void setArduino(Arduino arduino) {
+    public void setArduino(int arduino) {
         this.arduino = arduino;
     }
 

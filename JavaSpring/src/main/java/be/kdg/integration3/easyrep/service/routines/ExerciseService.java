@@ -10,7 +10,7 @@ public interface ExerciseService {
 
     Machine createMachine(Machine machine);
     List<Machine> getAllMachines();
-    void addMachine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino);
+    void addMachine(String name, String imageAddress, int arduino);
     void emptyMachines();
     List<Machine> findMachinesByNames(List<String> names);
     Machine findMachineById(int id);

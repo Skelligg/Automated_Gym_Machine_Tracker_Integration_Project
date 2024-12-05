@@ -33,15 +33,16 @@
 <div class="mobile-container">
     <div class="container">
         <h1 class="text-center mt-4">Create a Machine</h1>
-        <form method="get" th:action="@{GymOwner/machines}">
+        <!--/*@thymesVar id="machineViewModel" type=""*/-->
+        <form method="post" th:action="@{/GymOwner/machines/add}" th:object="${machineViewModel}">
             <h3 class="mt-4">Choose one of the machines</h3>
 
             <!-- create a selected card for each machine of ours -->
             <div class="row">
-                <div class="col-6 col-md-3 mb-3" th:each="machine : ${ourMachines}">
+                <div class="col-6 col-md-3 mb-3" th:each="machine : ${ourMachines}" >
                     <div class="card text-center h-100" style="cursor: pointer; min-height: 170px;">
                         <label class="card h-100 shadow-sm rounded text-center">
-                            <input type="radio" name="selectedMachineIds" th:value="${machine.getMachineId()}">
+                            <input type="radio" name="selectedMachineIds" th:value="${machine.getMachineId()}" th:field="*{machineId}">
                             <div class="card-body rounded">
                                 <img th:src="${machine.getImageAddress()}" class="card-img-top" alt="machine image">
                                 <h5 class="card-title" th:text="${machine.getName()}">Machine</h5>
@@ -54,8 +55,8 @@
             <h3 class="mt-4">Enter the Arduino connected to the machine</h3>
 
             <!-- Arduino IP -->
-            <label for="arduinoIP">Arduino IP</label>
-            <input type="text" id="arduinoIP" name="arduinoIP" placeholder="Arduino IP" class="form-control mb-3" required />
+            <label for="arduinoID">Arduino IP</label>
+            <input type="text" id="arduinoID" name="arduino" placeholder="Arduino IP" class="form-control mb-3" required th:field="*{arduino}"/>
 
 
             <!-- Add Machine Button -->

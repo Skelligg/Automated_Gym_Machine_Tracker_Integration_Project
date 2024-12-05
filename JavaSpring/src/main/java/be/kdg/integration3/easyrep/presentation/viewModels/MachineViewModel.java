@@ -9,8 +9,7 @@ public class MachineViewModel {
     private String name;
     private MaintenanceAlarm alarm;
     private String imageAddress;
-    private MachineSet machineSetId;
-    private Arduino arduino;
+    private int arduino;
 
     public MachineViewModel() {
     }
@@ -47,19 +46,12 @@ public class MachineViewModel {
         this.imageAddress = imageAddress;
     }
 
-    public MachineSet getSetId() {
-        return machineSetId;
-    }
 
-    public void setSetId(MachineSet machineSetId) {
-        this.machineSetId = machineSetId;
-    }
-
-    public Arduino getArduino() {
+    public int getArduino() {
         return arduino;
     }
 
-    public void setArduino(Arduino arduino) {
+    public void setArduino(int arduino) {
         this.arduino = arduino;
     }
 }

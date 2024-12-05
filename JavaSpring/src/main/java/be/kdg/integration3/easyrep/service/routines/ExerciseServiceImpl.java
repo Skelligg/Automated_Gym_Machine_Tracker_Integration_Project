@@ -28,14 +28,8 @@ public class ExerciseServiceImpl implements ExerciseService {
         return machine;
     }
 
-    public void addMachine(String name, String imageAddress, MachineSet machineSetId, Arduino arduino){
-        Machine machine = new Machine(name, imageAddress, machineSetId, arduino);
-        logger.info("Creating a machine {}", machine);
-        exerciseRepository.createMachine(machine);
-    }
-
     //I don't understand why MachineSet is in Machine so i create the add Machine without it
-    public void addMachine(String name, String imageAddress, Arduino arduino){
+    public void addMachine(String name, String imageAddress, int arduino){
         Machine machine = new Machine(name, imageAddress, arduino);
         logger.info("Creating a machine {}", machine);
         exerciseRepository.createMachine(machine);
