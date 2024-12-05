@@ -1,9 +1,10 @@
 package be.kdg.integration3.easyrep.presentation;
 
 
-import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.Routine;
-import be.kdg.integration3.easyrep.service.MachineService;
+
+import be.kdg.integration3.easyrep.service.routines.ExerciseService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,12 +20,12 @@ public class RoutineController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private RoutineService routineService;
-    private MachineService machineService;
+    private ExerciseService exerciseService;
 
 
-    public RoutineController(RoutineService routineService, MachineService machineService) {
+    public RoutineController(RoutineService routineService, ExerciseService exerciseService) {
         this.routineService = routineService;
-        this.machineService = machineService;
+        this.exerciseService = exerciseService;
     }
 
     @GetMapping
@@ -47,10 +48,10 @@ public class RoutineController {
     @GetMapping("/exerciseselection")
     public String showExerciseSelection(@RequestParam ("routineName") String routineName, Model model){
         logger.info("Displaying exercise selection for routine: {}", routineName);
-        List<Machine> exercises = machineService.findAllMachines();
+        List<Exercise> exercises = exerciseService.getAllExercises();
         int midIndex = exercises.size()/2;
-        List<Machine> leftColumnExercises = exercises.subList(0, midIndex);
-        List<Machine> rightColumnExercises = exercises.subList(midIndex, exercises.size());
+        List<Exercise> leftColumnExercises = exercises.subList(0, midIndex);
+        List<Exercise> rightColumnExercises = exercises.subList(midIndex, exercises.size());
         model.addAttribute("leftColumnExercises", leftColumnExercises);
         model.addAttribute("rightColumnExercises", rightColumnExercises);
         model.addAttribute("routineName", routineName);
@@ -70,18 +71,18 @@ public class RoutineController {
 
         // Split string into list
         List<String> exerciseList = List.of(exerciseNames.split(","));
-//        routine.setMachines(machineService.findMachinesByNames(exerciseList)); // Map exercises to machines
+//        routine.setExercises(exerciseService.findExercisesByNames(exerciseList)); // Map exercises to exercises
 
         for (String exerciseName : exerciseList) {
-            Machine machine = machineService.findMachineByName(exerciseName);
-            if (machine != null) {
-                routine.addMachine(machine);
+            Exercise exercise = exerciseService.findByName(exerciseName);
+            if (exercise != null) {
+                routine.addExercise(exercise);
             } else {
-                logger.warn("Machine with name '{}' not found", exerciseName);
+                logger.warn("Exercise with name '{}' not found", exerciseName);
             }
         }
 
-        logger.info("!!The machines are {}", routine.getMachines().toString());
+        logger.info("!!The exercises are {}", routine.getExercises().toString());
         logger.info(routine.toString());
 
         routineService.createRoutine(routine);

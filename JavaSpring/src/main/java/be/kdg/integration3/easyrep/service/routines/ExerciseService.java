@@ -12,4 +12,5 @@ public interface ExerciseService {
     void deleteExercise(int id);
     void updateExercise(Exercise exercise);
 //    List<Exercise> findExerciseByNames(List<String> names);
+    Exercise findByName(String name);
 }

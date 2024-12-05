@@ -1,10 +1,7 @@
 package be.kdg.integration3.easyrep.service.routines;
 
-import be.kdg.integration3.easyrep.model.Arduino;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
-import be.kdg.integration3.easyrep.model.sessions.Exercise;
-import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
-import be.kdg.integration3.easyrep.repository.routines.ExerciseRepository;
+import be.kdg.integration3.easyrep.repository.ExerciseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -25,13 +22,17 @@ public class ExerciseServiceImpl implements ExerciseService {
     @Override
     public Exercise createExercise(Exercise exercise) {
         logger.info("Creating exercise " + exercise);
-        return null;
-//        return exerciseRepository.createExercise(exercise);
+        return exerciseRepository.save(exercise);
     }
 
     @Override
     public List<Exercise> getAllExercises() {
-        return List.of();
+
+        return exerciseRepository.findAll();
+    }
+
+    public Exercise findByName(String name){
+        return exerciseRepository.findByexerciseName(name);
     }
 
     @Override

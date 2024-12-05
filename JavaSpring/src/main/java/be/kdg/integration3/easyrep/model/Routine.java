@@ -42,6 +42,10 @@ public class Routine {
         return exercises;
     }
 
+    public void addExercise(Exercise exercise) {
+        this.exercises.add(exercise);
+    }
+
     public void setExercises(List<Exercise> exercises) {
         this.exercises = exercises;
     }
