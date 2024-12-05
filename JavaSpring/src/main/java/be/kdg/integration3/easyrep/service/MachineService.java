@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MachineService{
@@ -25,7 +26,7 @@ public class MachineService{
     @Transactional
     public Machine createMachine(Machine machine) {
         logger.info("Creating a machine {}", machine);
-       return machineRepository.createMachine(machine);
+       return machineRepository.save(machine);
     }
 
     public Machine findMachineById(int id) {
@@ -56,12 +57,15 @@ public class MachineService{
     @Transactional
     public void updateMachine(Machine machine) {
         logger.info("Updating machine {}", machine);
-        machineRepository.update(machine);
+        machineRepository.save(machine);
     }
 
 
 
-
+    public List<Machine> findOurMachines() {
+        logger.info("Finding our machines until id {}", 20);
+        return machineRepository.findByIdLessThan(20);
+    }
 
 
 
