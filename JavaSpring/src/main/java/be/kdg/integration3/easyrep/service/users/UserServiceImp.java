@@ -60,7 +60,7 @@ public class UserServiceImp implements UserService {
     // Find gym goer by user ID
     @Override
     public GymGoer getGymGoerByUserId(int userId) {
-        return gymGoerRepository.findByUserId(userId);
+        return gymGoerRepository.findByuserId(userId);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class UserServiceImp implements UserService {
             if (gymStaff != null) {
                 return "redirect:/" + gymStaff.getGymId() + "/GymOwner";
             } else {
-                return "redirect:/" + userCheck.getUsername() + "/home";
+                return "redirect:/home/"  + userCheck.getUsername();
             }
         } catch (NullPointerException e) {
             // Handle potential null pointer exceptions

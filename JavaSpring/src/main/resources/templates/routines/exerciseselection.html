@@ -14,9 +14,11 @@
 <div class="mobile-container">
   <div class="container">
     <h1 class="text-center mt-4">Select Exercises for <span th:text="${routineName}"></span></h1>
-    <form method="post" th:action="@{/myroutines/exerciseselection}">
+    <form method="post" th:action="@{/myroutines/{username}/exerciseselection(username=${user.username})}">
       <!-- Hidden field for routine name -->
       <input type="hidden" th:value="${routineName}" name="routineName" />
+      <input type="hidden" name="username" th:value="${user.username}">
+
 
       <div class="mb-3">
         <h5 class="mt-4">Available Exercises</h5>
@@ -70,7 +72,7 @@
 </div>
 
 <!-- Navbar Fragment -->
-<div th:insert="~{fragments/navbar :: bottomNavbar}"></div>
+<div th:insert="~{fragments/navbar :: bottomNavbar(user=${user})}"></div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

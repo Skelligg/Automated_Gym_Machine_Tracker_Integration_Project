@@ -16,5 +16,4 @@ public interface RoutineService {
 
     void removeRoutine(int id);
     Routine getRoutineByName(String name);
-    void updateRoutineExercise(Routine routine);
 }

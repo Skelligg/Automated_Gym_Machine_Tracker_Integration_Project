@@ -22,13 +22,13 @@ public class Session {
     @JoinColumn(name = "user_Id", nullable = false)
     private GymGoer gymGoerId;
 
-    @Column(nullable = false)
+    @Column
     private LocalDateTime startSession;
 
-    @Column(nullable = false)
+    @Column
     private LocalDateTime endSession;
 
-    @Column(nullable = false)
+    @Column
     private String status;
 
 

@@ -21,20 +21,20 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     public Session createSession(Session session) {
-        sessionRepository.saveSession(session);
+        sessionRepository.save(session);
         return session;
     }
 
     @Override
     public List<Session> getAllSessions() {
-        return sessionRepository.getAllSessions();
+        return sessionRepository.findAll();
     }
 
 
     @Override
     public Session getSessionById(int id) {
         logger.info("in service getting session repo");
-        return sessionRepository.getSessionById(id);
+        return sessionRepository.findById(id);
     }
 
 }

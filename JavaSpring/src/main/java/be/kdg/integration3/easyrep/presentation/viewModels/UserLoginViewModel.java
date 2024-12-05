@@ -24,4 +24,6 @@ public class UserLoginViewModel {
     public void setPassword(@NotBlank(message = "Password is required") String password) {
         this.password = password;
     }
+
+
 }

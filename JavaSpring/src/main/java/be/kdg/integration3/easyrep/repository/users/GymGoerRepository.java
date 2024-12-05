@@ -1,13 +1,16 @@
 package be.kdg.integration3.easyrep.repository.users;
 
 import be.kdg.integration3.easyrep.model.GymGoer;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
+@Repository
+public interface GymGoerRepository extends JpaRepository<GymGoer, Integer> {
 
-public interface GymGoerRepository {
-    void save(GymGoer gymGoer);
-    GymGoer findByUserId(int userId);
-    List<GymGoer> findAll();
-    void deleteGymGoer(GymGoer gymGoer);
+    GymGoer findByuserId(int id);
+
 }

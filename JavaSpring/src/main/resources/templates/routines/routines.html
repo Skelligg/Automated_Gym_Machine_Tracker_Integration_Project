@@ -31,10 +31,10 @@
         <div class="routine-list list-group my-3" style="max-height: 80vh; overflow-y: auto;">
             <div th:each="routine : ${routines}" class="d-flex align-items-center justify-content-between mb-2">
                 <!-- Routine Link (Grey Background) -->
-                <a th:href="@{/activesession/startSession(userRoutines=${routine.getName()})}"
+                <a th:href="@{/activesession/startSession(userRoutines=${routine.getRoutineName()})}"
                    class="routine-item bg-gradient rounded p-3 text-decoration-none text-reset d-flex align-items-center flex-grow-1">
                     <div class="info w-100 d-flex justify-content-between">
-                        <div class="name fw-bold fs-5" th:text="${routine.getName()}">Chest Day</div>
+                        <div class="name fw-bold fs-5" th:text="${routine.getRoutineName()}">Chest Day</div>
                         <div class="view-arrow ms-3">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -76,7 +76,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form id="addRoutineForm" method="get" th:action="@{/myroutines/exerciseselection}">
+                <form id="addRoutineForm" method="get" th:action="@{/myroutines/{username}/exerciseselection(username=${user.username})}">
                     <div class="mb-3">
                         <label for="routineName" class="form-label">Routine Name</label>
                         <input type="text" class="form-control" id="routineName" name="routineName" required>
@@ -123,7 +123,7 @@
 </script>
 
 <!-- Navbar Fragment -->
-<div th:insert="~{fragments/navbar :: bottomNavbar}"></div>
+<div th:insert="~{fragments/navbar :: bottomNavbar(user=${user})}"></div>
 
 </body>
 </html>

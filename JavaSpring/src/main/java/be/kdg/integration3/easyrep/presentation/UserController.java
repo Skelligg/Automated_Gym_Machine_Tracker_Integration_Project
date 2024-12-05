@@ -31,7 +31,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String attemptLogIn(@Valid @ModelAttribute("user") UserLoginViewModel user, BindingResult br, Model model) {
+    public String attemptLogIn(@Valid @ModelAttribute("user") UserLoginViewModel user, BindingResult br,HttpSession session, Model model) {
         return userService.attemptLogIn(user, br);
     }
 

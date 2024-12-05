@@ -40,16 +40,16 @@
     </nav>
 </div>
 
-<div th:fragment="bottomNavbar">
+<div th:fragment="bottomNavbar(user)">
     <nav class="navbar navbar-dark bg-dark navbar-expand fixed-bottom p-0">
         <div class="container-fluid d-flex justify-content-around align-items-center">
             <!-- Home Button -->
-            <a th:href="@{/home}" class="btn btn-dark d-flex justify-content-center align-items-center">
+            <a th:href="@{/home/{username}(username=${user.username})}" class="btn btn-dark d-flex justify-content-center align-items-center">
                 <i class="fas fa-home fa-lg"></i>
             </a>
 
             <!-- Workout Button -->
-            <a th:href="@{/myroutines}" class="btn btn-primary workout-btn position-relative">
+            <a th:href="@{/myroutines/{username}(username=${user.username})}" class="btn btn-primary workout-btn position-relative">
                 <i class="fas fa-dumbbell fa-3x"></i>
             </a>
 

@@ -69,4 +69,15 @@ public class UserCredentials {
     public void setDateCreated(LocalDate dateCreated) {
         this.dateCreated = dateCreated;
     }
+
+    @Override
+    public String toString() {
+        return "UserCredentials{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", dateCreated=" + dateCreated +
+                '}';
+    }
 }

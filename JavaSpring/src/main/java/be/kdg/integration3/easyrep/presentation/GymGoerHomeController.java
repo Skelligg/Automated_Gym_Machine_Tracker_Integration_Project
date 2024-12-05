@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/home")
 public class GymGoerHomeController {
     private Logger logger = LoggerFactory.getLogger(GymGoerHomeController.class);
     private UserService userService;
@@ -20,16 +20,12 @@ public class GymGoerHomeController {
         this.userService = userService;
     }
 
-    @GetMapping("/{username}/home")
+    @GetMapping("/{username}")
     public String userHome(@PathVariable String username, Model model) {
         // Example: Fetch additional user-specific data to display on the homepage
         UserCredentials user = userService.getUserCredentialsByUsername(username);
-
-        if (user == null) {
-            return "error/404"; // Return a 404 error page if the user is not found
-        }
-
         model.addAttribute("user", user);
+
         return "GymGoer/profile"; // The view for the user's homepage
     }
 

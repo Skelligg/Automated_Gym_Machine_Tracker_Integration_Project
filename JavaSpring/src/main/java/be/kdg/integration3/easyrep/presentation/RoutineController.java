@@ -1,11 +1,17 @@
 package be.kdg.integration3.easyrep.presentation;
 
 
+import be.kdg.integration3.easyrep.model.ExerciseList;
+import be.kdg.integration3.easyrep.model.GymGoer;
+import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.Routine;
 
+import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
+import be.kdg.integration3.easyrep.service.ExerciseListService;
 import be.kdg.integration3.easyrep.service.routines.ExerciseService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
+import be.kdg.integration3.easyrep.service.users.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -15,87 +21,82 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/myroutines")
+@RequestMapping("/myroutines/{username}")
 public class RoutineController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private RoutineService routineService;
     private ExerciseService exerciseService;
+    private ExerciseListService exerciseListService;
+    private UserService userService;
 
-
-    public RoutineController(RoutineService routineService, ExerciseService exerciseService) {
+    public RoutineController(RoutineService routineService, ExerciseService exerciseService, ExerciseListService exerciseListService, UserService userService) {
         this.routineService = routineService;
         this.exerciseService = exerciseService;
+        this.exerciseListService = exerciseListService;
+        this.userService = userService;
     }
 
-    @GetMapping
-    public String getRoutineView(Model model){
-        logger.info("getRoutineView");
+    @GetMapping("")
+    public String getRoutineView(@PathVariable String username, Model model) {
+        logger.info("Fetching routines for user: {}", username);
         List<Routine> routines = routineService.getAllRoutines();
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
         model.addAttribute("routines", routines);
+        model.addAttribute("user", user);
         return "routines/routines";
     }
 
-
-    //do I need to display all routines????? Not while adding
-    @GetMapping("/add")
-    public String showAddRoutine(Model model){
-        logger.info("Accessing page to create new Routine");
-        return "routines/addRoutine";
-    }
-
-
     @GetMapping("/exerciseselection")
-    public String showExerciseSelection(@RequestParam ("routineName") String routineName, Model model){
-        logger.info("Displaying exercise selection for routine: {}", routineName);
-        List<Exercise> exercises = exerciseService.getAllExercises();
-        int midIndex = exercises.size()/2;
-        List<Exercise> leftColumnExercises = exercises.subList(0, midIndex);
-        List<Exercise> rightColumnExercises = exercises.subList(midIndex, exercises.size());
+    public String showExerciseSelection(@PathVariable String username,
+                                        @RequestParam("routineName") String routineName,
+                                        Model model) {
+        logger.info("Displaying exercise selection for routine: {} by user: {}", routineName, username);
+
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
+        List<ExerciseList> exercises = exerciseListService.getAllExercises();
+        int midIndex = exercises.size() / 2;
+        List<ExerciseList> leftColumnExercises = exercises.subList(0, midIndex);
+        List<ExerciseList> rightColumnExercises = exercises.subList(midIndex, exercises.size());
+
+        model.addAttribute("user", user);
         model.addAttribute("leftColumnExercises", leftColumnExercises);
         model.addAttribute("rightColumnExercises", rightColumnExercises);
         model.addAttribute("routineName", routineName);
         return "routines/exerciseselection";
-
     }
 
-
     @PostMapping("/exerciseselection")
-    public String addExercise(@RequestParam("routineName") String routineName,
+    public String addExercise(@PathVariable String username,
+                              @RequestParam("routineName") String routineName,
                               @RequestParam("exerciseNames") String exerciseNames) {
+        logger.info("Creating routine '{}' with exercises {} for user: {}", routineName, exerciseNames, username);
 
-        logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
+        logger.info("The user is {}", user);
 
+        GymGoer gymGoer = userService.getGymGoerByUserId(user.getUserId());
         Routine routine = new Routine();
         routine.setRoutineName(routineName);
 
-        // Split string into list
         List<String> exerciseList = List.of(exerciseNames.split(","));
-//        routine.setExercises(exerciseService.findExercisesByNames(exerciseList)); // Map exercises to exercises
-
         for (String exerciseName : exerciseList) {
-            Exercise exercise = exerciseService.findByName(exerciseName);
-            if (exercise != null) {
-                routine.addExercise(exercise);
-            } else {
-                logger.warn("Exercise with name '{}' not found", exerciseName);
-            }
+            Exercise exercise = new Exercise();
+            exercise.setExerciseName(exerciseName);
+            exerciseService.createExercise(exercise);
+            routine.addExercise(exercise);
+            routine.setGymGoerId(gymGoer);
         }
 
-        logger.info("!!The exercises are {}", routine.getExercises().toString());
-        logger.info(routine.toString());
-
         routineService.createRoutine(routine);
-
-        return "redirect:/myroutines";
+        return "redirect:/myroutines/" + username;
     }
-
 
     @PostMapping("/delete")
-    public String deleteRoutine(@RequestParam("routineId") int routineId) {
+    public String deleteRoutine(@PathVariable String username,
+                                @RequestParam("routineId") int routineId) {
         logger.info("Deleting routine with ID: {}", routineId);
         routineService.removeRoutine(routineId);
-        return "redirect:/myroutines";
+        return "redirect:/myroutines/" + username;
     }
-
 }

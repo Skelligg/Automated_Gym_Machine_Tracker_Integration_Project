@@ -22,15 +22,15 @@ public class Exercise {
     private String exerciseName;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "routine_id", nullable = false)
+    @JoinColumn(name = "routine_id")
     private Routine routine;  // Many exercises belong to one routine
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "session_id", nullable = false)
+    @JoinColumn(name = "session_id")
     private Session session;  // Many exercises belong to one session
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "machine_id", nullable = false)
+    @JoinColumn(name = "machine_id")
     private Machine machine;
 
 

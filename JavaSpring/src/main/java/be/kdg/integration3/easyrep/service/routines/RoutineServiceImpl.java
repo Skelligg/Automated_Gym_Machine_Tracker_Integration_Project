@@ -25,37 +25,32 @@ public class RoutineServiceImpl implements RoutineService {
     @Override
     public void createRoutine(Routine routine) {
         logger.info("Creating Routine");
-        routineRepository.createRoutine(routine);
+        routineRepository.save(routine);
     }
 
     @Override
     public List<Routine> getAllRoutines() {
         logger.info("Getting all Routines");
-        return routineRepository.getAllRoutines();
+        return routineRepository.findAll();
     }
 
     @Override
     public Routine getRoutine(int id) {
         logger.info("Getting Routine");
-        return routineRepository.getRoutine(id);
+        return routineRepository.findById(id);
     }
 
     @Override
     public void removeRoutine(int id) {
         logger.info("Removing Routine");
-        Routine routine = routineRepository.getRoutine(id);
-        routineRepository.removeRoutine(routine);
+        Routine routine = routineRepository.findById(id);
+        routineRepository.delete(routine);
     }
 
     @Override
     public Routine getRoutineByName(String name) {
         logger.info("Getting Routine by name");
-        return routineRepository.getRoutineByName(name);
+        return routineRepository.findByRoutineName(name);
     }
 
-    @Override
-    public void updateRoutineExercise(Routine routine) {
-        logger.info("Updating Routine");
-        routineRepository.updateRoutineExercises(routine);
-    }
 }
