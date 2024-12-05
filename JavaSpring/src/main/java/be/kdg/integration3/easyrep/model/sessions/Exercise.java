@@ -1,7 +1,10 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.model.Routine;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,14 +14,24 @@ public class Exercise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "exercise_id")
     private int exerciseId;
+
     @OneToMany(mappedBy = "exercise", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<ExerciseSet> exerciseSetId;
+    private List<ExerciseSet> exerciseSets = new ArrayList<>();  // List of exercise sets associated with this exercise
+
     @Column(nullable = false, length = 50)
     private String exerciseName;
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "routine_id", nullable = false)
+    private Routine routine;  // Many exercises belong to one routine
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "session_id", nullable = false)
-    private Session session;
+    private Session session;  // Many exercises belong to one session
+
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "machine_id", nullable = false)
+    private Machine machine;
 
 
     public Exercise() {
@@ -26,13 +39,46 @@ public class Exercise {
 
     public Exercise(int exerciseId, List<ExerciseSet> exerciseSetId, String exerciseName) {
         this.exerciseId = exerciseId;
-        this.exerciseSetId = exerciseSetId;
+        this.exerciseSets = exerciseSetId;
         this.exerciseName = exerciseName;
     }
 
     public Exercise(List<ExerciseSet> exerciseSetId, String exerciseName) {
-        this.exerciseSetId = exerciseSetId;
+        this.exerciseSets = exerciseSetId;
         this.exerciseName = exerciseName;
+    }
+
+
+    public List<ExerciseSet> getExerciseSets() {
+        return exerciseSets;
+    }
+
+    public void setExerciseSets(List<ExerciseSet> exerciseSets) {
+        this.exerciseSets = exerciseSets;
+    }
+
+    public Routine getRoutine() {
+        return routine;
+    }
+
+    public void setRoutine(Routine routine) {
+        this.routine = routine;
+    }
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
+
+    public Machine getMachine() {
+        return machine;
+    }
+
+    public void setMachine(Machine machine) {
+        this.machine = machine;
     }
 
     public int getExerciseId() {
@@ -44,11 +90,11 @@ public class Exercise {
     }
 
     public List<ExerciseSet> getExerciseSetId() {
-        return exerciseSetId;
+        return exerciseSets;
     }
 
     public void setExerciseSetId(List<ExerciseSet> exerciseSetId) {
-        this.exerciseSetId = exerciseSetId;
+        this.exerciseSets = exerciseSetId;
     }
 
     public String getExerciseName() {
@@ -63,7 +109,7 @@ public class Exercise {
     public String toString() {
         return "Exercise{" +
                 "exerciseId=" + exerciseId +
-                ", exerciseSetId=" + exerciseSetId +
+                ", exerciseSetId=" + exerciseSets +
                 ", exerciseName='" + exerciseName + '\'' +
                 '}';
     }

@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.model.sessions;
 
+import be.kdg.integration3.easyrep.model.GymGoer;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -11,7 +12,16 @@ import java.util.List;
 public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name="session_id")
+    private int session_id;
+
+    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Exercise> exercises = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "user_Id", nullable = false)
+    private GymGoer gymGoerId;
+
     @Column(nullable = false)
     private LocalDateTime startSession;
 
@@ -21,8 +31,7 @@ public class Session {
     @Column(nullable = false)
     private String status;
 
-    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Exercise> exercises = new ArrayList<>();
+
 
     public Session() {
     }
@@ -40,20 +49,20 @@ public class Session {
         this.exercises = exercise;
     }
 
-    public Session(int id, LocalDateTime startSession, LocalDateTime endSession, String status, List<Exercise> exercise) {
-        this.id = id;
+    public Session(int session_id, LocalDateTime startSession, LocalDateTime endSession, String status, List<Exercise> exercise) {
+        this.session_id = session_id;
         this.startSession = startSession;
         this.endSession = endSession;
         this.status = status;
         this.exercises = exercise;
     }
 
-    public int getId() {
-        return id;
+    public int getSession_id() {
+        return session_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSession_id(int id) {
+        this.session_id = id;
     }
 
     public LocalDateTime getStartSession() {
@@ -89,12 +98,18 @@ public class Session {
         this.exercises = exercises;
     }
 
+    public GymGoer getGymGoerId() {
+        return gymGoerId;
+    }
 
+    public void setGymGoerId(GymGoer gymGoerId) {
+        this.gymGoerId = gymGoerId;
+    }
 
     @Override
     public String toString() {
         return "Session{" +
-                "id=" + id +
+                "id=" + session_id +
                 ", startDateTime=" + startSession +
                 ", endDateTime=" + endSession +
                 ", status='" + status + '\'' +

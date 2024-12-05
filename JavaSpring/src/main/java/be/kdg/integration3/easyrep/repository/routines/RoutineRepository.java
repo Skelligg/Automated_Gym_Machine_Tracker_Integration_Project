@@ -28,11 +28,11 @@ public class RoutineRepository {
 
     @Transactional
     public void removeRoutine(Routine routine) {
-        Routine managedRoutine = em.find(Routine.class, routine.getId());
+        Routine managedRoutine = em.find(Routine.class, routine.getRoutine_id());
         if (managedRoutine != null) {
             em.remove(managedRoutine);
         } else {
-            throw new IllegalArgumentException("Routine with ID " + routine.getId() + " not found, cannot remove.");
+            throw new IllegalArgumentException("Routine with ID " + routine.getRoutine_id() + " not found, cannot remove.");
         }
     }
 
@@ -50,13 +50,13 @@ public class RoutineRepository {
 
     @Transactional
     public void updateRoutineExercises(Routine routine) {
-        Routine routineTemp = em.find(Routine.class, routine.getId());
+        Routine routineTemp = em.find(Routine.class, routine.getRoutine_id());
         if (routineTemp != null) {
-            routineTemp.setMachines(routine.getMachines());
-            log.info("Updated routine with ID: {}", routine.getId());
+            routineTemp.setExercises(routine.getExercises());
+            log.info("Updated routine with ID: {}", routine.getRoutine_id());
         } else {
-            log.warn("Routine with ID {} not found. Update failed.", routine.getId());
-            throw new IllegalArgumentException("Routine with ID " + routine.getId() + " not found");
+            log.warn("Routine with ID {} not found. Update failed.", routine.getRoutine_id());
+            throw new IllegalArgumentException("Routine with ID " + routine.getRoutine_id() + " not found");
         }
     }
 

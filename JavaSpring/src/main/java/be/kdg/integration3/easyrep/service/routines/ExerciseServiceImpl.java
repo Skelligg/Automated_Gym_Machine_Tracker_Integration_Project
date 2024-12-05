@@ -49,11 +49,11 @@ public class ExerciseServiceImpl implements ExerciseService {
     public void updateExercise(Exercise exercise) {
 
     }
-
-    @Override
-    public List<Exercise> findExercisesByNames(List<String> names) {
-        return List.of();
-    }
+//
+//    @Override
+//    public Exercise findExerciseByNames(String name) {
+//        return f
+//    }
 
 
 //    //I don't understand why ExerciseSet is in Exercise so i create the add Exercise without it

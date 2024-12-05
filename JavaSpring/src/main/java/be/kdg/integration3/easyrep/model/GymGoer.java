@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.model;
 
+import be.kdg.integration3.easyrep.model.sessions.Session;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -25,13 +26,18 @@ public class GymGoer {
     @Column(nullable = false, length = 100)
     private String address;
 
-    @OneToMany(mappedBy = "gymID",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "gymGoerId",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Routine> routines = new ArrayList<>();
+
+    @OneToMany(mappedBy = "gymGoerId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Session> sessions = new ArrayList<>();
+
 
     @MapsId
     @OneToOne
     @JoinColumn(name = "user_Id")
     private UserCredentials userCredentials;
+
 
     public GymGoer() {
     }
@@ -98,6 +104,14 @@ public class GymGoer {
 
     public void setUserCredentials(UserCredentials userCredentials) {
         this.userCredentials = userCredentials;
+    }
+
+    public List<Session> getSessions() {
+        return sessions;
+    }
+
+    public void setSessions(List<Session> sessions) {
+        this.sessions = sessions;
     }
 
     @Override
