@@ -1,14 +1,9 @@
 package be.kdg.integration3.easyrep.service;
 
-import be.kdg.integration3.easyrep.model.Gym;
-import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.repository.GymRepository;
 import be.kdg.integration3.easyrep.repository.MachineRepository;
-import be.kdg.integration3.easyrep.repository.routines.ExerciseRepository;
 import be.kdg.integration3.easyrep.repository.routines.RoutineRepository;
 import org.springframework.stereotype.Component;
-
-import java.util.Date;
 
 @Component
 public class DataInitializer {

@@ -81,7 +81,7 @@ public class RoutineController {
             }
         }
 
-//        logger.info("!!The machines are {}", machineService.findMachinesByNames(exerciseList).toString());
+        logger.info("!!The machines are {}", routine.getMachines().toString());
         logger.info(routine.toString());
 
         routineService.createRoutine(routine);
