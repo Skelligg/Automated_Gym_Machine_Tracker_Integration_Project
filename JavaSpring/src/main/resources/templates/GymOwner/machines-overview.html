@@ -6,15 +6,16 @@
     <title>Machines Overview</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 
-<div th:insert="~{fragments/navbar :: header}">header</div>
+<div th:insert="~{fragments/navbar :: header(userName=${user.username})}">header</div>
 
 <div class="container mt-4">
     <div class="row align-items-center">
         <div class="col-6">
-            <h1 class="display-5">Dashboard</h1>
+            <h1 class="display-5" th:text="${'Dashboard of ' + user.username}">Dashboard</h1>
         </div>
 
         <div class="col-6 text-end">
@@ -22,21 +23,55 @@
         </div>
     </div>
 </div>
-<div class="container mt-4">
-    <h2>Machine Overview</h2>
+
+<div class="container  mt-4 d-flex flex-column align-items-center justify-content-center" th:each="gym : ${gyms}">
     <div class="row">
-        <div class="col-6 col-md-3 mb-3" th:each="machine : ${machines}">
-            <a href="machine_review.html" th:href="@{/GymOwner/machines/machineReview(idMachine=${machine.getMachineId()})}" class="text-decoration-none">
+        <div class="col-6 col-md-3 mb-3 w-100">
+            <a href="machines-overview.html"  th:href="@{'/' + ${user.username} + '/machines?idGym=' + ${gym.getGymId()}}"
+               class="text-decoration-none">
             <div class="card text-center h-100" style="cursor: pointer; min-height: 170px;">
-                <img th:src="${machine.getImageAddress()}" class="card-img-top" alt="machine image">
+                <img th:src="@{/images/gym.png}" class="card-img-top img-fluid w-50 mx-auto" alt="gym image">
                 <div class="card-body">
-                    <h5 class="card-title"  th:text="${machine.getName()}">Machine</h5>
-                    <p class="card-text text-danger">• Attention Required</p>
+                    <h5 class="card-title"  th:text="${gym.getName()}">Gym</h5>
+                    <p class="card-text" th:text="${gym.getLocation()}">Location</p>
                 </div>
             </div>
             </a>
         </div>
 
+    </div>
+    <!-- Add Gym Button -->
+    <!--<div class="text-center mt-4">
+        <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
+           th:href="@{'/' + ${user.username} + '/gym/add'}">
+            + Add a Gym
+        </a>
+    </div>-->
+</div>
+
+<div class="container mt-4">
+    <h2 th:text="${'Machine Overview of Gym ' + gymSelected.getName()}">Machine Overview</h2>
+    <div class="row">
+        <div class="col-6 col-md-3 mb-3" th:each="machine : ${machines}">
+            <a href="machine_review.html"  th:href="@{'/' + ${user.username} + '/machines/' + ${idGym}+ '/machineReview?idMachine=' + ${machine.machineId} }"
+               class="text-decoration-none">
+                <div class="card text-center h-100" style="cursor: pointer; min-height: 170px;">
+                    <img th:src="${machine.getImageUrl()}" class="card-img-top" alt="machine image">
+                    <div class="card-body">
+                        <h5 class="card-title"  th:text="${machine.getName()}">Machine</h5>
+                        <p class="card-text text-danger">• Attention Required</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <!-- Add Machine Button -->
+    <div class="text-center mt-4">
+        <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
+           th:href="@{'/' + ${user.username} + '/machines/' + ${idGym}+ '/add'}">
+            + Add Machine to Gym
+        </a>
     </div>
 </div>
 
