@@ -1,6 +1,6 @@
 package be.kdg.integration3.easyrep.model;
 
-import be.kdg.integration3.easyrep.model.sessions.Session;
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -11,15 +11,15 @@ import java.util.List;
 public class Routine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @OneToMany
-    private List<Session> sessionId;
-    @ManyToOne
-    @JoinColumn(name = "owner_user_Id")
-    private GymGoer gymID;
+    @Column(name = "routine_id")
+    private int routine_id;
 
-    @OneToMany
-    private List<Machine> machines = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "user_Id", nullable = false)
+    private GymGoer gymGoerId;
+
+    @OneToMany(mappedBy = "routine", fetch = FetchType.EAGER, cascade = CascadeType.ALL) // Changed mappedBy to refer to routine
+    private List<Exercise> exercises = new ArrayList<>();  // Renamed from exerciseId
 
     @Column(nullable = false,length = 50)
     private String routineName;
@@ -27,51 +27,47 @@ public class Routine {
     public Routine() {
     }
 
-    public Routine(int id, List<Session> sessionId, GymGoer gymID, List<Machine> machines, String routineName) {
-        this.id = id;
-        this.sessionId = sessionId;
-        this.gymID = gymID;
-        this.machines = machines;
+    public Routine(int id, GymGoer gymGoerId, String routineName) {
+        this.routine_id = id;
+        this.gymGoerId = gymGoerId;
         this.routineName = routineName;
     }
 
-    public Routine(List<Session> sessionId, GymGoer gymID, List<Machine> machines, String routineName) {
-        this.sessionId = sessionId;
-        this.gymID = gymID;
-        this.machines = machines;
+    public Routine(GymGoer gymGoerId, String routineName) {
+        this.gymGoerId = gymGoerId;
         this.routineName = routineName;
+    }
+
+    public List<Exercise> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(List<Exercise> exercises) {
+        this.exercises = exercises;
     }
 
     public int getId() {
-        return id;
+        return routine_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.routine_id = id;
     }
 
-    public List<Session> getSessionId() {
-        return sessionId;
+    public GymGoer getGymGoerId() {
+        return gymGoerId;
     }
 
-    public void setSessionId(List<Session> sessionId) {
-        this.sessionId = sessionId;
+    public void setGymGoerId(GymGoer gymGoerId) {
+        this.gymGoerId = gymGoerId;
     }
 
-    public GymGoer getGymID() {
-        return gymID;
+    public int getRoutine_id() {
+        return routine_id;
     }
 
-    public void setGymID(GymGoer gymID) {
-        this.gymID = gymID;
-    }
-
-    public List<Machine> getMachines() {
-        return machines;
-    }
-
-    public void setMachines(List<Machine> machines) {
-        this.machines = machines;
+    public void setRoutine_id(int routine_id) {
+        this.routine_id = routine_id;
     }
 
     public String getRoutineName() {
@@ -82,17 +78,11 @@ public class Routine {
         this.routineName = routineName;
     }
 
-    public void addMachine(Machine machine) {
-        machines.add(machine);
-    }
-
     @Override
     public String toString() {
         return "Routine{" +
-                "id=" + id +
-                ", sessionId=" + sessionId +
-                ", gymID=" + gymID +
-                ", machines=" + machines +
+                "id=" + routine_id +
+                ", gymID=" + gymGoerId +
                 ", routineName='" + routineName + '\'' +
                 '}';
     }

@@ -29,13 +29,13 @@ public class SessionRepositoryImpl implements SessionRepository {
     @Transactional
     @Override
     public void deleteSession(Session session) {
-        logger.info("Deleting session with ID: {}", session.getId());
+        logger.info("Deleting session with ID: {}", session.getSession_id());
 
-        Session managedSession = em.find(Session.class, session.getId()); // Retrieve the managed entity
+        Session managedSession = em.find(Session.class, session.getSession_id()); // Retrieve the managed entity
         if (managedSession != null) {
             em.remove(managedSession); // Remove the managed session
         } else {
-            throw new IllegalArgumentException("Session with ID " + session.getId() + " not found, cannot delete.");
+            throw new IllegalArgumentException("Session with ID " + session.getSession_id() + " not found, cannot delete.");
         }
     }
 

@@ -4,6 +4,7 @@ package be.kdg.integration3.easyrep.presentation;
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.service.MachineService;
+import be.kdg.integration3.easyrep.service.routines.ExerciseServiceImpl;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +19,15 @@ import java.util.List;
 public class RoutineController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final ExerciseServiceImpl exerciseServiceImpl;
     private RoutineService routineService;
     private MachineService machineService;
 
 
-    public RoutineController(RoutineService routineService, MachineService machineService) {
+    public RoutineController(RoutineService routineService, MachineService machineService, ExerciseServiceImpl exerciseServiceImpl) {
         this.routineService = routineService;
         this.machineService = machineService;
+        this.exerciseServiceImpl = exerciseServiceImpl;
     }
 
     @GetMapping
@@ -59,35 +62,35 @@ public class RoutineController {
     }
 
 
-    @PostMapping("/exerciseselection")
-    public String addExercise(@RequestParam("routineName") String routineName,
-                              @RequestParam("exerciseNames") String exerciseNames) {
-
-        logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
-
-        Routine routine = new Routine();
-        routine.setRoutineName(routineName);
-
-        // Split string into list
-        List<String> exerciseList = List.of(exerciseNames.split(","));
-//        routine.setMachines(machineService.findMachinesByNames(exerciseList)); // Map exercises to machines
-
-        for (String exerciseName : exerciseList) {
-            Machine machine = machineService.findMachineByName(exerciseName);
-            if (machine != null) {
-                routine.addMachine(machine);
-            } else {
-                logger.warn("Machine with name '{}' not found", exerciseName);
-            }
-        }
-
-//        logger.info("!!The machines are {}", machineService.findMachinesByNames(exerciseList).toString());
-        logger.info(routine.toString());
-
-        routineService.createRoutine(routine);
-
-        return "redirect:/myroutines";
-    }
+//    @PostMapping("/exerciseselection")
+//    public String addExercise(@RequestParam("routineName") String routineName,
+//                              @RequestParam("exerciseNames") String exerciseNames) {
+//
+//        logger.info("Creating routine '{}' with exercises {}", routineName, exerciseNames);
+//
+//        Routine routine = new Routine();
+//        routine.setRoutineName(routineName);
+//
+//        // Split string into list
+//        List<String> exerciseList = List.of(exerciseNames.split(","));
+////        routine.setMachines(machineService.findMachinesByNames(exerciseList)); // Map exercises to machines
+//
+//        for (String exerciseName : exerciseList) {
+//            Machine machine = exerciseServiceImpl.findExerciseByNames(exerciseName);
+//            if (machine != null) {
+//                routine.addExercise(machine);
+//            } else {
+//                logger.warn("Machine with name '{}' not found", exerciseName);
+//            }
+//        }
+//
+////        logger.info("!!The machines are {}", machineService.findMachinesByNames(exerciseList).toString());
+//        logger.info(routine.toString());
+//
+//        routineService.createRoutine(routine);
+//
+//        return "redirect:/myroutines";
+//    }
 
 
     @PostMapping("/delete")

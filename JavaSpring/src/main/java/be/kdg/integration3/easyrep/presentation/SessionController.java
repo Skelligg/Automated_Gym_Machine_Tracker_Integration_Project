@@ -1,12 +1,10 @@
 package be.kdg.integration3.easyrep.presentation;
 
-import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
-import be.kdg.integration3.easyrep.service.routines.ExerciseService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.session.SessionService;
 import org.slf4j.Logger;
@@ -44,8 +42,8 @@ public class SessionController {
 
         // Map machines to exercises
         List<Exercise> exercises = new ArrayList<>();
-        for (Machine machine : routine.getMachines()) {
-            logger.debug(machine.toString());
+        for (Exercise exercise : routine.getExercises()) {
+            logger.debug(exercise.toString());
             //IDK WHAT THIS MEANS SO I COMMENT IT OUT
 //            exercises.add(new Exercise(machine.getName()));
         }
@@ -53,11 +51,11 @@ public class SessionController {
         // Create and save the session
         Session session = new Session();
         session.setExercises(exercises);
-        session.setId(1);
+        session.setSession_id(1);
         sessionService.createSession(session);
 
         // Redirect to the first exercise
-        int sessionId = session.getId();
+        int sessionId = session.getSession_id();
         return "redirect:/activesession/nextExercise?sessionId=" + sessionId + "&exerciseIndex=-1";
     }
 

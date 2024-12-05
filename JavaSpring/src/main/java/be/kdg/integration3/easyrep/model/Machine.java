@@ -11,15 +11,17 @@ import java.time.LocalDateTime;
 public class Machine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "machine_id")
     private int machineId;
+
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "arduino_id") //FK
+    private Arduino arduinoId;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "gym_id") //FK
     private Gym gym;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "arduino_id") //FK
-    private Arduino arduinoId;
 
     @Column(nullable = false,length = 30)
     private String name;
