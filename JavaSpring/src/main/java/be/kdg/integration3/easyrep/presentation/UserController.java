@@ -35,8 +35,6 @@ public class UserController {
         return userService.attemptLogIn(user, br);
     }
 
-
-
     @GetMapping("/userdetails")
     public String getUserDetails(Model model) {
         model.addAttribute("gymgoer", new GymGoerViewModel());

@@ -6,7 +6,7 @@ import java.time.LocalDate;
 public class UserCredentialsViewModel {
     private int userId; // Assumes it's auto-generated, not validated here
 
-    @NotBlank(message = "Username is required")
+    @NotBlank(message = "Userame is required")
     @Size(min = 4, max = 20, message = "Username must be between 3 and 20 characters")
     private String username;
 

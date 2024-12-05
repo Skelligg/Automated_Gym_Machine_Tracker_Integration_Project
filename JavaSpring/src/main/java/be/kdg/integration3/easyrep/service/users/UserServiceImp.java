@@ -48,7 +48,7 @@ public class UserServiceImp implements UserService {
     // Find user credentials by ID
     @Override
     public UserCredentials getUserCredentialsByUsername(String username) {
-        return userCredentialsRepository.findByUsername(username);
+        return userCredentialsRepository.findByUsernameOrEmail(username);
     }
 
     // Find gym staff by user ID
@@ -65,9 +65,13 @@ public class UserServiceImp implements UserService {
 
     @Override
     public String attemptLogIn(UserLoginViewModel user, BindingResult br) {
+        if (br.hasErrors()) {
+            return "users/login";
+        }
+
         try {
-            // Search by username or email
-            UserCredentials userCheck = userCredentialsRepository.findByUsername(user.getUsernameOrEmail());
+
+            UserCredentials userCheck = userCredentialsRepository.findByUsernameOrEmail(user.getUsernameOrEmail());
 
             if (userCheck == null) {
                 br.rejectValue("usernameOrEmail", "username.not.found", "Username or email not found");
