@@ -18,7 +18,7 @@ public class Routine {
     @JoinColumn(name = "user_Id", nullable = false)
     private GymGoer gymGoerId;
 
-    @OneToMany(mappedBy = "routine", fetch = FetchType.EAGER, cascade = CascadeType.ALL) // Changed mappedBy to refer to routine
+    @OneToMany(mappedBy = "routine", cascade = CascadeType.ALL, fetch = FetchType.EAGER) // Changed mappedBy to refer to routine
     private List<Exercise> exercises = new ArrayList<>();  // Renamed from exerciseId
 
     @Column(nullable = false,length = 50)

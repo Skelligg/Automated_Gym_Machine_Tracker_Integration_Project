@@ -29,7 +29,7 @@ public class Exercise {
     @JoinColumn(name = "session_id", nullable = false)
     private Session session;  // Many exercises belong to one session
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "machine_id", nullable = false)
     private Machine machine;
 
