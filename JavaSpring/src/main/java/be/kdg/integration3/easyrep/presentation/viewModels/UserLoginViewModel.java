@@ -9,7 +9,7 @@ public class UserLoginViewModel {
     @NotBlank(message = "Password is required")
     private String password;
 
-    public @NotBlank(message = "Username is required") String getUsernameOrEmail() {
+    public String getUsernameOrEmail() {
         return usernameOrEmail;
     }
 

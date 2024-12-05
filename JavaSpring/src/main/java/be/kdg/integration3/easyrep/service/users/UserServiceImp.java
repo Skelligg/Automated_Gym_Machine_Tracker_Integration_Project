@@ -65,8 +65,12 @@ public class UserServiceImp implements UserService {
 
     @Override
     public String attemptLogIn(UserLoginViewModel user, BindingResult br) {
+        if (br.hasErrors()) {
+            return "users/login";
+        }
+
         try {
-            // Search by username or email
+
             UserCredentials userCheck = userCredentialsRepository.findByUsername(user.getUsernameOrEmail());
 
             if (userCheck == null) {
