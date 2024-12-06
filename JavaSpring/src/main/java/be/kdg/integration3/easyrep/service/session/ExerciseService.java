@@ -1,4 +1,4 @@
-package be.kdg.integration3.easyrep.service.routines;
+package be.kdg.integration3.easyrep.service.session;
 
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 

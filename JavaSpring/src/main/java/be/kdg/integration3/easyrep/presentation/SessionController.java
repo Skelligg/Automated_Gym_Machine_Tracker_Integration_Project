@@ -2,6 +2,7 @@ package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.Routine;
+import be.kdg.integration3.easyrep.model.RoutineExercise;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.model.sessions.Session;
@@ -45,7 +46,7 @@ public class SessionController {
         logger.info("Starting session for routine: " + routineId);
 
         // Map machines to exercises
-        List<Exercise> exercises = routine.getExercises();
+        List<RoutineExercise> exercises = routine.getExercises();
 //        for (Exercise exercise : routine.getExercises()) {
 //            logger.debug(exercise.toString());
 //            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
@@ -56,7 +57,7 @@ public class SessionController {
 
         // Create and save the session
         Session session = new Session();
-        session.setExercises(exercises);
+        //session.setExercises(exercises);
         session.setGymGoerId(user);
         sessionService.createSession(session);
 

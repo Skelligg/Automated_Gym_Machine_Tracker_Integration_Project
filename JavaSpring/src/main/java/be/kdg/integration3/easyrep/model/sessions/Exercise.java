@@ -22,10 +22,6 @@ public class Exercise {
     private String exerciseName;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "routine_id")
-    private Routine routine;  // Many exercises belong to one routine
-
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "session_id")
     private Session session;  // Many exercises belong to one session
 
@@ -55,14 +51,6 @@ public class Exercise {
 
     public void setExerciseSets(List<ExerciseSet> exerciseSets) {
         this.exerciseSets = exerciseSets;
-    }
-
-    public Routine getRoutine() {
-        return routine;
-    }
-
-    public void setRoutine(Routine routine) {
-        this.routine = routine;
     }
 
     public Session getSession() {

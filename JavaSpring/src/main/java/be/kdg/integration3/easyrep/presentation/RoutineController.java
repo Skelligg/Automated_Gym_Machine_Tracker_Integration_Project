@@ -1,15 +1,12 @@
 package be.kdg.integration3.easyrep.presentation;
 
 
-import be.kdg.integration3.easyrep.model.ExerciseList;
-import be.kdg.integration3.easyrep.model.GymGoer;
-import be.kdg.integration3.easyrep.model.UserCredentials;
+import be.kdg.integration3.easyrep.model.*;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
-import be.kdg.integration3.easyrep.model.Routine;
 
-import be.kdg.integration3.easyrep.presentation.viewModels.GymGoerViewModel;
 import be.kdg.integration3.easyrep.service.ExerciseListService;
-import be.kdg.integration3.easyrep.service.routines.ExerciseService;
+import be.kdg.integration3.easyrep.service.routines.RoutineExerciseService;
+import be.kdg.integration3.easyrep.service.session.ExerciseService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.users.UserService;
 import org.slf4j.Logger;
@@ -26,13 +23,13 @@ public class RoutineController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private RoutineService routineService;
-    private ExerciseService exerciseService;
+    private RoutineExerciseService routineExerciseService;
     private ExerciseListService exerciseListService;
     private UserService userService;
 
-    public RoutineController(RoutineService routineService, ExerciseService exerciseService, ExerciseListService exerciseListService, UserService userService) {
+    public RoutineController(RoutineService routineService, RoutineExerciseService routineExerciseService, ExerciseListService exerciseListService, UserService userService) {
         this.routineService = routineService;
-        this.exerciseService = exerciseService;
+        this.routineExerciseService = routineExerciseService;
         this.exerciseListService = exerciseListService;
         this.userService = userService;
     }
@@ -81,14 +78,14 @@ public class RoutineController {
         GymGoer gymGoer = userService.getGymGoerByUserId(user.getUserId());
         Routine routine = new Routine();
         routine.setRoutineName(routineName);
+        routine.setGymGoerId(gymGoer);
 
         List<String> exerciseList = List.of(exerciseNames.split(","));
         for (String exerciseName : exerciseList) {
-            Exercise exercise = new Exercise();
-            exercise.setExerciseName(exerciseName);
-            exerciseService.createExercise(exercise);
+            RoutineExercise exercise = new RoutineExercise();
+            exercise.setName(exerciseName);
+            exercise.setRoutine(routine);
             routine.addExercise(exercise);
-            routine.setGymGoerId(gymGoer);
         }
 
         routineService.createRoutine(routine);
