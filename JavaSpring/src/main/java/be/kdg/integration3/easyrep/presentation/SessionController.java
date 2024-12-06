@@ -45,27 +45,30 @@ public class SessionController {
         Routine routine = routineService.getRoutine(routineId);
         logger.info("Starting session for routine: " + routineId);
 
-        // Map machines to exercises
-        List<Exercise> exercises = new ArrayList<>();
-        for (RoutineExercise rExercise : routine.getExercises()) {
-            Exercise exercise = new Exercise();
-            exercise.setExerciseName(rExercise.getName());
-            exercises.add(exercise);
-            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
-//            exercises.add(new Exercise(machine.getName()));
-        }
 
         GymGoer user = userService.getGymGoerByUserId(userService.getUserCredentialsByUsername(username).getUserId()) ;
 
         // Create and save the session
         Session session = new Session();
-        session.setExercises(exercises);
         session.setGymGoerId(user);
+
+        // Map machines to exercises
+        List<Exercise> exercises = new ArrayList<>();
+        for (RoutineExercise rExercise : routine.getExercises()) {
+            Exercise exercise = new Exercise();
+            exercise.setExerciseName(rExercise.getName());
+            exercise.setSession(session);
+            exercises.add(exercise);
+            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
+//            exercises.add(new Exercise(machine.getName()));
+        }
+
+        session.setExercises(exercises);
         sessionService.createSession(session);
 
         // Redirect to the first exercise
         int sessionId = session.getSession_id();
-        return "redirect:/activesession/" + username + "/nextExercise?sessionId=" + sessionId + "&exerciseIndex=-1";
+        return "redirect:/activesession/" + username + "/nextExercise?sessionId=" + sessionId + "&exerciseIndex=0";
     }
 
     @GetMapping("/nextExercise")
@@ -75,8 +78,6 @@ public class SessionController {
                                   Model model) {
         // Fetch the session by ID
         Session session = sessionService.getSessionById(sessionId);
-        exerciseIndex++;
-
         // Get the current exercise
         Exercise currentExercise = session.getExercises().get(exerciseIndex);
 
