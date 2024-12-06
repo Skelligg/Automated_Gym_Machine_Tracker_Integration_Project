@@ -1,0 +1,67 @@
+Index: JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineSetServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package be.kdg.integration3.easyrep.service;\n\n\nimport be.kdg.integration3.easyrep.model.sessions.MachineSet;\nimport be.kdg.integration3.easyrep.repository.SetRepository;\nimport org.slf4j.Logger;\nimport org.slf4j.LoggerFactory;\nimport org.springframework.beans.factory.annotation.Qualifier;\nimport org.springframework.stereotype.Service;\n\nimport java.util.List;\n\n@Service\npublic class MachineSetServiceImpl implements MachineSetService {\n    private Logger logger = LoggerFactory.getLogger(MachineSetServiceImpl.class);\n    private SetRepository setRepository;\n    private DataProcessor dataProcessor;\n\n    public MachineSetServiceImpl(@Qualifier(\"compositeMachineSet\") DataProcessor dataProcessor) {\n        logger.debug(\"Initializing Set Repository\");\n        this.dataProcessor = dataProcessor;\n    }\n\n//    @Override\n//    public Set addSet(LocalTime startTime, LocalTime endTime, int repCount){\n//        return setRepository.createSet(new Set(startTime, endTime, repCount));\n//    }\n\n    @Override\n    public MachineSet addSet(int setNumber, String setTime, int repCount, double weightCount){\n        MachineSet tempMachineSet = new MachineSet(setNumber, setTime, repCount, weightCount);\n         dataProcessor.process(tempMachineSet);\n         return tempMachineSet;\n    }\n\n    @Override\n    public List<MachineSet> getSets(){\n        logger.debug(\"Getting sets\");\n        return setRepository.getSets();\n    }\n\n    @Override\n    public void emptyRepository(){\n        logger.debug(\"Cleaning the repository\");\n        setRepository.emptyList();\n    }\n\n}\n
+===================================================================
+diff --git a/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineSetServiceImpl.java b/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineSetServiceImpl.java
+--- a/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineSetServiceImpl.java	(revision da36b9d735fc537054edfa34286b0e890afe7835)
++++ b/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineSetServiceImpl.java	(date 1732896811893)
+@@ -3,6 +3,7 @@
+ 
+ import be.kdg.integration3.easyrep.model.sessions.MachineSet;
+ import be.kdg.integration3.easyrep.repository.SetRepository;
++import be.kdg.integration3.easyrep.repository.SetRepositoryImpl;
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ import org.springframework.beans.factory.annotation.Qualifier;
+@@ -16,8 +17,9 @@
+     private SetRepository setRepository;
+     private DataProcessor dataProcessor;
+ 
+-    public MachineSetServiceImpl(@Qualifier("compositeMachineSet") DataProcessor dataProcessor) {
++    public MachineSetServiceImpl(@Qualifier("compositeMachineSet") DataProcessor dataProcessor, SetRepository setRepository) {
+         logger.debug("Initializing Set Repository");
++        this.setRepository = new SetRepositoryImpl();
+         this.dataProcessor = dataProcessor;
+     }
+ 
+Index: JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/MachineSetController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package be.kdg.integration3.easyrep.presentation;\n\nimport be.kdg.integration3.easyrep.model.sessions.MachineSet;\nimport be.kdg.integration3.easyrep.service.MachineSetService;\nimport org.slf4j.Logger;\nimport org.slf4j.LoggerFactory;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Controller;\nimport org.springframework.ui.Model;\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RequestMapping;\n\nimport java.util.List;\n\n\n//gonna mix this class with \"SET CONTROLLER API\"\n@Controller\n@RequestMapping(\"/sets\")\npublic class MachineSetController {\n\n    private static Logger logger = LoggerFactory.getLogger(MachineSetController.class);\n\n    private MachineSetService machineSetService;\n\n    @Autowired\n    public MachineSetController(MachineSetService machineSetService) {\n        this.machineSetService = machineSetService;\n    }\n\n    @GetMapping\n    public String getSetsView(Model model){\n        logger.debug(\"getting SetsView\");\n        List<MachineSet> machineSets = machineSetService.getSets();\n        logger.debug(machineSets.toString());\n        model.addAttribute(\"machineSets\", machineSets);\n        return \"GymGoer/sets\";\n    }\n}\n
+===================================================================
+diff --git a/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/MachineSetController.java b/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/MachineSetController.java
+--- a/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/MachineSetController.java	(revision da36b9d735fc537054edfa34286b0e890afe7835)
++++ b/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/MachineSetController.java	(date 1732896522625)
+@@ -8,6 +8,7 @@
+ import org.springframework.stereotype.Controller;
+ import org.springframework.ui.Model;
+ import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.PostMapping;
+ import org.springframework.web.bind.annotation.RequestMapping;
+ 
+ import java.util.List;
+@@ -15,7 +16,7 @@
+ 
+ //gonna mix this class with "SET CONTROLLER API"
+ @Controller
+-@RequestMapping("/sets")
++@RequestMapping("/machineSets")
+ public class MachineSetController {
+ 
+     private static Logger logger = LoggerFactory.getLogger(MachineSetController.class);
+@@ -27,12 +28,12 @@
+         this.machineSetService = machineSetService;
+     }
+ 
+-    @GetMapping
++    @PostMapping
+     public String getSetsView(Model model){
+         logger.debug("getting SetsView");
+         List<MachineSet> machineSets = machineSetService.getSets();
+         logger.debug(machineSets.toString());
+         model.addAttribute("machineSets", machineSets);
+-        return "GymGoer/sets";
++        return "GymGoer/machineSets";
+     }
+ }

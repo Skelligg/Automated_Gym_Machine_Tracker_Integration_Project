@@ -1,0 +1,72 @@
+Index: JavaSpring/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>logging.level.be.kdg.integration3 = debug\nserver.port=80\n\n#logging.level.org.thymeleaf=DEBUG\nlogging.level.org.springframework.web=DEBUG\nlogging.level.org.springframework.web.servlet.DispatcherServlet=DEBUG\n\n#spring.thymeleaf.cache=false\n\nspring.datasource.url=jdbc:postgresql://10.134.178.163:5432/postgres\nspring.datasource.username=postgres\nspring.datasource.password=IP3dbP@ss\nspring.datasource.driver-class-name=org.postgresql.Driver\nspring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect\n\nlogging.level.org.springframework.jdbc=DEBUG\nlogging.level.org.hibernate=DEBUG\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JavaSpring/src/main/resources/application.properties b/JavaSpring/src/main/resources/application.properties
+--- a/JavaSpring/src/main/resources/application.properties	(revision da36b9d735fc537054edfa34286b0e890afe7835)
++++ b/JavaSpring/src/main/resources/application.properties	(date 1732896256555)
+@@ -1,5 +1,5 @@
+ logging.level.be.kdg.integration3 = debug
+-server.port=80
++server.port=8080
+ 
+ #logging.level.org.thymeleaf=DEBUG
+ logging.level.org.springframework.web=DEBUG
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"435d0537-22ec-4e01-9553-f853cb2d9a8f\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <projects_view>\n          <tree_state>\n            <expand>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"EasyRep\" type=\"f1a62948:ProjectNode\" />\n              </path>\n            </expand>\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitLabMergeRequestFiltersHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPENED&quot;,\n    &quot;assignee&quot;: {\n      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,\n      &quot;username&quot;: &quot;Michaelukyanov&quot;,\n      &quot;fullname&quot;: &quot;Michael Lukyanov&quot;\n    }\n  }\n}</component>\n  <component name=\"GitLabMergeRequestsSettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;first&quot;: &quot;https://gitlab.com/kdg-ti/integration-2.1/24-25/team-13/gym-accessory-project.git&quot;,\n    &quot;second&quot;: &quot;721c8e40-b50a-404c-96ad-7f999e2ba003&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"2nVvmdLGtYcCjPTQnZ0t5eMANWm\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Gradle.Build gym-accessory-project.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"Spring Boot.StartApplication.executor\": \"Run\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"C:/KdG/GymProject/gym-accessory-project/JavaSpring\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"StartApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\n      <module name=\"EasyRep.main\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"be.kdg.integration3.easyrep.StartApplication\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"435d0537-22ec-4e01-9553-f853cb2d9a8f\" name=\"Changes\" comment=\"\" />\n      <created>1729071220524</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1729071220524</updated>\n      <workItem from=\"1729071221659\" duration=\"1763000\" />\n      <workItem from=\"1729252945065\" duration=\"2730000\" />\n      <workItem from=\"1729506039062\" duration=\"3045000\" />\n      <workItem from=\"1729517960341\" duration=\"18000\" />\n      <workItem from=\"1729517986511\" duration=\"9000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision da36b9d735fc537054edfa34286b0e890afe7835)
++++ b/.idea/workspace.xml	(date 1732894975271)
+@@ -4,10 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -69,10 +66,11 @@
+   "keyToString": {
+     "Gradle.Build gym-accessory-project.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
+     "Spring Boot.StartApplication.executor": "Run",
+-    "git-widget-placeholder": "main",
++    "git-widget-placeholder": "AddMachine",
+     "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/KdG/GymProject/gym-accessory-project/JavaSpring",
++    "last_opened_file_path": "/home/anna/Escriptori/KDG/2/Integration3/gym-accessory-project",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+@@ -93,8 +91,8 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
++        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
++        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -111,6 +109,7 @@
+       <workItem from="1729506039062" duration="3045000" />
+       <workItem from="1729517960341" duration="18000" />
+       <workItem from="1729517986511" duration="9000" />
++      <workItem from="1732894955461" duration="20000" />
+     </task>
+     <servers />
+   </component>
