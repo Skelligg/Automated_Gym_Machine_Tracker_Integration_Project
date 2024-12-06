@@ -5,6 +5,7 @@ import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.repository.session.SessionRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +16,7 @@ public class SessionServiceImpl implements SessionService {
     Logger logger = LoggerFactory.getLogger(SessionServiceImpl.class);
     SessionRepository sessionRepository;
 
+    @Autowired
     public SessionServiceImpl(SessionRepository sessionRepository) {
         this.sessionRepository = sessionRepository;
     }
@@ -35,6 +37,9 @@ public class SessionServiceImpl implements SessionService {
     public Session getSessionById(int id) {
         logger.info("in service getting session repo");
         return sessionRepository.findById(id);
+    }
+    public int getSessionCountByUserId(int userId) {
+        return sessionRepository.countSessionByUserId(userId);
     }
 
 }

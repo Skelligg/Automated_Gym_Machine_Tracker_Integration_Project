@@ -6,13 +6,11 @@ import java.util.List;
 
 public interface ExerciseSetService {
 
-//    ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount);
 
     List<ExerciseSet> findAllExerciseSet();
     ExerciseSet findExerciseSetById(int id);
     ExerciseSet createExerciseSet(ExerciseSet exerciseSet);
     void delete(int id);
-    void update(ExerciseSet exerciseSet);
-//    List<ExerciseSet> getAllExerciseSets();
+    ExerciseSet update(ExerciseSet exerciseSet);
 
 }

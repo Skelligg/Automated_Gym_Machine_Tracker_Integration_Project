@@ -1,4 +1,4 @@
-let chart;
+    let chart;
 
 function showTable(tableId,chartType, clickedLabel){
     //hiding all tables

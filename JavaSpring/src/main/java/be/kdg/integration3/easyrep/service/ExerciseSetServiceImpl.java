@@ -2,12 +2,9 @@ package be.kdg.integration3.easyrep.service;
 
 
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
-import be.kdg.integration3.easyrep.repository.SetRepository;
-import be.kdg.integration3.easyrep.repository.SetRepositoryImpl;
-import be.kdg.integration3.easyrep.service.dataProcessors.DataProcessor;
+import be.kdg.integration3.easyrep.repository.ExerciseSetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,51 +12,45 @@ import java.util.List;
 @Service
 public class ExerciseSetServiceImpl implements ExerciseSetService {
     private Logger logger = LoggerFactory.getLogger(ExerciseSetServiceImpl.class);
-    private SetRepository setRepository;
-    private DataProcessor dataProcessor;
+    private ExerciseSetRepository exerciseSetRepository;
 
-    public ExerciseSetServiceImpl(@Qualifier("compositeExerciseSet") DataProcessor dataProcessor) {
-        logger.debug("Initializing Set Repository");
-        this.dataProcessor = dataProcessor;
-        this.setRepository = new SetRepositoryImpl();
+
+    public ExerciseSetServiceImpl(ExerciseSetRepository exerciseSetRepository) {
+        this.exerciseSetRepository = exerciseSetRepository;
     }
-
-//    @Override
-//    public Set addSet(LocalTime startTime, LocalTime endTime, int repCount){
-//        return setRepository.createSet(new Set(startTime, endTime, repCount));
-//    }
-
-//    @Override
-//    public ExerciseSet addSet(int setNumber, String setTime, int repCount, double weightCount){
-////        ExerciseSet tempExerciseSet = new ExerciseSet(setNumber, setTime, repCount, weightCount);
-//         dataProcessor.process(tempExerciseSet);
-//         return tempExerciseSet;
-//    }
 
     @Override
     public List<ExerciseSet> findAllExerciseSet() {
-        return setRepository.findAllExerciseSet();
+        logger.info("Finding all exercise sets");
+        return exerciseSetRepository.findAll();
     }
 
     @Override
     public ExerciseSet findExerciseSetById(int id) {
-        return setRepository.findExerciseSetById(id);
+        logger.info("Finding exercise set by id: {}", id);
+        return exerciseSetRepository.findById(id).orElseThrow(() -> new RuntimeException("No exercise set found with id: " + id));
     }
 
     @Override
     public ExerciseSet createExerciseSet(ExerciseSet exerciseSet) {
-        return setRepository.createExerciseSet(exerciseSet);
+        logger.debug("Creating new exercise set {}", exerciseSet);
+        return exerciseSetRepository.save(exerciseSet);
     }
 
     @Override
     public void delete(int id) {
         logger.debug("Deleting exercise set with id {}", id);
-        ExerciseSet exerciseSet = setRepository.findExerciseSetById(id);
-        setRepository.delete(exerciseSet);
+        exerciseSetRepository.deleteById(id);
     }
 
     @Override
-    public void update(ExerciseSet exerciseSet) {
-        setRepository.updateSet(exerciseSet);
+    public ExerciseSet update(ExerciseSet exerciseSet) {
+        logger.debug("Updating exercise set {}", exerciseSet);
+
+        if (!exerciseSetRepository.existsById(exerciseSet.getSetId())){
+            throw new RuntimeException("No exercise set found with id: " + exerciseSet.getSetId());
+        }
+
+        return exerciseSetRepository.save(exerciseSet);
     }
 }

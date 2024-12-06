@@ -79,11 +79,12 @@ public class SessionController {
     }
 
     @GetMapping("/end")
-    public String getSessionEnd(@RequestParam("sessionId") int sessionId,Model model) {
+    public String getSessionEnd(@RequestParam("userId") int userId,Model model) {
+        int count = sessionService.getSessionCountByUserId(userId);
         logger.info("Mapping the end screen");
-        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
-        logger.info("Found {} statistics", statistics);
-        model.addAttribute("statistics", statistics);
+//        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
+//        logger.info("Found {} statistics", statistics);
+//        model.addAttribute("statistics", statistics);
         return "GymGoer/end_screen_session";
     }
 
