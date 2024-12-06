@@ -79,20 +79,48 @@ public class SessionController {
     }
 
     @GetMapping("/end")
-    public String getSessionEnd(@RequestParam("userId") int userId,Model model) {
+    public String getSessionEnd(@RequestParam("sessionId") int sessionId ,@RequestParam("userId") int userId,Model model){
+        logger.info("Loading the end page.");
+
+        //finding on which number workout the person is
         int count = sessionService.getSessionCountByUserId(userId);
-        logger.info("Mapping the end screen");
-//        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
-//        logger.info("Found {} statistics", statistics);
-//        model.addAttribute("statistics", statistics);
+        logger.info("The GymGoer is on workout number [{}]", count);
+
+        //adding the suffix to the number
+        String endNumberSuffix = getNumberEndAnnotation(count);
+
+        //getting the duration of the session
+        String duration = sessionService.getTimeForSessionById(sessionId);
+
+        //getting name of the exercise and the weight for each set
+        List<Object[]> dataFromExerciseSession = exerciseSetService.getExerciseSetsNameAndWeightBySessionId(sessionId);
+
+        //adding the attributes to the model
+        model.addAttribute("endNumberCount", count);
+        model.addAttribute("endNumberSuffix", endNumberSuffix);
+        model.addAttribute("duration", duration);
+        model.addAttribute("exerciseData", dataFromExerciseSession);
+
         return "GymGoer/end_screen_session";
     }
+    //going among the numbers and seeing if they are supposed to end on 'st', 'nd' etc.
+    private String getNumberEndAnnotation(int number) {
+        if (number % 100 >= 11 && number % 100 <= 13) return "th"; // for evey number that end on 'th'
+        return switch (number %10){
+            case 1 -> "st"; //for the first
+            case 2 -> "nd"; // for the second
+            case 3 -> "rd"; // for the third
+            default -> "th";
+        };
+    }
+
 
     @PostMapping("/GymGoer/statistics/open")
     public String getStatistics() {
         logger.info("Mapping the statistics screen");
         return "redirect:GymGoer/statistics";
     }
+
 }
 
 

@@ -12,5 +12,6 @@ public interface ExerciseSetService {
     ExerciseSet createExerciseSet(ExerciseSet exerciseSet);
     void delete(int id);
     ExerciseSet update(ExerciseSet exerciseSet);
+    List<Object[]> getExerciseSetsNameAndWeightBySessionId(int sessionId);
 
 }

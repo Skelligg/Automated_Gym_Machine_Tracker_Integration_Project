@@ -53,4 +53,10 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
 
         return exerciseSetRepository.save(exerciseSet);
     }
+
+    // getting the name of the exercise and weight for the specific session
+    @Override
+    public List<Object[]> getExerciseSetsNameAndWeightBySessionId(int sessionId) {
+        return exerciseSetRepository.findExerciseSetsByNameAndWeightCountBySessionId(sessionId);
+    }
 }

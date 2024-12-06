@@ -13,5 +13,6 @@ public interface SessionService {
     Session getSessionById(int id);
 
     public int getSessionCountByUserId(int userId);
+    public String getTimeForSessionById(int sessionId);
 
 }
