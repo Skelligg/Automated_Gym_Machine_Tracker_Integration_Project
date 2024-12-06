@@ -46,18 +46,20 @@ public class SessionController {
         logger.info("Starting session for routine: " + routineId);
 
         // Map machines to exercises
-        List<RoutineExercise> exercises = routine.getExercises();
-//        for (Exercise exercise : routine.getExercises()) {
-//            logger.debug(exercise.toString());
-//            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
-////            exercises.add(new Exercise(machine.getName()));
-//        }
+        List<Exercise> exercises = new ArrayList<>();
+        for (RoutineExercise rExercise : routine.getExercises()) {
+            Exercise exercise = new Exercise();
+            exercise.setExerciseName(rExercise.getName());
+            exercises.add(exercise);
+            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
+//            exercises.add(new Exercise(machine.getName()));
+        }
 
         GymGoer user = userService.getGymGoerByUserId(userService.getUserCredentialsByUsername(username).getUserId()) ;
 
         // Create and save the session
         Session session = new Session();
-        //session.setExercises(exercises);
+        session.setExercises(exercises);
         session.setGymGoerId(user);
         sessionService.createSession(session);
 
