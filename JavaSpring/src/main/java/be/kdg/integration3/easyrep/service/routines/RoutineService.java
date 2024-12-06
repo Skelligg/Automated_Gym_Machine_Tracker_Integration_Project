@@ -1,6 +1,7 @@
 package be.kdg.integration3.easyrep.service.routines;
 
 
+import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.Routine;
 import org.springframework.stereotype.Service;
 
@@ -16,4 +17,6 @@ public interface RoutineService {
 
     void removeRoutine(int id);
     Routine getRoutineByName(String name);
+
+    public List<Routine> getRoutinesByGymGoer(GymGoer gymgoer);
 }

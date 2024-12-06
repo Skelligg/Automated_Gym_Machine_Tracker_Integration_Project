@@ -1,6 +1,7 @@
 package be.kdg.integration3.easyrep.repository.routines;
 
 
+import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.Routine;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -21,6 +22,8 @@ public interface RoutineRepository extends JpaRepository<Routine, Integer> {
     Routine findById(int id);
 
     Routine findByRoutineName(String name);
+
+    List<Routine> findAllByGymGoerId(GymGoer gymgoer);
 
 
 //    private static final Logger log = LogManager.getLogger(RoutineRepository.class);

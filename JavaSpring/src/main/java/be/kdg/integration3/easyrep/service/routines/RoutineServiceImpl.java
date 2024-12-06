@@ -1,6 +1,7 @@
 package be.kdg.integration3.easyrep.service.routines;
 
 import be.kdg.integration3.easyrep.model.Gender;
+import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.repository.routines.RoutineRepository;
 import org.slf4j.Logger;
@@ -51,6 +52,11 @@ public class RoutineServiceImpl implements RoutineService {
     public Routine getRoutineByName(String name) {
         logger.info("Getting Routine by name");
         return routineRepository.findByRoutineName(name);
+    }
+
+    @Override
+    public List<Routine> getRoutinesByGymGoer(GymGoer gymgoer) {
+        return routineRepository.findAllByGymGoerId(gymgoer);
     }
 
 }
