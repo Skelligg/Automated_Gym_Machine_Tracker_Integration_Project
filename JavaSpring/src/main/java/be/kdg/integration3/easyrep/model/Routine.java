@@ -50,14 +50,6 @@ public class Routine {
         this.exercises = exercises;
     }
 
-    public int getId() {
-        return routine_id;
-    }
-
-    public void setId(int id) {
-        this.routine_id = id;
-    }
-
     public GymGoer getGymGoerId() {
         return gymGoerId;
     }
@@ -66,11 +58,11 @@ public class Routine {
         this.gymGoerId = gymGoerId;
     }
 
-    public int getRoutine_id() {
+    public int getId() {
         return routine_id;
     }
 
-    public void setRoutine_id(int routine_id) {
+    public void setId(int routine_id) {
         this.routine_id = routine_id;
     }
 
@@ -86,7 +78,7 @@ public class Routine {
     public String toString() {
         return "Routine{" +
                 "id=" + routine_id +
-                ", gymID=" + gymGoerId +
+                ", gymID=" + gymGoerId.getUserId() +
                 ", routineName='" + routineName + '\'' +
                 '}';
     }

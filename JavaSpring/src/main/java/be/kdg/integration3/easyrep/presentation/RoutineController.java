@@ -39,11 +39,12 @@ public class RoutineController {
 
     @GetMapping("")
     public String getRoutineView(@PathVariable String username, Model model) {
-        logger.info("Fetching routines for user: {}", username);
         UserCredentials user = userService.getUserCredentialsByUsername(username);
         GymGoer gymgoer = userService.getGymGoerByUserId(user.getUserId());
 
         List<Routine> routines = routineService.getRoutinesByGymGoer(gymgoer);
+        logger.info("!!Fetching routines {}", routines);
+
         model.addAttribute("routines", routines);
         model.addAttribute("user", user);
         return "routines/routines";

@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
@@ -7,6 +8,7 @@ import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.session.SessionService;
+import be.kdg.integration3.easyrep.service.users.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -20,46 +22,52 @@ import java.util.List;
 @RequestMapping("/activesession/{username}")
 public class SessionController {
 
+    private final UserService userService;
     Logger logger = LoggerFactory.getLogger(SessionController.class);
     private final SessionService sessionService;
     private final ExerciseSetService exerciseSetService;
     private final RoutineService routineService;
 
-    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService) {
+
+    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService, UserService userService) {
         this.sessionService = sessionService;
         this.exerciseSetService = exerciseSetService;
         this.routineService = routineService;
+        this.userService = userService;
     }
 
     @GetMapping("/startSession")
     public String startSession(@PathVariable String username,
-                               @RequestParam("userRoutines") String routineName,
+                               @RequestParam("userRoutine") int routineId,
                                Model model) {
         // Fetch the routine by name
-        Routine routine = routineService.getRoutineByName(routineName);
-        logger.info("Starting session for routine: " + routineName);
+        Routine routine = routineService.getRoutine(routineId);
+        logger.info("Starting session for routine: " + routineId);
 
         // Map machines to exercises
-        List<Exercise> exercises = new ArrayList<>();
-        for (Exercise exercise : routine.getExercises()) {
-            logger.debug(exercise.toString());
-            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
-//            exercises.add(new Exercise(machine.getName()));
-        }
+        List<Exercise> exercises = routine.getExercises();
+//        for (Exercise exercise : routine.getExercises()) {
+//            logger.debug(exercise.toString());
+//            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
+////            exercises.add(new Exercise(machine.getName()));
+//        }
+
+        GymGoer user = userService.getGymGoerByUserId(userService.getUserCredentialsByUsername(username).getUserId()) ;
 
         // Create and save the session
         Session session = new Session();
         session.setExercises(exercises);
-        session.setSession_id(1);
+        session.setGymGoerId(user);
         sessionService.createSession(session);
 
         // Redirect to the first exercise
         int sessionId = session.getSession_id();
-        return "redirect:/activesession/nextExercise?sessionId=" + sessionId + "&exerciseIndex=-1";
+        return "redirect:/activesession/" + username + "/nextExercise?sessionId=" + sessionId + "&exerciseIndex=-1";
     }
 
     @GetMapping("/nextExercise")
-    public String getNextExercise(@RequestParam("sessionId") int sessionId,
+    public String getNextExercise(@PathVariable String username,
+                                  @RequestParam("sessionId") int sessionId,
                                   @RequestParam("exerciseIndex") int exerciseIndex,
                                   Model model) {
         // Fetch the session by ID
