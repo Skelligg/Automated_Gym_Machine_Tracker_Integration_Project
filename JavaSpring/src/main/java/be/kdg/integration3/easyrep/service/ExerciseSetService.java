@@ -13,5 +13,6 @@ public interface ExerciseSetService {
     void delete(int id);
     ExerciseSet update(ExerciseSet exerciseSet);
     List<Object[]> getExerciseSetsNameAndWeightBySessionId(int sessionId);
+    List<ExerciseSet> getProgressForSpecificUser(int gymGoerId, int machineId);
 
 }

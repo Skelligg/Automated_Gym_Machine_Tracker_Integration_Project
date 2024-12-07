@@ -32,25 +32,39 @@ public class StatisticsController {
     }
 
 
-
     @GetMapping("/GymGoer/statistics")
-    public String getPlayerStatistics(Model model) {
-        logger.info("Mapping the statistics from the gym");
-        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
+    public String getPlayerStatistics(@RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId ,Model model) {
+        logger.info("Opening the statistics for exercise for user");
 
-        logger.info("Gym goer statistics: {}", statistics);
-//        List<Map<String, Object>> volumeData = new ArrayList<>();
-        for (ExerciseSet exerciseSet : statistics) {
-            Map<String, Object> volumeMap = new HashMap<>();
-//            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
-            volumeMap.put("dateTime", exerciseSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
-//            volumeData.add(volumeMap);
+        //getting the attributes from the query in the repository and then the service
+        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoerId, machineId);
+
+        //the data for the charts
+        List<Map<String, Object>> statistics = new ArrayList<>();
+        List<Map<String, Object>> volumeData = new ArrayList<>();
+
+        for (ExerciseSet exerciseSet : exerciseSets) {
+            Map<String, Object> statisticsDataChart = new HashMap<>();
+            statisticsDataChart.put("weightCount", exerciseSet.getWeightCount());
+            statisticsDataChart.put("date", exerciseSet.getStartTime());
+            //calculating the total repetition
+            statisticsDataChart.put("repCount", exerciseSet.getRepetitionId().size());
+            //adding it to the list
+            statistics.add(statisticsDataChart);
+
+
+            // the data for the volume
+            Map<String, Object> volumeDataChart = new HashMap<>();
+            volumeDataChart.put("volumeD", exerciseSet.getWeightCount() * exerciseSet.getRepetitionId().size());
+            volumeDataChart.put("date", exerciseSet.getStartTime());
+            //adding it to the map
+            volumeData.add(volumeDataChart);
         }
 
+        //adding the attributes to the model
+        model.addAttribute("exerciseSets", exerciseSets);
         model.addAttribute("statistics", statistics);
-//        model.addAttribute("volumeData", volumeData);
-        model.addAttribute("LocalDate", LocalDate.now());
-        model.addAttribute("volume", "10");
+        model.addAttribute("volumeData", volumeData);
 
         return "GymGoer/statistics";
     }
@@ -60,20 +74,6 @@ public class StatisticsController {
     public List<Map<String, Object>> getChartData(@PathVariable String chartType) {
         List<Map<String, Object>> chartData = new ArrayList<>();
 
-        for (ExerciseSet set : exerciseSetService.findAllExerciseSet()) {
-            Map<String, Object> dataPoint = new HashMap<>();
-
-            dataPoint.put("dateTime", set.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
-            switch (chartType){
-                case "weights": dataPoint.put("value",set.getWeightCount()); break;
-//                case "volume" : double volume = set.getWeightCount() * set.getRepCount();
-                case "volume" : double volume = set.getWeightCount();
-                dataPoint.put("value", volume); break;
-//                case "reps":dataPoint.put("value", set.getRepCount()); break;
-                default: throw new IllegalArgumentException("Invalid chart " + chartType);
-            }
-            chartData.add(dataPoint);
-        }
         return chartData;
     }
 
@@ -97,9 +97,6 @@ public class StatisticsController {
 
         return "GymOwner/machine_review";
     }
-
-
-
 
 
 

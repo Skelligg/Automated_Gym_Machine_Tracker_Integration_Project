@@ -24,4 +24,8 @@ public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Intege
     @Query("select es.weightCount, e.exerciseName from ExerciseSet es join es.exercise e where e.session.session_id = :sessionId")
     List<Object[]> findExerciseSetsByNameAndWeightCountBySessionId(@Param("sessionId") int sessionId);
 
+    //query to find the past sets for user and specific exercise
+    @Query("select es from ExerciseSet es join es.exercise e join e.machine m join e.session s join s.gymGoerId g where g.userId = :gymGoerId and m.machineId = :machineId")
+    List<ExerciseSet> findProgressForSpecificUser(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
+
 }

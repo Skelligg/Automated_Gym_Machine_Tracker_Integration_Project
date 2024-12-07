@@ -59,4 +59,9 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     public List<Object[]> getExerciseSetsNameAndWeightBySessionId(int sessionId) {
         return exerciseSetRepository.findExerciseSetsByNameAndWeightCountBySessionId(sessionId);
     }
+
+    @Override
+    public List<ExerciseSet> getProgressForSpecificUser(int gymGoerId, int machineId) {
+        return exerciseSetRepository.findProgressForSpecificUser(gymGoerId, machineId);
+    }
 }

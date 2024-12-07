@@ -9,13 +9,21 @@ function showTable(tableId,chartType, clickedLabel){
     //remove active class
     document.querySelectorAll('.btn').forEach(button => {button.classList.remove('active');});
 
+    //adding the active class to the clicked one
     clickedLabel.classList.add('active');
     fetchChartData(chartType)
 
     function fetchChartData(chartType) {
-        fetch(`/getChartData/${chartType}`).then(response => response.json()).then(data => {
-            const labels = data.map(entry => entry.dateTime);
-            const chartData = data.map(entry => entry.value);
+        fetch(`/getChartData/${chartType}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('failed to load')
+                }
+                        return response.json();
+            }).then(data => {
+                const labels = data.map(entry => entry.dateTime);
+                const chartData = data.map(entry => entry.value);
+
 
             // removing the previous chart
             if (chart) {
@@ -34,7 +42,8 @@ function showTable(tableId,chartType, clickedLabel){
                         borderColor: 'rgb(0, 0, 0)',
                         backgroundColor: 'rgba(0,0,0)',
                         borderWidth: 2,
-                        fill: false
+                        fill: false,
+                        tension: 0.4
                     }]
                 },
                 options: {
@@ -55,6 +64,9 @@ function showTable(tableId,chartType, clickedLabel){
                     }
                 }
             });
+        }).catch(error => {
+            console.error('There was an error to find the data:', error);
+            alert('There was an error fetching the data');
         });
     }
 
