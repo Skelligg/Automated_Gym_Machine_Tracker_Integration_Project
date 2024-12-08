@@ -25,13 +25,13 @@ public class ScannerController {
         this.gymService = gymService;
     }
 
-    @GetMapping("/scan")
+    @GetMapping()
     public String showScanner() {
         logger.info("Showing scanner");
         return "GymGoer/scanner";
     }
 
-    @PostMapping("/scan")
+    @PostMapping()
     public ResponseEntity<String> handleQrCodeScan(@RequestBody Map<String, String> payload) {
         String qrCode = payload.get("qrCode");
         if (qrCode == null || qrCode.isEmpty()) {

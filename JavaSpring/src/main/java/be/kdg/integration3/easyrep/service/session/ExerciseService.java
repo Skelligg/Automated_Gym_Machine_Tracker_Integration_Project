@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface ExerciseService {
 
+    Exercise getExerciseById (int id);
     Exercise createExercise(Exercise exercise);
     List<Exercise> getAllExercises();
     Exercise getExercise(int id);

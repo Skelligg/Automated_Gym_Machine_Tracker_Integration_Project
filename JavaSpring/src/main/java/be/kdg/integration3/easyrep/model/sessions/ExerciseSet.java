@@ -2,7 +2,7 @@ package be.kdg.integration3.easyrep.model.sessions;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -16,8 +16,9 @@ public class ExerciseSet {
     @OneToMany(mappedBy = "exerciseSet", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Repetition> repetitionId;
 
-    private LocalDateTime startTime;
-    private LocalDateTime endTime;
+    private LocalTime startTime;
+    private LocalTime endTime;
+    private int setNumber;
     @Column(length = 50)
     private String previousSet;
 
@@ -30,13 +31,29 @@ public class ExerciseSet {
 
     public ExerciseSet(){}
 
-    public ExerciseSet(int setId, List<Repetition> repetitionId, LocalDateTime startTime, LocalDateTime endTime, String previousSet, double weightCount) {
+    public ExerciseSet(int setId, List<Repetition> repetitionId, LocalTime startTime, LocalTime endTime, String previousSet, double weightCount) {
         this.setId = setId;
         this.repetitionId = repetitionId;
         this.startTime = startTime;
         this.endTime = endTime;
         this.previousSet = previousSet;
         this.weightCount = weightCount;
+    }
+
+    public int getSetNumber() {
+        return setNumber;
+    }
+
+    public void setSetNumber(int setNumber) {
+        this.setNumber = setNumber;
+    }
+
+    public Exercise getExercise() {
+        return exercise;
+    }
+
+    public void setExercise(Exercise exercise) {
+        this.exercise = exercise;
     }
 
     public int getSetId() {
@@ -55,19 +72,19 @@ public class ExerciseSet {
         this.repetitionId = repetitionId;
     }
 
-    public LocalDateTime getStartTime() {
+    public LocalTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
+    public void setStartTime(LocalTime startTime) {
         this.startTime = startTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public LocalTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) {
+    public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
 

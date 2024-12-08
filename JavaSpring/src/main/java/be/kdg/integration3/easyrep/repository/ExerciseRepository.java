@@ -19,6 +19,8 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
 
     Exercise findByexerciseName(String name);
 
+    Exercise findByexerciseId(Integer id);
+
     //    private static final Logger log = LoggerFactory.getLogger(ExerciseRepository.class);
 //    private static List<Exercise> exercises = new ArrayList<Exercise>();
 //

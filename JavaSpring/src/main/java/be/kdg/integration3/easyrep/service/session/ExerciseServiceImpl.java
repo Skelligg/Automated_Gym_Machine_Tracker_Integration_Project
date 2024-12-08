@@ -32,6 +32,11 @@ public class ExerciseServiceImpl implements ExerciseService {
         return exerciseRepository.findAll();
     }
 
+    @Override
+    public Exercise getExerciseById (int id){
+        return exerciseRepository.findByexerciseId(id);
+    }
+
     public Exercise findByName(String name){
         return exerciseRepository.findByexerciseName(name);
     }
