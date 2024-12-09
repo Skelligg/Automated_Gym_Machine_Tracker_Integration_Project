@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.repository;
 
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -21,6 +22,7 @@ public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Intege
     @Query("Select e from ExerciseSet e")
     List<ExerciseSet> findAllExerciseSets();
 
+    List<ExerciseSet> findExerciseByExercise(Exercise exercise);
 
     @Query("select es.weightCount, e.exerciseName from ExerciseSet es join es.exercise e where e.session.session_id = :sessionId")
     List<Object[]> findExerciseSetsByNameAndWeightCountBySessionId(@Param("sessionId") int sessionId);

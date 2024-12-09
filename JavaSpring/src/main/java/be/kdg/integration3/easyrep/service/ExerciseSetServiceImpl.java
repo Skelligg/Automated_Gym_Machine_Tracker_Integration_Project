@@ -1,12 +1,14 @@
 package be.kdg.integration3.easyrep.service;
 
 
+import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.repository.ExerciseSetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 
@@ -33,9 +35,19 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     }
 
     @Override
+    public List<ExerciseSet> findExerciseSetsByExercise(Exercise exercise) {
+        return exerciseSetRepository.findExerciseByExercise(exercise);
+    }
+
+    @Override
     public ExerciseSet createExerciseSet(ExerciseSet exerciseSet) {
         logger.debug("Creating new exercise set {}", exerciseSet);
         return exerciseSetRepository.save(exerciseSet);
+    }
+
+    @Override
+    public LocalTime stringToLocalTime(String time) {
+        return LocalTime.parse(time);
     }
 
     @Override
