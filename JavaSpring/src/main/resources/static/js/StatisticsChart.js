@@ -1,4 +1,7 @@
-let chart;
+    let chart;
+    // const chartDataElement = document.getElementById('stats-container');
+    // const gymGoerId = chartDataElement.getAttribute('data-gym-goer-id');
+    // const machineId = chartDataElement.getAttribute('data-machine-id');
 
 function showTable(tableId,chartType, clickedLabel){
     //hiding all tables
@@ -9,13 +12,37 @@ function showTable(tableId,chartType, clickedLabel){
     //remove active class
     document.querySelectorAll('.btn').forEach(button => {button.classList.remove('active');});
 
+    //adding the active class to the clicked one
     clickedLabel.classList.add('active');
     fetchChartData(chartType)
 
+    //fetching the chart and checking what type should it be
     function fetchChartData(chartType) {
-        fetch(`/getChartData/${chartType}`).then(response => response.json()).then(data => {
-            const labels = data.map(entry => entry.dateTime);
-            const chartData = data.map(entry => entry.value);
+
+
+        const gymGoerId = 1
+        const machineId = 52
+
+        fetch(`/getChartData/${chartType}?gymGoerId=${gymGoerId}&machineId=${machineId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('failed to load')
+                }
+                        return response.json();
+            }).then(data => {
+                console.log(data)
+                const labels = data.map(entry => entry.date);
+                let chartData;
+
+                // const chartData = data.map(entry => entry.value);
+            if (chartType === 'weights') {
+                chartData = data.map(entry => entry.weightCount);
+            } else if (chartType === 'volume'){
+                chartData = data.map(entry => entry.volumeD)
+            } else if (chartType === 'repetitions'){
+                chartData = data.map(entry => entry.repCount || 0);
+            }
+
 
             // removing the previous chart
             if (chart) {
@@ -34,7 +61,8 @@ function showTable(tableId,chartType, clickedLabel){
                         borderColor: 'rgb(0, 0, 0)',
                         backgroundColor: 'rgba(0,0,0)',
                         borderWidth: 2,
-                        fill: false
+                        fill: false,
+                        tension: 0.4
                     }]
                 },
                 options: {
@@ -43,18 +71,23 @@ function showTable(tableId,chartType, clickedLabel){
                         x: {
                             title: {
                                 display: true,
+                                //the name of the x-date
                                 text: 'Date'
                             }
                         },
                         y: {
                             title: {
                                 display: true,
+                                // the name of the Y-axis
                                 text: getYAxisLabel(chartType)
                             }
                         }
                     }
                 }
             });
+        }).catch(error => {
+            console.error('There was an error to find the data:', error);
+            alert('There was an error fetching the data');
         });
     }
 
@@ -63,7 +96,7 @@ function showTable(tableId,chartType, clickedLabel){
             case 'weights': return 'Weight Lifted';
             case 'volume':return 'Volume Lifted';
             case 'reps':return 'Total Reps';
-            default:return 'Data';
+            default: return 'Data';
         }
     }
     function getYAxisLabel(chartType) {
