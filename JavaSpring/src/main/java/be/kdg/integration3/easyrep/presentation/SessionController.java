@@ -41,11 +41,11 @@ public class SessionController {
 
         // Map machines to exercises
         List<Exercise> exercises = new ArrayList<>();
-        for (Exercise exercise : routine.getExercises()) {
-            logger.debug(exercise.toString());
+//        for (Exercise exercise : routine) {
+//            logger.debug(exercise.toString());
             //IDK WHAT THIS MEANS SO I COMMENT IT OUT
 //            exercises.add(new Exercise(machine.getName()));
-        }
+//        }
 
         // Create and save the session
         Session session = new Session();

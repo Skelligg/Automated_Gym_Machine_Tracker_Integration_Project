@@ -1,9 +1,11 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.service.MachineService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,24 +41,39 @@ public class StatisticsController {
         //getting the attributes from the query in the repository and then the service
         List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoerId, machineId);
 
+
+        Machine machine = machineService.findMachineById(machineId);
+
         //the data for the charts
         List<Map<String, Object>> statistics = new ArrayList<>();
         List<Map<String, Object>> volumeData = new ArrayList<>();
 
+        //to use the month and the day of the session
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd");
+
         for (ExerciseSet exerciseSet : exerciseSets) {
+
+            //calling the session so it can display the date
+            Session session = exerciseSet.getExercise().getSession();
+
+            //formatting the date for the end screen to check from the session and then return the month and day
+            String formattedDate = (session != null && session.getStartSession() != null) ? session.getStartSession().format(formatter) : "Null";
+
             Map<String, Object> statisticsDataChart = new HashMap<>();
             statisticsDataChart.put("weightCount", exerciseSet.getWeightCount());
-            statisticsDataChart.put("date", exerciseSet.getStartTime());
+            statisticsDataChart.put("date", formattedDate);
             //calculating the total repetition
-            statisticsDataChart.put("repCount", exerciseSet.getRepetitionId().size());
+            statisticsDataChart.put("repCount", exerciseSet.getRepetitionCount());
+
             //adding it to the list
             statistics.add(statisticsDataChart);
 
 
             // the data for the volume
             Map<String, Object> volumeDataChart = new HashMap<>();
-            volumeDataChart.put("volumeD", exerciseSet.getWeightCount() * exerciseSet.getRepetitionId().size());
-            volumeDataChart.put("date", exerciseSet.getStartTime());
+            volumeDataChart.put("volumeD", exerciseSet.getWeightCount() * exerciseSet.getRepetitionCount());
+            volumeDataChart.put("date", formattedDate);
+
             //adding it to the map
             volumeData.add(volumeDataChart);
         }
@@ -65,23 +82,32 @@ public class StatisticsController {
         model.addAttribute("exerciseSets", exerciseSets);
         model.addAttribute("statistics", statistics);
         model.addAttribute("volumeData", volumeData);
+        model.addAttribute("machineName", machine.getName());
+//        model.addAttribute("machineId", machineId);
+//        model.addAttribute("gymGoerId", gymGoerId);
+//        model.addAttribute("sessionId", sessionId);
 
         return "GymGoer/statistics";
     }
 
     @GetMapping("/getChartData/{chartType}")
     @ResponseBody
-    public List<Map<String, Object>> getChartData(@PathVariable String chartType) {
-        List<Map<String, Object>> chartData = new ArrayList<>();
-
-        return chartData;
+    public List<Map<String, Object>> getChartData(@PathVariable String chartType, @RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId) {
+//        logger.info("Choosing the data from which table should be displayed");
+        logger.info("Fetching chart data for gymGoerId: " + gymGoerId + " and machineId: " + machineId);
+        switch (chartType) {
+            case "weights": return exerciseSetService.getWeightData(gymGoerId,machineId);
+            case "volume" : return exerciseSetService.getVolumeData(gymGoerId,machineId);
+            case "repetitions": return exerciseSetService.getRepetitionData(gymGoerId,machineId);
+            default: throw new IllegalArgumentException("Invalid chartType");
+        }
     }
 
-
     @PostMapping("/statisticsClose")
-    public String exitPlayerStatistics() {
+    public String exitPlayerStatistics(@RequestParam("sessionId") int sessionId, @RequestParam("userId") int userId) {
         logger.info("Exiting the page");
-        return "GymGoer/end_screen_session";
+//        return "redirect:/gymGoer/end?sessionId=" + sessionId + "&userId=" + userId;
+        return "redirect:/gymGoer/statistics";
     }
 
     @GetMapping("/GymOwner/machines/machine_review")

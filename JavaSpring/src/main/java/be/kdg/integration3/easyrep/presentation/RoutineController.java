@@ -86,7 +86,7 @@ public class RoutineController {
             Exercise exercise = new Exercise();
             exercise.setExerciseName(exerciseName);
             exerciseService.createExercise(exercise);
-            routine.addExercise(exercise);
+//            routine.addExercise(exercise);
             routine.setGymGoerId(gymGoer);
         }
 

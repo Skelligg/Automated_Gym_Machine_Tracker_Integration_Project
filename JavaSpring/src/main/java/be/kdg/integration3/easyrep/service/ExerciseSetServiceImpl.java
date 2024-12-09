@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ExerciseSetServiceImpl implements ExerciseSetService {
@@ -63,5 +64,20 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     @Override
     public List<ExerciseSet> getProgressForSpecificUser(int gymGoerId, int machineId) {
         return exerciseSetRepository.findProgressForSpecificUser(gymGoerId, machineId);
+    }
+
+    @Override
+    public List<Map<String, Object>> getWeightData(int gymGoerId,int machineId) {
+        return exerciseSetRepository.findWeightsData(gymGoerId,machineId);
+    }
+
+    @Override
+    public List<Map<String, Object>> getVolumeData(int gymGoerId,int machineId) {
+        return exerciseSetRepository.findVolumeData(gymGoerId,machineId);
+    }
+
+    @Override
+    public List<Map<String, Object>> getRepetitionData(int gymGoerId,int machineId) {
+        return exerciseSetRepository.findRepetitionData(gymGoerId,machineId);
     }
 }

@@ -18,8 +18,8 @@ public class Routine {
     @JoinColumn(name = "user_Id", nullable = false)
     private GymGoer gymGoerId;
 
-    @OneToMany(mappedBy = "routine", cascade = CascadeType.ALL, fetch = FetchType.EAGER) // Changed mappedBy to refer to routine
-    private List<Exercise> exercises = new ArrayList<>();  // Renamed from exerciseId
+//    @OneToMany(mappedBy = "routine", cascade = CascadeType.ALL, fetch = FetchType.EAGER) // Changed mappedBy to refer to routine
+//    private List<Exercise> exercises = new ArrayList<>();  // Renamed from exerciseId
 
     @Column(nullable = false,length = 50)
     private String routineName;
@@ -38,17 +38,17 @@ public class Routine {
         this.routineName = routineName;
     }
 
-    public List<Exercise> getExercises() {
-        return exercises;
-    }
-
-    public void addExercise(Exercise exercise) {
-        this.exercises.add(exercise);
-    }
-
-    public void setExercises(List<Exercise> exercises) {
-        this.exercises = exercises;
-    }
+//    public List<Exercise> getExercises() {
+//        return exercises;
+//    }
+//
+//    public void addExercise(Exercise exercise) {
+//        this.exercises.add(exercise);
+//    }
+//
+//    public void setExercises(List<Exercise> exercises) {
+//        this.exercises = exercises;
+//    }
 
     public int getId() {
         return routine_id;

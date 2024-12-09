@@ -47,3 +47,31 @@ insert into public.machine (arduino_id, gym_id, last_time_checked, name) values 
 insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (19, 0,  null, 'Squat');
 insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (20, 0,  null, 'Triceps Dip');
 
+
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name ) VALUES (1, null, 2, 'Calf Press' );
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (2, null, 2, 'Cable Bicep Curl');
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (3, null, 3, 'Calf Press');
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (4, null, 3, 'Cable Bicep Curl');
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (5, null, 4, 'Calf Press');
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (6, null, 4, 'Cable Bicep Curl');
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (7, null, 5, 'Calf Press');
+INSERT INTO public.exercise (exercise_id, machine_id, session_id, exercise_name) VALUES (8, null, 5, 'Cable Bicep Curl');
+
+INSERT INTO public.exercise_set (exercise_id, set_id, weight_count, end_time, start_time, previous_set, repetition_count) VALUES (1, 1, 50, '20:41:25', '20:31:15', '0',5);
+INSERT INTO public.exercise_set (exercise_id, set_id, weight_count, end_time, start_time, previous_set, repetition_count) VALUES (1, 2, 80, '20:55:05', '20:41:06', '1',6);
+INSERT INTO public.exercise_set (exercise_id, set_id, weight_count, end_time, start_time, previous_set, repetition_count) VALUES (1, 3, 100, '21:12:37', '20:59:29', '2',7);
+
+INSERT INTO public.exercise_set (exercise_id, set_id, weight_count, end_time, start_time, previous_set, repetition_count, set_number) VALUES (2, 4, 100, '21:30:10', '21:20:17', null,1);
+INSERT INTO exercise_set (end_time, exercise_id, repetition_count, set_number, start_time, weight_count, previous_set) VALUES (2,null,5,1,null,78,null);
+
+INSERT INTO public.exercise_set (end_time, exercise_id, repetition_count, set_id, set_number, start_time, weight_count, previous_set) VALUES ('10:08:15', 5, 6, 13, 7, '09:58:19', 77, '1');
+INSERT INTO public.exercise_set (end_time, exercise_id, repetition_count, set_id, set_number, start_time, weight_count, previous_set) VALUES ('10:29:15', 5, 7, 14, 8, '10:12:19', 80, '1');
+INSERT INTO public.exercise_set (end_time, exercise_id, repetition_count, set_id, set_number, start_time, weight_count, previous_set) VALUES ('10:34:15', 5, 4, 15, 4, '10:31:15', 75, '2');
+
+INSERT INTO public.exercise_set (end_time, exercise_id, repetition_count, set_id, set_number, start_time, weight_count, previous_set) VALUES ('10:41:15', 6, 6, 16, 9, '10:31:15', 83, '0');
+INSERT INTO public.exercise_set (end_time, exercise_id, repetition_count, set_id, set_number, start_time, weight_count, previous_set) VALUES ('10:51:15', 6, 5, 17, 7, '10:45:15', 72, '1');
+INSERT INTO public.exercise_set (end_time, exercise_id, repetition_count, set_id, set_number, start_time, weight_count, previous_set) VALUES ('11:02:15', 6, 7, 18, 8, '10:55:15', 82, '2');
+
+
+
+

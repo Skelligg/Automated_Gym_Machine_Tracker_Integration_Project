@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.service;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ExerciseSetService {
 
@@ -14,5 +15,9 @@ public interface ExerciseSetService {
     ExerciseSet update(ExerciseSet exerciseSet);
     List<Object[]> getExerciseSetsNameAndWeightBySessionId(int sessionId);
     List<ExerciseSet> getProgressForSpecificUser(int gymGoerId, int machineId);
+    List<Map<String, Object>> getWeightData(int gymGoerId,int machineId);
+    List<Map<String, Object>> getVolumeData(int gymGoerId,int machineId);
+    List<Map<String, Object>> getRepetitionData(int gymGoerId,int machineId);
+
 
 }
