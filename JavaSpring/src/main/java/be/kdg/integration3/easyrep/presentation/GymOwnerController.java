@@ -16,7 +16,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/gymhome")
 public class GymOwnerController {
 
 
@@ -37,9 +37,7 @@ public class GymOwnerController {
     @GetMapping("/{username}")
     public String getGymOwnerView(@PathVariable String username,Model model) {
         UserCredentials user = userService.getUserCredentialsByUsername(username);
-        if (user == null) {
-            return "error/404"; // Return a 404 error page if the user is not found
-        }
+
         model.addAttribute("user", user);
 
         logger.info("get Machine view");
@@ -49,9 +47,7 @@ public class GymOwnerController {
     @GetMapping("/{username}/machines")
     public String getMachineView(@PathVariable String username, @RequestParam(value = "idGym", required = false) Integer idGym, Model model) {
         UserCredentials user = userService.getUserCredentialsByUsername(username);
-        if (user == null) {
-            return "error/404"; // Return a 404 error page if the user is not found
-        }
+
         model.addAttribute("user", user);
 
         logger.info("Loading machines overview from {}", user.getUsername());
@@ -80,9 +76,7 @@ public class GymOwnerController {
     @GetMapping("/{username}/machines/{gymID}/add")
     public String showAddMachine(@PathVariable String username,@PathVariable int gymID, Model model) {
         UserCredentials user = userService.getUserCredentialsByUsername(username);
-        if (user == null) {
-            return "error/404"; // Return a 404 error page if the user is not found
-        }
+
         model.addAttribute("user", user);
         model.addAttribute("gym", gymService.findGymById(gymID));
         logger.info("Accessing page to create new Machine");
@@ -100,9 +94,7 @@ public class GymOwnerController {
     @GetMapping("/{username}/machines/{gymID}/machineReview")
     public String viewReviewMachine(@PathVariable String username, @PathVariable int gymID, @RequestParam("idMachine") Integer idMachine, Model model) {
         UserCredentials user = userService.getUserCredentialsByUsername(username);
-        if (user == null) {
-            return "error/404"; // Return a 404 error page if the user is not found
-        }
+
         model.addAttribute("user", user);
         model.addAttribute("gym", gymService.findGymById(gymID));
         Machine machine = machineService.findMachineById(idMachine);
@@ -134,9 +126,7 @@ public class GymOwnerController {
     public String addMachine(@PathVariable String username, @PathVariable int gymID, @ModelAttribute("machineViewModel") MachineViewModel machineViewModel, Model model) {
         logger.info("Creating machine with ID '{}', Arduino IP '{}'", machineViewModel.getMachineId(), machineViewModel.getArduinoId());
         UserCredentials user = userService.getUserCredentialsByUsername(username);
-        if (user == null) {
-            return "error/404"; // Return a 404 error page if the user is not found
-        }
+
         model.addAttribute("user", user);
         //find our machines by id
         Machine selectedMachine = machineService.findMachineById(machineViewModel.getMachineId());

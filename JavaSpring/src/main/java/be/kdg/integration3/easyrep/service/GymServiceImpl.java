@@ -19,8 +19,8 @@ public class GymServiceImpl implements GymService {
     }
 
     @Override
-    public Gym findGymByQrCode(String qrCode) {
-        return null;
+    public Gym findGymByQrCode(int qrCode) {
+        return gymRepository.findById(qrCode);
     }
 
     @Override

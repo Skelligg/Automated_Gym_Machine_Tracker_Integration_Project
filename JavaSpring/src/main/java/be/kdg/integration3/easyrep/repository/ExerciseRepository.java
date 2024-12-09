@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.repository;
 
+import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -20,6 +21,8 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
     Exercise findByexerciseName(String name);
 
     Exercise findByexerciseId(Integer id);
+
+    List<Exercise> findExercisesByMachine(Machine machine);
 
     //    private static final Logger log = LoggerFactory.getLogger(ExerciseRepository.class);
 //    private static List<Exercise> exercises = new ArrayList<Exercise>();

@@ -33,7 +33,7 @@
                 <!-- Routine Link (Grey Background) -->
 
 <!--                <a th:href="@{/activesession/{username}/startSession(username=${user.username}, userRoutine=${routine.getId()})}"-->
-                <a th:href="@{/scanner}"
+                <a th:href="@{/scanner/{username}/{userRoutine}(username=${user.username}, userRoutine=${routine.getId()})}"
                    class="routine-item bg-gradient rounded p-3 text-decoration-none text-reset d-flex align-items-center flex-grow-1">
                     <div class="info w-100 d-flex justify-content-between">
                         <div class="name fw-bold fs-5" th:text="${routine.routineName}">Chest Day</div>

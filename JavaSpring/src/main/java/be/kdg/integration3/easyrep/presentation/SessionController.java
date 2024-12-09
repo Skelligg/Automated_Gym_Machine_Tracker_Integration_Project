@@ -1,12 +1,12 @@
 package be.kdg.integration3.easyrep.presentation;
 
-import be.kdg.integration3.easyrep.model.GymGoer;
-import be.kdg.integration3.easyrep.model.Routine;
-import be.kdg.integration3.easyrep.model.RoutineExercise;
+import be.kdg.integration3.easyrep.model.*;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
+import be.kdg.integration3.easyrep.service.GymService;
+import be.kdg.integration3.easyrep.service.MachineService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.session.ExerciseService;
 import be.kdg.integration3.easyrep.service.session.SessionService;
@@ -22,10 +22,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/activesession/{username}")
+@RequestMapping("/activesession")
 public class SessionController {
 
     private final UserService userService;
+    private final GymService gymService;
+    private final MachineService machineService;
     Logger logger = LoggerFactory.getLogger(SessionController.class);
     private final SessionService sessionService;
     private final ExerciseSetService exerciseSetService;
@@ -33,22 +35,26 @@ public class SessionController {
     private final ExerciseService exerciseService;
 
 
-    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService, UserService userService, ExerciseService exerciseService) {
+    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService, UserService userService, ExerciseService exerciseService, GymService gymService, MachineService machineService) {
         this.sessionService = sessionService;
         this.exerciseSetService = exerciseSetService;
         this.routineService = routineService;
         this.userService = userService;
         this.exerciseService = exerciseService;
+        this.gymService = gymService;
+        this.machineService = machineService;
     }
 
-    @GetMapping("/startSession")
+    @GetMapping("/{username}/startSession")
     public String startSession(@PathVariable String username,
                                @RequestParam("userRoutine") int routineId,
+                               @RequestParam("gymId") int gymId,
                                Model model) {
         // Fetch the routine by name
         Routine routine = routineService.getRoutine(routineId);
         logger.info("Starting session for routine: " + routineId);
 
+        Gym currentGym = gymService.findGymById(gymId);
 
         GymGoer user = userService.getGymGoerByUserId(userService.getUserCredentialsByUsername(username).getUserId()) ;
 
@@ -62,23 +68,28 @@ public class SessionController {
             Exercise exercise = new Exercise();
             exercise.setExerciseName(rExercise.getName());
             exercise.setSession(session);
+            Machine machine = machineService.findMachineByName(rExercise.getName());
+            exercise.setMachine(machine);
             exercises.add(exercise);
-            //IDK WHAT THIS MEANS SO I COMMENT IT OUT
-//            exercises.add(new Exercise(machine.getName()));
+
         }
 
         session.setExercises(exercises);
+        session.setStatus("active");
         sessionService.createSession(session);
+
+        int machineId = exercises.get(0).getMachine().getMachineId();
 
         // Redirect to the first exercise
         int sessionId = session.getSession_id();
-        return "redirect:/activesession/" + username + "/nextExercise?sessionId=" + sessionId + "&exerciseIndex=0";
+        return "redirect:/activesession/" + username + "/nextExercise?sessionId=" + sessionId + "&exerciseIndex=0" + "&machineId=" + machineId;
     }
 
-    @GetMapping("/nextExercise")
+    @GetMapping("/{username}/nextExercise")
     public String getNextExercise(@PathVariable String username,
                                   @RequestParam("sessionId") int sessionId,
                                   @RequestParam("exerciseIndex") int exerciseIndex,
+                                  @RequestParam("machineId") int machineId,
                                   Model model,
                                   HttpSession httpSession) {
         // Fetch the session by ID
@@ -89,6 +100,8 @@ public class SessionController {
         httpSession.setAttribute("currentExerciseId", currentExercise.getExerciseId());
 
         List<ExerciseSet> sets = exerciseSetService.findExerciseSetsByExercise(currentExercise); // Fetch sets for this exercise
+
+        logger.info("Session found by machineID is {} ",sessionService.getActiveSessionByMachineId(machineId));
 
         // Add attributes to the model
         model.addAttribute("exercise", currentExercise);
@@ -101,28 +114,34 @@ public class SessionController {
     }
 
     @GetMapping("/setInput")
+    @ResponseBody
     public void inputSet(@RequestParam int machineId,
                          @RequestParam int setNumber,
                          @RequestParam String setTime,
                          @RequestParam int repCount,
-                         @RequestParam float weightCount,
-                         HttpSession httpSession) {
+                         @RequestParam float weightCount) {
         logger.debug("Processing set input for machineId: {}", machineId);
 
-        //Session activeSession = sessionService.getActiveSessionByMachineId(machineId);
+        Session activeSession = sessionService.getActiveSessionByMachineId(machineId);
 
-        Integer exerciseId = (Integer) httpSession.getAttribute("currentExerciseId");
-        if (exerciseId == null) {
-            throw new IllegalStateException("No active exercise found for this session.");
+        if (!activeSession.getStatus().equals("active")) {
+            throw new IllegalStateException("No active session found for machine ID: " + machineId);
+        }
+
+        Exercise currentExercise = activeSession.getExercises().stream()
+                .filter(exercise -> exercise.getMachine().getMachineId() == machineId)
+                .findFirst()
+                .orElseThrow(() -> new IllegalStateException("No active exercise found for machine ID: " + machineId));; // Adjust logic to get the current exercise
+        if (currentExercise == null) {
+            throw new IllegalStateException("No active exercise found for machine ID: " + machineId);
         }
 
         ExerciseSet set = new ExerciseSet();
         set.setSetNumber(setNumber);
         set.setEndTime(exerciseSetService.stringToLocalTime(setTime));
-        //set.setRepetitionNumber(repCount);
+        set.setRepetitionCount(repCount);
         set.setWeightCount(weightCount);
-        Exercise exercise = exerciseService.getExerciseById(exerciseId); // Fetch the associated exercise
-        set.setExercise(exercise);
+        set.setExercise(currentExercise);
 
         exerciseSetService.createExerciseSet(set);
     }
@@ -130,6 +149,9 @@ public class SessionController {
     @GetMapping("/end")
     public String getSessionEnd(@RequestParam("sessionId") int sessionId,Model model) {
         logger.info("Mapping the end screen");
+        Session session = sessionService.getSessionById(sessionId);
+        session.setStatus("ended");
+
         List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
         logger.info("Found {} statistics", statistics);
         model.addAttribute("statistics", statistics);

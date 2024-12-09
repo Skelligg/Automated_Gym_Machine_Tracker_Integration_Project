@@ -15,6 +15,6 @@ public interface MachineRepository extends JpaRepository<Machine, Integer> {
     @Query("SELECT m FROM Machine m WHERE (m.machineId <= :LastId)")
     List<Machine> findByIdLessThan(int LastId);
 
-    Machine findByName(String name);
+    Machine findMachineByName(String name);
     Machine findById(int id);
 }

@@ -13,8 +13,7 @@ public class ExerciseSet {
     @Column(name = "set_id")
     private int setId;
 
-    @OneToMany(mappedBy = "exerciseSet", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private List<Repetition> repetitionId;
+    private int repetitionCount;
 
     private LocalTime startTime;
     private LocalTime endTime;
@@ -31,9 +30,9 @@ public class ExerciseSet {
 
     public ExerciseSet(){}
 
-    public ExerciseSet(int setId, List<Repetition> repetitionId, LocalTime startTime, LocalTime endTime, String previousSet, double weightCount) {
+    public ExerciseSet(int setId, int repetitionCount, LocalTime startTime, LocalTime endTime, String previousSet, double weightCount) {
         this.setId = setId;
-        this.repetitionId = repetitionId;
+        this.repetitionCount = repetitionCount;
         this.startTime = startTime;
         this.endTime = endTime;
         this.previousSet = previousSet;
@@ -64,12 +63,12 @@ public class ExerciseSet {
         this.setId = setId;
     }
 
-    public List<Repetition> getRepetitionId() {
-        return repetitionId;
+    public int getRepetitionCount() {
+        return repetitionCount;
     }
 
-    public void setRepetitionId(List<Repetition> repetitionId) {
-        this.repetitionId = repetitionId;
+    public void setRepetitionCount(int repetitionCount) {
+        this.repetitionCount = repetitionCount;
     }
 
     public LocalTime getStartTime() {
@@ -108,7 +107,7 @@ public class ExerciseSet {
     public String toString() {
         return "ExerciseSet{" +
                 "setId=" + setId +
-                ", repetitionId=" + repetitionId +
+                ", repetitionCount=" + repetitionCount +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 ", previousSet='" + previousSet + '\'' +

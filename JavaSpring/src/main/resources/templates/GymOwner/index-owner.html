@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div th:insert="~{fragments/navbar :: header(userName=${user.username})}">header</div>
+<div th:insert="~{fragments/navbar :: header(user=${user})}">header</div>
 
 
 <div class="container mt-4">

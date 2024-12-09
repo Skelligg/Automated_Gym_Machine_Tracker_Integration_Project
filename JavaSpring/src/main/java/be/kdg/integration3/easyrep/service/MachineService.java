@@ -35,7 +35,8 @@ public class MachineService{
     }
 
     public Machine findMachineByName(String name) {
-        return machineRepository.findByName(name);
+
+        return machineRepository.findMachineByName(name);
     }
 
     public List<Machine> findAllMachines() {

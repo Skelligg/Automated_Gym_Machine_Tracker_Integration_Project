@@ -14,6 +14,30 @@ INSERT INTO public.exercise_list (id, name) VALUES (11, 'Lat Pulldown');
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-05', 0, 'easyrep@student.kdg.be', 'easyrep', 'easyrep123');
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-05', 2, 'philipe.domingues@hotmail.com', 'PhChevico', '12345678');
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-05', 1, 'michael.lukyanov@gmail.com', 'michaeliftyanov', '12345678');
+INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-06', 3, 'benlancry@gmail.com', 'benlancry', 'jjjjjjjj');
+INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-06', 4, 'martin@email.com', 'martinivanov', 'P@ssw0rd');
+
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (2, 3, 'roo teen');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (3, 3, 'too reen');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (4, 1, 'hrllo');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (5, 1, 'Chest Day');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (6, 4, 'MartinRoutine');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (7, 2, 'Fuck me');
+
+
+INSERT INTO public.gym_goer (user_id, gender, first_name, last_name, address) VALUES (1, 'MALE', 'Michael', 'Lukyanov', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer (user_id, gender, first_name, last_name, address) VALUES (2, 'MALE', 'Philipe', 'Souza', 'Antwerp, Belgium');
+
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (2, 4, 'Calf Press');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (3, 4, 'Cable Bicep Curl');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (4, 5, 'Chest Press');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (5, 5, 'Bench Press');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (6, 6, 'Bench Press');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (7, 6, 'Chest Press');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (8, 7, 'Back Extension');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (9, 7, 'Bench Press');
+INSERT INTO public.routine_exercise (exercise_id, routine_id, name) VALUES (10, 7, 'Hip Abduction');
+
 
 
 INSERT INTO public.gym_goer (user_id, gender, first_name, last_name, address) VALUES (1, 'MALE', 'Michael', 'Lukyanov', 'Antwerp, Belgium');

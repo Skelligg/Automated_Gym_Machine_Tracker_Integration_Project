@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface GymService {
 
-    Gym findGymByQrCode(String qrCode);
+    Gym findGymByQrCode(int qrCode);
     List<Gym> findAllGyms();
     Gym findGymById(int id);
     Gym createGym(Gym gym);

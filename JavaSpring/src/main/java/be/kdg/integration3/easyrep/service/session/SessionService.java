@@ -12,4 +12,6 @@ public interface SessionService {
 
     Session getSessionById(int id);
 
+    Session getActiveSessionByMachineId(int machineId);
+
 }
