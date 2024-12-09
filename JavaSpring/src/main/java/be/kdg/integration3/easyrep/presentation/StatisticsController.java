@@ -1,9 +1,12 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.service.GymService;
 import be.kdg.integration3.easyrep.service.MachineService;
+import be.kdg.integration3.easyrep.service.users.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +25,16 @@ public class StatisticsController {
     private final Logger logger = LoggerFactory.getLogger(StatisticsController.class);
     private MachineService machineService;
     private final ExerciseSetService exerciseSetService;
-
+    private final UserService userService;
+    private final GymService gymService;
 
 
     @Autowired
-    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService) {
+    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService, UserService userService, GymService gymService) {
         this.machineService = machineService;
         this.exerciseSetService = exerciseSetService;
+        this.userService = userService;
+        this.gymService = gymService;
     }
 
 
@@ -84,16 +90,37 @@ public class StatisticsController {
         return "GymGoer/end_screen_session";
     }
 
-    @GetMapping("/GymOwner/machines/machine_review")
-    public String getMachineReview(@RequestParam("idMachine") int idMachine, Model model) {
-        logger.info("Get Mapping to a machine review");
+    @GetMapping("/gymhome/{username}/machines/{gymID}/machineReview")
+    public String viewReviewMachine(@PathVariable String username, @PathVariable int gymID, @RequestParam("idMachine") Integer idMachine, Model model) {
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
         model.addAttribute("LocalDate", LocalDate.now());
-        String lastMaintained = "12/08/2021"; // Example value, can be dynamic
-        model.addAttribute("lastMainteinedDate", lastMaintained);
-        logger.info("lastMainteinedDate: {}", lastMaintained);
+        model.addAttribute("user", user);
+        model.addAttribute("gym", gymService.findGymById(gymID));
         Machine machine = machineService.findMachineById(idMachine);
         logger.debug("View Machine: " + machine);
         model.addAttribute("machine", machine);
+
+        // Retrieve the date of the Last maintained
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String lastMaintained = "No Information";
+        if (machine.getLastTimeChecked() != null) {
+             lastMaintained =  machine.getLastTimeChecked().format(format);
+        }
+        model.addAttribute("lastMainteinedDate", lastMaintained);
+        logger.info("lastMainteinedDate: {}", lastMaintained);
+
+        // Get the data for Machine Usage
+        HashMap<String, Integer> machineUsage = new HashMap<>();
+        if (machineService.findUsageOfMachineByIdPerDay(idMachine) != null) {
+            machineUsage = machineService.findUsageOfMachineByIdPerDay(idMachine);
+            logger.info("Machine usage data: {}", machineUsage);
+        }
+        model.addAttribute("machineUsage", machineUsage);
+        List<String> machineUsageKeys = new ArrayList<>(machineUsage.keySet());
+        List<Integer> machineUsageValues = new ArrayList<>(machineUsage.values());
+
+        model.addAttribute("machineUsageKeys", machineUsageKeys);
+        model.addAttribute("machineUsageValues", machineUsageValues);
 
         return "GymOwner/machine_review";
     }

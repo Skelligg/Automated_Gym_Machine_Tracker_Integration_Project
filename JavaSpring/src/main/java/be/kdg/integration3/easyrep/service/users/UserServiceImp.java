@@ -89,7 +89,7 @@ public class UserServiceImp implements UserService {
 
             // Determine the redirection path
             if (gymStaff != null) {
-                return "redirect:/" + gymStaff.getGymId() + "/GymOwner";
+                return "redirect:/gymhome/" + userCheck.getUsername();
             } else {
                 return "redirect:/home/"  + userCheck.getUsername();
             }

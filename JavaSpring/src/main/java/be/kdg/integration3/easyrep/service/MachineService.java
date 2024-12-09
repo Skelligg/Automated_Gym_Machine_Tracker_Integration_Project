@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -55,7 +56,18 @@ public class MachineService{
         machineRepository.save(machine);
     }
 
+    public HashMap<String, Integer> findUsageOfMachineByIdPerDay(int machineId){
+        HashMap<String, Integer> machineUsage = new HashMap<>();
+        List<Object[]> result =machineRepository.findAllSetsByMachineId(machineId);
 
+        for(Object[] row : result){
+            String date = (String) row[0];
+            Long usage = (Long) row[1];
+            machineUsage.put(date, usage.intValue());
+        }
+
+        return machineUsage;
+    }
 
     public List<Machine> findOurMachines() {
         logger.info("Finding our machines until id {}", ourMachines);
