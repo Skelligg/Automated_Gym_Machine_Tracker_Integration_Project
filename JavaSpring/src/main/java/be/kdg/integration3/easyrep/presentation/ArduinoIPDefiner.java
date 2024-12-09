@@ -1,7 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.Arduino;
-import be.kdg.integration3.easyrep.repository.ArduinoRepositoryImpl;
 import be.kdg.integration3.easyrep.service.ArduinoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

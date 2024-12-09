@@ -14,16 +14,15 @@ public class Machine {
     @Column(name = "machine_id")
     private int machineId;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "arduino_id") //FK
+    @OneToOne(mappedBy = "machine")
     private Arduino arduinoId;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @JoinColumn(name = "gym_id") //FK
     private Gym gym;
 
 
-    @Column(nullable = false,length = 30)
+    @Column(nullable = false,length = 100)
     private String name;
 
     private LocalDateTime lastTimeChecked;

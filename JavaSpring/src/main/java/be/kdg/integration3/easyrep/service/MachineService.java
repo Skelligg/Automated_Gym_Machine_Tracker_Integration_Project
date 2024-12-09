@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MachineService{
@@ -23,19 +22,18 @@ public class MachineService{
         this.machineRepository = machineRepository;
     }
 
-    @Transactional
-    public Machine createMachine(Machine machine) {
+    public void createMachine(Machine machine) {
         logger.info("Creating a machine {}", machine);
-       return machineRepository.save(machine);
+        machineRepository.save(machine);
     }
 
     public Machine findMachineById(int id) {
         logger.info("Finding machine with id {}", id);
-        return machineRepository.findById(id);
+        return machineRepository.findByMachineId(id);
     }
 
     public Machine findMachineByName(String name) {
-        return machineRepository.findByName(name);
+        return machineRepository.findMachineByName(name);
     }
 
     public List<Machine> findAllMachines() {
@@ -43,13 +41,11 @@ public class MachineService{
         return machineRepository.findAll();
     }
 
-    @Transactional
     public void deleteMachine(int id){
         logger.info("Deleting machine {}", id);
         Machine machine = findMachineById(id);
         machineRepository.delete(machine);
     }
-    @Transactional
     public void updateMachine(Machine machine) {
         logger.info("Updating machine {}", machine);
         machineRepository.save(machine);

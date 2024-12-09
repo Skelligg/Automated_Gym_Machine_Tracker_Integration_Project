@@ -1,0 +1,2538 @@
+start_time,end_time,exercise_title,set_index,weight_kg,reps
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Bench Press (Barbell),0,40,8
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Bench Press (Barbell),1,60,11
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Bench Press (Barbell),2,62.5,6
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Bench Press (Barbell),3,60,6
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Lat Pulldown - Close Grip (Cable),0,45,8
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Lat Pulldown - Close Grip (Cable),1,59,9
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Lat Pulldown - Close Grip (Cable),2,54.3,9
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Lat Pulldown - Close Grip (Cable),3,52,9
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Incline Bench Press (Dumbbell),0,24,7
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Incline Bench Press (Dumbbell),1,22,8
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Incline Bench Press (Smith Machine),0,41.3,9
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Iso-Lateral Row (Machine),0,45,11
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Seated Row (Machine),0,52,12
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Seated Row (Machine),1,52,12
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Pullover (Dumbbell),0,12,12
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Pullover (Dumbbell),1,14,10
+"3 Dec 2024, 13:04","3 Dec 2024, 14:56",Pullover (Dumbbell),2,14,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Bicep Curl (Dumbbell),0,12,6
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Bicep Curl (Dumbbell),1,14,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Bicep Curl (Dumbbell),2,14,9
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Bayesian Cable Curl,0,10.2,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Bayesian Cable Curl,1,10.2,7
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Hammer Curl (Dumbbell),0,12,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Hammer Curl (Dumbbell),1,12,9
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Pushdown,0,11.3,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Pushdown,1,24.8,15
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Pushdown,2,31.5,6
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Pushdown,3,27,3
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Pushdown,4,27,9
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Extension (Cable),0,20.3,13
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Extension (Cable),1,22.5,11
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Triceps Extension (Cable),2,22.5,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Rear Delt Reverse Fly (Cable),0,4.5,11
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Rear Delt Reverse Fly (Cable),1,4.5,10
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Lateral Raise (Machine),0,45,12
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Lateral Raise (Machine),1,50,9
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Lateral Raise (Machine),2,41,3
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Lateral Raise (Machine),3,50,6
+"2 Dec 2024, 17:04","2 Dec 2024, 18:22",Lateral Raise (Machine),4,41,5
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Lat Pulldown (Cable),0,52,10
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Lat Pulldown (Cable),1,66,9
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Lat Pulldown (Cable),2,66,5
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Lat Pulldown (Cable),3,59,2
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Lat Pulldown (Cable),4,52,10
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Iso-Lateral Row (Machine),0,59,7
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Iso-Lateral Row (Machine),1,52,3
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Iso-Lateral Row (Machine),2,52,11
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Iso-Lateral Row (Machine),3,52,8
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Rear Delt Reverse Fly (Machine),0,45,9
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Rear Delt Reverse Fly (Machine),1,45,7
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Rear Delt Reverse Fly (Machine),2,39,9
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Triceps Pushdown,0,27,10
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Triceps Pushdown,1,64,7
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Triceps Pushdown,2,59,7
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Triceps Pushdown,3,54,7
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Triceps Extension (Cable),0,43.3,9
+"27 Nov 2024, 14:04","27 Nov 2024, 15:00",Triceps Extension (Cable),1,43.3,7
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Bench Press (Barbell),0,40,10
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Bench Press (Barbell),1,60,10
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Bench Press (Barbell),2,60,8
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Bench Press (Barbell),3,60,4
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Butterfly (Pec Deck),0,66,12
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Butterfly (Pec Deck),1,66,7
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Butterfly (Pec Deck),2,59,2
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Butterfly (Pec Deck),3,59,5
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Iso-Lateral Chest Press (Machine),0,29.3,9
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Iso-Lateral Chest Press (Machine),1,29.3,4
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Iso-Lateral Chest Press (Machine),2,26.8,7
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Bicep Curl (Dumbbell),0,14,12
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Bicep Curl (Dumbbell),1,14,8
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Reverse Curl (Cable),0,11.3,13
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Reverse Curl (Cable),1,13.5,12
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Hammer Curl (Dumbbell),0,12,12
+"25 Nov 2024, 16:39","25 Nov 2024, 17:45",Hammer Curl (Dumbbell),1,12,10
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Lat Pulldown (Cable),0,52,10
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Lat Pulldown (Cable),1,66,8
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Lat Pulldown (Cable),2,59,7
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Lat Pulldown (Cable),3,52,8
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Seated Cable Row - Bar Wide Grip,0,52,9
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Seated Cable Row - Bar Wide Grip,1,47.3,9
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Rear Delt Reverse Fly (Machine),0,45,9
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Rear Delt Reverse Fly (Machine),1,45,8
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Seated Row (Machine),0,66,2
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Seated Row (Machine),1,59,9
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Seated Row (Machine),2,59,10
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Triceps Pushdown,0,27,10
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Triceps Pushdown,1,64,8
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Triceps Pushdown,2,59,9
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Triceps Extension (Cable),0,43.3,11
+"20 Nov 2024, 12:12","20 Nov 2024, 13:11",Triceps Extension (Cable),1,43.3,9
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Hack Squat (Machine),0,47.6,10
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Hack Squat (Machine),1,97.6,12
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Hack Squat (Machine),2,107.6,8
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Hack Squat (Machine),3,113.6,6
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Romanian Deadlift (Barbell),0,60,8
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Romanian Deadlift (Barbell),1,100,5
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Seated Leg Curl (Machine),0,53.1,13
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Seated Leg Curl (Machine),1,0.59,14
+"18 Nov 2024, 16:11","18 Nov 2024, 17:07",Seated Leg Curl (Machine),2,0.66,10
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Incline Bench Press (Dumbbell),0,16,10
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Incline Bench Press (Dumbbell),1,26,8
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Incline Bench Press (Dumbbell),2,26,7
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Incline Bench Press (Dumbbell),3,24,9
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Supine Press,0,30,11
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Supine Press,1,30,11
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Supine Press,2,32.5,8
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Butterfly (Pec Deck),0,66,6
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Butterfly (Pec Deck),1,59,3
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Butterfly (Pec Deck),2,59,8
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Butterfly (Pec Deck),3,59,7
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Butterfly (Pec Deck),4,52,2
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Reverse Curl (Cable),0,27,16
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Reverse Curl (Cable),1,32,10
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Bicep Curl (Dumbbell),0,14,10
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Bicep Curl (Dumbbell),1,14,8
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Seated Incline Curl (Dumbbell),0,12,8
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Seated Incline Curl (Dumbbell),1,12,7
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Single Arm Lateral Raise (Cable),0,14,8
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Single Arm Lateral Raise (Cable),1,11.3,9
+"17 Nov 2024, 12:46","17 Nov 2024, 14:04",Single Arm Lateral Raise (Cable),2,9,12
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Seated Leg Curl (Machine),0,25,10
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Seated Leg Curl (Machine),1,54.3,10
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Seated Leg Curl (Machine),2,54.3,5
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Seated Leg Curl (Machine),3,47.3,5
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Seated Leg Curl (Machine),4,47.3,8
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Hack Squat (Machine),0,47.6,10
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Hack Squat (Machine),1,87.6,12
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Hack Squat (Machine),2,97.6,9
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Hack Squat (Machine),3,87.6,3
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Romanian Deadlift (Barbell),0,60,10
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Romanian Deadlift (Barbell),1,100,12
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Bulgarian Split Squat,0,12,12
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Bulgarian Split Squat,1,14,12
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Leg Raise Parallel Bars,0,,20
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Leg Raise Parallel Bars,1,,20
+"14 Nov 2024, 12:21","14 Nov 2024, 13:38",Leg Raise Parallel Bars,2,,15
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Lat Pulldown (Cable),0,52,10
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Lat Pulldown (Cable),1,66,6
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Lat Pulldown (Cable),2,59,7
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Lat Pulldown (Cable),3,52,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Row (Machine),0,66,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Row (Machine),1,59,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Row (Machine),2,54.3,10
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Cable Row - Bar Wide Grip,0,52,9
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Cable Row - Bar Wide Grip,1,47.3,9
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Cable Row - Bar Wide Grip,2,47.3,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Seated Cable Row - Bar Wide Grip,3,41.3,3
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Rear Delt Reverse Fly (Machine),0,45,9
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Rear Delt Reverse Fly (Machine),1,45,7
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Rear Delt Reverse Fly (Machine),2,39,3
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Rear Delt Reverse Fly (Machine),3,39,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Pushdown,0,27,10
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Pushdown,1,59,12
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Pushdown,2,61.3,6
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Pushdown,3,56.3,2
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Pushdown,4,56.3,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Extension (Cable),0,43.3,9
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Extension (Cable),1,43.3,8
+"13 Nov 2024, 14:35","13 Nov 2024, 15:43",Triceps Extension (Cable),2,41,8
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Incline Bench Press (Dumbbell),0,16,10
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Incline Bench Press (Dumbbell),1,26,8
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Incline Bench Press (Dumbbell),2,26,6
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Incline Bench Press (Dumbbell),3,24,7
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Iso-Lateral Chest Press (Machine),0,29.3,12
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Iso-Lateral Chest Press (Machine),1,29.3,10
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Iso-Lateral Chest Press (Machine),2,31.8,7
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Butterfly (Pec Deck),0,66,12
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Butterfly (Pec Deck),1,66,8
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Butterfly (Pec Deck),2,59,2
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Butterfly (Pec Deck),3,66,7
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Butterfly (Pec Deck),4,59,2
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Bicep Curl (Dumbbell),0,14,12
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Bicep Curl (Dumbbell),1,14,9
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Seated Incline Curl (Dumbbell),0,12,8
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Seated Incline Curl (Dumbbell),1,12,6
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Preacher Curl (Hammer),0,12,8
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Preacher Curl (Hammer),1,12,8
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),0,45,10
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),1,45,10
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),2,45,11
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),3,50,6
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),4,45,2
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),5,45,5
+"10 Nov 2024, 13:23","10 Nov 2024, 15:10",Lateral Raise (Machine),6,41,3
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Lat Pulldown (Cable),0,52,10
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Lat Pulldown (Cable),1,66,7
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Lat Pulldown (Cable),2,59,7
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Lat Pulldown (Cable),3,54.3,7
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Iso-Lateral Row (Machine),0,31.3,12
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Iso-Lateral Row (Machine),1,36.3,11
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Iso-Lateral Row (Machine),2,38.8,8
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Seated Cable Row - Bar Wide Grip,0,52,9
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Seated Cable Row - Bar Wide Grip,1,47.3,9
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Seated Cable Row - Bar Wide Grip,2,45,11
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Pushdown,0,27,10
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Pushdown,1,59,12
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Pushdown,2,66,4
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Pushdown,3,59,4
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Pushdown,4,59,5
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Pushdown,5,54,2
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Extension (Cable),0,41,10
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Extension (Cable),1,41,8
+"9 Nov 2024, 14:11","9 Nov 2024, 15:46",Triceps Extension (Cable),2,38.3,9
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Seated Leg Curl (Machine),0,25,12
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Seated Leg Curl (Machine),1,54.3,12
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Seated Leg Curl (Machine),2,54.3,8
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Seated Leg Curl (Machine),3,47.3,11
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Squat (Barbell),0,40,10
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Squat (Barbell),1,60,6
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Squat (Barbell),2,80,6
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Squat (Barbell),3,90,3
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Romanian Deadlift (Barbell),0,60,10
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Romanian Deadlift (Barbell),1,80,10
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Romanian Deadlift (Barbell),2,100,8
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Romanian Deadlift (Barbell),3,120,1
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Bulgarian Split Squat,0,12,11
+"8 Nov 2024, 15:47","8 Nov 2024, 17:20",Bulgarian Split Squat,1,12,8
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Dumbbell),0,16,10
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Dumbbell),1,26,7
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Dumbbell),2,26,6
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Dumbbell),3,24,6
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Smith Machine),0,41.3,11
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Smith Machine),1,46.3,8
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Incline Bench Press (Smith Machine),2,41.3,11
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Cable Fly Crossovers,0,14,11
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Cable Fly Crossovers,1,18,5
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Cable Fly Crossovers,2,16.3,3
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Cable Fly Crossovers,3,16.3,8
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Bicep Curl (Dumbbell),0,14,12
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Bicep Curl (Dumbbell),1,14,10
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Seated Incline Curl (Dumbbell),0,12,8
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Seated Incline Curl (Dumbbell),1,12,7
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Hammer Curl (Dumbbell),0,12,9
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Hammer Curl (Dumbbell),1,12,11
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Lateral Raise (Dumbbell),0,12,12
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Lateral Raise (Dumbbell),1,12,9
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Lateral Raise (Dumbbell),2,10,8
+"7 Nov 2024, 17:04","7 Nov 2024, 18:40",Lateral Raise (Dumbbell),3,8,8
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Lat Pulldown (Cable),0,52,10
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Lat Pulldown (Cable),1,59,10
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Lat Pulldown (Cable),2,66,6
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Lat Pulldown (Cable),3,66,5
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Lat Pulldown (Cable),4,59,2
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Chest Supported Incline Row (Dumbbell),0,20,12
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Chest Supported Incline Row (Dumbbell),1,24,8
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Dumbbell Row,0,24,12
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Seated Row (Machine),0,66,8
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Seated Row (Machine),1,59,9
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Seated Row (Machine),2,52,10
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Rear Delt Reverse Fly (Machine),0,39,10
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Rear Delt Reverse Fly (Machine),1,39,8
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Rear Delt Reverse Fly (Machine),2,45,5
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Rear Delt Reverse Fly (Machine),3,39,2
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Pushdown,0,27,10
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Pushdown,1,59,11
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Pushdown,2,59,9
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Pushdown,3,59,8
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Extension (Cable),0,36,12
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Extension (Cable),1,38.3,11
+"5 Nov 2024, 15:24","5 Nov 2024, 17:03",Triceps Extension (Cable),2,41,10
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Seated Leg Curl (Machine),0,25,15
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Seated Leg Curl (Machine),1,54.3,9
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Seated Leg Curl (Machine),2,54.3,6
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Seated Leg Curl (Machine),3,47.3,10
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Squat (Barbell),0,40,10
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Squat (Barbell),1,60,5
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Squat (Barbell),2,70,6
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Squat (Barbell),3,80,5
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Romanian Deadlift (Barbell),0,60,10
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Romanian Deadlift (Barbell),1,80,12
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Romanian Deadlift (Barbell),2,90,8
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Leg Extension (Machine),0,66,11
+"4 Nov 2024, 15:27","4 Nov 2024, 16:35",Leg Extension (Machine),1,66,12
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Incline Bench Press (Dumbbell),0,16,8
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Incline Bench Press (Dumbbell),1,26,7
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Incline Bench Press (Dumbbell),2,26,7
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Incline Bench Press (Dumbbell),3,24,7
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Iso-Lateral Chest Press (Machine),0,29.3,11
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Iso-Lateral Chest Press (Machine),1,29.03,6
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Iso-Lateral Chest Press (Machine),2,26.8,2
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Iso-Lateral Chest Press (Machine),3,26.8,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Butterfly (Pec Deck),0,66,10
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Butterfly (Pec Deck),1,66,7
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Butterfly (Pec Deck),2,59,2
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Butterfly (Pec Deck),3,59,5
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Butterfly (Pec Deck),4,52,2
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",EZ Bar Biceps Curl,0,30,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",EZ Bar Biceps Curl,1,30,8
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Bayesian Cable Curl,0,18,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Bayesian Cable Curl,1,18,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Hammer Curl Bar,0,17.5,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Hammer Curl Bar,1,17.5,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Single Arm Lateral Raise (Cable),0,6.8,12
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Single Arm Lateral Raise (Cable),1,6.8,11
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Lateral Raise (Machine),0,45,9
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Lateral Raise (Machine),1,45,7
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Lateral Raise (Machine),2,41,2
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Lateral Raise (Machine),3,41,7
+"3 Nov 2024, 17:41","3 Nov 2024, 19:26",Lateral Raise (Machine),4,36,2
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up,0,,4
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up,1,,1
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up,2,,2
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up,3,,2
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up (Weighted),0,10,7
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up (Weighted),1,10,5
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Pull Up (Weighted),2,5,6
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Iso-Lateral Row (Machine),0,59,12
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Iso-Lateral Row (Machine),1,52,9
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Iso-Lateral Row (Machine),2,52,8
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",T Bar Row,0,20,12
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",T Bar Row,1,35,8
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Bent Over Row (Barbell),0,60,8
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Bent Over Row (Barbell),1,50,8
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Rear Delt Reverse Fly (Cable),0,9,12
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Rear Delt Reverse Fly (Cable),1,9,15
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Pushdown,0,27,10
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Pushdown,1,54,12
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Pushdown,2,59,7
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Pushdown,3,54,8
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Pushdown,4,50,2
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Extension (Cable),0,36,11
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Extension (Cable),1,36,9
+"30 Oct 2024, 18:48","30 Oct 2024, 20:20",Triceps Extension (Cable),2,32,11
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Incline Bench Press (Dumbbell),0,20,8
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Incline Bench Press (Dumbbell),1,24,10
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Incline Bench Press (Dumbbell),2,26,6
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Incline Bench Press (Dumbbell),3,24,8
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Overhead Press (Barbell),0,20,8
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Overhead Press (Barbell),1,30,6
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Overhead Press (Barbell),2,40,3
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Overhead Press (Barbell),3,45,1
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Bench Press (Barbell),0,40,12
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Butterfly (Pec Deck),0,59,12
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Butterfly (Pec Deck),1,66,11
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Butterfly (Pec Deck),2,66,7
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Butterfly (Pec Deck),3,59,2
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Bicep Curl (Dumbbell),0,14,11
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Bicep Curl (Dumbbell),1,14,9
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Preacher Curl (Hammer),0,12,6
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Preacher Curl (Hammer),1,10,12
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Seated Incline Curl (Dumbbell),0,12,11
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Seated Incline Curl (Dumbbell),1,12,7
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Single Arm Lateral Raise (Cable),0,14,12
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Single Arm Lateral Raise (Cable),1,14,11
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Single Arm Lateral Raise (Cable),2,16.3,7
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Single Arm Lateral Raise (Cable),3,14,2
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Single Arm Lateral Raise (Cable),4,14,9
+"29 Oct 2024, 13:03","29 Oct 2024, 15:19",Single Arm Lateral Raise (Cable),5,11.3,12
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Incline Bench Press (Dumbbell),0,20,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Incline Bench Press (Dumbbell),1,24,10
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Incline Bench Press (Dumbbell),2,24,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Incline Bench Press (Dumbbell),3,22,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Iso-Lateral Chest Press (Machine),0,28.05,10
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Iso-Lateral Chest Press (Machine),1,28.05,9
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Iso-Lateral Chest Press (Machine),2,28.05,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Butterfly (Pec Deck),0,59,12
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Butterfly (Pec Deck),1,66,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Butterfly (Pec Deck),2,59,1
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Butterfly (Pec Deck),3,59,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Bicep Curl (Dumbbell),0,14,10
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Bicep Curl (Dumbbell),1,14,7
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Reverse Curl (Cable),0,23,13
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Reverse Curl (Cable),1,23,13
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Seated Incline Curl (Dumbbell),0,12,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Seated Incline Curl (Dumbbell),1,12,6
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),0,36,12
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),1,41,13
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),2,45,7
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),3,41,1
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),4,41,8
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),5,36,3
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Lateral Raise (Machine),6,36,10
+"25 Oct 2024, 15:40","25 Oct 2024, 17:07",Preacher Curl (Machine),0,36,9
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Lat Pulldown (Cable),0,52,12
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Lat Pulldown (Cable),1,59,9
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Lat Pulldown (Cable),2,59,6
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Lat Pulldown (Cable),3,52,2
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Lat Pulldown (Cable),4,52,8
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Meadows Rows (Barbell),0,20,6
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Iso-Lateral Row (Machine),0,66,12
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Seated Row (Machine),0,59,12
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Seated Row (Machine),1,66,7
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Seated Cable Row - Bar Wide Grip,0,45,15
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Seated Cable Row - Bar Wide Grip,1,52,9
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Seated Cable Row - Bar Wide Grip,2,52,8
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Seated Cable Row - Bar Wide Grip,3,45,2
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Triceps Pushdown,0,27,12
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Triceps Pushdown,1,54,12
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Triceps Pushdown,2,59,7
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Triceps Pushdown,3,54,2
+"24 Oct 2024, 15:24","24 Oct 2024, 17:22",Triceps Pushdown,4,50,8
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Squat (Barbell),0,40,10
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Squat (Barbell),1,60,12
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Squat (Barbell),2,70,11
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Squat (Barbell),3,75,6
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Seated Leg Curl (Machine),0,25,12
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Seated Leg Curl (Machine),1,52,12
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Seated Leg Curl (Machine),2,54.3,7
+"23 Oct 2024, 15:03","23 Oct 2024, 15:49",Seated Leg Curl (Machine),3,47.3,9
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Incline Bench Press (Dumbbell),0,18,10
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Incline Bench Press (Dumbbell),1,22,12
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Incline Bench Press (Dumbbell),2,22,8
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Incline Bench Press (Dumbbell),3,22,8
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Iso-Lateral Chest Press (Machine),0,26.8,10
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Iso-Lateral Chest Press (Machine),1,26.8,10
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Iso-Lateral Chest Press (Machine),2,28.05,8
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Cable Fly Crossovers,0,9,16
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Cable Fly Crossovers,1,14,8
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Cable Fly Crossovers,2,9,4
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Bicep Curl (Dumbbell),0,12,13
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Bicep Curl (Dumbbell),1,14,7
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Preacher Curl (Machine),0,29.3,11
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Preacher Curl (Machine),1,32,8
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Bayesian Cable Curl,0,9,9
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Bayesian Cable Curl,1,9,9
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),0,45,12
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),1,54,4
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),2,50,3
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),3,45,1
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),4,45,5
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),5,23,2
+"21 Oct 2024, 17:23","21 Oct 2024, 18:47",Lateral Raise (Machine),6,36,1
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Lat Pulldown (Cable),0,52,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Lat Pulldown (Cable),1,59,5
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Lat Pulldown (Cable),2,52,2
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Lat Pulldown (Cable),3,52,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Lat Pulldown (Cable),4,52,8
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Iso-Lateral Row (Machine),0,59,12
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Row (Machine),0,59,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Row (Machine),1,59,9
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Cable Row - Bar Wide Grip,0,39,15
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Cable Row - Bar Wide Grip,1,45,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Cable Row - Bar Wide Grip,2,45,9
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Rear Delt Reverse Fly (Machine),0,39,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Rear Delt Reverse Fly (Machine),1,39,8
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Rear Delt Reverse Fly (Machine),2,39,8
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Rear Delt Reverse Fly (Machine),3,32,2
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Triceps Pushdown,0,18,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Triceps Pushdown,1,24.8,9
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Triceps Pushdown,2,24.8,7
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Triceps Pushdown,3,22.5,10
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Dip Machine,0,59,13
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Dip Machine,1,64,8
+"20 Oct 2024, 15:12","20 Oct 2024, 16:34",Seated Dip Machine,2,59,7
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Seated Leg Curl (Machine),0,25,12
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Seated Leg Curl (Machine),1,52,15
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Seated Leg Curl (Machine),2,0.66,12
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Seated Leg Curl (Machine),3,0.73,8
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Seated Calf Raise,0,20,15
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Seated Calf Raise,1,30,15
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Hack Squat (Machine),0,47.6,12
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Hack Squat (Machine),1,77.6,14
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Hack Squat (Machine),2,87.6,12
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Hack Squat (Machine),3,92.6,8
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Lying Leg Curl (Machine),0,24.1,11
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Lying Leg Curl (Machine),1,27,7
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Lying Leg Curl (Machine),2,23,2
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Leg Extension (Machine),0,59,12
+"18 Oct 2024, 15:29","18 Oct 2024, 16:37",Leg Extension (Machine),1,59,11
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bench Press (Barbell),0,40,12
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bench Press (Barbell),1,60,8
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bench Press (Barbell),2,55,8
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bench Press (Barbell),3,50,12
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Incline Bench Press (Smith Machine),0,51.3,3
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Incline Bench Press (Smith Machine),1,41.3,5
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Incline Bench Press (Smith Machine),2,41.3,9
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Incline Bench Press (Smith Machine),3,41.3,8
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Chest Fly (Dumbbell),0,12,12
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Chest Fly (Dumbbell),1,14,5
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Chest Fly (Dumbbell),2,12,3
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Chest Fly (Dumbbell),3,12,8
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bicep Curl (Dumbbell),0,12,12
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bicep Curl (Dumbbell),1,12,9
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Reverse Curl (Cable),0,27,12
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Reverse Curl (Cable),1,32,6
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Reverse Curl (Cable),2,27,1
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Reverse Curl (Cable),3,23,2
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bayesian Cable Curl,0,14,12
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Bayesian Cable Curl,1,18,10
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),0,14,11
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),1,14,9
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),2,14,5
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),3,9,7
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),4,11.3,11
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),5,11.3,11
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),6,9,3
+"17 Oct 2024, 11:51","17 Oct 2024, 13:46",Single Arm Lateral Raise (Cable),7,4.5,7
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Lat Pulldown (Cable),0,45,12
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Lat Pulldown (Cable),1,54.3,9
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Lat Pulldown (Cable),2,54.3,7
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Lat Pulldown (Cable),3,47.3,3
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Lat Pulldown (Cable),4,47.3,9
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Iso-Lateral Row (Machine),0,45,15
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Iso-Lateral Row (Machine),1,52,12
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Iso-Lateral Row (Machine),2,52,10
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Seated Cable Row - Bar Wide Grip,0,39,15
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Seated Cable Row - Bar Wide Grip,1,41.3,12
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Seated Cable Row - Bar Wide Grip,2,45,10
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Pushdown,0,27,12
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Pushdown,1,54,12
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Pushdown,2,54,7
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Pushdown,3,50,2
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Pushdown,4,50,8
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Extension (Cable),0,36,10
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Extension (Cable),1,36,10
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Triceps Extension (Cable),2,36,8
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Rear Delt Reverse Fly (Machine),0,39,10
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Rear Delt Reverse Fly (Machine),1,39,7
+"15 Oct 2024, 14:26","15 Oct 2024, 15:52",Rear Delt Reverse Fly (Machine),2,32,11
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Seated Leg Curl (Machine),0,25,12
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Seated Leg Curl (Machine),1,47.3,15
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Seated Leg Curl (Machine),2,52,15
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Seated Leg Curl (Machine),3,59,13
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Hack Squat (Machine),0,77.6,12
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Hack Squat (Machine),1,77.6,11
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Hack Squat (Machine),2,77.6,7
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Deadlift (Barbell),0,60,12
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Deadlift (Barbell),1,80,10
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Leg Extension (Machine),0,52,12
+"14 Oct 2024, 17:24","14 Oct 2024, 18:16",Leg Extension (Machine),1,55.3,11
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Incline Bench Press (Dumbbell),0,18,10
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Incline Bench Press (Dumbbell),1,22,10
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Incline Bench Press (Dumbbell),2,22,7
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Incline Bench Press (Dumbbell),3,20,10
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Iso-Lateral Chest Press (Machine),0,20,6
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Iso-Lateral Chest Press (Machine),1,15,12
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Iso-Lateral Chest Press (Machine),2,17.5,13
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Butterfly (Pec Deck),0,59,11
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Butterfly (Pec Deck),1,59,5
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Butterfly (Pec Deck),2,52,3
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Butterfly (Pec Deck),3,52,8
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Reverse Curl (Cable),0,27,14
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Reverse Curl (Cable),1,32,11
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Bicep Curl (Dumbbell),0,12,9
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Bicep Curl (Dumbbell),1,12,8
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Seated Incline Curl (Dumbbell),0,12,7
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Seated Incline Curl (Dumbbell),1,12,4
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Lateral Raise (Machine),0,27,12
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Lateral Raise (Machine),1,36,15
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Lateral Raise (Machine),2,45,9
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Lateral Raise (Machine),3,41,10
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Lateral Raise (Machine),4,41,8
+"13 Oct 2024, 17:58","13 Oct 2024, 19:24",Lateral Raise (Machine),5,36,2
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Lat Pulldown (Cable),0,39,12
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Lat Pulldown (Cable),1,54.3,10
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Lat Pulldown (Cable),2,54.3,7
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Lat Pulldown (Cable),3,47.3,3
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Lat Pulldown (Cable),4,47.3,8
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Row (Machine),0,52,13
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Row (Machine),1,59,10
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Row (Machine),2,59,8
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Row (Machine),3,52,2
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Cable Row - Bar Wide Grip,0,45,9
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Cable Row - Bar Wide Grip,1,45,8
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Cable Row - Bar Wide Grip,2,39,3
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Seated Cable Row - Bar Wide Grip,3,39,13
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Rear Delt Reverse Fly (Machine),0,32,12
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Rear Delt Reverse Fly (Machine),1,39,5
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Rear Delt Reverse Fly (Machine),2,32,3
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Rear Delt Reverse Fly (Machine),3,32,6
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Rear Delt Reverse Fly (Machine),4,25,2
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Pushdown,0,27,12
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Pushdown,1,54,10
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Pushdown,2,54,6
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Pushdown,3,50,3
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Pushdown,4,50,6
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Pushdown,5,45,2
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Extension (Cable),0,36,10
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Extension (Cable),1,36,7
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Extension (Cable),2,32,2
+"11 Oct 2024, 14:49","11 Oct 2024, 16:23",Triceps Extension (Cable),3,32,8
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Incline Bench Press (Dumbbell),0,18,12
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Incline Bench Press (Dumbbell),1,22,10
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Incline Bench Press (Dumbbell),2,22,8
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Incline Bench Press (Dumbbell),3,20,7
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Supine Press,0,30,8
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Supine Press,1,25,11
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Butterfly (Pec Deck),0,59,6
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Butterfly (Pec Deck),1,52,4
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Butterfly (Pec Deck),2,52,11
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Butterfly (Pec Deck),3,52,10
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Seated Incline Curl (Dumbbell),0,12,11
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Seated Incline Curl (Dumbbell),1,12,7
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Reverse Curl (Cable),0,27,10
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Reverse Curl (Cable),1,27,10
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Preacher Curl (Barbell),0,22.5,10
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Preacher Curl (Barbell),1,22.5,9
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),0,14,12
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),1,14,9
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),2,14,6
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),3,9,5
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),4,11.3,9
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),5,11.3,7
+"10 Oct 2024, 14:47","10 Oct 2024, 16:07",Single Arm Lateral Raise (Cable),6,9,5
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Lat Pulldown (Cable),0,39,12
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Lat Pulldown (Cable),1,52,11
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Lat Pulldown (Cable),2,52,8
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Lat Pulldown (Cable),3,45,8
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Iso Lateral Low Row,0,25,12
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Iso Lateral Low Row,1,25,8
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Iso Lateral Low Row,2,20,11
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),0,52,11
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),1,59,8
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),2,52,3
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),3,59,7
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),4,52,3
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),5,45,3
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),6,39,3
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),7,32,2
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Seated Cable Row - V Grip (Cable),8,25,1
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Unilateral Rear Delts (Nipples),0,32,15
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Rear Delt Reverse Fly (Machine),0,32,11
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Rear Delt Reverse Fly (Machine),1,32,7
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Pushdown,0,27,12
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Pushdown,1,50,13
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Pushdown,2,54,7
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Pushdown,3,50,2
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Pushdown,4,50,8
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Pushdown,5,45,3
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Extension (Cable),0,32,13
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Extension (Cable),1,36,9
+"4 Oct 2024, 15:15","4 Oct 2024, 16:59",Triceps Extension (Cable),2,32,11
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Seated Leg Curl (Machine),0,25,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Seated Leg Curl (Machine),1,45,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Seated Leg Curl (Machine),2,45,11
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Seated Leg Curl (Machine),3,47.3,8
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Hack Squat (Machine),0,47.6,3
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Hack Squat (Machine),1,67.6,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Hack Squat (Machine),2,77.6,11
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Hack Squat (Machine),3,87.6,6
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Deadlift (Barbell),0,60,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Deadlift (Barbell),1,80,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Bulgarian Split Squat,0,10,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Bulgarian Split Squat,1,12,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Hip Abduction (Machine),0,30,13
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Hip Adduction (Machine),0,32,13
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Crunch (Machine),0,36,12
+"3 Oct 2024, 14:02","3 Oct 2024, 15:25",Crunch (Machine),1,36,12
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Incline Bench Press (Dumbbell),0,18,12
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Incline Bench Press (Dumbbell),1,22,11
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Incline Bench Press (Dumbbell),2,24,5
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Incline Bench Press (Dumbbell),3,20,10
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Supine Press,0,30,8
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Supine Press,1,25,9
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Supine Press,2,20,3
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Supine Press,3,25,7
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Butterfly (Pec Deck),0,59,11
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Butterfly (Pec Deck),1,59,7
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Butterfly (Pec Deck),2,52,2
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Butterfly (Pec Deck),3,52,9
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Seated Incline Curl (Dumbbell),0,12,10
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Seated Incline Curl (Dumbbell),1,12,8
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Preacher Curl (Barbell),0,25,10
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Preacher Curl (Barbell),1,25,7
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Preacher Curl (Barbell),2,20,10
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Single Arm Lateral Raise (Cable),0,4.5,12
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Single Arm Lateral Raise (Cable),1,6.8,12
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Single Arm Lateral Raise (Cable),2,9,12
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Single Arm Lateral Raise (Cable),3,11.3,8
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Single Arm Lateral Raise (Cable),4,11.3,7
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Single Arm Lateral Raise (Cable),5,9,4
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Leg Raise Parallel Bars,0,,20
+"2 Oct 2024, 12:38","2 Oct 2024, 14:14",Leg Raise Parallel Bars,1,,20
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Lat Pulldown (Cable),0,39,12
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Lat Pulldown (Cable),1,52,11
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Lat Pulldown (Cable),2,59,5
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Lat Pulldown (Cable),3,52,3
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Lat Pulldown (Cable),4,52,6
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Lat Pulldown (Cable),5,45,3
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Pull Up (Assisted),0,14,12
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Pull Up (Assisted),1,9,9
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Iso Lateral Low Row,0,15,13
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Iso Lateral Low Row,1,20,10
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Iso Lateral Low Row,2,22.5,8
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Pushdown,0,13.5,12
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Pushdown,1,31.5,7
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Pushdown,2,27,3
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Pushdown,3,27,10
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Pushdown,4,27,7
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Pushdown,5,24.8,2
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Kickback (Cable),0,4.5,12
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Kickback (Cable),1,4.5,14
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Kickback (Cable),2,6.8,8
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Triceps Kickback (Cable),3,4.5,3
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Leg Raise Parallel Bars,0,,20
+"30 Sep 2024, 17:31","30 Sep 2024, 18:53",Leg Raise Parallel Bars,1,,20
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Incline Bench Press (Dumbbell),0,16,10
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Incline Bench Press (Dumbbell),1,22,12
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Incline Bench Press (Dumbbell),2,22,8
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Incline Bench Press (Dumbbell),3,20,9
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Supine Press,0,30,10
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Supine Press,1,30,7
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Supine Press,2,30,6
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Butterfly (Pec Deck),0,59,10
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Butterfly (Pec Deck),1,59,9
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Butterfly (Pec Deck),2,52,2
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Butterfly (Pec Deck),3,52,7
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Butterfly (Pec Deck),4,52,2
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Seated Incline Curl (Dumbbell),0,10,13
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Seated Incline Curl (Dumbbell),1,10,9
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Single Arm Lateral Raise (Cable),0,4.5,12
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Single Arm Lateral Raise (Cable),1,6.8,10
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Single Arm Lateral Raise (Cable),2,6.8,7
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Single Arm Lateral Raise (Cable),3,4.5,5
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Preacher Curl (Barbell),0,17.5,12
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Preacher Curl (Barbell),1,22.5,11
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Leg Raise Parallel Bars,0,,20
+"29 Sep 2024, 14:23","29 Sep 2024, 15:41",Leg Raise Parallel Bars,1,,15
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Seated Leg Curl (Machine),0,25,12
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Seated Leg Curl (Machine),1,45,14
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Seated Leg Curl (Machine),2,45,12
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Seated Leg Curl (Machine),3,45,9
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Squat (Barbell),0,40,12
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Squat (Barbell),1,60,12
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Squat (Barbell),2,65,10
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Squat (Barbell),3,65,8
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Leg Extension (Machine),0,52,12
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Leg Extension (Machine),1,52,12
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Leg Raise Parallel Bars,0,,20
+"28 Sep 2024, 13:12","28 Sep 2024, 14:02",Leg Raise Parallel Bars,1,,20
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Iso-Lateral Row (Machine),0,32,10
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Iso-Lateral Row (Machine),1,43.3,13
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Iso-Lateral Row (Machine),2,45,10
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Iso-Lateral Row (Machine),3,45,10
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Lat Pulldown (Cable),0,52,8
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Lat Pulldown (Cable),1,47.3,7
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Lat Pulldown (Cable),2,45,9
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Shrug (Barbell),0,70,20
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Shrug (Barbell),1,80,20
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Seated Cable Row - Bar Wide Grip,0,39,15
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Seated Cable Row - Bar Wide Grip,1,45,8
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Seated Cable Row - Bar Wide Grip,2,45,5
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Seated Cable Row - Bar Wide Grip,3,39,5
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Pushdown,0,27,10
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Pushdown,1,50,11
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Pushdown,2,50,9
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Pushdown,3,50,8
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Extension (Cable),0,32,12
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Extension (Cable),1,32,10
+"26 Sep 2024, 13:32","26 Sep 2024, 15:00",Triceps Extension (Cable),2,32,9
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Incline Bench Press (Dumbbell),0,18,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Incline Bench Press (Dumbbell),1,20,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Incline Bench Press (Dumbbell),2,20,10
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Incline Bench Press (Dumbbell),3,22,8
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Supine Press,0,30,8
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Supine Press,1,25,7
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Supine Press,2,20,9
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Butterfly (Pec Deck),0,59,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Butterfly (Pec Deck),1,59,7
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Butterfly (Pec Deck),2,52,3
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Butterfly (Pec Deck),3,52,8
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Reverse Curl (Cable),0,23,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Reverse Curl (Cable),1,27,11
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Reverse Curl (Cable),2,27,6
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Reverse Curl (Cable),3,25.3,2
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Reverse Curl (Cable),4,20.3,3
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Bayesian Cable Curl,0,18,10
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Bayesian Cable Curl,1,18,11
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Preacher Curl (Barbell),0,17.5,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Single Arm Lateral Raise (Cable),0,9,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Single Arm Lateral Raise (Cable),1,11.3,9
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Single Arm Lateral Raise (Cable),2,11.3,8
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Single Arm Lateral Raise (Cable),3,9,6
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Single Arm Lateral Raise (Cable),4,9,12
+"25 Sep 2024, 14:17","25 Sep 2024, 15:43",Single Arm Lateral Raise (Cable),5,9,9
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Romanian Deadlift (Barbell),0,70,12
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Romanian Deadlift (Barbell),1,80,12
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Romanian Deadlift (Barbell),2,80,10
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Shoulder Press (Dumbbell),0,15,12
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Shoulder Press (Dumbbell),1,17.5,10
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Shoulder Press (Dumbbell),2,17.5,8
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Seated Row (Machine),0,37.5,10
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Seated Row (Machine),1,57.5,8
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Seated Row (Machine),2,0.08,4
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Seated Row (Machine),3,0.08,6
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Triceps Extension (Cable),0,3.75,10
+"19 Sep 2024, 20:57","19 Sep 2024, 21:03",Triceps Extension (Cable),1,6.25,10
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Lat Pulldown (Cable),0,39,12
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Lat Pulldown (Cable),1,52,12
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Lat Pulldown (Cable),2,52,9
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Lat Pulldown (Cable),3,52,6
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Lat Pulldown (Cable),4,47.3,4
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Iso-Lateral Row (Machine),0,43.3,10
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Iso-Lateral Row (Machine),1,43.3,7
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Iso-Lateral Row (Machine),2,38.3,4
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Iso-Lateral Row (Machine),3,38.3,10
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Seated Cable Row - Bar Wide Grip,0,45,10
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Seated Cable Row - Bar Wide Grip,1,45,7
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Seated Cable Row - Bar Wide Grip,2,39,4
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Seated Cable Row - Bar Wide Grip,3,39,12
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Rear Delt Reverse Fly (Machine),0,25,15
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Rear Delt Reverse Fly (Machine),1,32,10
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Rear Delt Reverse Fly (Machine),2,32,8
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Rear Delt Reverse Fly (Machine),3,25,4
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Pushdown,0,27,12
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Pushdown,1,50,13
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Pushdown,2,50,10
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Pushdown,3,50,9
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Extension (Cable),0,32,12
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Extension (Cable),1,36,7
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Extension (Cable),2,32,2
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Extension (Cable),3,32,8
+"18 Sep 2024, 14:30","18 Sep 2024, 15:58",Triceps Extension (Cable),4,27,3
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Incline Bench Press (Dumbbell),0,18,12
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Incline Bench Press (Dumbbell),1,20,11
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Incline Bench Press (Dumbbell),2,20,9
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Incline Bench Press (Dumbbell),3,20,9
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Chest Press (Machine),0,66,9
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Chest Press (Machine),1,45,12
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Chest Press (Machine),2,52,11
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Butterfly (Pec Deck),0,66,7
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Butterfly (Pec Deck),1,52,3
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Butterfly (Pec Deck),2,59,11
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Butterfly (Pec Deck),3,59,9
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Reverse Curl (Cable),0,18,15
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Reverse Curl (Cable),1,27,10
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Reverse Curl (Cable),2,27,9
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Seated Incline Curl (Dumbbell),0,10,12
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Seated Incline Curl (Dumbbell),1,10,9
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Single Arm Lateral Raise (Cable),0,9,12
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Single Arm Lateral Raise (Cable),1,11.3,11
+"17 Sep 2024, 14:04","17 Sep 2024, 15:39",Single Arm Lateral Raise (Cable),2,11.3,6
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Seated Row (Machine),0,39,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Seated Row (Machine),1,66,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Iso-Lateral Row (Machine),0,36,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Iso-Lateral Row (Machine),1,41,9
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Iso-Lateral Row (Machine),2,40.6,3
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Lat Pulldown (Cable),0,52,8
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Lat Pulldown (Cable),1,47.3,10
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Lat Pulldown (Cable),2,47.3,8
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Seated Cable Row - Bar Wide Grip,0,39,15
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Seated Cable Row - Bar Wide Grip,1,45,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Seated Cable Row - Bar Wide Grip,2,45,10
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Shrug (Barbell),0,70,20
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Shrug (Barbell),1,75,20
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Shrug (Barbell),2,80,20
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Pushdown,0,27,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Pushdown,1,50,13
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Pushdown,2,50,10
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Pushdown,3,50,9
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Kickback (Cable),0,9,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Kickback (Cable),1,9,12
+"14 Sep 2024, 13:41","14 Sep 2024, 15:20",Triceps Kickback (Cable),2,6.8,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Seated Leg Curl (Machine),0,25,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Seated Leg Curl (Machine),1,39,14
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Seated Leg Curl (Machine),2,45,11
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Seated Leg Curl (Machine),3,45,8
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Squat (Barbell),0,50,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Squat (Barbell),1,60,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Squat (Barbell),2,65,9
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Deadlift (Barbell),0,60,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Deadlift (Barbell),1,70,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Deadlift (Barbell),2,70,12
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Leg Extension (Machine),0,45,14
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Leg Extension (Machine),1,52,14
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Leg Raise Parallel Bars,0,,20
+"13 Sep 2024, 15:29","13 Sep 2024, 17:20",Leg Raise Parallel Bars,1,,20
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Incline Bench Press (Smith Machine),0,41.3,12
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Incline Bench Press (Smith Machine),1,51.3,10
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Incline Bench Press (Smith Machine),2,51.3,7
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Incline Bench Press (Smith Machine),3,46.3,9
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Iso-Lateral Chest Press (Machine),0,20,12
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Iso-Lateral Chest Press (Machine),1,25,12
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Iso-Lateral Chest Press (Machine),2,30,8
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Butterfly (Pec Deck),0,66,12
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Butterfly (Pec Deck),1,66,6
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Butterfly (Pec Deck),2,59,1
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Butterfly (Pec Deck),3,52,1
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Butterfly (Pec Deck),4,52,10
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Preacher Curl (Machine),0,27,12
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Preacher Curl (Machine),1,32,10
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Preacher Curl (Machine),2,27,12
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Seated Incline Curl (Dumbbell),0,10,9
+"11 Sep 2024, 17:40","11 Sep 2024, 18:59",Seated Incline Curl (Dumbbell),1,10,10
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Lat Pulldown (Cable),0,39,12
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Lat Pulldown (Cable),1,52,11
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Lat Pulldown (Cable),2,52,8
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Lat Pulldown (Cable),3,47.3,3
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Lat Pulldown (Cable),4,47.3,11
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Bent Over Row (Barbell),0,50,12
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Bent Over Row (Barbell),1,50,13
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Bent Over Row (Barbell),2,55,9
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Shoulder Press (Dumbbell),0,14,13
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Shoulder Press (Dumbbell),1,16,9
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Shoulder Press (Dumbbell),2,16,9
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Pushdown,0,27,12
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Pushdown,1,50,12
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Pushdown,2,50,9
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Pushdown,3,50,9
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Pushdown,4,47.3,2
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Kickback (Cable),0,4.5,12
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Kickback (Cable),1,6.8,12
+"10 Sep 2024, 13:40","10 Sep 2024, 15:15",Triceps Kickback (Cable),2,9,12
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bench Press (Barbell),0,40,12
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bench Press (Barbell),1,60,8
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bench Press (Barbell),2,60,6
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bench Press (Barbell),3,55,6
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Incline Bench Press (Dumbbell),0,20,6
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Incline Bench Press (Dumbbell),1,18,9
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Incline Bench Press (Dumbbell),2,18,8
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Butterfly (Pec Deck),0,66,9
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Butterfly (Pec Deck),1,66,4
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Butterfly (Pec Deck),2,59,2
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Butterfly (Pec Deck),3,52,1
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Butterfly (Pec Deck),4,52,9
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Single Arm Lateral Raise (Cable),0,9,12
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Single Arm Lateral Raise (Cable),1,9,11
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Single Arm Lateral Raise (Cable),2,9,10
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Single Arm Lateral Raise (Cable),3,9,8
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bicep Curl (Cable),0,36,12
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bicep Curl (Cable),1,32,12
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bicep Curl (Cable),2,27,12
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bicep Curl (Cable),3,32,8
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Bicep Curl (Cable),4,27,4
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Seated Incline Curl (Dumbbell),0,12,5
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Seated Incline Curl (Dumbbell),1,10,2
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Seated Incline Curl (Dumbbell),2,10,8
+"8 Sep 2024, 11:34","8 Sep 2024, 13:02",Hammer Curl (Dumbbell),0,10,10
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Lat Pulldown (Cable),0,40,12
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Lat Pulldown (Cable),1,50,12
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Lat Pulldown (Cable),2,50,9
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Lat Pulldown (Cable),3,45,3
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Lat Pulldown (Cable),4,50,8
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Lat Pulldown (Cable),5,40,4
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Iso-Lateral Low Row,0,0.07,8
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Iso-Lateral Low Row,1,0.07,12
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Iso-Lateral Low Row,2,0.07,9
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Bent Over Row (Barbell),0,50,10
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Bent Over Row (Barbell),1,50,7
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Shrug (Barbell),0,70,20
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Shrug (Barbell),1,70,20
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Shrug (Barbell),2,70,20
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Pushdown,0,22.5,14
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Pushdown,1,25,9
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Pushdown,2,25,6
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Pushdown,3,22.5,2
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Extension (Cable),0,15,8
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Extension (Cable),1,12.5,12
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Kickback (Cable),0,2.5,12
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Kickback (Cable),1,3.75,12
+"6 Sep 2024, 14:18","6 Sep 2024, 15:32",Triceps Kickback (Cable),2,2.5,20
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Triceps Dip,0,,5
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Bench Press (Barbell),0,60,5
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Bench Press (Barbell),1,55,8
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Bench Press (Barbell),2,55,8
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Incline Bench Press (Smith Machine),0,41,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Incline Bench Press (Smith Machine),1,51,9
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Incline Bench Press (Smith Machine),2,51,7
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Incline Bench Press (Smith Machine),3,46,10
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Low Cable Fly Crossovers,0,5.7,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Low Cable Fly Crossovers,1,7.9,10
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Cable Fly Crossovers,0,5.7,4
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Cable Fly Crossovers,1,7.9,5
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Cable Fly Crossovers,2,7.9,4
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Cable Fly Crossovers,3,5.7,4
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Cable Fly Crossovers,4,5.7,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Cable Fly Crossovers,5,7.9,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Single Arm Lateral Raise (Cable),0,3.4,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Single Arm Lateral Raise (Cable),1,5.7,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Single Arm Lateral Raise (Cable),2,5.7,12
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Leg Raise Parallel Bars,0,,20
+"5 Sep 2024, 11:38","5 Sep 2024, 13:06",Leg Raise Parallel Bars,1,,10
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Incline Bench Press (Dumbbell),0,18,14
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Incline Bench Press (Dumbbell),1,20,10
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Incline Bench Press (Dumbbell),2,20,9
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Bench Press (Smith Machine),0,51.3,6
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Bench Press (Smith Machine),1,51.3,10
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Bench Press (Smith Machine),2,51.3,8
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Butterfly (Pec Deck),0,66,10
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Butterfly (Pec Deck),1,66,7
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Butterfly (Pec Deck),2,59,3
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Butterfly (Pec Deck),3,59,8
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Butterfly (Pec Deck),4,52,3
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Preacher Curl (Machine),0,27,12
+"30 Aug 2024, 19:08","30 Aug 2024, 20:02",Preacher Curl (Machine),1,32,10
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Squat (Smith Machine),0,38,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Squat (Smith Machine),1,48,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Squat (Smith Machine),2,53,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Squat (Smith Machine),3,58,11
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Deadlift (Smith Machine),0,58,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Deadlift (Smith Machine),1,58,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Deadlift (Smith Machine),2,68,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Leg Press Horizontal (Machine),0,70,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Leg Press Horizontal (Machine),1,80,12
+"28 Aug 2024, 19:46","28 Aug 2024, 20:50",Leg Press Horizontal (Machine),2,90,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Lat Pulldown (Cable),0,40,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Lat Pulldown (Cable),1,50,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Lat Pulldown (Cable),2,50,11
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Lat Pulldown (Cable),3,50,7
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Lat Pulldown (Cable),4,45,5
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Lat Pulldown (Cable),5,40,2
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Bent Over Row (Barbell),0,45,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Bent Over Row (Barbell),1,50,10
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Bent Over Row (Barbell),2,50,9
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Unilateral Rear Delts (Nipples),0,22.5,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Unilateral Rear Delts (Nipples),1,25,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Unilateral Rear Delts (Nipples),2,28,10
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Shoulder Press (Dumbbell),0,14,13
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Shoulder Press (Dumbbell),1,14,10
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Shoulder Press (Dumbbell),2,16,8
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Pushdown,0,27,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Pushdown,1,50,12
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Pushdown,2,50,8
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Pushdown,3,47.3,2
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Pushdown,4,47.3,7
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Pushdown,5,45,2
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Extension (Cable),0,34.3,9
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Extension (Cable),1,34.3,8
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Extension (Cable),2,32,3
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Extension (Cable),3,34.3,7
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Extension (Cable),4,30.3,3
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Kickback (Cable),0,6.8,15
+"25 Aug 2024, 18:42","25 Aug 2024, 20:46",Triceps Kickback (Cable),1,9,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Bench Press (Barbell),0,40,10
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Bench Press (Barbell),1,55,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Bench Press (Barbell),2,60,9
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Bench Press (Barbell),3,60,8
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Incline Bench Press (Dumbbell),0,18,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Incline Bench Press (Dumbbell),1,18,11
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Incline Bench Press (Dumbbell),2,20,9
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Butterfly (Pec Deck),0,35,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Butterfly (Pec Deck),1,35,10
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Butterfly (Pec Deck),2,35,9
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Seated Incline Curl (Dumbbell),0,12,10
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Seated Incline Curl (Dumbbell),1,12,8
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Preacher Curl (Barbell),0,25,10
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Preacher Curl (Barbell),1,25,9
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Preacher Curl (Barbell),2,25,8
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Single Arm Lateral Raise (Cable),0,9,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Single Arm Lateral Raise (Cable),1,9,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Single Arm Lateral Raise (Cable),2,9,12
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Single Arm Lateral Raise (Cable),3,11.3,8
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Single Arm Lateral Raise (Cable),4,11.3,8
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Single Arm Lateral Raise (Cable),5,9,4
+"24 Aug 2024, 17:27","24 Aug 2024, 19:46",Leg Press Horizontal (Machine),0,70,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Lat Pulldown (Cable),0,40,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Lat Pulldown (Cable),1,50,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Lat Pulldown (Cable),2,50,5
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Lat Pulldown (Cable),3,45,6
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Lat Pulldown (Cable),4,47.5,9
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Lat Pulldown (Cable),5,45,4
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Seated Cable Row - Bar Wide Grip,0,40,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Seated Cable Row - V Grip (Cable),0,55,8
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Seated Cable Row - V Grip (Cable),1,50,3
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Seated Cable Row - V Grip (Cable),2,50,10
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Seated Cable Row - V Grip (Cable),3,45,2
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Standing Calf Raise (Machine),0,35,20
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Standing Calf Raise (Machine),1,35,20
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Standing Calf Raise (Machine),2,40,20
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Unilateral Rear Delts (Nipples),0,10,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Unilateral Rear Delts (Nipples),1,20,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Unilateral Rear Delts (Nipples),2,20,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Pushdown,0,27,15
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Pushdown,1,47.3,12
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Pushdown,2,47.3,11
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Pushdown,3,50,8
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Pushdown,4,47.5,2
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Kickback (Cable),0,14,9
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Kickback (Cable),1,11.3,11
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Kickback (Cable),2,11.3,4
+"22 Aug 2024, 17:10","22 Aug 2024, 18:39",Triceps Kickback (Cable),3,9,8
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Incline Bench Press (Smith Machine),0,38,12
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Incline Bench Press (Smith Machine),1,50.5,11
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Incline Bench Press (Smith Machine),2,50.5,9
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Incline Bench Press (Smith Machine),3,50.5,8
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Chest Press (Machine),0,70,12
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Chest Press (Machine),1,70,9
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Chest Press (Machine),2,67.5,9
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Butterfly (Pec Deck),0,30,13
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Butterfly (Pec Deck),1,32.5,11
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Butterfly (Pec Deck),2,35,11
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Seated Incline Curl (Dumbbell),0,12,10
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Seated Incline Curl (Dumbbell),1,12,9
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Preacher Curl (Barbell),0,22.5,12
+"20 Aug 2024, 18:14","20 Aug 2024, 19:49",Preacher Curl (Barbell),1,25,10
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Lat Pulldown (Cable),0,35,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Lat Pulldown (Cable),1,45,15
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Lat Pulldown (Cable),2,50,9
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Lat Pulldown (Cable),3,47.5,2
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Lat Pulldown (Cable),4,50,6
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Lat Pulldown (Cable),5,45,7
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Seated Cable Row - V Grip (Cable),0,50,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Seated Cable Row - V Grip (Cable),1,50,11
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Seated Cable Row - V Grip (Cable),2,50,11
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Unilateral Rear Delts (Nipples),0,17.5,8
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Unilateral Rear Delts (Nipples),1,15,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Unilateral Rear Delts (Nipples),2,17.5,17
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Shoulder Press (Dumbbell),0,16,8
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Shoulder Press (Dumbbell),1,14,11
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Shoulder Press (Dumbbell),2,14,9
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Shrug (Barbell),0,65,20
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Shrug (Barbell),1,65,20
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Shrug (Barbell),2,70,20
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Pushdown,0,27,15
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Pushdown,1,45,13
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Pushdown,2,45,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Pushdown,3,47.3,10
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Extension (Cable),0,34.3,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Extension (Cable),1,34.3,9
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Extension (Cable),2,34.3,8
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Kickback (Cable),0,11.3,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Kickback (Cable),1,11.3,12
+"18 Aug 2024, 17:03","18 Aug 2024, 19:24",Triceps Kickback (Cable),2,14,8
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Bench Press (Barbell),0,40,10
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Bench Press (Barbell),1,52.5,12
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Bench Press (Barbell),2,55,11
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Bench Press (Barbell),3,57.5,8
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Incline Bench Press (Dumbbell),0,20,8
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Incline Bench Press (Dumbbell),1,18,8
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Incline Bench Press (Dumbbell),2,16,12
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Butterfly (Pec Deck),0,30,14
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Butterfly (Pec Deck),1,32.5,10
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Butterfly (Pec Deck),2,32.5,8
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Butterfly (Pec Deck),3,30,2
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Seated Incline Curl (Dumbbell),0,10,13
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Seated Incline Curl (Dumbbell),1,10,10
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Seated Incline Curl (Dumbbell),2,10,10
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Preacher Curl (Barbell),0,22.5,9
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Preacher Curl (Barbell),1,22.5,6
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Preacher Curl (Barbell),2,20,2
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Preacher Curl (Barbell),3,20,12
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Lateral Raise (Dumbbell),0,10,12
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Lateral Raise (Dumbbell),1,10,12
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Lateral Raise (Dumbbell),2,10,12
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Single Arm Lateral Raise (Cable),0,9,9
+"17 Aug 2024, 18:05","17 Aug 2024, 19:52",Single Arm Lateral Raise (Cable),1,9,11
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Lying Leg Curl (Machine),0,20,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Lying Leg Curl (Machine),1,22.5,13
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Lying Leg Curl (Machine),2,25,6
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Lying Leg Curl (Machine),3,20,4
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Lying Leg Curl (Machine),4,22.5,10
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hack Squat (Machine),0,40,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hack Squat (Machine),1,40,6
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hack Squat (Machine),2,30,6
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Leg Press (Machine),0,45,15
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Bulgarian Split Squat,0,,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Bulgarian Split Squat,1,10,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Leg Extension (Machine),0,60,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Leg Extension (Machine),1,60,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Leg Extension (Machine),2,60,7
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Leg Extension (Machine),3,55,5
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hip Abduction (Machine),0,30,15
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hip Abduction (Machine),1,35,15
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hip Abduction (Machine),2,40,9
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hip Abduction (Machine),3,35,2
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hip Adduction (Machine),0,25,12
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Hip Adduction (Machine),1,30,17
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Crunch (Machine),0,60,20
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Crunch (Machine),1,65,7
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Crunch (Machine),2,60,5
+"16 Aug 2024, 19:36","16 Aug 2024, 21:03",Crunch (Machine),3,55,8
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Pull Up,0,,12
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Pull Up,1,,9
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Pull Up,2,,5
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Lat Pulldown (Cable),0,42.5,12
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Lat Pulldown (Cable),1,45,8
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Lat Pulldown (Cable),2,42.5,3
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Lat Pulldown (Cable),3,45,8
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Lat Pulldown (Cable),4,42.5,3
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Seated Cable Row - V Grip (Cable),0,47.5,13
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Seated Cable Row - V Grip (Cable),1,50,11
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Seated Cable Row - V Grip (Cable),2,50,7
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Seated Cable Row - V Grip (Cable),3,47.5,3
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Rear Delt Reverse Fly (Machine),0,17.5,9
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Rear Delt Reverse Fly (Machine),1,15,2
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Rear Delt Reverse Fly (Machine),2,17.5,5
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Rear Delt Reverse Fly (Machine),3,15,3
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Rear Delt Reverse Fly (Machine),4,15,10
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Shrug (Barbell),0,70,20
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Shrug (Barbell),1,70,18
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Shrug (Barbell),2,70,9
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Shrug (Barbell),3,65,13
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Pushdown,0,27,12
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Pushdown,1,45,13
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Pushdown,2,45,11
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Pushdown,3,45,10
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Extension (Cable),0,32,13
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Extension (Cable),1,34.3,10
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Extension (Cable),2,34.3,9
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Kickback (Cable),0,6.8,12
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Kickback (Cable),1,9,12
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Kickback (Cable),2,11.3,9
+"15 Aug 2024, 13:45","15 Aug 2024, 15:41",Triceps Kickback (Cable),3,9,3
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Incline Bench Press (Smith Machine),0,38,10
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Incline Bench Press (Smith Machine),1,48,12
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Incline Bench Press (Smith Machine),2,50.5,9
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Incline Bench Press (Smith Machine),3,50.5,7
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Incline Bench Press (Smith Machine),4,45.5,2
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Chest Press (Machine),0,62.5,15
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Chest Press (Machine),1,65,12
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Chest Press (Machine),2,65,12
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Butterfly (Pec Deck),0,30,12
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Butterfly (Pec Deck),1,30,9
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Butterfly (Pec Deck),2,30,8
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Butterfly (Pec Deck),3,27.5,4
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Seated Incline Curl (Dumbbell),0,10,12
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Seated Incline Curl (Dumbbell),1,10,10
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Preacher Curl (Barbell),0,20,14
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Preacher Curl (Barbell),1,22.5,10
+"13 Aug 2024, 16:57","13 Aug 2024, 18:29",Preacher Curl (Barbell),2,22.5,8
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Squat (Barbell),0,40,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Squat (Barbell),1,50,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Squat (Barbell),2,55,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Squat (Barbell),3,60,13
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Hip Thrust (Barbell),0,60,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Lying Leg Curl (Machine),0,25,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Leg Extension (Machine),0,55,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Leg Extension (Machine),1,60,13
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Leg Extension (Machine),2,60,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Standing Calf Raise (Machine),0,30,20
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Standing Calf Raise (Machine),1,30,20
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Crunch (Machine),0,40,10
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Crunch (Machine),1,60,10
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Crunch (Machine),2,60,12
+"11 Aug 2024, 11:23","11 Aug 2024, 12:54",Crunch (Machine),3,55,8
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Pull Up,0,,11
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Pull Up,1,,8
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Pull Up,2,,6
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lat Pulldown (Cable),0,45,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lat Pulldown (Cable),1,45,7
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lat Pulldown (Cable),2,40,4
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lat Pulldown (Cable),3,42.5,7
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lat Pulldown (Cable),4,40,3
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Seated Cable Row - V Grip (Cable),0,47.5,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Seated Cable Row - V Grip (Cable),1,47.5,11
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Seated Cable Row - V Grip (Cable),2,47.5,9
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Rear Delt Reverse Fly (Machine),0,17.5,9
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Rear Delt Reverse Fly (Machine),1,15,3
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Rear Delt Reverse Fly (Machine),2,17.5,5
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Rear Delt Reverse Fly (Machine),3,15,3
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Rear Delt Reverse Fly (Machine),4,15,8
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Shrug (Barbell),0,67.5,20
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Shrug (Barbell),1,70,20
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Shrug (Barbell),2,70,19
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Pushdown,0,27,10
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Pushdown,1,45,13
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Pushdown,2,45,7
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Pushdown,3,43.3,3
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Pushdown,4,43.3,8
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Extension (Cable),0,32,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Extension (Cable),1,32,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Triceps Extension (Cable),2,32,8
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Bench Dip,0,,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Bench Dip,1,,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lateral Raise (Dumbbell),0,10,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lateral Raise (Dumbbell),1,10,12
+"10 Aug 2024, 19:40","10 Aug 2024, 21:20",Lateral Raise (Dumbbell),2,10,11
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Incline Bench Press (Smith Machine),0,38,8
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Incline Bench Press (Smith Machine),1,48,11
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Incline Bench Press (Smith Machine),2,48,8
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Incline Bench Press (Smith Machine),3,48,6
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Incline Bench Press (Smith Machine),4,43,1
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Chest Press (Machine),0,60,12
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Chest Press (Machine),1,65,9
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Chest Press (Machine),2,65,10
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Seated Incline Curl (Dumbbell),0,10,12
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Seated Incline Curl (Dumbbell),1,10,10
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Preacher Curl (Barbell),0,20,12
+"5 Aug 2024, 19:27","5 Aug 2024, 20:29",Preacher Curl (Barbell),1,20,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Pull Up,0,,11
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Pull Up,1,,8
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Pull Up,2,,6
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Lat Pulldown (Cable),0,45,11
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Lat Pulldown (Cable),1,45,7
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Lat Pulldown (Cable),2,40,4
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Lat Pulldown (Cable),3,40,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Seated Cable Row - V Grip (Cable),0,50,8
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Seated Cable Row - V Grip (Cable),1,45,4
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Seated Cable Row - V Grip (Cable),2,45,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Seated Cable Row - V Grip (Cable),3,50,8
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Seated Cable Row - V Grip (Cable),4,45,4
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Rear Delt Reverse Fly (Machine),0,17.5,10
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Rear Delt Reverse Fly (Machine),1,17.5,6
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Rear Delt Reverse Fly (Machine),2,15,2
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Rear Delt Reverse Fly (Machine),3,15,8
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Shrug (Barbell),0,70,18
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Shrug (Barbell),1,65,20
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Shrug (Barbell),2,65,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Shrug (Barbell),3,60,4
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Pushdown,0,27,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Pushdown,1,45,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Pushdown,2,45,8
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Pushdown,3,43.3,2
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Pushdown,4,43.3,8
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Extension (Cable),0,32,11
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Extension (Cable),1,32,9
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Triceps Extension (Cable),2,32,9
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Bench Dip,0,,12
+"3 Aug 2024, 13:25","3 Aug 2024, 15:20",Bench Dip,1,,14
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Bench Press (Barbell),0,40,10
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Bench Press (Barbell),1,52.5,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Bench Press (Barbell),2,52.5,10
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Bench Press (Barbell),3,52.5,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Incline Bench Press (Dumbbell),0,16,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Incline Bench Press (Dumbbell),1,16,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Incline Bench Press (Dumbbell),2,16,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Bayesian Cable Curl,0,18,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Bayesian Cable Curl,1,18,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Butterfly (Pec Deck),0,30,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Butterfly (Pec Deck),1,32.5,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Butterfly (Pec Deck),2,32.5,6
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Butterfly (Pec Deck),3,30,2
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Seated Incline Curl (Dumbbell),0,10,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Seated Incline Curl (Dumbbell),1,10,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Preacher Curl (Barbell),0,20,10
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Preacher Curl (Barbell),1,20,7
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Preacher Curl (Barbell),2,17.5,9
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Lateral Raise (Dumbbell),0,10,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Lateral Raise (Dumbbell),1,10,12
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Lateral Raise (Dumbbell),2,10,7
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Lateral Raise (Dumbbell),3,9,4
+"2 Aug 2024, 19:22","2 Aug 2024, 21:20",Lateral Raise (Dumbbell),4,9,12
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Incline Bench Press (Smith Machine),0,38,12
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Incline Bench Press (Smith Machine),1,48,11
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Incline Bench Press (Smith Machine),2,48,8
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Incline Bench Press (Smith Machine),3,48,8
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Incline Bench Press (Smith Machine),4,43,3
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Chest Press (Machine),0,65,10
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Chest Press (Machine),1,65,9
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Chest Press (Machine),2,65,11
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Butterfly (Pec Deck),0,30,12
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Butterfly (Pec Deck),1,30,11
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Butterfly (Pec Deck),2,30,8
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Butterfly (Pec Deck),3,27.5,1
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Seated Incline Curl (Dumbbell),0,10,12
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Seated Incline Curl (Dumbbell),1,10,9
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Preacher Curl (Barbell),0,20,12
+"9 Aug 2024, 19:06","9 Aug 2024, 20:41",Preacher Curl (Barbell),1,20,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Incline Bench Press (Smith Machine),0,40.5,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Incline Bench Press (Smith Machine),1,45.5,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Incline Bench Press (Smith Machine),2,48.5,8
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Incline Bench Press (Smith Machine),3,48.5,7
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Incline Bench Press (Smith Machine),4,45.5,1
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Bench Press (Barbell),0,50,10
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Chest Press (Machine),0,65,10
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Chest Press (Machine),1,65,5
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Chest Press (Machine),2,60,3
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Bayesian Cable Curl,0,16.3,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Bayesian Cable Curl,1,16.3,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Butterfly (Pec Deck),0,30,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Butterfly (Pec Deck),1,30,11
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Butterfly (Pec Deck),2,30,9
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Butterfly (Pec Deck),3,27.5,2
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Seated Incline Curl (Dumbbell),0,10,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Seated Incline Curl (Dumbbell),1,10,9
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Preacher Curl (Barbell),0,20,11
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Preacher Curl (Barbell),1,20,9
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Lateral Raise (Dumbbell),0,9,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Lateral Raise (Dumbbell),1,9,12
+"29 Jul 2024, 19:48","29 Jul 2024, 21:24",Lateral Raise (Dumbbell),2,9,12
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Pull Up,0,,12
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Pull Up,1,,6
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Pull Up,2,,5
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Lat Pulldown (Cable),0,45,11
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Lat Pulldown (Cable),1,45,10
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Lat Pulldown (Cable),2,45,7
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Lat Pulldown (Cable),3,40,4
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Bent Over Row (Barbell),0,40,12
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Bent Over Row (Barbell),1,42.5,13
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Bent Over Row (Barbell),2,45,10
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Rear Delt Reverse Fly (Machine),0,17.5,8
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Rear Delt Reverse Fly (Machine),1,15,4
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Rear Delt Reverse Fly (Machine),2,17.5,7
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Rear Delt Reverse Fly (Machine),3,15,4
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Rear Delt Reverse Fly (Machine),4,15,9
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Shrug (Barbell),0,60,20
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Shrug (Barbell),1,60,20
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Shrug (Barbell),2,60,20
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Pushdown,0,27,12
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Pushdown,1,43.3,13
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Pushdown,2,43.3,13
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Pushdown,3,45,11
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Extension (Cable),0,32,11
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Extension (Cable),1,32,9
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Extension (Cable),2,32,9
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Triceps Extension (Cable),3,27,3
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Bench Dip,0,,12
+"26 Jul 2024, 20:15","26 Jul 2024, 22:03",Bench Dip,1,,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Bench Press (Barbell),0,40,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Bench Press (Barbell),1,50,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Bench Press (Barbell),2,52.5,8
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Bench Press (Barbell),3,50,8
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Incline Bench Press (Dumbbell),0,16,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Incline Bench Press (Dumbbell),1,16,9
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Incline Bench Press (Dumbbell),2,16,11
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Butterfly (Pec Deck),0,30,11
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Butterfly (Pec Deck),1,30,8
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Butterfly (Pec Deck),2,27.5,11
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Bayesian Cable Curl,0,14,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Bayesian Cable Curl,1,16.3,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Seated Incline Curl (Dumbbell),0,9,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Seated Incline Curl (Dumbbell),1,9,12
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Preacher Curl (Barbell),0,20,10
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Preacher Curl (Barbell),1,20,7
+"24 Jul 2024, 19:43","24 Jul 2024, 21:01",Preacher Curl (Barbell),2,17.5,10
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Pull Up,0,,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Pull Up,1,,7
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Pull Up,2,,5
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Seated Row (Machine),0,65,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Seated Row (Machine),1,65,10
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Iso-Lateral Low Row,0,20,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Rear Delt Reverse Fly (Machine),0,15,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Rear Delt Reverse Fly (Machine),1,17.5,8
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Rear Delt Reverse Fly (Machine),2,15,2
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Rear Delt Reverse Fly (Machine),3,17.5,5
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Rear Delt Reverse Fly (Machine),4,15,3
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Lat Pulldown (Cable),0,35,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Lat Pulldown (Cable),1,45,11
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Lat Pulldown (Cable),2,45,8
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Shrug (Barbell),0,55,20
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Shrug (Barbell),1,55,20
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Shrug (Barbell),2,55,20
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Pushdown,0,27,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Pushdown,1,41,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Pushdown,2,41,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Pushdown,3,43.3,11
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Extension (Cable),0,32,12
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Extension (Cable),1,32,10
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Triceps Extension (Cable),2,32,10
+"21 Jul 2024, 19:34","21 Jul 2024, 21:25",Bench Dip,0,,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Incline Bench Press (Smith Machine),0,18,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Incline Bench Press (Smith Machine),1,40.5,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Incline Bench Press (Smith Machine),2,45.5,10
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Incline Bench Press (Smith Machine),3,45.5,8
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Incline Bench Press (Smith Machine),4,40.5,1
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Chest Press (Machine),0,60,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Chest Press (Machine),1,65,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Chest Press (Machine),2,67.5,8
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Cable Fly Crossovers,0,14,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Cable Fly Crossovers,1,14,9
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Butterfly (Pec Deck),0,30,10
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Bicep Curl (Dumbbell),0,12,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Bicep Curl (Dumbbell),1,14,4
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Bicep Curl (Dumbbell),2,12,4
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Seated Incline Curl (Dumbbell),0,9,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Seated Incline Curl (Dumbbell),1,9,10
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Lateral Raise (Dumbbell),0,9,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Lateral Raise (Dumbbell),1,9,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Lateral Raise (Dumbbell),2,9,10
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Lateral Raise (Dumbbell),3,8,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Lateral Raise (Dumbbell),4,8,10
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Preacher Curl (Barbell),0,20,12
+"19 Jul 2024, 21:27","19 Jul 2024, 23:05",Preacher Curl (Barbell),1,20,10
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up,0,,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up,1,,8
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up,2,,7
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up (Assisted),0,15,11
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up (Assisted),1,15,6
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up (Assisted),2,20,6
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Pull Up (Assisted),3,20,8
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Rear Delt Reverse Fly (Machine),0,0.03,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Rear Delt Reverse Fly (Machine),1,0.03,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Rear Delt Reverse Fly (Machine),2,0.04,10
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",T Bar Row,0,20,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",T Bar Row,1,30,10
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",T Bar Row,2,30,8
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",T Bar Row,3,25,3
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Shrug (Barbell),0,55,20
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Shrug (Barbell),1,55,20
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Shrug (Barbell),2,55,14
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Triceps Pushdown,0,25,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Triceps Pushdown,1,40,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Triceps Pushdown,2,0.05,6
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Triceps Pushdown,3,40,1
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Triceps Pushdown,4,40,7
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Bench Dip,0,,12
+"17 Jul 2024, 19:06","17 Jul 2024, 20:21",Bench Dip,1,,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Incline Bench Press (Smith Machine),0,18,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Incline Bench Press (Smith Machine),1,42,10
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Incline Bench Press (Smith Machine),2,42,7
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Incline Bench Press (Smith Machine),3,38,9
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Chest Press (Machine),0,50,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Chest Press (Machine),1,54,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Chest Press (Machine),2,60,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Chest Fly (Dumbbell),0,10,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Cable Fly Crossovers,0,12.5,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Cable Fly Crossovers,1,15,9
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Cable Fly Crossovers,2,14,3
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Bayesian Cable Curl,0,15,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Bayesian Cable Curl,1,17.5,9
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Seated Incline Curl (Dumbbell),0,9,10
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Seated Incline Curl (Dumbbell),1,9,8
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Preacher Curl (Barbell),0,20,9
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Preacher Curl (Barbell),1,20,6
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Preacher Curl (Barbell),2,17.5,4
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Preacher Curl (Barbell),3,17.5,8
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),0,0.05,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),1,0.05,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),2,0.08,5
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),3,0.05,12
+"16 Jul 2024, 19:03","16 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),4,0.05,9
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Pull Up,0,,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Pull Up,1,,8
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Pull Up,2,,7
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Pull Up (Assisted),0,15,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Pull Up (Assisted),1,10,9
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Pull Up (Assisted),2,10,7
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Seated Cable Row - V Grip (Cable),0,45,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Seated Cable Row - V Grip (Cable),1,45,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Seated Cable Row - V Grip (Cable),2,50,9
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Rear Delt Reverse Fly (Machine),0,17.5,11
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Rear Delt Reverse Fly (Machine),1,17.5,8
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Rear Delt Reverse Fly (Machine),2,15,11
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Shrug (Barbell),0,50,20
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Shrug (Barbell),1,50,20
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Shrug (Barbell),2,55,20
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Pushdown,0,27,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Pushdown,1,41,10
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Pushdown,2,41,10
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Pushdown,3,41,9
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Extension (Cable),0,29.3,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Extension (Cable),1,29.3,12
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Triceps Extension (Cable),2,32,9
+"13 Jul 2024, 20:24","13 Jul 2024, 22:15",Bench Dip,0,,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Incline Bench Press (Smith Machine),0,18,15
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Incline Bench Press (Smith Machine),1,40.5,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Incline Bench Press (Smith Machine),2,40.5,10
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Incline Bench Press (Smith Machine),3,40.5,7
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Chest Press (Machine),0,40,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Chest Press (Machine),1,45,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Chest Press (Machine),2,55,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Cable Fly Crossovers,0,14,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Cable Fly Crossovers,1,14,9
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Cable Fly Crossovers,2,14,8
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Cable Fly Crossovers,3,11.3,5
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Bayesian Cable Curl,0,14,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Bayesian Cable Curl,1,16.3,10
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Seated Incline Curl (Dumbbell),0,9,10
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Seated Incline Curl (Dumbbell),1,9,11
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Preacher Curl (Barbell),0,20,10
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Preacher Curl (Barbell),1,20,8
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Preacher Curl (Barbell),2,17.5,5
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Lateral Raise (Dumbbell),0,8,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Lateral Raise (Dumbbell),1,8,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Lateral Raise (Dumbbell),2,8,12
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),0,9,4
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),1,6.8,8
+"12 Jul 2024, 18:59","12 Jul 2024, 20:40",Single Arm Lateral Raise (Cable),2,6.8,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Bent Over Row (Barbell),0,20,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Bent Over Row (Barbell),1,40,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Bent Over Row (Barbell),2,45,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Bent Over Row (Barbell),3,45,9
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Iso-Lateral High Row (Machine),0,40,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Iso-Lateral High Row (Machine),1,50,13
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Iso-Lateral High Row (Machine),2,60,9
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Seated Cable Row - V Grip (Cable),0,40,16
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Seated Cable Row - V Grip (Cable),1,50,7
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Seated Cable Row - V Grip (Cable),2,45,3
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Seated Cable Row - V Grip (Cable),3,45,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Shrug (Barbell),0,40,20
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Shrug (Barbell),1,50,20
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Shrug (Barbell),2,50,20
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Triceps Pushdown,0,18,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Triceps Pushdown,1,41,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Triceps Pushdown,2,41,12
+"9 Jul 2024, 21:15","9 Jul 2024, 22:20",Triceps Pushdown,3,41,11
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bench Press (Barbell),0,40,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bench Press (Barbell),1,50,9
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bench Press (Barbell),2,45,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bench Press (Barbell),3,47.5,9
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Incline Bench Press (Dumbbell),0,16,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Incline Bench Press (Dumbbell),1,16,11
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Incline Bench Press (Dumbbell),2,16,9
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Seated Chest Flys (Cable),0,9,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Seated Chest Flys (Cable),1,14,11
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Seated Chest Flys (Cable),2,14,9
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bicep Curl (Dumbbell),0,14,6
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bicep Curl (Dumbbell),1,12,4
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Bayesian Cable Curl,0,14,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Seated Incline Curl (Dumbbell),0,9,11
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Seated Incline Curl (Dumbbell),1,9,8
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Preacher Curl (Barbell),0,20,9
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Preacher Curl (Barbell),1,20,7
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Preacher Curl (Barbell),2,17.5,3
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Lateral Raise (Dumbbell),0,8,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Lateral Raise (Dumbbell),1,8,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Lateral Raise (Dumbbell),2,8,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Lateral Raise (Dumbbell),3,8,12
+"7 Jul 2024, 17:11","7 Jul 2024, 18:48",Lateral Raise (Dumbbell),4,8,9
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Pull Up,0,,11
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Pull Up,1,,7
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Pull Up,2,,5
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Pull Up (Assisted),0,10,9
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Pull Up (Assisted),1,15,10
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Pull Up (Assisted),2,15,9
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Seated Row (Machine),0,60,12
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Seated Row (Machine),1,62.5,12
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Seated Row (Machine),2,67.5,10
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Rear Delt Reverse Fly (Machine),0,17.5,8
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Rear Delt Reverse Fly (Machine),1,15,3
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Rear Delt Reverse Fly (Machine),2,15,10
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Rear Delt Reverse Fly (Machine),3,15,8
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Rear Delt Reverse Fly (Machine),4,12.5,4
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Shrug (Dumbbell),0,22,20
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Shrug (Dumbbell),1,22,20
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Shrug (Dumbbell),2,22,20
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Pushdown,0,27,12
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Pushdown,1,41,12
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Pushdown,2,41,10
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Pushdown,3,41,8
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Pushdown,4,38.3,3
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Extension (Cable),0,29.3,9
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Extension (Cable),1,27,9
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Triceps Extension (Cable),2,27,11
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Bench Dip,0,,12
+"5 Jul 2024, 14:27","5 Jul 2024, 16:27",Bench Dip,1,,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Bench Press (Barbell),0,40,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Bench Press (Barbell),1,45,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Bench Press (Barbell),2,50,8
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Bench Press (Barbell),3,45,11
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Incline Bench Press (Dumbbell),0,14,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Incline Bench Press (Dumbbell),1,14,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Incline Bench Press (Dumbbell),2,16,11
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Butterfly (Pec Deck),0,27.5,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Butterfly (Pec Deck),1,27.5,10
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Butterfly (Pec Deck),2,27.5,7
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Butterfly (Pec Deck),3,25,3
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Bicep Curl (Dumbbell),0,12,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Bicep Curl (Dumbbell),1,12,9
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Seated Incline Curl (Dumbbell),0,8,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Seated Incline Curl (Dumbbell),1,8,11
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Preacher Curl (Barbell),0,22.5,4
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Preacher Curl (Barbell),1,17.5,8
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Preacher Curl (Barbell),2,17.5,11
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Preacher Curl (Barbell),3,20,8
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Single Arm Lateral Raise (Cable),0,4.5,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Single Arm Lateral Raise (Cable),1,6.8,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Single Arm Lateral Raise (Cable),2,6.8,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Single Arm Lateral Raise (Cable),3,6.8,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Single Arm Lateral Raise (Cable),4,6.8,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Lateral Raise (Dumbbell),0,7,12
+"4 Jul 2024, 15:07","4 Jul 2024, 17:04",Lateral Raise (Dumbbell),1,7,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Squat (Barbell),0,35,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Squat (Barbell),1,40,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Squat (Barbell),2,50,9
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Squat (Barbell),3,50,10
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Hip Thrust (Barbell),0,60,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Hip Thrust (Barbell),1,65,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Hip Thrust (Barbell),2,80,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Lying Leg Curl (Machine),0,25,11
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Lying Leg Curl (Machine),1,25,8
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Lying Leg Curl (Machine),2,20,9
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Back Extension (Weighted Hyperextension),0,10,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Back Extension (Weighted Hyperextension),1,10,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Leg Extension (Machine),0,50,12
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Leg Extension (Machine),1,55,14
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Leg Extension (Machine),2,60,11
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Standing Calf Raise (Machine),0,30,20
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Standing Calf Raise (Machine),1,30,20
+"2 Jul 2024, 14:58","2 Jul 2024, 16:13",Standing Calf Raise (Machine),2,30,20
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Pull Up,0,,10
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Pull Up,1,,7
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Pull Up,2,,5
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Pull Up (Assisted),0,10,8
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Pull Up (Assisted),1,15,9
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Pull Up (Assisted),2,15,8
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Seated Row (Machine),0,60,9
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Seated Row (Machine),1,55,12
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Seated Row (Machine),2,60,7
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Seated Row (Machine),3,55,5
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Rear Delt Reverse Fly (Machine),0,15,9
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Rear Delt Reverse Fly (Machine),1,12.5,5
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Rear Delt Reverse Fly (Machine),2,15,7
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Rear Delt Reverse Fly (Machine),3,12.5,5
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Rear Delt Reverse Fly (Machine),4,12.5,11
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Shrug (Dumbbell),0,22,20
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Shrug (Dumbbell),1,22,20
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Shrug (Dumbbell),2,22,9
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Shrug (Dumbbell),3,20,3
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Shrug (Cable),0,0.65,12
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Pushdown,0,25.3,12
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Pushdown,1,36,12
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Pushdown,2,36,11
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Pushdown,3,36,11
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Extension (Cable),0,29.3,8
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Extension (Cable),1,25.3,12
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Extension (Cable),2,27,4
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Triceps Extension (Cable),3,27,11
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Bench Dip,0,,12
+"1 Jul 2024, 14:02","1 Jul 2024, 15:40",Bench Dip,1,,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Bench Press (Barbell),0,40,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Bench Press (Barbell),1,45,11
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Bench Press (Barbell),2,45,10
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Bench Press (Barbell),3,45,9
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Incline Bench Press (Dumbbell),0,14,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Incline Bench Press (Dumbbell),1,14,10
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Incline Bench Press (Dumbbell),2,14,9
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Butterfly (Pec Deck),0,27.5,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Butterfly (Pec Deck),1,27.5,8
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Butterfly (Pec Deck),2,25,3
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Butterfly (Pec Deck),3,27.5,7
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Butterfly (Pec Deck),4,25,4
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Bicep Curl (Dumbbell),0,10,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Bicep Curl (Dumbbell),1,10,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Seated Incline Curl (Dumbbell),0,7,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Seated Incline Curl (Dumbbell),1,7,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Preacher Curl (Barbell),0,15,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Preacher Curl (Barbell),1,17.5,11
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Preacher Curl (Barbell),2,17.5,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),0,15,4
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),1,10,8
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),2,10,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),3,12.5,12
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),4,12.5,11
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),5,12.5,7
+"30 Jun 2024, 15:57","30 Jun 2024, 17:56",Lateral Raise (Machine),6,10,4
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Squat (Machine),0,42,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Squat (Machine),1,47,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Leg Press (Machine),0,20,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Leg Press (Machine),1,35,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Thrust (Barbell),0,50,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Thrust (Barbell),1,55,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Thrust (Barbell),2,65,13
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Lying Leg Curl (Machine),0,25,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Lying Leg Curl (Machine),1,25,7
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Lying Leg Curl (Machine),2,20,4
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Lying Leg Curl (Machine),3,20,9
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Leg Extension (Machine),0,40,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Leg Extension (Machine),1,40,15
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Leg Extension (Machine),2,45,15
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Abduction (Machine),0,25,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Abduction (Machine),1,35,12
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Abduction (Machine),2,35,9
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Hip Abduction (Machine),3,30,3
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Standing Calf Raise (Machine),0,30,20
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Standing Calf Raise (Machine),1,30,20
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Standing Calf Raise (Machine),2,30,13
+"29 Jun 2024, 12:07","29 Jun 2024, 14:08",Standing Calf Raise (Machine),3,25,7
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Pull Up,0,,10
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Pull Up,1,,7
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Pull Up,2,,5
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Cross Arm Lat Pull Around,0,11.3,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Cross Arm Lat Pull Around,1,16.3,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Cross Arm Lat Pull Around,2,20.3,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Seated Row (Machine),0,40,16
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Seated Row (Machine),1,50,15
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Seated Row (Machine),2,60,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Seated Cable Row - V Grip (Cable),0,30,15
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Seated Cable Row - V Grip (Cable),1,37.3,14
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Seated Cable Row - V Grip (Cable),2,42.3,10
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Rear Delt Reverse Fly (Machine),0,15,8
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Rear Delt Reverse Fly (Machine),1,10,4
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Rear Delt Reverse Fly (Machine),2,15,3
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Rear Delt Reverse Fly (Machine),3,10,9
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Rear Delt Reverse Fly (Machine),4,15,6
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Rear Delt Reverse Fly (Machine),5,10,6
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Shrug (Dumbbell),0,20,20
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Shrug (Dumbbell),1,22,20
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Shrug (Dumbbell),2,22,18
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Pushdown,0,20.3,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Pushdown,1,27,14
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Pushdown,2,32,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Pushdown,3,36,10
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Pushdown,4,32,2
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Extension (Cable),0,27,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Triceps Extension (Cable),1,29.3,9
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Bench Dip,0,,12
+"28 Jun 2024, 16:52","28 Jun 2024, 18:59",Bench Dip,1,,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Bench Press (Barbell),0,40,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Bench Press (Barbell),1,40,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Bench Press (Barbell),2,45,8
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Bench Press (Barbell),3,42.5,9
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Incline Bench Press (Dumbbell),0,14,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Incline Bench Press (Dumbbell),1,14,10
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Incline Bench Press (Dumbbell),2,14,8
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Butterfly (Pec Deck),0,25,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Butterfly (Pec Deck),1,25,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Butterfly (Pec Deck),2,25,8
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Bicep Curl (Dumbbell),0,10,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Bicep Curl (Dumbbell),1,10,11
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Seated Incline Curl (Dumbbell),0,7,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Seated Incline Curl (Dumbbell),1,7,9
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Preacher Curl (Barbell),0,12.5,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Preacher Curl (Barbell),1,17.5,9
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Lateral Raise (Dumbbell),0,8,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Lateral Raise (Dumbbell),1,8,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Lateral Raise (Dumbbell),2,8,12
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Lateral Raise (Dumbbell),3,8,8
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Lateral Raise (Dumbbell),4,7,4
+"27 Jun 2024, 18:21","27 Jun 2024, 19:34",Lateral Raise (Dumbbell),5,7,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Squat (Barbell),0,35,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Squat (Barbell),1,40,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Squat (Barbell),2,45,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Squat (Barbell),3,50,6
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Leg Extension (Machine),0,39,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Leg Extension (Machine),1,39,14
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Leg Extension (Machine),2,41.3,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Seated Leg Curl (Machine),0,39,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Seated Leg Curl (Machine),1,39,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Seated Leg Curl (Machine),2,41.3,7
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Seated Leg Curl (Machine),3,39,5
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Hip Thrust (Barbell),0,42.7,13
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Hip Thrust (Barbell),1,47.7,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Hip Thrust (Barbell),2,50.2,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Hip Abduction (Machine),0,25,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Hip Abduction (Machine),1,32,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Hip Abduction (Machine),2,32,12
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Calf Extension (Machine),0,39,20
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Calf Extension (Machine),1,39,20
+"24 Jun 2024, 13:29","24 Jun 2024, 15:00",Calf Extension (Machine),2,45,20
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Pull Up,0,,10
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Pull Up,1,,7
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Pull Up,2,,5
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Pull Up (Assisted),0,14,13
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Pull Up (Assisted),1,14,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Pull Up (Assisted),2,9,8
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Seated Row (Machine),0,32,10
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Seated Row (Machine),1,27,13
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Seated Row (Machine),2,29.2,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Seated Cable Row - V Grip (Cable),0,34.3,15
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Seated Cable Row - V Grip (Cable),1,39,13
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Seated Cable Row - V Grip (Cable),2,41.3,9
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Shrug (Cable),0,24.8,20
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Shrug (Cable),1,31.5,18
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Shrug (Cable),2,29.3,20
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,0,18,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,1,20.3,6
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,2,18,6
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,3,20.3,6
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,4,18,2
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,5,18,8
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Pushdown,6,15.8,2
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Extension (Cable),0,11.3,6
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Extension (Cable),1,13.5,6
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Extension (Cable),2,13.5,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Extension (Cable),3,15.8,4
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Triceps Extension (Cable),4,13.5,8
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Bench Dip,0,,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Bench Dip,1,,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Single Arm Lateral Raise (Cable),0,2.3,12
+"23 Jun 2024, 12:08","23 Jun 2024, 14:43",Single Arm Lateral Raise (Cable),1,4.5,9
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Bench Press (Barbell),0,35,12
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Bench Press (Barbell),1,40,12
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Bench Press (Barbell),2,40,11
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Bench Press (Barbell),3,45,6
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Bench Press (Barbell),4,40,3
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Incline Bench Press (Dumbbell),0,14,8
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Incline Bench Press (Dumbbell),1,12,11
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Incline Bench Press (Dumbbell),2,12,11
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Seated Chest Flys (Cable),0,6.8,8
+"22 Jun 2024, 15:03","22 Jun 2024, 15:46",Bicep Curl (Dumbbell),0,10,12
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Squat (Smith Machine),0,31.3,10
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Squat (Smith Machine),1,41.3,13
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Squat (Smith Machine),2,46.3,13
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Squat (Smith Machine),3,46.3,11
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Seated Leg Curl (Machine),0,25,13
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Seated Leg Curl (Machine),1,34.2,12
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Calf Extension (Machine),0,25,20
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Calf Extension (Machine),1,32,20
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Calf Extension (Machine),2,39,20
+"20 Jun 2024, 14:22","20 Jun 2024, 15:12",Leg Extension (Machine),0,39,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Bent Over Row (Barbell),0,40,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Bent Over Row (Barbell),1,45,8
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Bent Over Row (Barbell),2,40,13
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Seated Cable Row - V Grip (Cable),0,32,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Seated Cable Row - V Grip (Cable),1,39,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Seated Cable Row - V Grip (Cable),2,45,10
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Straight Arm Lat Pulldown (Cable),0,15.8,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Straight Arm Lat Pulldown (Cable),1,14,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Straight Arm Lat Pulldown (Cable),2,15.8,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Shrug (Dumbbell),0,22,20
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Shrug (Dumbbell),1,22,19
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Shrug (Dumbbell),2,22,18
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Pushdown,0,15.8,13
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Pushdown,1,18,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Pushdown,2,18,8
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Pushdown,3,15.8,2
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Extension (Cable),0,9,14
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Extension (Cable),1,11.3,14
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Extension (Cable),2,15.8,9
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Triceps Extension (Cable),3,13.5,3
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),0,18,18
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),1,27,13
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),2,27,10
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),3,23,2
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),4,27,9
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),5,23,3
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),6,27,9
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),7,23,4
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),8,27,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),9,23,3
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Lateral Raise (Machine),10,18,3
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Seated Dip Machine,0,36,12
+"19 Jun 2024, 14:15","19 Jun 2024, 16:22",Bench Dip,0,,12
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Bench Press (Barbell),0,35,12
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Bench Press (Barbell),1,40,12
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Bench Press (Barbell),2,40,11
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Bench Press (Barbell),3,45,7
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Incline Bench Press (Dumbbell),0,14,11
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Incline Bench Press (Dumbbell),1,14,12
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Incline Bench Press (Dumbbell),2,14,9
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Butterfly (Pec Deck),0,39,12
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Butterfly (Pec Deck),1,39,15
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Butterfly (Pec Deck),2,45,9
+"17 Jun 2024, 19:51","17 Jun 2024, 20:47",Butterfly (Pec Deck),3,39,3
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Squat (Barbell),0,30,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Squat (Barbell),1,40,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Squat (Barbell),2,40,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Squat (Barbell),3,40,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Thrust (Barbell),0,32.7,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Thrust (Barbell),1,37.7,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Thrust (Barbell),2,42.7,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Seated Leg Curl (Machine),0,34.2,14
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Seated Leg Curl (Machine),1,34.2,13
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Seated Leg Curl (Machine),2,34.2,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Leg Extension (Machine),0,34.3,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Leg Extension (Machine),1,34.3,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Leg Extension (Machine),2,39,11
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Abduction (Machine),0,25,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Abduction (Machine),1,32,12
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Abduction (Machine),2,32,7
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Hip Abduction (Machine),3,25,5
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Decline Crunch,0,,20
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Decline Crunch,1,,20
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Decline Crunch,2,,11
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Decline Crunch,3,,4
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Calf Extension (Machine),0,25,20
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Calf Extension (Machine),1,25,20
+"15 Jun 2024, 17:40","15 Jun 2024, 19:03",Calf Extension (Machine),2,25,20
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Pull Up,0,,10
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Pull Up,1,,7
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Pull Up,2,,4
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Iso-Lateral Row (Machine),0,23,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Iso-Lateral Row (Machine),1,27,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Iso-Lateral Row (Machine),2,27,9
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Iso-Lateral Row (Machine),3,25.3,3
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Single Arm Lat Pulldown,0,14,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Single Arm Lat Pulldown,1,27,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Single Arm Lat Pulldown,2,23,5
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Single Arm Lat Pulldown,3,27,7
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Shrug (Dumbbell),0,18,20
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Shrug (Dumbbell),1,18,20
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Shrug (Dumbbell),2,18,20
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Pushdown,0,23,13
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Pushdown,1,25.3,8
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Pushdown,2,23,4
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Pushdown,3,25.3,9
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Pushdown,4,23,3
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Extension (Cable),0,11.3,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Extension (Cable),1,11.3,11
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Extension (Cable),2,6.8,3
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Extension (Cable),3,9,10
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Triceps Extension (Cable),4,4.5,2
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Rear Delt Reverse Fly (Machine),0,25,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Rear Delt Reverse Fly (Machine),1,25,9
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Rear Delt Reverse Fly (Machine),2,18,3
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Rear Delt Reverse Fly (Machine),3,25,6
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Rear Delt Reverse Fly (Machine),4,18,6
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Back Extension (Weighted Hyperextension),0,,12
+"14 Jun 2024, 16:45","14 Jun 2024, 18:15",Back Extension (Weighted Hyperextension),1,,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Iso-Lateral Chest Press (Machine),0,15,10
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Bench Press (Barbell),0,35,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Bench Press (Barbell),1,40,10
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Bench Press (Barbell),2,37.5,9
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Incline Bench Press (Dumbbell),0,14,10
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Incline Bench Press (Dumbbell),1,14,8
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Incline Bench Press (Dumbbell),2,12,4
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Incline Bench Press (Dumbbell),3,12,11
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Butterfly (Pec Deck),0,39,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Butterfly (Pec Deck),1,39,9
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Butterfly (Pec Deck),2,32,3
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Butterfly (Pec Deck),3,34.3,13
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Bicep Curl (Dumbbell),0,10,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Bicep Curl (Dumbbell),1,10,10
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Seated Incline Curl (Dumbbell),0,7,11
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Seated Incline Curl (Dumbbell),1,6,8
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Preacher Curl (Barbell),0,20,9
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Preacher Curl (Barbell),1,15,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Lateral Raise (Dumbbell),0,8,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Lateral Raise (Dumbbell),1,8,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Lateral Raise (Dumbbell),2,8,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Lateral Raise (Dumbbell),3,7,12
+"13 Jun 2024, 15:59","13 Jun 2024, 17:04",Lateral Raise (Dumbbell),4,7,9
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Bent Over Row (Barbell),0,35,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Bent Over Row (Barbell),1,45,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Bent Over Row (Barbell),2,45,5
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Bent Over Row (Barbell),3,40,4
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Bent Over Row (Barbell),4,30,3
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Cable Row - V Grip (Cable),0,32,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Cable Row - V Grip (Cable),1,32,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Cable Row - V Grip (Cable),2,32,9
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Cable Row - V Grip (Cable),3,25,3
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Pull Up,0,,4
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Pull Up (Assisted),0,14,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Pull Up (Assisted),1,14,8
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Pull Up (Assisted),2,18,4
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Dip Machine,0,27,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Dip Machine,1,36,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Seated Dip Machine,2,36,15
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Shrug (Dumbbell),0,18,20
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Shrug (Dumbbell),1,18,20
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Shrug (Dumbbell),2,12,20
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Triceps Extension (Cable),0,9,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Triceps Extension (Cable),1,11.3,18
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Triceps Extension (Cable),2,9,6
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Triceps Extension (Cable),3,6.8,11
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Rear Delt Reverse Fly (Machine),0,25,12
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Rear Delt Reverse Fly (Machine),1,25,8
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Rear Delt Reverse Fly (Machine),2,18,4
+"11 Jun 2024, 16:18","11 Jun 2024, 17:23",Rear Delt Reverse Fly (Machine),3,18,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Incline Bench Press (Smith Machine),0,21.3,10
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Incline Bench Press (Smith Machine),1,31.3,15
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Incline Bench Press (Smith Machine),2,33.8,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Incline Bench Press (Smith Machine),3,33.8,9
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Incline Bench Press (Smith Machine),4,31.3,3
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Bench Press (Dumbbell),0,14,11
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Bench Press (Dumbbell),1,14,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Bench Press (Dumbbell),2,14,11
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Butterfly (Pec Deck),0,39,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Butterfly (Pec Deck),1,39,7
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Butterfly (Pec Deck),2,32,5
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Butterfly (Pec Deck),3,39,5
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Butterfly (Pec Deck),4,34.5,4
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Butterfly (Pec Deck),5,32,3
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Bicep Curl (Dumbbell),0,10,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Bicep Curl (Dumbbell),1,10,10
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Seated Incline Curl (Dumbbell),0,7,11
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Seated Incline Curl (Dumbbell),1,7,8
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Seated Incline Curl (Dumbbell),2,6,3
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Spider Curl (Barbell),0,15,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Spider Curl (Barbell),1,15,11
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Spider Curl (Barbell),2,15,9
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Lateral Raise (Dumbbell),0,8,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Lateral Raise (Dumbbell),1,8,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Lateral Raise (Dumbbell),2,8,12
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Lateral Raise (Dumbbell),3,8,8
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Lateral Raise (Dumbbell),4,7,4
+"10 Jun 2024, 16:44","10 Jun 2024, 18:26",Lateral Raise (Dumbbell),5,7,13
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bench Press (Barbell),0,30,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bench Press (Barbell),1,35,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bench Press (Barbell),2,40,10
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bench Press (Barbell),3,40,7
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bench Press (Barbell),4,35,5
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Incline Bench Press (Dumbbell),0,12,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Incline Bench Press (Dumbbell),1,12,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Incline Bench Press (Dumbbell),2,12,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Butterfly (Pec Deck),0,39,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Butterfly (Pec Deck),1,39,7
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Butterfly (Pec Deck),2,32,5
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Butterfly (Pec Deck),3,34.3,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bicep Curl (Dumbbell),0,10,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Bicep Curl (Dumbbell),1,10,9
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Seated Incline Curl (Dumbbell),0,6,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Seated Incline Curl (Dumbbell),1,6,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Preacher Curl (Barbell),0,20,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Preacher Curl (Barbell),1,20,12
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Single Arm Lateral Raise (Cable),0,4.5,30
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Single Arm Lateral Raise (Cable),1,6.8,16
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Single Arm Lateral Raise (Cable),2,4.5,24
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Single Arm Lateral Raise (Cable),3,4.5,24
+"4 Jun 2024, 16:00","4 Jun 2024, 17:28",Single Arm Lateral Raise (Cable),4,4.5,24
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Squat (Barbell),0,30,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Squat (Barbell),1,40,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Squat (Barbell),2,40,10
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Squat (Barbell),3,45,6
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Squat (Barbell),4,40,2
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Hip Thrust (Barbell),0,32.7,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Hip Thrust (Barbell),1,39,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Hip Thrust (Barbell),2,39,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Seated Leg Curl (Machine),0,32,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Seated Leg Curl (Machine),1,34.2,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Seated Leg Curl (Machine),2,34.2,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Leg Extension (Machine),0,32,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Leg Extension (Machine),1,32,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Leg Extension (Machine),2,32,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Hip Abduction (Machine),0,25,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Hip Abduction (Machine),1,25,12
+"2 Jun 2024, 14:37","2 Jun 2024, 15:41",Hip Abduction (Machine),2,25,12
+"31 May 2024, 12:41","31 May 2024, 14:01",Pull Up,0,,7
+"31 May 2024, 12:41","31 May 2024, 14:01",Pull Up,1,,7
+"31 May 2024, 12:41","31 May 2024, 14:01",Pull Up (Assisted),0,14,12
+"31 May 2024, 12:41","31 May 2024, 14:01",Pull Up (Assisted),1,14,12
+"31 May 2024, 12:41","31 May 2024, 14:01",Pull Up (Assisted),2,14,5
+"31 May 2024, 12:41","31 May 2024, 14:01",Pull Up (Assisted),3,9,5
+"31 May 2024, 12:41","31 May 2024, 14:01",Seated Row (Machine),0,18,12
+"31 May 2024, 12:41","31 May 2024, 14:01",Seated Row (Machine),1,25.3,13
+"31 May 2024, 12:41","31 May 2024, 14:01",Seated Row (Machine),2,27,14
+"31 May 2024, 12:41","31 May 2024, 14:01",Seated Row (Machine),3,32,11
+"31 May 2024, 12:41","31 May 2024, 14:01",Seated Row (Machine),4,32,9
+"31 May 2024, 12:41","31 May 2024, 14:01",Seated Row (Machine),5,27,3
+"31 May 2024, 12:41","31 May 2024, 14:01",Shrug (Dumbbell),0,16,20
+"31 May 2024, 12:41","31 May 2024, 14:01",Shrug (Dumbbell),1,16,20
+"31 May 2024, 12:41","31 May 2024, 14:01",Shrug (Dumbbell),2,16,20
+"31 May 2024, 12:41","31 May 2024, 14:01",Single Arm Triceps Pushdown (Cable),0,9,12
+"31 May 2024, 12:41","31 May 2024, 14:01",Single Arm Triceps Pushdown (Cable),1,9,15
+"31 May 2024, 12:41","31 May 2024, 14:01",Single Arm Triceps Pushdown (Cable),2,14,12
+"31 May 2024, 12:41","31 May 2024, 14:01",Triceps Extension (Cable),0,18,13
+"31 May 2024, 12:41","31 May 2024, 14:01",Triceps Extension (Cable),1,18,7
+"31 May 2024, 12:41","31 May 2024, 14:01",Triceps Extension (Cable),2,14,6
+"31 May 2024, 12:41","31 May 2024, 14:01",Triceps Extension (Cable),3,16.3,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Bench Press (Barbell),0,30,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Bench Press (Barbell),1,40,9
+"30 May 2024, 14:42","30 May 2024, 16:38",Bench Press (Barbell),2,35,11
+"30 May 2024, 14:42","30 May 2024, 16:38",Bench Press (Barbell),3,35,10
+"30 May 2024, 14:42","30 May 2024, 16:38",Bench Press (Barbell),4,30,5
+"30 May 2024, 14:42","30 May 2024, 16:38",Incline Bench Press (Dumbbell),0,10,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Incline Bench Press (Dumbbell),1,12,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Incline Bench Press (Smith Machine),0,26.3,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Incline Bench Press (Smith Machine),1,31.3,9
+"30 May 2024, 14:42","30 May 2024, 16:38",Butterfly (Pec Deck),0,39,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Butterfly (Pec Deck),1,39,10
+"30 May 2024, 14:42","30 May 2024, 16:38",Butterfly (Pec Deck),2,32,2
+"30 May 2024, 14:42","30 May 2024, 16:38",Butterfly (Pec Deck),3,34.3,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Bicep Curl (Dumbbell),0,10,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Bicep Curl (Dumbbell),1,10,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Seated Incline Curl (Dumbbell),0,6,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Seated Incline Curl (Dumbbell),1,6,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Preacher Curl (Barbell),0,20,8
+"30 May 2024, 14:42","30 May 2024, 16:38",Preacher Curl (Barbell),1,17.5,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Lateral Raise (Dumbbell),0,8,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Lateral Raise (Dumbbell),1,8,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Lateral Raise (Dumbbell),2,8,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Lateral Raise (Dumbbell),3,7,12
+"30 May 2024, 14:42","30 May 2024, 16:38",Lateral Raise (Dumbbell),4,7,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Squat (Barbell),0,25,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Squat (Barbell),1,35,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Squat (Barbell),2,45,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Squat (Barbell),3,45,6
+"27 May 2024, 14:19","27 May 2024, 16:02",Squat (Barbell),4,40,6
+"27 May 2024, 14:19","27 May 2024, 16:02",Hip Thrust (Barbell),0,32.7,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Hip Thrust (Barbell),1,32.7,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Hip Thrust (Barbell),2,32.7,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Seated Leg Curl (Machine),0,32,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Seated Leg Curl (Machine),1,34.3,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Seated Leg Curl (Machine),2,34.3,6
+"27 May 2024, 14:19","27 May 2024, 16:02",Seated Leg Curl (Machine),3,32,6
+"27 May 2024, 14:19","27 May 2024, 16:02",Leg Extension (Machine),0,32,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Leg Extension (Machine),1,32,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Leg Extension (Machine),2,34.3,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Hip Abduction (Machine),0,18,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Hip Abduction (Machine),1,18,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Hip Abduction (Machine),2,25,12
+"27 May 2024, 14:19","27 May 2024, 16:02",Decline Crunch,0,,20
+"27 May 2024, 14:19","27 May 2024, 16:02",Decline Crunch,1,,20
+"27 May 2024, 14:19","27 May 2024, 16:02",Decline Crunch,2,,11
+"27 May 2024, 14:19","27 May 2024, 16:02",Decline Crunch,3,,9
+"27 May 2024, 14:19","27 May 2024, 16:02",Calf Extension (Machine),0,18,20
+"27 May 2024, 14:19","27 May 2024, 16:02",Calf Extension (Machine),1,25,20
+"27 May 2024, 14:19","27 May 2024, 16:02",Calf Extension (Machine),2,25,20
+"26 May 2024, 14:21","26 May 2024, 15:47",Bent Over Row (Barbell),0,35,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Bent Over Row (Barbell),1,40,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Bent Over Row (Barbell),2,40,9
+"26 May 2024, 14:21","26 May 2024, 15:47",Bent Over Row (Barbell),3,35,3
+"26 May 2024, 14:21","26 May 2024, 15:47",Lat Pulldown (Cable),0,32,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Lat Pulldown (Cable),1,32,10
+"26 May 2024, 14:21","26 May 2024, 15:47",Lat Pulldown (Cable),2,25,4
+"26 May 2024, 14:21","26 May 2024, 15:47",Lat Pulldown (Cable),3,32,8
+"26 May 2024, 14:21","26 May 2024, 15:47",Lat Pulldown (Cable),4,25,4
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Cable Row - V Grip (Cable),0,39,9
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Cable Row - V Grip (Cable),1,32,3
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Cable Row - V Grip (Cable),2,32,10
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Cable Row - V Grip (Cable),3,25,4
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Cable Row - V Grip (Cable),4,25,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Shrug (Dumbbell),0,16,20
+"26 May 2024, 14:21","26 May 2024, 15:47",Shrug (Dumbbell),1,16,20
+"26 May 2024, 14:21","26 May 2024, 15:47",Shrug (Dumbbell),2,16,18
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Pushdown,0,11.3,4
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Pushdown,1,13.6,8
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Pushdown,2,15.9,10
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Pushdown,3,13.6,2
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Pushdown,4,13.6,8
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Pushdown,5,11.3,4
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Rope Pushdown,0,9.1,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Rope Pushdown,1,13.6,5
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Rope Pushdown,2,11.3,5
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Rope Pushdown,3,6.8,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Extension (Cable),0,4.5,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Extension (Cable),1,6.8,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Triceps Extension (Cable),2,9.1,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Rear Delt Reverse Fly (Machine),0,18,12
+"26 May 2024, 14:21","26 May 2024, 15:47",Rear Delt Reverse Fly (Machine),1,25,8
+"26 May 2024, 14:21","26 May 2024, 15:47",Rear Delt Reverse Fly (Machine),2,18,4
+"26 May 2024, 14:21","26 May 2024, 15:47",Rear Delt Reverse Fly (Machine),3,25,6
+"26 May 2024, 14:21","26 May 2024, 15:47",Rear Delt Reverse Fly (Machine),4,18,6
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Palms Up Wrist Curl,0,4,20
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Palms Up Wrist Curl,1,4,20
+"26 May 2024, 14:21","26 May 2024, 15:47",Seated Palms Up Wrist Curl,2,6,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Bench Press (Barbell),0,30,10
+"25 May 2024, 13:27","25 May 2024, 15:11",Bench Press (Barbell),1,40,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Bench Press (Barbell),2,40,11
+"25 May 2024, 13:27","25 May 2024, 15:11",Bench Press (Barbell),3,40,7
+"25 May 2024, 13:27","25 May 2024, 15:11",Bench Press (Barbell),4,35,2
+"25 May 2024, 13:27","25 May 2024, 15:11",Incline Bench Press (Dumbbell),0,8,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Incline Bench Press (Dumbbell),1,9,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Incline Bench Press (Dumbbell),2,9,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Butterfly (Pec Deck),0,32,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Butterfly (Pec Deck),1,39,10
+"25 May 2024, 13:27","25 May 2024, 15:11",Butterfly (Pec Deck),2,32,2
+"25 May 2024, 13:27","25 May 2024, 15:11",Butterfly (Pec Deck),3,34.3,9
+"25 May 2024, 13:27","25 May 2024, 15:11",Butterfly (Pec Deck),4,32,3
+"25 May 2024, 13:27","25 May 2024, 15:11",Bicep Curl (Dumbbell),0,9,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Bicep Curl (Dumbbell),1,9,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Seated Incline Curl (Dumbbell),0,6,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Seated Incline Curl (Dumbbell),1,6,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Preacher Curl (Barbell),0,18,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Preacher Curl (Barbell),1,20.3,8
+"25 May 2024, 13:27","25 May 2024, 15:11",Preacher Curl (Barbell),2,16.3,4
+"25 May 2024, 13:27","25 May 2024, 15:11",Lateral Raise (Dumbbell),0,7,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Lateral Raise (Dumbbell),1,7,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Lateral Raise (Dumbbell),2,7,14
+"25 May 2024, 13:27","25 May 2024, 15:11",Lateral Raise (Dumbbell),3,7,12
+"25 May 2024, 13:27","25 May 2024, 15:11",Lateral Raise (Dumbbell),4,7,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Squat (Barbell),0,20,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Squat (Barbell),1,30,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Squat (Barbell),2,40,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Squat (Barbell),3,45,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Lying Leg Curl (Machine),0,18,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Lying Leg Curl (Machine),1,23,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Seated Leg Curl (Machine),0,32,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Seated Leg Curl (Machine),1,32,14
+"23 May 2024, 15:50","23 May 2024, 16:41",Leg Extension (Machine),0,32,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Leg Extension (Machine),1,32,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Leg Extension (Machine),2,34.3,12
+"23 May 2024, 15:50","23 May 2024, 16:41",Decline Crunch,0,,20
+"23 May 2024, 15:50","23 May 2024, 16:41",Decline Crunch,1,,20
+"23 May 2024, 15:50","23 May 2024, 16:41",Decline Crunch,2,,15
+"22 May 2024, 13:34","22 May 2024, 15:03",Bent Over Row (Barbell),0,35,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Bent Over Row (Barbell),1,40,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Bent Over Row (Barbell),2,40,9
+"22 May 2024, 13:34","22 May 2024, 15:03",Bent Over Row (Barbell),3,35,4
+"22 May 2024, 13:34","22 May 2024, 15:03",Seated Cable Row - V Grip (Cable),0,39,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Seated Cable Row - V Grip (Cable),1,39,11
+"22 May 2024, 13:34","22 May 2024, 15:03",Seated Cable Row - V Grip (Cable),2,39,6
+"22 May 2024, 13:34","22 May 2024, 15:03",Seated Cable Row - V Grip (Cable),3,34,6
+"22 May 2024, 13:34","22 May 2024, 15:03",Single Arm Lat Pulldown,0,14,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Single Arm Lat Pulldown,1,23,14
+"22 May 2024, 13:34","22 May 2024, 15:03",Single Arm Lat Pulldown,2,27,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Shrug (Dumbbell),0,14,20
+"22 May 2024, 13:34","22 May 2024, 15:03",Shrug (Dumbbell),1,16,20
+"22 May 2024, 13:34","22 May 2024, 15:03",Shrug (Dumbbell),2,16,20
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Pushdown,0,18,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Pushdown,1,32,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Pushdown,2,32,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Pushdown,3,32,5
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Pushdown,4,27,7
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Pushdown,5,14,18
+"22 May 2024, 13:34","22 May 2024, 15:03",Rear Delt Reverse Fly (Machine),0,18,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Rear Delt Reverse Fly (Machine),1,25,6
+"22 May 2024, 13:34","22 May 2024, 15:03",Rear Delt Reverse Fly (Machine),2,18,6
+"22 May 2024, 13:34","22 May 2024, 15:03",Rear Delt Reverse Fly (Machine),3,18,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Skullcrusher (Barbell),0,10,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Skullcrusher (Barbell),1,15,12
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Extension (Cable),0,14,3
+"22 May 2024, 13:34","22 May 2024, 15:03",Triceps Extension (Cable),1,18,8
+"21 May 2024, 11:52","21 May 2024, 13:01",Iso-Lateral Chest Press (Machine),0,10,10
+"21 May 2024, 11:52","21 May 2024, 13:01",Iso-Lateral Chest Press (Machine),1,15,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Iso-Lateral Chest Press (Machine),2,15,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Iso-Lateral Chest Press (Machine),3,17.5,7
+"21 May 2024, 11:52","21 May 2024, 13:01",Incline Bench Press (Smith Machine),0,21.3,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Incline Bench Press (Smith Machine),1,26.3,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Incline Bench Press (Smith Machine),2,26.3,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Butterfly (Pec Deck),0,32,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Butterfly (Pec Deck),1,32,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Butterfly (Pec Deck),2,32,7
+"21 May 2024, 11:52","21 May 2024, 13:01",Butterfly (Pec Deck),3,25,5
+"21 May 2024, 11:52","21 May 2024, 13:01",Bicep Curl (Dumbbell),0,9,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Bicep Curl (Dumbbell),1,9,10
+"21 May 2024, 11:52","21 May 2024, 13:01",Seated Incline Curl (Dumbbell),0,6,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Seated Incline Curl (Dumbbell),1,6,9
+"21 May 2024, 11:52","21 May 2024, 13:01",Preacher Curl (Barbell),0,15,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Preacher Curl (Barbell),1,20,8
+"21 May 2024, 11:52","21 May 2024, 13:01",Lateral Raise (Machine),0,9,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Lateral Raise (Machine),1,14,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Lateral Raise (Machine),2,14,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Lateral Raise (Machine),3,18,12
+"21 May 2024, 11:52","21 May 2024, 13:01",Lateral Raise (Machine),4,23,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Iso-Lateral Row (Machine),0,10,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Iso-Lateral Row (Machine),1,10,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Iso-Lateral Row (Machine),2,12.5,10
+"17 May 2024, 16:27","17 May 2024, 17:38",Seated Cable Row - V Grip (Cable),0,34,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Seated Cable Row - V Grip (Cable),1,39,9
+"17 May 2024, 16:27","17 May 2024, 17:38",Seated Cable Row - V Grip (Cable),2,34,3
+"17 May 2024, 16:27","17 May 2024, 17:38",Seated Cable Row - V Grip (Cable),3,34,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Lat Pulldown (Cable),0,32,10
+"17 May 2024, 16:27","17 May 2024, 17:38",Lat Pulldown (Cable),1,25,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Lat Pulldown (Cable),2,32,9
+"17 May 2024, 16:27","17 May 2024, 17:38",Lat Pulldown (Cable),3,25,4
+"17 May 2024, 16:27","17 May 2024, 17:38",Rear Delt Reverse Fly (Machine),0,18,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Rear Delt Reverse Fly (Machine),1,25,8
+"17 May 2024, 16:27","17 May 2024, 17:38",Rear Delt Reverse Fly (Machine),2,18,4
+"17 May 2024, 16:27","17 May 2024, 17:38",Rear Delt Reverse Fly (Machine),3,25,6
+"17 May 2024, 16:27","17 May 2024, 17:38",Rear Delt Reverse Fly (Machine),4,18,6
+"17 May 2024, 16:27","17 May 2024, 17:38",Shrug (Dumbbell),0,14,20
+"17 May 2024, 16:27","17 May 2024, 17:38",Shrug (Dumbbell),1,14,20
+"17 May 2024, 16:27","17 May 2024, 17:38",Shrug (Dumbbell),2,14,22
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Pushdown,0,18,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Pushdown,1,27,13
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Pushdown,2,36,7
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Pushdown,3,32,3
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Pushdown,4,27,8
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Pushdown,5,23,4
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Extension (Cable),0,14,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Extension (Cable),1,9,12
+"17 May 2024, 16:27","17 May 2024, 17:38",Triceps Extension (Cable),2,9,17
+"16 May 2024, 15:13","16 May 2024, 16:35",Leg Press (Machine),0,60,11
+"16 May 2024, 15:13","16 May 2024, 16:35",Leg Press (Machine),1,50,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Leg Press (Machine),2,40,3
+"16 May 2024, 15:13","16 May 2024, 16:35",Leg Press (Machine),3,50,7
+"16 May 2024, 15:13","16 May 2024, 16:35",Leg Press (Machine),4,40,5
+"16 May 2024, 15:13","16 May 2024, 16:35",Seated Leg Curl (Machine),0,32,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Seated Leg Curl (Machine),1,32,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Seated Leg Curl (Machine),2,35.3,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Seated Leg Curl (Machine),3,35.3,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Hip Thrust (Barbell),0,22.7,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Hip Thrust (Barbell),1,22.7,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Calf Extension (Machine),0,32,20
+"16 May 2024, 15:13","16 May 2024, 16:35",Calf Extension (Machine),1,32,12
+"16 May 2024, 15:13","16 May 2024, 16:35",Calf Extension (Machine),2,25,8
+"16 May 2024, 15:13","16 May 2024, 16:35",Calf Extension (Machine),3,25,7
+"16 May 2024, 15:13","16 May 2024, 16:35",Calf Extension (Machine),4,18,2
+"15 May 2024, 13:23","15 May 2024, 15:07",Iso-Lateral Chest Press (Machine),0,10,10
+"15 May 2024, 13:23","15 May 2024, 15:07",Iso-Lateral Chest Press (Machine),1,15,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Iso-Lateral Chest Press (Machine),2,17.5,10
+"15 May 2024, 13:23","15 May 2024, 15:07",Iso-Lateral Chest Press (Machine),3,15,6
+"15 May 2024, 13:23","15 May 2024, 15:07",Iso-Lateral Chest Press (Machine),4,10,3
+"15 May 2024, 13:23","15 May 2024, 15:07",Incline Bench Press (Smith Machine),0,21.3,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Incline Bench Press (Smith Machine),1,21.3,14
+"15 May 2024, 13:23","15 May 2024, 15:07",Incline Bench Press (Smith Machine),2,23.6,10
+"15 May 2024, 13:23","15 May 2024, 15:07",Butterfly (Pec Deck),0,32,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Butterfly (Pec Deck),1,32,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Butterfly (Pec Deck),2,39,6
+"15 May 2024, 13:23","15 May 2024, 15:07",Butterfly (Pec Deck),3,32,3
+"15 May 2024, 13:23","15 May 2024, 15:07",Bicep Curl (Dumbbell),0,9,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Bicep Curl (Dumbbell),1,9,9
+"15 May 2024, 13:23","15 May 2024, 15:07",Seated Incline Curl (Dumbbell),0,6,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Seated Incline Curl (Dumbbell),1,6,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Preacher Curl (Barbell),0,15,12
+"15 May 2024, 13:23","15 May 2024, 15:07",Preacher Curl (Barbell),1,20,8
+"15 May 2024, 13:23","15 May 2024, 15:07",Single Arm Lateral Raise (Cable),0,4.5,24
+"15 May 2024, 13:23","15 May 2024, 15:07",Single Arm Lateral Raise (Cable),1,4.5,24
+"15 May 2024, 13:23","15 May 2024, 15:07",Single Arm Lateral Raise (Cable),2,4.5,24
+"15 May 2024, 13:23","15 May 2024, 15:07",Single Arm Lateral Raise (Cable),3,4.5,30
+"15 May 2024, 13:23","15 May 2024, 15:07",Lateral Raise (Dumbbell),0,7,15
+"13 May 2024, 16:18","13 May 2024, 18:02",Bent Over Row (Barbell),0,35,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Bent Over Row (Barbell),1,40,7
+"13 May 2024, 16:18","13 May 2024, 18:02",Bent Over Row (Barbell),2,35,5
+"13 May 2024, 16:18","13 May 2024, 18:02",Bent Over Row (Barbell),3,35,11
+"13 May 2024, 16:18","13 May 2024, 18:02",Seated Cable Row - V Grip (Cable),0,34.3,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Seated Cable Row - V Grip (Cable),1,39,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Seated Cable Row - V Grip (Cable),2,39,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Seated Cable Row - V Grip (Cable),3,25,6
+"13 May 2024, 16:18","13 May 2024, 18:02",Single Arm Lat Pulldown,0,10,8
+"13 May 2024, 16:18","13 May 2024, 18:02",Single Arm Lat Pulldown,1,15,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Single Arm Lat Pulldown,2,25,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Single Arm Lat Pulldown,3,35,7
+"13 May 2024, 16:18","13 May 2024, 18:02",Single Arm Lat Pulldown,4,30,6
+"13 May 2024, 16:18","13 May 2024, 18:02",Shrug (Dumbbell),0,12,20
+"13 May 2024, 16:18","13 May 2024, 18:02",Shrug (Dumbbell),1,12,20
+"13 May 2024, 16:18","13 May 2024, 18:02",Shrug (Dumbbell),2,12,20
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Pushdown,0,18,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Pushdown,1,27,13
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Pushdown,2,36,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Pushdown,3,32,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Extension (Cable),0,9,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Extension (Cable),1,14,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Extension (Cable),2,14,8
+"13 May 2024, 16:18","13 May 2024, 18:02",Triceps Extension (Cable),3,9,4
+"13 May 2024, 16:18","13 May 2024, 18:02",Rear Delt Reverse Fly (Machine),0,18,12
+"13 May 2024, 16:18","13 May 2024, 18:02",Rear Delt Reverse Fly (Machine),1,18,9
+"13 May 2024, 16:18","13 May 2024, 18:02",Rear Delt Reverse Fly (Machine),2,13.3,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Bench Press (Barbell),0,30,10
+"11 May 2024, 13:41","11 May 2024, 14:52",Bench Press (Barbell),1,30,10
+"11 May 2024, 13:41","11 May 2024, 14:52",Bench Press (Barbell),2,35,4
+"11 May 2024, 13:41","11 May 2024, 14:52",Bicep Curl (Dumbbell),0,8,15
+"11 May 2024, 13:41","11 May 2024, 14:52",Bicep Curl (Dumbbell),1,9,9
+"11 May 2024, 13:41","11 May 2024, 14:52",Preacher Curl (Barbell),0,15,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Preacher Curl (Barbell),1,15,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Butterfly (Pec Deck),0,32,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Butterfly (Pec Deck),1,32,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Butterfly (Pec Deck),2,32,9
+"11 May 2024, 13:41","11 May 2024, 14:52",Butterfly (Pec Deck),3,25,5
+"11 May 2024, 13:41","11 May 2024, 14:52",Incline Bench Press (Barbell),0,20,8
+"11 May 2024, 13:41","11 May 2024, 14:52",Incline Bench Press (Barbell),1,30,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Incline Bench Press (Barbell),2,40,3
+"11 May 2024, 13:41","11 May 2024, 14:52",Incline Bench Press (Barbell),3,35,4
+"11 May 2024, 13:41","11 May 2024, 14:52",Incline Bench Press (Barbell),4,30,7
+"11 May 2024, 13:41","11 May 2024, 14:52",Seated Incline Curl (Dumbbell),0,7,8
+"11 May 2024, 13:41","11 May 2024, 14:52",Seated Incline Curl (Dumbbell),1,5,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Lateral Raise (Machine),0,6.3,20
+"11 May 2024, 13:41","11 May 2024, 14:52",Lateral Raise (Machine),1,9,20
+"11 May 2024, 13:41","11 May 2024, 14:52",Lateral Raise (Machine),2,14,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Lateral Raise (Machine),3,18,12
+"11 May 2024, 13:41","11 May 2024, 14:52",Lateral Raise (Machine),4,18,5
+"11 May 2024, 13:41","11 May 2024, 14:52",Lateral Raise (Machine),5,20.3,8
+"7 May 2024, 12:30","7 May 2024, 14:08",Bicep Curl (Dumbbell),0,8,13
+"7 May 2024, 12:30","7 May 2024, 14:08",Bicep Curl (Dumbbell),1,9,9
+"7 May 2024, 12:30","7 May 2024, 14:08",Preacher Curl (Barbell),0,20,8
+"7 May 2024, 12:30","7 May 2024, 14:08",Preacher Curl (Barbell),1,15,11
+"7 May 2024, 12:30","7 May 2024, 14:08",Lateral Raise (Dumbbell),0,6,20
+"7 May 2024, 12:30","7 May 2024, 14:08",Lateral Raise (Dumbbell),1,7,12
+"7 May 2024, 12:30","7 May 2024, 14:08",Lateral Raise (Dumbbell),2,7,10
+"7 May 2024, 12:30","7 May 2024, 14:08",Iso-Lateral Chest Press (Machine),0,10,8
+"7 May 2024, 12:30","7 May 2024, 14:08",Iso-Lateral Chest Press (Machine),1,15,10
+"7 May 2024, 12:30","7 May 2024, 14:08",Iso-Lateral Chest Press (Machine),2,20,8
+"7 May 2024, 12:30","7 May 2024, 14:08",Iso-Lateral Chest Press (Machine),3,20,6
+"7 May 2024, 12:30","7 May 2024, 14:08",Incline Bench Press (Barbell),0,21.3,12
+"7 May 2024, 12:30","7 May 2024, 14:08",Incline Bench Press (Barbell),1,21.3,10
+"7 May 2024, 12:30","7 May 2024, 14:08",Incline Bench Press (Barbell),2,16.3,15
+"7 May 2024, 12:30","7 May 2024, 14:08",Butterfly (Pec Deck),0,25,12
+"7 May 2024, 12:30","7 May 2024, 14:08",Butterfly (Pec Deck),1,32,12
+"7 May 2024, 12:30","7 May 2024, 14:08",Butterfly (Pec Deck),2,28.3,10
+"7 May 2024, 12:30","7 May 2024, 14:08",Seated Incline Curl (Dumbbell),0,5,12
+"7 May 2024, 12:30","7 May 2024, 14:08",Seated Incline Curl (Dumbbell),1,7,8
+"7 May 2024, 12:30","7 May 2024, 14:08",Single Arm Lateral Raise (Cable),0,4.5,12
+"7 May 2024, 12:30","7 May 2024, 14:08",Single Arm Lateral Raise (Cable),1,4.5,15
+"6 May 2024, 15:51","6 May 2024, 17:39",Shrug (Dumbbell),0,12,20
+"6 May 2024, 15:51","6 May 2024, 17:39",Shrug (Dumbbell),1,14,20
+"6 May 2024, 15:51","6 May 2024, 17:39",Shrug (Dumbbell),2,14,20
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Pushdown,0,14,12
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Pushdown,1,19.3,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Pushdown,2,15,12
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Pushdown,3,15,8
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Pushdown,4,16.5,7
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Extension (Cable),0,7.9,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Extension (Cable),1,7.9,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Triceps Extension (Cable),2,7.9,8
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up,0,,6
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up,1,,6
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up,2,,6
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up (Assisted),0,9,7
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up (Assisted),1,14,3
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up (Assisted),2,14,7
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up (Assisted),3,18,2
+"6 May 2024, 15:51","6 May 2024, 17:39",Pull Up (Assisted),4,18,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Iso-Lateral Row (Machine),0,10,12
+"6 May 2024, 15:51","6 May 2024, 17:39",Iso-Lateral Row (Machine),1,10,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Iso-Lateral Row (Machine),2,15,5
+"6 May 2024, 15:51","6 May 2024, 17:39",Iso-Lateral Row (Machine),3,10,7
+"6 May 2024, 15:51","6 May 2024, 17:39",Rear Delt Reverse Fly (Machine),0,18,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Rear Delt Reverse Fly (Machine),1,18,10
+"6 May 2024, 15:51","6 May 2024, 17:39",Rear Delt Reverse Fly (Machine),2,18,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Bent Over Row (Barbell),0,20,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Bent Over Row (Barbell),1,30,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Bent Over Row (Barbell),2,40,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Bent Over Row (Barbell),3,40,8
+"1 May 2024, 18:53","1 May 2024, 20:13",Seated Cable Row - V Grip (Cable),0,34.3,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Seated Cable Row - V Grip (Cable),1,34.3,9
+"1 May 2024, 18:53","1 May 2024, 20:13",Seated Cable Row - V Grip (Cable),2,27.3,3
+"1 May 2024, 18:53","1 May 2024, 20:13",Seated Cable Row - V Grip (Cable),3,27.3,13
+"1 May 2024, 18:53","1 May 2024, 20:13",Shrug (Dumbbell),0,16,20
+"1 May 2024, 18:53","1 May 2024, 20:13",Shrug (Dumbbell),1,16,20
+"1 May 2024, 18:53","1 May 2024, 20:13",Shrug (Dumbbell),2,16,20
+"1 May 2024, 18:53","1 May 2024, 20:13",Triceps Pushdown,0,14,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Lat Pulldown (Cable),0,32,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Lat Pulldown (Cable),1,39,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Lat Pulldown (Cable),2,39,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Seated Dip Machine,0,27,15
+"1 May 2024, 18:53","1 May 2024, 20:13",Seated Dip Machine,1,32,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Triceps Extension (Machine),0,23,15
+"1 May 2024, 18:53","1 May 2024, 20:13",Triceps Extension (Machine),1,27,15
+"1 May 2024, 18:53","1 May 2024, 20:13",Triceps Extension (Machine),2,27,15
+"1 May 2024, 18:53","1 May 2024, 20:13",Rear Delt Reverse Fly (Machine),0,18,12
+"1 May 2024, 18:53","1 May 2024, 20:13",Rear Delt Reverse Fly (Machine),1,25,5
+"1 May 2024, 18:53","1 May 2024, 20:13",Rear Delt Reverse Fly (Machine),2,18,7
+"1 May 2024, 18:53","1 May 2024, 20:13",Rear Delt Reverse Fly (Machine),3,18,11
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Squat (Barbell),0,20,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Squat (Barbell),1,30,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Squat (Barbell),2,40,10
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Squat (Barbell),3,45,8
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Squat (Barbell),4,50,6
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Seated Leg Curl (Machine),0,32,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Seated Leg Curl (Machine),1,32,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Seated Leg Curl (Machine),2,39,6
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Seated Leg Curl (Machine),3,32,6
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Leg Extension (Machine),0,18,16
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Leg Extension (Machine),1,25,15
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Leg Extension (Machine),2,32,15
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Decline Crunch,0,,20
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Decline Crunch,1,,20
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Decline Crunch,2,,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Lying Leg Curl (Machine),0,18,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Lying Leg Curl (Machine),1,23,12
+"30 Apr 2024, 10:52","30 Apr 2024, 12:28",Lying Leg Curl (Machine),2,23,9
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Bent Over Row (Barbell),0,10,10
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Bent Over Row (Barbell),1,20,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Bent Over Row (Barbell),2,20,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Bent Over Row (Barbell),3,30,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Bent Over Row (Barbell),4,35,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Seated Cable Row - V Grip (Cable),0,32,11
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Seated Cable Row - V Grip (Cable),1,27.3,13
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Seated Cable Row - V Grip (Cable),2,27.3,13
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Single Arm Lat Pulldown,0,23,15
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Single Arm Lat Pulldown,1,32,11
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Single Arm Lat Pulldown,2,32,6
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Single Arm Lat Pulldown,3,27,6
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Shrug (Dumbbell),0,16,20
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Shrug (Dumbbell),1,16,20
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Shrug (Dumbbell),2,14,16
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Pushdown,0,18,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Pushdown,1,27,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Pushdown,2,27,9
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Pushdown,3,23,3
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Extension (Cable),0,14,10
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Extension (Cable),1,9,12
+"25 Apr 2024, 13:58","25 Apr 2024, 15:29",Triceps Extension (Cable),2,9,15
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Butterfly (Pec Deck),0,11,10
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Butterfly (Pec Deck),1,25,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Butterfly (Pec Deck),2,32,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Butterfly (Pec Deck),3,32,10
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Chest Press (Machine),0,11,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Chest Press (Machine),1,18,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Chest Press (Machine),2,18,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Incline Bench Press (Barbell),0,30,8
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Incline Bench Press (Barbell),1,30,5
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Incline Bench Press (Barbell),2,20,8
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Preacher Curl (Barbell),0,10,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Preacher Curl (Barbell),1,15,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Preacher Curl (Barbell),2,15,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Bicep Curl (Dumbbell),0,8,10
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Bicep Curl (Dumbbell),1,8,7
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Hammer Curl (Cable),0,9,16
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Hammer Curl (Cable),1,9,16
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Lateral Raise (Dumbbell),0,6,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Lateral Raise (Dumbbell),1,6,15
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Lateral Raise (Dumbbell),2,6,12
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Lateral Raise (Dumbbell),3,4,16
+"24 Apr 2024, 17:56","24 Apr 2024, 19:04",Lateral Raise (Dumbbell),4,4,16
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Bench Press (Barbell),0,20,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Bench Press (Barbell),1,40,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Bench Press (Barbell),2,40,7
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Bench Press (Barbell),3,30,8
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Incline Bench Press (Dumbbell),0,8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Incline Bench Press (Dumbbell),1,8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Incline Bench Press (Dumbbell),2,8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Seated Chest Flys (Cable),0,6.8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Seated Chest Flys (Cable),1,6.8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Seated Chest Flys (Cable),2,6.8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Bicep Curl (Dumbbell),0,8,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Bicep Curl (Dumbbell),1,10,8
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Seated Incline Curl (Dumbbell),0,5,12
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Seated Incline Curl (Dumbbell),1,4,12
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Hammer Curl (Cable),0,9,16
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Hammer Curl (Cable),1,6.8,16
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Lateral Raise (Dumbbell),0,6,12
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Lateral Raise (Dumbbell),1,5,10
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Lateral Raise (Dumbbell),2,4,12
+"19 Apr 2024, 17:16","19 Apr 2024, 17:35",Lateral Raise (Dumbbell),3,4,12

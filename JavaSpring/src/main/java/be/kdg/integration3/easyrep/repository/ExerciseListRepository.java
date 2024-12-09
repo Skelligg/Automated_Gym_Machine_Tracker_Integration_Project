@@ -10,4 +10,5 @@ public interface ExerciseListRepository extends JpaRepository <ExerciseList, Int
     List<ExerciseList> findAll();
 
 
+    ExerciseList getExerciseListByName(String name);
 }

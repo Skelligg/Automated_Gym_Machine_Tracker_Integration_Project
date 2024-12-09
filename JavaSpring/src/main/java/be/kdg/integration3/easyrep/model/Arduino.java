@@ -12,6 +12,10 @@ public class Arduino {
     @Column(nullable = false, length = 20)
     private String ipAddress;
 
+    @OneToOne
+    @JoinColumn(name = "arduino_id")
+    private Machine machine;
+
     public Arduino() {
     }
 
@@ -34,5 +38,21 @@ public class Arduino {
 
     public void setId(int id) {
         this.arduinoId = id;
+    }
+
+    public int getArduinoId() {
+        return arduinoId;
+    }
+
+    public void setArduinoId(int arduinoId) {
+        this.arduinoId = arduinoId;
+    }
+
+    public Machine getMachine() {
+        return machine;
+    }
+
+    public void setMachine(Machine machine) {
+        this.machine = machine;
     }
 }

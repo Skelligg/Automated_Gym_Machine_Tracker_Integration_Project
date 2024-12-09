@@ -5,8 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ArduinoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/hevyData/philipeHevy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/arduino.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/exercise.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/exercise_list.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/exercise_set.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/gym.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/gym_goer.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/gym_staff.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/machine.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/routine.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/routine_exercise.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/session.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/user_credential.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_12_24_12_18_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_12_24_12_18__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/ExerciseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/ExerciseList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/Machine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/ExerciseSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/ExerciseSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/Repetition.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/Repetition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/ArduinoIPDefiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/ArduinoIPDefiner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ArduinoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ArduinoRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ExerciseListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ExerciseListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/GymRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/GymRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/GymRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/GymRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/MachineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/MachineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ArduinoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ArduinoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ExerciseListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ExerciseListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/GymServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/GymServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +51,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/JavaSpring">
       <ProjectState />
     </projectState>
   </component>
@@ -37,6 +73,14 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -59,7 +103,7 @@
   <component name="GitLabMergeRequestsSettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;first&quot;: &quot;https://gitlab.com/kdg-ti/integration-2.1/24-25/team-13/gym-accessory-project.git&quot;,
-    &quot;second&quot;: &quot;721c8e40-b50a-404c-96ad-7f999e2ba003&quot;
+    &quot;second&quot;: &quot;2eeadfaa-9ca8-43cc-a2cd-7ffe0832a4a2&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -70,24 +114,90 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build gym-accessory-project.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.StartApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/anna/Escriptori/KDG/2/Integration3/gym-accessory-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.arduino.sql and 3 more.executor": "Run",
+    "Database Script.arduino.sql.executor": "Run",
+    "Database Script.exercise_list.sql and 2 more.executor": "Run",
+    "Gradle.Build JavaSpring.executor": "Run",
+    "Gradle.Build gym-accessory-project.executor": "Run",
+    "Gradle.JavaSpring [:be.kdg.integration3.easyrep.service.CsvImporter.main()].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.StartApplication.executor": "Run",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "git-widget-placeholder": "importingHevyData",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/scripts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "RunConfigurationTargetLRU": [
+      "56e55c86-abe5-4443-9639-ea48e943c5b1/database/\"postgres\"/schema/\"public\"",
+      "56e55c86-abe5-4443-9639-ea48e943c5b1/database/\"postgres\""
+    ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\scripts" />
+      <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\hevyData" />
+      <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\static\hevyData" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="be.kdg.integration3.easyrep.repository" />
+      <recent name="be.kdg.integration3.easyrep.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Database Script.exercise_list.sql and 2 more">
+    <configuration name="CsvImporter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.kdg.integration3.easyrep.service.CsvImporter" />
+      <module name="EasyRep.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.kdg.integration3.easyrep.service.ExerciseListService" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arduino.sql and 3 more" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/arduino.sql" />
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/user_credential.sql" />
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/gym_staff.sql" />
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/gym_goer.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="56e55c86-abe5-4443-9639-ea48e943c5b1" namespace="database/&quot;postgres&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="arduino.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/arduino.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="56e55c86-abe5-4443-9639-ea48e943c5b1" namespace="database/&quot;postgres&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise_list.sql and 2 more" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/exercise_list.sql" />
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/gym.sql" />
+      <script-file value="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/machine.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="56e55c86-abe5-4443-9639-ea48e943c5b1" namespace="database/&quot;postgres&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="StartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="EasyRep.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="be.kdg.integration3.easyrep.StartApplication" />
@@ -95,6 +205,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.exercise_list.sql and 2 more" />
+        <item itemvalue="Database Script.arduino.sql and 3 more" />
+        <item itemvalue="Database Script.arduino.sql" />
+        <item itemvalue="Application.CsvImporter" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -119,6 +237,8 @@
       <workItem from="1729517986511" duration="9000" />
       <workItem from="1733396629770" duration="877000" />
       <workItem from="1733479691067" duration="344000" />
+      <workItem from="1733689283695" duration="597000" />
+      <workItem from="1733731895273" duration="20422000" />
     </task>
     <servers />
   </component>
