@@ -20,5 +20,11 @@ public class ExerciseListService {
         return exerciseListRepository.findAll();
     }
 
+    public ExerciseList getExerciseByName(String name) {
+        return exerciseListRepository.getExerciseListByName(name);
+    }
 
+    public void addExercise(ExerciseList exerciseList) {
+        exerciseListRepository.save(exerciseList);
+    }
 }

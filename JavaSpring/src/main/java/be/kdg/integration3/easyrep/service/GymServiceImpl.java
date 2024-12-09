@@ -26,31 +26,31 @@ public class GymServiceImpl implements GymService {
     @Override
     public List<Gym> findAllGyms() {
         logger.debug("Finding All Gyms");
-        return gymRepository.findAllGyms();
+        return gymRepository.findAll();
     }
 
     @Override
     public Gym findGymById(int id) {
         logger.debug("Find Gym by id: {}", id);
-        return gymRepository.findById(id);
+        return gymRepository.findByGymId(id);
     }
 
     @Override
     public Gym createGym(Gym gym) {
         logger.debug("Creating Gym: {}", gym);
-        return gymRepository.create(gym);
+        return gymRepository.save(gym);
     }
 
     @Override
     public void updateGym(Gym gym) {
         logger.debug("Updating Gym: {}", gym);
-        gymRepository.update(gym);
+        gymRepository.save(gym);
     }
 
     @Override
     public void delete(int id) {
         logger.debug("Deleting Gym: {}", id);
-        Gym gym = gymRepository.findById(id);
+        Gym gym = gymRepository.findByGymId(id);
         gymRepository.delete(gym);
     }
 
