@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Comparator;
 import java.util.List;
 
@@ -55,18 +56,18 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     public String getTimeForSessionById(int sessionId) {
-        Object[] timeSession = sessionRepository.getSessionDuration(sessionId);
+        //get the time in seconds
+        Integer totalSeconds = sessionRepository.getSessionDurationInSeconds(sessionId);
 
-        //get the attributes from the array
-        LocalDateTime start = (LocalDateTime) timeSession[0];
-        LocalDateTime end = (LocalDateTime) timeSession[1];
+        //check if time is not null and calculate the time in hours and minutes and seconds
+        if (totalSeconds != null) {
+            long hours = totalSeconds / 3600;
+            long minutes = (totalSeconds %3600) / 60;
+            long seconds = totalSeconds % 60;
+            return String.format("%dh %dm %ds", hours, minutes, seconds);
+        }
 
-        //find the time between the start and the end
-        Duration duration = Duration.between(start, end);
-        double hours = duration.toHours();
-        double minutes = duration.toMinutes();
-        double seconds = duration.toSeconds();
-        return String.format("%02fh %02fm %02fs", hours, minutes, seconds) ;
+        return null ;
     }
 
     public Session getActiveSessionByMachineId(int machineId){

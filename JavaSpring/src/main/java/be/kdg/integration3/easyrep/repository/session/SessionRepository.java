@@ -21,6 +21,6 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
     int countSessionByUserId(@Param("userId")int userId);
 
     //how long was the specific session
-    @Query("select s.startSession, s.endSession from Session s where s.session_id = :sessionId")
-    Object [] getSessionDuration(@Param("sessionId") int sessionId);
+    @Query("select TIMESTAMPDIFF(SECOND,s.startSession, s.endSession) from Session s where s.session_id = :sessionId")
+    Integer getSessionDurationInSeconds(@Param("sessionId") int sessionId);
 }

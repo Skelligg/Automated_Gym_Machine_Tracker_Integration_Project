@@ -89,9 +89,6 @@ public class StatisticsController {
         model.addAttribute("statistics", statistics);
         model.addAttribute("volumeData", volumeData);
         model.addAttribute("machineName", machine.getName());
-//        model.addAttribute("machineId", machineId);
-//        model.addAttribute("gymGoerId", gymGoerId);
-//        model.addAttribute("sessionId", sessionId);
 
         return "GymGoer/statistics";
     }

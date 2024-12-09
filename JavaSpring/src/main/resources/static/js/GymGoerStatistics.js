@@ -1,7 +1,5 @@
     let chart;
-    // const chartDataElement = document.getElementById('stats-container');
-    // const gymGoerId = chartDataElement.getAttribute('data-gym-goer-id');
-    // const machineId = chartDataElement.getAttribute('data-machine-id');
+
 
 function showTable(tableId,chartType, clickedLabel){
     //hiding all tables

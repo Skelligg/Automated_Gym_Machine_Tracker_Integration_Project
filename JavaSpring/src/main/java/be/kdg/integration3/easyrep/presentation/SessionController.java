@@ -19,7 +19,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/activesession")
@@ -148,7 +151,11 @@ public class SessionController {
 
     @GetMapping("/end")
     public String getSessionEnd(@RequestParam("sessionId") int sessionId ,@RequestParam("userId") int userId,Model model){
-        logger.info("Loading the end page.");
+        logger.info("loading the end page for session ID [{}] and user Id [{}]", sessionId, userId);
+
+        Session session = sessionService.getSessionById(sessionId);
+        GymGoer user = userService.getGymGoerByUserId(userId);
+
 
         //finding on which number workout the person is
         int count = sessionService.getSessionCountByUserId(userId);
@@ -162,12 +169,21 @@ public class SessionController {
 
         //getting name of the exercise and the weight for each set
         List<Object[]> dataFromExerciseSession = exerciseSetService.getExerciseSetsNameAndWeightBySessionId(sessionId);
+            if (dataFromExerciseSession == null || dataFromExerciseSession.isEmpty()) {
+                logger.warn("No exercise data found in session ID [{}]",sessionId);
+            }
+
+         //group the first column (exercise name)
+        Map<Object, List<Object[]>> groupedData = dataFromExerciseSession.stream().collect(Collectors.groupingBy(entry->entry[0]));
 
         //adding the attributes to the model
         model.addAttribute("endNumberCount", count);
         model.addAttribute("endNumberSuffix", endNumberSuffix);
         model.addAttribute("duration", duration);
-        model.addAttribute("exerciseData", dataFromExerciseSession);
+        model.addAttribute("exerciseData", groupedData);
+        model.addAttribute("userName", user.getUserCredentials().getUsername());
+        model.addAttribute("userId", user.getUserId());
+
 
         return "GymGoer/end_screen_session";
     }
