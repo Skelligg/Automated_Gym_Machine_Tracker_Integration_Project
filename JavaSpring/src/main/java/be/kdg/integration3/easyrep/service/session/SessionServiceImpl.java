@@ -48,7 +48,7 @@ public class SessionServiceImpl implements SessionService {
 
     public Session getActiveSessionByMachineId(int machineId){
         logger.info("!!Machine ID = {}", machineId);
-        Machine machine = machineRepository.findById(machineId);
+        Machine machine = machineRepository.findByMachineId(machineId);
 
         List<Exercise> exercises = exerciseRepository.findExercisesByMachine(machine);
         Exercise exercise = exercises.stream()
