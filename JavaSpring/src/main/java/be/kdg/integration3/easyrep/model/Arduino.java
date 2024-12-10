@@ -12,8 +12,7 @@ public class Arduino {
     @Column(nullable = false, length = 20)
     private String ipAddress;
 
-    @OneToOne
-    @JoinColumn(name = "arduino_id")
+    @OneToOne(mappedBy = "arduino")  // Define the reverse mapping to the 'arduino' field in Machine
     private Machine machine;
 
     public Arduino() {

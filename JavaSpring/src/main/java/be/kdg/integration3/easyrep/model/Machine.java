@@ -1,7 +1,5 @@
 package be.kdg.integration3.easyrep.model;
 
-import be.kdg.integration3.easyrep.model.sessions.Exercise;
-import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -14,8 +12,10 @@ public class Machine {
     @Column(name = "machine_id")
     private int machineId;
 
-    @OneToOne(mappedBy = "machine")
-    private Arduino arduinoId;
+    @OneToOne
+    @JoinColumn(name = "arduino_id") // Make sure it references arduinoId in Arduino
+    private Arduino arduino;  // No longer arduinoId, just arduino
+
 
     @ManyToOne
     @JoinColumn(name = "gym_id") //FK
@@ -31,17 +31,17 @@ public class Machine {
     public Machine() {
     }
 
-    public Machine(int machineId, Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+    public Machine(int machineId, Gym gym, Arduino arduino, String name, LocalDateTime lastTimeChecked) {
         this.machineId = machineId;
         this.gym = gym;
-        this.arduinoId = arduinoId;
+        this.arduino = arduino;
         this.name = name;
         this.lastTimeChecked = lastTimeChecked;
     }
 
-    public Machine(Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked) {
+    public Machine(Gym gym, Arduino arduino, String name, LocalDateTime lastTimeChecked) {
         this.gym = gym;
-        this.arduinoId = arduinoId;
+        this.arduino = arduino;
         this.name = name;
         this.lastTimeChecked = lastTimeChecked;
     }
@@ -67,12 +67,12 @@ public class Machine {
         this.gym = gym;
     }
 
-    public Arduino getArduinoId() {
-        return arduinoId;
+    public Arduino getArduino() {
+        return arduino;
     }
 
-    public void setArduinoId(Arduino arduinoId) {
-        this.arduinoId = arduinoId;
+    public void setArduino(Arduino arduinoId) {
+        this.arduino = arduinoId;
     }
 
     public String getName() {
@@ -89,9 +89,5 @@ public class Machine {
 
     public void setLastTimeChecked(LocalDateTime lastTimeChecked) {
         this.lastTimeChecked = lastTimeChecked;
-    }
-
-    public void setArduino(Arduino arduinoId) {
-        this.arduinoId = arduinoId;
     }
 }
