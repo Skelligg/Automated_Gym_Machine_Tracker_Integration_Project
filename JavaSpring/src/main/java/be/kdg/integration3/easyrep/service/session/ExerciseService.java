@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.service.session;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ExerciseService {
 
@@ -14,4 +15,5 @@ public interface ExerciseService {
     void updateExercise(Exercise exercise);
 //    List<Exercise> findExerciseByNames(List<String> names);
     Exercise findByName(String name);
+//    List<Map<String, Object>> getChartData(String name);
 }

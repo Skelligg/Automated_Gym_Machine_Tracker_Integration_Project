@@ -14,4 +14,7 @@ public interface SessionService {
 
     Session getActiveSessionByMachineId(int machineId);
 
+    public int getSessionCountByUserId(int userId);
+    public String getTimeForSessionById(int sessionId);
+
 }

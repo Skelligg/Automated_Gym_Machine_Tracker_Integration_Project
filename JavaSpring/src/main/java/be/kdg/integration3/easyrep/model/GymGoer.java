@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//we did not add lastGym as an attribute because the user needs to be present
 @Entity
 @Table(name = "GYM_GOER")
 public class GymGoer {

@@ -69,23 +69,42 @@ insert into public.arduino (ip_address) values ( '018');
 insert into public.arduino (ip_address) values ('019');
 
 
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (1, 0,  null, 'Back Extension');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (2, 0,  null, 'Bench Press');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (3, 0,  null, 'Butterfly');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (4, 0,  null, 'Cable Bicep Curl');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (5, 0,  null, 'Calf Press');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (6, 0,  null, 'Chest Press');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (7, 0,  null, 'Glute kickback');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (8, 0,  null, 'Hip Abduction');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (9, 0,  null, 'Hip Adduction');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (10, 0, null, 'Iso-lateral Row');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (11, 0, null, 'Lat Pulldown');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (12, 0, null, 'Leg Extension');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (13, 0, null, 'Leg Press');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (14, 0, null, 'Pull Up');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (15, 0, null, 'Rowing Machine');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (16, 0,  null, 'Seated Leg Curl');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (17, 0,  null, 'Seated Row');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (18, 0,  null, 'Shrug');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (19, 0,  null, 'Squat');
-insert into public.machine (arduino_id, gym_id, last_time_checked, name) values (20, 0,  null,'Tricep Dip');
+insert into public.machine ( gym_id, name) values ( 3,   'Back Extension');
+insert into public.machine ( gym_id, name) values ( 3,   'Bench Press');
+insert into public.machine ( gym_id, name) values ( 3,   'Butterfly');
+insert into public.machine ( gym_id, name) values ( 3,   'Cable Bicep Curl');
+insert into public.machine ( gym_id, name) values ( 3,   'Calf Press');
+insert into public.machine ( gym_id, name) values ( 3,   'Chest Press');
+insert into public.machine ( gym_id, name) values ( 3,   'Glute kickback');
+insert into public.machine ( gym_id, name) values ( 3,   'Hip Abduction');
+insert into public.machine ( gym_id, name) values ( 3,   'Hip Adduction');
+insert into public.machine ( gym_id, name) values ( 1,  'Iso-lateral Row');
+insert into public.machine ( gym_id, name) values ( 1,  'Lat Pulldown');
+insert into public.machine ( gym_id, name) values ( 1,  'Leg Extension');
+insert into public.machine ( gym_id, name) values ( 1,  'Leg Press');
+insert into public.machine ( gym_id, name) values ( 1,  'Pull Up');
+insert into public.machine ( gym_id, name) values ( 1,  'Rowing Machine');
+insert into public.machine ( gym_id, name) values ( 1,  'Seated Leg Curl');
+insert into public.machine ( gym_id, name) values ( 1,  'Seated Row');
+insert into public.machine ( gym_id, name) values ( 1,  'Shrug');
+insert into public.machine ( gym_id, name) values ( 1,  'Squat');
+insert into public.machine ( gym_id, name) values ( 1, 'Tricep Dip');
+
+INSERT INTO public.exercise ( exercise_name, machine_id, session_id) VALUES ( 'Back Extension', 3, 3);
+INSERT INTO public.exercise ( exercise_name, machine_id, session_id) VALUES ( 'Bench Press', 4, 3);
+INSERT INTO public.exercise ( exercise_name, machine_id, session_id) VALUES ( 'Butterfly', 5, 3);
+
+
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:30:07', '0', 7, 1, '20:20:19', 84, 16);
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:40:32', '1', 7, 2, '20:35:50', 78, 16);
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:49:03', '2', 7, 3, '20:45:54', 70, 16);
+
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:30:07', '0', 12, 1, '20:20:19', 69, 18);
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:40:32', '1', 7, 2, '20:35:50', 78, 18);
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:49:03', '2', 8, 3, '20:45:54', 85, 18);
+
+
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:30:07', '0', 5, 1, '20:20:19', 50, 10);
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:40:32', '1', 7, 2, '20:35:50', 52, 10);
+INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:49:03', '2', 3, 3, '20:45:54', 100, 10);
+

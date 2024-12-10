@@ -9,8 +9,12 @@ import be.kdg.integration3.easyrep.repository.MachineRepository;
 import be.kdg.integration3.easyrep.repository.session.SessionRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Comparator;
 import java.util.List;
 
@@ -22,6 +26,7 @@ public class SessionServiceImpl implements SessionService {
     Logger logger = LoggerFactory.getLogger(SessionServiceImpl.class);
     SessionRepository sessionRepository;
 
+    @Autowired
     public SessionServiceImpl(SessionRepository sessionRepository, ExerciseRepository exerciseRepository, MachineRepository machineRepository) {
         this.sessionRepository = sessionRepository;
         this.exerciseRepository = exerciseRepository;
@@ -44,6 +49,25 @@ public class SessionServiceImpl implements SessionService {
     public Session getSessionById(int id) {
         logger.info("in service getting session repo");
         return sessionRepository.findById(id);
+    }
+    public int getSessionCountByUserId(int userId) {
+        return sessionRepository.countSessionByUserId(userId);
+    }
+
+    @Override
+    public String getTimeForSessionById(int sessionId) {
+        //get the time in seconds
+        Integer totalSeconds = sessionRepository.getSessionDurationInSeconds(sessionId);
+
+        //check if time is not null and calculate the time in hours and minutes and seconds
+        if (totalSeconds != null) {
+            long hours = totalSeconds / 3600;
+            long minutes = (totalSeconds %3600) / 60;
+            long seconds = totalSeconds % 60;
+            return String.format("%dh %dm %ds", hours, minutes, seconds);
+        }
+
+        return null ;
     }
 
     public Session getActiveSessionByMachineId(int machineId){

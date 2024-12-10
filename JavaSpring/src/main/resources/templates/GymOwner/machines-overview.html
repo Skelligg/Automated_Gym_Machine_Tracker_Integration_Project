@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div th:insert="~{fragments/navbar :: header(userName=${user.username})}">header</div>
+<div th:insert="~{fragments/navbar :: header(user=${user})}">header</div>
 
 <div class="container mt-4">
     <div class="row align-items-center">
@@ -27,7 +27,7 @@
 <div class="container  mt-4 d-flex flex-column align-items-center justify-content-center" th:each="gym : ${gyms}">
     <div class="row">
         <div class="col-6 col-md-3 mb-3 w-100">
-            <a href="machines-overview.html"  th:href="@{'/' + ${user.username} + '/machines?idGym=' + ${gym.getGymId()}}"
+            <a href="machines-overview.html"  th:href="@{'/gymhome/' + ${user.username} + '/machines?idGym=' + ${gym.getGymId()}}"
                class="text-decoration-none">
             <div class="card text-center h-100" style="cursor: pointer; min-height: 170px;">
                 <img th:src="@{/images/gym.png}" class="card-img-top img-fluid w-50 mx-auto" alt="gym image">
@@ -53,7 +53,7 @@
     <h2 th:text="${'Machine Overview of Gym ' + gymSelected.getName()}">Machine Overview</h2>
     <div class="row">
         <div class="col-6 col-md-3 mb-3" th:each="machine : ${machines}">
-            <a href="machine_review.html"  th:href="@{'/' + ${user.username} + '/machines/' + ${idGym}+ '/machineReview?idMachine=' + ${machine.machineId} }"
+            <a href="machine_review.html"  th:href="@{'/gymhome/' + ${user.username} + '/machines/' + ${idGym}+ '/machineReview?idMachine=' + ${machine.machineId} }"
                class="text-decoration-none">
                 <div class="card text-center h-100" style="cursor: pointer; min-height: 170px;">
                     <img th:src="${machine.getImageUrl()}" class="card-img-top" alt="machine image">
@@ -69,7 +69,7 @@
     <!-- Add Machine Button -->
     <div class="text-center mt-4">
         <a class="btn btn-primary btn-md rounded-pill shadow-sm px-4 text-white text-decoration-none"
-           th:href="@{'/' + ${user.username} + '/machines/' + ${idGym}+ '/add'}">
+           th:href="@{'/gymhome/' + ${user.username} + '/machines/' + ${idGym}+ '/add'}">
             + Add Machine to Gym
         </a>
     </div>

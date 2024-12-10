@@ -1,9 +1,14 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.service.GymService;
 import be.kdg.integration3.easyrep.service.MachineService;
+import be.kdg.integration3.easyrep.service.users.UserService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,84 +27,126 @@ public class StatisticsController {
     private final Logger logger = LoggerFactory.getLogger(StatisticsController.class);
     private MachineService machineService;
     private final ExerciseSetService exerciseSetService;
-
+    private final UserService userService;
+    private final GymService gymService;
 
 
     @Autowired
-    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService) {
+    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService, UserService userService, GymService gymService) {
         this.machineService = machineService;
         this.exerciseSetService = exerciseSetService;
+        this.userService = userService;
+        this.gymService = gymService;
     }
 
 
-
     @GetMapping("/GymGoer/statistics")
-    public String getPlayerStatistics(Model model) {
-        logger.info("Mapping the statistics from the gym");
-        List<ExerciseSet> statistics = exerciseSetService.findAllExerciseSet();
+    public String getPlayerStatistics(@RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId ,Model model) {
+        logger.info("Opening the statistics for exercise for user");
 
-        logger.info("Gym goer statistics: {}", statistics);
+        //getting the attributes from the query in the repository and then the service
+        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoerId, machineId);
+
+
+        Machine machine = machineService.findMachineById(machineId);
+
+        //the data for the charts
+        List<Map<String, Object>> statistics = new ArrayList<>();
         List<Map<String, Object>> volumeData = new ArrayList<>();
-        for (ExerciseSet exerciseSet : statistics) {
-            Map<String, Object> volumeMap = new HashMap<>();
-//            volumeMap.put("volume", exerciseSet.getRepCount() * exerciseSet.getWeightCount());
-            volumeMap.put("dateTime", exerciseSet.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
-            volumeData.add(volumeMap);
+
+        //to use the month and the day of the session
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd");
+
+        for (ExerciseSet exerciseSet : exerciseSets) {
+
+            //calling the session so it can display the date
+            Session session = exerciseSet.getExercise().getSession();
+
+            //formatting the date for the end screen to check from the session and then return the month and day
+            String formattedDate = (session != null && session.getStartSession() != null) ? session.getStartSession().format(formatter) : "Null";
+
+            Map<String, Object> statisticsDataChart = new HashMap<>();
+            statisticsDataChart.put("weightCount", exerciseSet.getWeightCount());
+            statisticsDataChart.put("date", formattedDate);
+            //calculating the total repetition
+            statisticsDataChart.put("repCount", exerciseSet.getRepetitionCount());
+
+            //adding it to the list
+            statistics.add(statisticsDataChart);
+
+
+            // the data for the volume
+            Map<String, Object> volumeDataChart = new HashMap<>();
+            volumeDataChart.put("volumeD", exerciseSet.getWeightCount() * exerciseSet.getRepetitionCount());
+            volumeDataChart.put("date", formattedDate);
+
+            //adding it to the map
+            volumeData.add(volumeDataChart);
         }
 
+        //adding the attributes to the model
+        model.addAttribute("exerciseSets", exerciseSets);
         model.addAttribute("statistics", statistics);
         model.addAttribute("volumeData", volumeData);
-        model.addAttribute("LocalDate", LocalDate.now());
-        model.addAttribute("volume", "10");
+        model.addAttribute("machineName", machine.getName());
 
         return "GymGoer/statistics";
     }
 
     @GetMapping("/getChartData/{chartType}")
     @ResponseBody
-    public List<Map<String, Object>> getChartData(@PathVariable String chartType) {
-        List<Map<String, Object>> chartData = new ArrayList<>();
-
-        for (ExerciseSet set : exerciseSetService.findAllExerciseSet()) {
-            Map<String, Object> dataPoint = new HashMap<>();
-
-            dataPoint.put("dateTime", set.getEndTime().format(DateTimeFormatter.ofPattern("MM/dd")));
-            switch (chartType){
-                case "weights": dataPoint.put("value",set.getWeightCount()); break;
-//                case "volume" : double volume = set.getWeightCount() * set.getRepCount();
-                case "volume" : double volume = set.getWeightCount();
-                dataPoint.put("value", volume); break;
-//                case "reps":dataPoint.put("value", set.getRepCount()); break;
-                default: throw new IllegalArgumentException("Invalid chart " + chartType);
-            }
-            chartData.add(dataPoint);
+    public List<Map<String, Object>> getChartData(@PathVariable String chartType, @RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId) {
+//        logger.info("Choosing the data from which table should be displayed");
+        logger.info("Fetching chart data for gymGoerId: " + gymGoerId + " and machineId: " + machineId);
+        switch (chartType) {
+            case "weights": return exerciseSetService.getWeightData(gymGoerId,machineId);
+            case "volume" : return exerciseSetService.getVolumeData(gymGoerId,machineId);
+            case "repetitions": return exerciseSetService.getRepetitionData(gymGoerId,machineId);
+            default: throw new IllegalArgumentException("Invalid chartType");
         }
-        return chartData;
     }
-
 
     @PostMapping("/statisticsClose")
-    public String exitPlayerStatistics() {
+    public String exitPlayerStatistics(@RequestParam("sessionId") int sessionId, @RequestParam("userId") int userId) {
         logger.info("Exiting the page");
-        return "GymGoer/end_screen_session";
+//        return "redirect:/gymGoer/end?sessionId=" + sessionId + "&userId=" + userId;
+        return "redirect:/gymGoer/statistics";
     }
 
-    @GetMapping("/GymOwner/machines/machine_review")
-    public String getMachineReview(@RequestParam("idMachine") int idMachine, Model model) {
-        logger.info("Get Mapping to a machine review");
+    @GetMapping("/gymhome/{username}/machines/{gymID}/machineReview")
+    public String viewReviewMachine(@PathVariable String username, @PathVariable int gymID, @RequestParam("idMachine") Integer idMachine, Model model) {
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
         model.addAttribute("LocalDate", LocalDate.now());
-        String lastMaintained = "12/08/2021"; // Example value, can be dynamic
-        model.addAttribute("lastMainteinedDate", lastMaintained);
-        logger.info("lastMainteinedDate: {}", lastMaintained);
+        model.addAttribute("user", user);
+        model.addAttribute("gym", gymService.findGymById(gymID));
         Machine machine = machineService.findMachineById(idMachine);
         logger.debug("View Machine: " + machine);
         model.addAttribute("machine", machine);
 
+        // Retrieve the date of the Last maintained
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String lastMaintained = "No Information";
+        if (machine.getLastTimeChecked() != null) {
+             lastMaintained =  machine.getLastTimeChecked().format(format);
+        }
+        model.addAttribute("lastMainteinedDate", lastMaintained);
+        logger.info("lastMainteinedDate: {}", lastMaintained);
+
+        // Get the data for Machine Usage
+        HashMap<String, Integer> machineUsage = new HashMap<>();
+        if (machineService.findUsageOfMachineByIdPerDay(idMachine) != null) {
+            machineUsage = machineService.findUsageOfMachineByIdPerDay(idMachine);
+            logger.info("Machine usage data: {}", machineUsage);
+        }
+        model.addAttribute("machineUsage", machineUsage);
+        List<String> machineUsageKeys = new ArrayList<>(machineUsage.keySet());
+        List<Integer> machineUsageValues = new ArrayList<>(machineUsage.values());
+
+        model.addAttribute("machineUsageKeys", machineUsageKeys);
+        model.addAttribute("machineUsageValues", machineUsageValues);
+
         return "GymOwner/machine_review";
     }
-
-
-
 
 
 

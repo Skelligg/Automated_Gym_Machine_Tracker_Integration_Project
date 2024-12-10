@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<div th:insert="~{fragments/navbar :: header(userName=${user.username})}"></div>
+<div th:insert="~{fragments/navbar :: header(user=${user})}">header</div>
 
 <div class="mobile-container">
   <div class="container">
