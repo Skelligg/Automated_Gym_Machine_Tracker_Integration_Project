@@ -1,6 +1,7 @@
 package be.kdg.integration3.easyrep.service.session;
 
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
+import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.repository.ExerciseRepository;
 import be.kdg.integration3.easyrep.service.routines.RoutineServiceImpl;
 import org.slf4j.Logger;
@@ -8,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class ExerciseServiceImpl implements ExerciseService {
@@ -57,24 +57,11 @@ public class ExerciseServiceImpl implements ExerciseService {
     public void updateExercise(Exercise exercise) {
 
     }
-//
-//    @Override
-//    public Exercise findExerciseByNames(String name) {
-//        return f
-//    }
 
 
-//    //I don't understand why ExerciseSet is in Exercise so i create the add Exercise without it
-//    public void addExercise(String name, String imageAddress, Arduino arduino){
-//        Exercise exercise = new Exercise(name);
-//        logger.info("Creating a exercise {}", exercise);
-//        exerciseRepository.createExercise(exercise);
-//    }
-
-
-
-
-
-
+    public Exercise findExerciseBySessionAndName(Session session, String exerciseName) {
+        return exerciseRepository.findBySessionAndExerciseName(session, exerciseName)
+                .orElse(null);
+    }
 
 }

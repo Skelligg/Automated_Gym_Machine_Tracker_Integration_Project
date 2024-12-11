@@ -5,62 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ExerciseSetRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ExerciseSetRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/BenchPress(Barbell).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/CableFlyCrossovers.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/Deadlift(Barbell).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/Deadlift(SmithMachine).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/HammerCurl(Cable).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/IsoLateralLowRow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/LateralRaise(Machine).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/LegPress(Machine).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/LegRaiseParallelBars.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/PreacherCurl(Barbell).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/PreacherCurl(Machine).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/Pullover(Dumbbell).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/RomanianDeadlift(Barbell).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/SeatedLegCurl(Machine).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/SeatedPalmsUpWristCurl.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/Squat(Machine).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/TricepsKickback(Cable).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/TricepsRopePushdown.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/js/StatisticsMachineReview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/EasyRep.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/EasyRep.main.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/hevyData/restartingIdSeq.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/GymGoer.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/GymGoer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/GymOwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/GymOwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/SessionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/ExerciseSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/model/sessions/ExerciseSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ExerciseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/ExerciseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/MachineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/MachineRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/users/GymGoerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/users/GymGoerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ExerciseSetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ExerciseSetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ExerciseSetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/ExerciseSetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/MachineService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/ExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/ExerciseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/ExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/ExerciseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/exercliseListData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/exercliseListData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/css/end-session.css" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/css/end-session.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/TricepsDip.gif" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/images/machinesPics/TricepDip.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/js/StatisticsChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/static/js/GymGoerStatistics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/end_screen_session.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/end_screen_session.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/statistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymOwner/machine_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymOwner/machine_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymOwner/machine_review.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymOwner/machine_review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymOwner/machines-overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymOwner/machines-overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/Machines/addMachine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/Machines/detailMachine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/Machines/machines.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/users/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/users/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/exercise.sql" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/exercise.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/session.sql" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/scripts/session.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +68,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="tempBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,40 +97,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Database Script.arduino.sql and 3 more.executor": "Run",
-    "Database Script.arduino.sql.executor": "Run",
-    "Database Script.exercise_list.sql and 2 more.executor": "Run",
-    "Database Script.machine.sql.executor": "Run",
-    "Gradle.Build JavaSpring.executor": "Run",
-    "Gradle.Build gym-accessory-project.executor": "Run",
-    "Gradle.JavaSpring [:be.kdg.integration3.easyrep.service.CsvImporter.main()].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.StartApplication.executor": "Run",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "git-widget-placeholder": "Merging main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/scripts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Database Script.arduino.sql and 3 more.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.arduino.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.exercise_list.sql and 2 more.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.machine.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build JavaSpring.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build gym-accessory-project.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JavaSpring [:be.kdg.integration3.easyrep.service.CsvImporter.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StartApplication.executor&quot;: &quot;Run&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;importingHevyData2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/scripts/session.sql&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "RunConfigurationTargetLRU": [
-      "56e55c86-abe5-4443-9639-ea48e943c5b1/database/\"postgres\"/schema/\"public\"",
-      "56e55c86-abe5-4443-9639-ea48e943c5b1/database/\"postgres\""
+  &quot;keyToStringList&quot;: {
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;56e55c86-abe5-4443-9639-ea48e943c5b1/database/\&quot;postgres\&quot;/schema/\&quot;public\&quot;&quot;,
+      &quot;56e55c86-abe5-4443-9639-ea48e943c5b1/database/\&quot;postgres\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\scripts" />
@@ -270,6 +232,8 @@
       <workItem from="1733731895273" duration="20422000" />
       <workItem from="1733757813945" duration="415000" />
       <workItem from="1733848999911" duration="1814000" />
+      <workItem from="1733919661546" duration="12292000" />
+      <workItem from="1733959037994" duration="73000" />
     </task>
     <servers />
   </component>

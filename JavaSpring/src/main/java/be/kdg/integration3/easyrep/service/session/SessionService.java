@@ -2,6 +2,7 @@ package be.kdg.integration3.easyrep.service.session;
 
 import be.kdg.integration3.easyrep.model.sessions.Session;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface SessionService {
@@ -14,7 +15,8 @@ public interface SessionService {
 
     Session getActiveSessionByMachineId(int machineId);
 
-    public int getSessionCountByUserId(int userId);
-    public String getTimeForSessionById(int sessionId);
+    int getSessionCountByUserId(int userId);
+    String getTimeForSessionById(int sessionId);
 
+    Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime);
 }

@@ -60,7 +60,7 @@ public class UserServiceImp implements UserService {
     // Find gym goer by user ID
     @Override
     public GymGoer getGymGoerByUserId(int userId) {
-        return gymGoerRepository.findByuserId(userId);
+        return gymGoerRepository.findByUserId(userId);
     }
 
     @Override

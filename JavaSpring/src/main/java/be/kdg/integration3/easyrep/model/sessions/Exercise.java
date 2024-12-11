@@ -26,7 +26,7 @@ public class Exercise {
     private Session session;  // Many exercises belong to one session
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "machine_id")
+    @JoinColumn(name = "machine_id", unique = false)
     private Machine machine;
 
 

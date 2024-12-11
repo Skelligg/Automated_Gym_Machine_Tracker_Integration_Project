@@ -2,12 +2,13 @@ package be.kdg.integration3.easyrep.repository;
 
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
+import be.kdg.integration3.easyrep.model.sessions.Session;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 import java.util.List;
-import java.util.Map;
+import java.util.Optional;
 
 @Repository
 public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
@@ -19,6 +20,8 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
     Exercise findByexerciseId(Integer id);
 
     List<Exercise> findExercisesByMachine(Machine machine);
+
+    Optional<Exercise> findBySessionAndExerciseName(Session session, String exerciseName);
 
     //    private static final Logger log = LoggerFactory.getLogger(ExerciseRepository.class);
 //    private static List<Exercise> exercises = new ArrayList<Exercise>();
