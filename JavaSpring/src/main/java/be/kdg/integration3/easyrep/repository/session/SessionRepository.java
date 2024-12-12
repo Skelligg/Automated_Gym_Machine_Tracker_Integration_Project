@@ -17,7 +17,7 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
 
 
     //to count the number of finished sessions for a specific user
-    @Query("select count(s) from Session s where lower(s.status) = 'finish' and s.gymGoerId.userId = :userId")
+    @Query("select count(s) from Session s where lower(s.status) = 'completed' and s.gymGoerId.userId = :userId")
     int countSessionByUserId(@Param("userId")int userId);
 
     //how long was the specific session

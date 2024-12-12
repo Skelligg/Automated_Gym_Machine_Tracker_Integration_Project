@@ -12,10 +12,10 @@ function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
 
     //adding the active class to the clicked one
     clickedLabel.classList.add('active');
-    fetchChartData(chartType)
+    fetchChartData(chartType, gymGoerId, machineId);
 
     //fetching the chart and checking what type should it be
-    function fetchChartData(chartType) {
+    function fetchChartData(chartType,gymGoerId, machineId) {
 
 
         fetch(`/getChartData/${chartType}?gymGoerId=${gymGoerId}&machineId=${machineId}`)
@@ -26,19 +26,13 @@ function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
                         return response.json();
             }).then(data => {
                 const labels = data.map(entry => entry.date);
-                let chartData;
-
-            if (chartType === 'weights') {
-                chartData = data.map(entry => entry.weightCount);
-            } else if (chartType === 'volume') {
-                chartData = data.map(entry => entry.weightCount * entry.repCount);
-            } else if (chartType === 'repetitions') {
-                chartData = data.map(entry => entry.repCount);
-            }
-
+                const chartData  = data.map(entry => {
+                    if (chartType === 'weights') return entry.weightCount;
+                    if (chartType === 'volume') return entry.volumeD;
+                    if (chartType === 'reps') return entry.repCountNumb;
+                })
 
             console.log(data)
-
 
             // removing the previous chart
             if (chart)
@@ -46,6 +40,10 @@ function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
 
             console.log('Labels:', labels);
             console.log('Chart Data:', chartData);
+
+            //getting the max value from the chart
+            const maxDataValue = Math.max(...chartData)
+            const yMax = maxDataValue + 14;
 
             // chart based on the pressed button
             const ctx = document.getElementById('chartCanvas').getContext('2d');
@@ -78,7 +76,9 @@ function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
                                 display: true,
                                 // the name of the Y-axis
                                 text: getYAxisLabel(chartType)
-                            }
+                            },
+                            min: 0,
+                            max: yMax
                         }
                     }
                 }

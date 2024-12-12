@@ -92,16 +92,16 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
 
     @Override
     public List<Map<String, Object>> getWeightData(int gymGoerId,int machineId) {
-        return exerciseSetRepository.findWeightsData(gymGoerId,machineId);
+        return exerciseSetRepository.findWeightsData(machineId,gymGoerId);
     }
 
     @Override
     public List<Map<String, Object>> getVolumeData(int gymGoerId,int machineId) {
-        return exerciseSetRepository.findVolumeData(gymGoerId,machineId);
+        return exerciseSetRepository.findVolumeData(machineId,gymGoerId);
     }
 
     @Override
     public List<Map<String, Object>> getRepetitionData(int gymGoerId,int machineId) {
-        return exerciseSetRepository.findRepetitionData(gymGoerId,machineId);
+        return exerciseSetRepository.findRepetitionData(machineId,gymGoerId);
     }
 }

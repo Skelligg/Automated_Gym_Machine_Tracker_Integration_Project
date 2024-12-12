@@ -27,5 +27,4 @@ public interface ExerciseSetService {
     List<Map<String, Object>> getVolumeData(int gymGoerId,int machineId);
     List<Map<String, Object>> getRepetitionData(int gymGoerId,int machineId);
 
-
 }

@@ -36,15 +36,16 @@ public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Intege
 //    List<ExerciseSet> findProgressForSpecificUser(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
 
     //Getting all the data for the weights
-    @Query("select e.session.startSession as date, es.weightCount as weightCount from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId order by es.startTime")
+    @Query("select to_char(e.session.startSession, 'MM/DD') as date , es.weightCount as weightCount from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId order by es.startTime")
     List<Map<String,Object>> findWeightsData(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
 
     //Getting all the data for the volume
-    @Query("select e.session.startSession as date, sum(es.weightCount * es.repetitionCount) as volumeD  from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  group by e.session.startSession order by e.session.startSession")
+    @Query("select to_char(e.session.startSession, 'MM/DD') as date , es.weightCount * es.repetitionCount AS volumeD from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  order by es.startTime")
     List<Map<String,Object>> findVolumeData(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
 
+
 //    getting all the data for the repetitions
-    @Query("select e.session.startSession as date, es.repetitionCount as repCount  from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  order by e.session.startSession")
+    @Query("select to_char(e.session.startSession, 'MM/DD') as date , es.repetitionCount as repCountNumb  from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  order by es.startTime")
     List<Map<String,Object>> findRepetitionData(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
 
 

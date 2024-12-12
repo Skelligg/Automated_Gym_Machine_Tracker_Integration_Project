@@ -59,6 +59,8 @@ public class StatisticsController {
         }
 
 
+        Integer sessionId = null;
+
         //the data for the charts
         List<Map<String, Object>> statistics = new ArrayList<>();
         List<Map<String, Object>> volumeData = new ArrayList<>();
@@ -70,6 +72,7 @@ public class StatisticsController {
 
             //calling the session so it can display the date
             Session session = exerciseSet.getExercise().getSession();
+            sessionId = session.getSession_id();
 
             //formatting the date for the end screen to check from the session and then return the month and day
             String formattedDate = (session != null && session.getStartSession() != null) ? session.getStartSession().format(formatter) : "Null";
@@ -107,6 +110,7 @@ public class StatisticsController {
         model.addAttribute("machineName", machine.getName());
         model.addAttribute("machineId",machineId);
         model.addAttribute("userId",gymGoerId);
+        model.addAttribute("sessionId", sessionId);
 
         return "GymGoer/statistics";
     }
@@ -115,21 +119,19 @@ public class StatisticsController {
     @ResponseBody
     public List<Map<String, Object>> getChartData(@PathVariable String chartType, @RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId) {
 //        logger.info("Choosing the data from which table should be displayed");
-        logger.info("Fetching chart data for gymGoerId: " + gymGoerId + " and machineId: " + machineId);
-        logger.info("Chart Type: {}, gymGoerId: {}, machineId: {}", chartType, gymGoerId, machineId);
+
+//        logger.info("Fetching chart data for gymGoerId: " + gymGoerId + " and machineId: " + machineId);
+//        logger.info("Chart Type: {}, gymGoerId: {}, machineId: {}", chartType, gymGoerId, machineId);
+//        if (!List.of("reps", "weight", "volume").contains(chartType)) {
+//            throw new IllegalArgumentException("Invalid chartType");
+//        }
+
         return switch (chartType) {
             case "weights" ->  exerciseSetService.getWeightData(gymGoerId,machineId);
             case "volume" ->  exerciseSetService.getVolumeData(gymGoerId,machineId);
-            case "repetitions" -> exerciseSetService.getRepetitionData(gymGoerId,machineId);
+            case "reps" -> exerciseSetService.getRepetitionData(gymGoerId,machineId);
             default -> throw new IllegalArgumentException("Invalid chartType");
         };
-    }
-
-    @PostMapping("/statisticsClose")
-    public String exitPlayerStatistics(@RequestParam("sessionId") int sessionId, @RequestParam("userId") int userId) {
-        logger.info("Exiting the page");
-//        return "redirect:/gymGoer/end?sessionId=" + sessionId + "&userId=" + userId;
-        return "redirect:/gymGoer/statistics";
     }
 
     @GetMapping("/gymhome/{username}/machines/{gymID}/machineReview")
