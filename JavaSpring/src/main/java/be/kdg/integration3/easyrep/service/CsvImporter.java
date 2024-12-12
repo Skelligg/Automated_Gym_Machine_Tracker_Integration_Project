@@ -28,7 +28,7 @@ import java.time.format.DateTimeParseException;
 import java.util.*;
 
 @Service
-public class CsvImporter implements CommandLineRunner {
+public class CsvImporter /*implements CommandLineRunner*/ {
 
     private static final Logger log = LoggerFactory.getLogger(CsvImporter.class);
     private final SessionService sessionService;
@@ -237,7 +237,7 @@ public class CsvImporter implements CommandLineRunner {
                 });
     }
 
-    @Transactional
+//    @Transactional
     public void insertingExerciseSet(String path) {
         List<DateTimeFormatter> FORMATTERS = List.of(
                 DateTimeFormatter.ofPattern("dd MMM yyyy, HH:mm", Locale.ENGLISH),
@@ -260,7 +260,7 @@ public class CsvImporter implements CommandLineRunner {
             // Skip lines until line 135 (0-indexed, so we skip 134 lines)
             while ((line = bufferedReader.readLine()) != null) {
                 lineNumber++;
-                if (lineNumber < 135) {
+                if (lineNumber < 501) { //put here the last line inserted
                     continue;  // Skip this line
                 }
 
@@ -321,72 +321,11 @@ public class CsvImporter implements CommandLineRunner {
     }
 
 
-// original
-//    public void insertingExerciseSet(String path) {
-//        List<DateTimeFormatter> FORMATTERS = List.of(
-//                DateTimeFormatter.ofPattern("dd MMM yyyy, HH:mm", Locale.ENGLISH),
-//                DateTimeFormatter.ofPattern("d MMM yyyy, HH:mm", Locale.ENGLISH)
-//        );
-//
-//        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
-//            String line = bufferedReader.readLine(); // Skip the header
-//
-//            while ((line = bufferedReader.readLine()) != null) {
-//                String[] info = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
-//
-//                // Extract session details
-//                String startDateStr = info[0].replace("\"", "").trim();
-//                String endDateStr = info[1].replace("\"", "").trim();
-//                String exerciseName = info[2].trim();
-//                int setNumber = Integer.parseInt(info[3].trim());
-//                double weightCount = Double.parseDouble(info[4].trim());
-//                int repetitionCount = Integer.parseInt(info[5].trim());
-//
-//                // Parse start and end dates
-//                LocalDateTime startTime = parseFlexibleDate(startDateStr, FORMATTERS);
-//                LocalDateTime endTime = parseFlexibleDate(endDateStr, FORMATTERS);
-//
-//                // Retrieve the session by start and end time
-//                Session session = sessionService.findSessionByStartAndEndTime(startTime, endTime);
-//                if (session == null) {
-//                    log.warn("No session found for start time '{}' and end time '{}'. Skipping set.", startTime, endTime);
-//                    continue;
-//                }
-//
-//                // Retrieve the exercise by session and name
-//                Exercise exercise = exerciseService.findExerciseBySessionAndName(session, exerciseName);
-//                if (exercise == null) {
-//                    log.warn("No exercise found for name '{}' in session ID '{}'. Skipping set.", exerciseName, session.getSession_id());
-//                    continue;
-//                }
-//
-//                // Create a new ExerciseSet
-//                ExerciseSet exerciseSet = new ExerciseSet();
-//                exerciseSet.setExercise(exercise);
-//                exerciseSet.setSetNumber(setNumber);
-//                exerciseSet.setWeightCount(weightCount);
-//                exerciseSet.setRepetitionCount(repetitionCount);
-//
-//                // Add the set to the exercise
-//                exercise.getExerciseSets().add(exerciseSet);
-//
-//                // Persist the set (cascade will save it with the exercise)
-//                exerciseService.updateExercise(exercise); // Use your update method to save changes
-//            }
-//
-//            log.info("All sets have been successfully added to their respective exercises.");
-//        } catch (IOException e) {
-//            log.error("Error reading the file: {}", path, e);
-//        } catch (Exception e) {
-//            log.error("An unexpected error occurred while adding sets", e);
-//        }
+
+
+//    @Override
+//    public void run(String... args) {
+////        insertingExercisesAndSessions(path);
+//        insertingExerciseSet(path);
 //    }
-
-
-
-    @Override
-    public void run(String... args) {
-//        insertingExercisesAndSessions(path);
-        insertingExerciseSet(path);
-    }
 }
