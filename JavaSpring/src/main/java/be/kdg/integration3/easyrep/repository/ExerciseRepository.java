@@ -3,6 +3,8 @@ package be.kdg.integration3.easyrep.repository;
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 
@@ -19,6 +21,10 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
     Exercise findByexerciseId(Integer id);
 
     List<Exercise> findExercisesByMachine(Machine machine);
+
+    //query to find the past exercises for user and specific machine
+    @Query("select e from Exercise e where e.session.gymGoerId.userId = :gymGoerId and e.machine.machineId = :machineId")
+    List<Exercise> findExerciseByUserAndMachine(@Param("gymGoerId") int gymGoerId, @Param("machineId") int machineId);
 
     //    private static final Logger log = LoggerFactory.getLogger(ExerciseRepository.class);
 //    private static List<Exercise> exercises = new ArrayList<Exercise>();

@@ -2,6 +2,7 @@ package be.kdg.integration3.easyrep.repository;
 
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import com.fasterxml.jackson.core.io.CharTypes;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -29,8 +30,10 @@ public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Intege
 
 
     //query to find the past sets for user and specific exercise
-    @Query("select es from ExerciseSet es join es.exercise e join e.machine m join e.session s join s.gymGoerId g where g.userId = :gymGoerId and m.machineId = :machineId")
-        List<ExerciseSet> findProgressForSpecificUser(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
+//    @Query("select es from ExerciseSet es join es.exercise e join e.machine m join e.session s join s.gymGoerId g where g.userId = :gymGoerId and m.machineId = :machineId")
+
+//    @Query("select e from Exercise e where e.session.gymGoerId.userId = :gymGoerId and e.machine.machineId = :machineId")
+//    List<ExerciseSet> findProgressForSpecificUser(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
 
     //Getting all the data for the weights
     @Query("select e.session.startSession as date, es.weightCount as weightCount from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId order by es.startTime")
@@ -40,8 +43,9 @@ public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Intege
     @Query("select e.session.startSession as date, sum(es.weightCount * es.repetitionCount) as volumeD  from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  group by e.session.startSession order by e.session.startSession")
     List<Map<String,Object>> findVolumeData(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
 
-    //getting all the data for the repetitions
-    @Query("select e.session.startSession as date, sum(es.repetitionCount) as repCount  from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  group by e.session.startSession order by e.session.startSession")
+//    getting all the data for the repetitions
+    @Query("select e.session.startSession as date, es.repetitionCount as repCount  from ExerciseSet es join Exercise e on (e.exerciseId = es.exercise.exerciseId) where e.session.gymGoerId.userId = :gymGoerId and es.exercise.machine.machineId = :machineId  order by e.session.startSession")
     List<Map<String,Object>> findRepetitionData(@Param("machineId") int machineId, @Param("gymGoerId") int gymGoerId);
+
 
 }

@@ -16,4 +16,5 @@ public interface ExerciseService {
 //    List<Exercise> findExerciseByNames(List<String> names);
     Exercise findByName(String name);
 //    List<Map<String, Object>> getChartData(String name);
+//    Map<String,Object> getUserProgressOnMachine(int gymGoerId, int machineId);
 }

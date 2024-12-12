@@ -106,6 +106,7 @@ public class Session {
         this.gymGoerId = gymGoerId;
     }
 
+
     @Override
     public String toString() {
         return "Session{" +

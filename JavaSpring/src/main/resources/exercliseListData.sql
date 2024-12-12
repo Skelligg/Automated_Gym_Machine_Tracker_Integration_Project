@@ -108,3 +108,21 @@ INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_
 INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:40:32', '1', 7, 2, '20:35:50', 52, 10);
 INSERT INTO public.exercise_set ( end_time, previous_set, repetition_count, set_number, start_time, weight_count, exercise_id) VALUES ( '20:49:03', '2', 3, 3, '20:45:54', 100, 10);
 
+-- SELECT s.start_session, es.weight_count
+-- FROM public.exercise_set es
+--          JOIN public.exercise e ON e.exercise_id = es.exercise_id
+--          JOIN public.session s ON s.session_id = e.session_id
+-- WHERE s.user_id = 4 AND e.machine_id = 83
+-- ORDER BY es.start_time;
+-- SELECT * FROM public.session WHERE user_id = 4;
+-- SELECT * FROM public.exercise WHERE machine_id = 83;
+-- SELECT * FROM public.exercise_set;
+
+SELECT es.set_id, es.repetition_count, es.start_time, es.end_time, es.weight_count
+FROM exercise_set es
+         JOIN exercise e ON es.exercise_id = e.exercise_id
+         JOIN machine m ON e.machine_id = m.machine_id
+         JOIN session s ON e.session_id = s.session_id
+WHERE s.user_id = 4
+  AND m.machine_id = 83
+ORDER BY es.start_time;

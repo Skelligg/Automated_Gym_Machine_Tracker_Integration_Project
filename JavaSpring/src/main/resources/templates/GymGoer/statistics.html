@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Statistics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<!--    <link rel="stylesheet" href="../../static/css/mobile-styling.css" th:href="@{/static/css/mobile-styling.css}">-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -13,7 +12,6 @@
 
     <link th:href="@{/css/mobile-styling.css}" rel="stylesheet" />
     <link th:href="@{/css/statistics.css}" rel="stylesheet" />
-<!--    <link rel="stylesheet" th:href="@{/static/css/statistics.css}">-->
 </head>
 <body>
 
@@ -37,13 +35,13 @@
 <h3 class="text-center" th:utext="${machineName}"></h3>
     <div class="d-flex justify-content-center mt-3">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-light active" onclick="showTable('weightTable', 'weights', this)">
+            <label class="btn btn-light active" onclick="showTable('weightTable', 'weights', this, [[${userId}]], [[${machineId}]])">
                 <input type="radio" name="options" id="option1" autocomplete="off" checked> By Weight
             </label>
-            <label class="btn btn-light" onclick="showTable('volumeTable', 'volume', this)">
+            <label class="btn btn-light" onclick="showTable('volumeTable', 'volume', this, [[${userId}]], [[${machineId}]])">
                 <input type="radio" name="options" id="option2" autocomplete="off"> By Volume
             </label>
-            <label class="btn btn-light" onclick="showTable('repsTable', 'reps', this)">
+            <label class="btn btn-light" onclick="showTable('repsTable', 'reps', this, [[${userId}]], [[${machineId}]])">
                 <input type="radio" name="options" id="option3" autocomplete="off"> By Reps
             </label>
         </div>
@@ -57,15 +55,18 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Weight Count</th>
+                <th>Weight</th>
                 <th>Date</th>
+<!--                <th>Rep</th>-->
 
             </tr>
             </thead>
             <tbody>
-            <tr th:each="stats : ${statistics} ">
-                <td th:text="${stats.weightCount}"></td>
-                <td th:text="${stats.date}"></td>
+            <tr th:each="stat : ${statistics} ">
+                <td th:text="${stat['weightCount']}"></td>
+                <td th:text="${stat['date']}"></td>
+<!--                <td th:text="${stat['repCount']}"></td>-->
+<!--                <td th:text="${stat.repCount}"></td>-->
             </tr>
             </tbody>
         </table>
@@ -76,32 +77,33 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Total Volume</th>
+                <th>Volume</th>
                 <th>Date</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="volum : ${volumeData}">
-                <td th:text="${volum.volumeD}"></td>
-                <td th:text="${volum.date}"></td>
+            <tr th:each="data : ${volumeData}">
+                <td th:text="${data['volumeD']}"></td>
+                <td th:text="${data['date']}"></td>
             </tr>
             </tbody>
         </table>
     </div>
 
-<!--this is the data for the total repeptitions-->
+<!--&lt;!&ndash;this is the data for the total repeptitions&ndash;&gt;-->
     <div id="repsTable" style="display: none;">
         <table class="table">
             <thead>
             <tr>
-                <th>Total Reps</th>
+                <th>Reps</th>
                 <th>Date</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="stat: ${statistics}">
-                <td th:text="${stat.repCount}"></td>
-                <td th:text="${stat.date}"></td>
+            <tr th:each="data : ${statistics}">
+                <td th:text="${data['repCount']}"></td>
+                <td th:text="${data['date']}"></td>
+            </tr>
             </tbody>
         </table>
     </div>

@@ -1,7 +1,7 @@
     let chart;
 
 
-function showTable(tableId,chartType, clickedLabel){
+function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
     //hiding all tables
     document.querySelectorAll('div[id$="Table"]').forEach(table=>{table.style.display = 'none';});
 
@@ -18,9 +18,6 @@ function showTable(tableId,chartType, clickedLabel){
     function fetchChartData(chartType) {
 
 
-        const gymGoerId = 1
-        const machineId = 52
-
         fetch(`/getChartData/${chartType}?gymGoerId=${gymGoerId}&machineId=${machineId}`)
             .then(response => {
                 if (!response.ok) {
@@ -28,24 +25,27 @@ function showTable(tableId,chartType, clickedLabel){
                 }
                         return response.json();
             }).then(data => {
-                console.log(data)
                 const labels = data.map(entry => entry.date);
                 let chartData;
 
-                // const chartData = data.map(entry => entry.value);
             if (chartType === 'weights') {
                 chartData = data.map(entry => entry.weightCount);
-            } else if (chartType === 'volume'){
-                chartData = data.map(entry => entry.volumeD)
-            } else if (chartType === 'repetitions'){
-                chartData = data.map(entry => entry.repCount || 0);
+            } else if (chartType === 'volume') {
+                chartData = data.map(entry => entry.weightCount * entry.repCount);
+            } else if (chartType === 'repetitions') {
+                chartData = data.map(entry => entry.repCount);
             }
+
+
+            console.log(data)
 
 
             // removing the previous chart
-            if (chart) {
+            if (chart)
                 chart.destroy();
-            }
+
+            console.log('Labels:', labels);
+            console.log('Chart Data:', chartData);
 
             // chart based on the pressed button
             const ctx = document.getElementById('chartCanvas').getContext('2d');
@@ -57,7 +57,7 @@ function showTable(tableId,chartType, clickedLabel){
                         label: getChartLabel(chartType),
                         data: chartData,
                         borderColor: 'rgb(0, 0, 0)',
-                        backgroundColor: 'rgba(0,0,0)',
+                        backgroundColor: 'rgba(0, 0, 0)',
                         borderWidth: 2,
                         fill: false,
                         tension: 0.4
@@ -88,7 +88,7 @@ function showTable(tableId,chartType, clickedLabel){
             alert('There was an error fetching the data');
         });
     }
-
+    //
     function getChartLabel(chartType) {
         switch (chartType) {
             case 'weights': return 'Weight Lifted';

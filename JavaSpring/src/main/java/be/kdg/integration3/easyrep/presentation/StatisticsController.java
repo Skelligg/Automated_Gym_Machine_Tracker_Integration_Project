@@ -7,6 +7,7 @@ import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.service.GymService;
 import be.kdg.integration3.easyrep.service.MachineService;
+import be.kdg.integration3.easyrep.service.session.ExerciseService;
 import be.kdg.integration3.easyrep.service.users.UserService;
 
 import org.slf4j.Logger;
@@ -27,14 +28,16 @@ public class StatisticsController {
     private final Logger logger = LoggerFactory.getLogger(StatisticsController.class);
     private MachineService machineService;
     private final ExerciseSetService exerciseSetService;
+    private final ExerciseService exerciseService;
     private final UserService userService;
     private final GymService gymService;
 
 
     @Autowired
-    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService, UserService userService, GymService gymService) {
+    public StatisticsController(ExerciseSetService exerciseSetService, MachineService machineService, ExerciseService exerciseService, UserService userService, GymService gymService) {
         this.machineService = machineService;
         this.exerciseSetService = exerciseSetService;
+        this.exerciseService = exerciseService;
         this.userService = userService;
         this.gymService = gymService;
     }
@@ -44,11 +47,17 @@ public class StatisticsController {
     public String getPlayerStatistics(@RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId ,Model model) {
         logger.info("Opening the statistics for exercise for user");
 
-        //getting the attributes from the query in the repository and then the service
-        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoerId, machineId);
-
 
         Machine machine = machineService.findMachineById(machineId);
+        if (machine == null) {
+            logger.error("Machine not found with ID {}", machineId);
+        }
+
+        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoerId, machineId);
+        if (exerciseSets.size() == 0) {
+            logger.error("No exercise sets found for user");
+        }
+
 
         //the data for the charts
         List<Map<String, Object>> statistics = new ArrayList<>();
@@ -84,11 +93,20 @@ public class StatisticsController {
             volumeData.add(volumeDataChart);
         }
 
+        //adding the statistics to the data
+
+
+
+        logger.info("Statistics: {}", statistics);
+        logger.info("Volume Data: {}", volumeData);
+        logger.info("Machine Name: {}", machine.getName());
         //adding the attributes to the model
         model.addAttribute("exerciseSets", exerciseSets);
         model.addAttribute("statistics", statistics);
         model.addAttribute("volumeData", volumeData);
         model.addAttribute("machineName", machine.getName());
+        model.addAttribute("machineId",machineId);
+        model.addAttribute("userId",gymGoerId);
 
         return "GymGoer/statistics";
     }
@@ -98,12 +116,13 @@ public class StatisticsController {
     public List<Map<String, Object>> getChartData(@PathVariable String chartType, @RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId) {
 //        logger.info("Choosing the data from which table should be displayed");
         logger.info("Fetching chart data for gymGoerId: " + gymGoerId + " and machineId: " + machineId);
-        switch (chartType) {
-            case "weights": return exerciseSetService.getWeightData(gymGoerId,machineId);
-            case "volume" : return exerciseSetService.getVolumeData(gymGoerId,machineId);
-            case "repetitions": return exerciseSetService.getRepetitionData(gymGoerId,machineId);
-            default: throw new IllegalArgumentException("Invalid chartType");
-        }
+        logger.info("Chart Type: {}, gymGoerId: {}, machineId: {}", chartType, gymGoerId, machineId);
+        return switch (chartType) {
+            case "weights" ->  exerciseSetService.getWeightData(gymGoerId,machineId);
+            case "volume" ->  exerciseSetService.getVolumeData(gymGoerId,machineId);
+            case "repetitions" -> exerciseSetService.getRepetitionData(gymGoerId,machineId);
+            default -> throw new IllegalArgumentException("Invalid chartType");
+        };
     }
 
     @PostMapping("/statisticsClose")

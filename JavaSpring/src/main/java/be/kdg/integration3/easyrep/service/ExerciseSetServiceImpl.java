@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.service;
 
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
+import be.kdg.integration3.easyrep.repository.ExerciseRepository;
 import be.kdg.integration3.easyrep.repository.ExerciseSetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,15 +12,18 @@ import org.springframework.stereotype.Service;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class ExerciseSetServiceImpl implements ExerciseSetService {
+    private final ExerciseRepository exerciseRepository;
     private Logger logger = LoggerFactory.getLogger(ExerciseSetServiceImpl.class);
     private ExerciseSetRepository exerciseSetRepository;
 
 
-    public ExerciseSetServiceImpl(ExerciseSetRepository exerciseSetRepository) {
+    public ExerciseSetServiceImpl(ExerciseSetRepository exerciseSetRepository, ExerciseRepository exerciseRepository) {
         this.exerciseSetRepository = exerciseSetRepository;
+        this.exerciseRepository = exerciseRepository;
     }
 
     @Override
@@ -75,8 +79,16 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
 
     @Override
     public List<ExerciseSet> getProgressForSpecificUser(int gymGoerId, int machineId) {
-        return exerciseSetRepository.findProgressForSpecificUser(gymGoerId, machineId);
+        List<Exercise> exercises  = exerciseRepository.findExerciseByUserAndMachine(gymGoerId, machineId);
+
+        return exercises.stream().flatMap(e->e.getExerciseSets().stream()).collect(Collectors.toList());
     }
+
+//    @Override
+//    public List<ExerciseSet> getProgressForSpecificUser(int gymGoerId, int machineId) {
+//        logger.info("Fetching progress for gymGoerId: {} and machineId: {}", gymGoerId, machineId);
+//        return exerciseSetRepository.findProgressForSpecificUser(gymGoerId, machineId);
+//    }
 
     @Override
     public List<Map<String, Object>> getWeightData(int gymGoerId,int machineId) {
