@@ -42,10 +42,11 @@
       <i class="fas fa-user-friends icon-size"></i>
       <span class="small">Friends</span>
     </button>
-    <button class="btn btn-outline-dark d-flex flex-column align-items-center p-2 p-sm-3 rounded-pill w-25 w-sm-30 w-md-25">
+    <a th:href="@{/home/{user}/calendar(user=${user.username})}" class="btn btn-outline-dark d-flex flex-column align-items-center p-2 p-sm-3 rounded-pill w-25 w-sm-30 w-md-25">
       <i class="fas fa-calendar-alt icon-size"></i>
       <span class="small">Calendar</span>
-    </button>
+    </a>
+
   </div>
 
 
