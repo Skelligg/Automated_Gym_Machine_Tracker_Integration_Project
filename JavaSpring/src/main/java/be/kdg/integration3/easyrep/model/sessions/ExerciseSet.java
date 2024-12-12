@@ -18,13 +18,14 @@ public class ExerciseSet {
     private LocalTime startTime;
     private LocalTime endTime;
     private int setNumber;
+
     @Column(length = 50)
     private String previousSet;
 
     @Column(nullable = false)
     private double weightCount;
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "exercise_id")
     private Exercise exercise;
 

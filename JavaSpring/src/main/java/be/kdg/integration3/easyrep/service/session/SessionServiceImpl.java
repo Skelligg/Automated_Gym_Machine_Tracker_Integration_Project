@@ -85,6 +85,11 @@ public class SessionServiceImpl implements SessionService {
 
     }
 
+    public Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime) {
+        return sessionRepository.findByStartSessionAndEndSession(startTime, endTime)
+                .orElse(null);
+    }
+
 
 }
 

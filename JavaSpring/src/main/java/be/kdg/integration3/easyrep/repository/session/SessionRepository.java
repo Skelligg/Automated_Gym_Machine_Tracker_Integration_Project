@@ -8,13 +8,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface SessionRepository extends JpaRepository<Session, Integer> {
 
     Session findById(int id);
 
+    Optional<Session> findByStartSessionAndEndSession(LocalDateTime startSession, LocalDateTime endSession);
 
     //to count the number of finished sessions for a specific user
     @Query("select count(s) from Session s where lower(s.status) = 'completed' and s.gymGoerId.userId = :userId")
