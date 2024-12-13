@@ -54,7 +54,7 @@
             </a>
 
             <!-- Profile Button -->
-            <a href="/profile" class="btn btn-dark d-flex justify-content-center align-items-center">
+            <a th:href="@{/home/{username}(username=${user.username})}" class="btn btn-dark d-flex justify-content-center align-items-center">
                 <i class="fas fa-user fa-lg"></i>
             </a>
         </div>

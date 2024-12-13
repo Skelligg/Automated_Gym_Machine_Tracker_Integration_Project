@@ -26,4 +26,7 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
     //how long was the specific session
     @Query("select TIMESTAMPDIFF(SECOND,s.startSession, s.endSession) from Session s where s.session_id = :sessionId")
     Integer getSessionDurationInSeconds(@Param("sessionId") int sessionId);
+
+    @Query("SELECT s FROM Session s WHERE s.gymGoerId.userId = :userId")
+    List<Session> findAllSessionsFromUser(int userId);
 }

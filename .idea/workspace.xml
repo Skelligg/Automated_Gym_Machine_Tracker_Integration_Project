@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/CalendarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/calendar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +230,7 @@
       <workItem from="1733959037994" duration="199000" />
       <workItem from="1734004299860" duration="5363000" />
       <workItem from="1734032856105" duration="838000" />
-      <workItem from="1734040242173" duration="3451000" />
+      <workItem from="1734040242173" duration="9373000" />
     </task>
     <servers />
   </component>

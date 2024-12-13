@@ -2,11 +2,14 @@ package be.kdg.integration3.easyrep.service.session;
 
 
 import be.kdg.integration3.easyrep.model.Machine;
+import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.model.sessions.Exercise;
 import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.repository.ExerciseRepository;
 import be.kdg.integration3.easyrep.repository.MachineRepository;
 import be.kdg.integration3.easyrep.repository.session.SessionRepository;
+import be.kdg.integration3.easyrep.repository.users.UserCredentialsRepository;
+import org.apache.catalina.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +26,16 @@ public class SessionServiceImpl implements SessionService {
 
     private final ExerciseRepository exerciseRepository;
     private final MachineRepository machineRepository;
+    private final UserCredentialsRepository userCredentialsRepository;
     Logger logger = LoggerFactory.getLogger(SessionServiceImpl.class);
     SessionRepository sessionRepository;
 
     @Autowired
-    public SessionServiceImpl(SessionRepository sessionRepository, ExerciseRepository exerciseRepository, MachineRepository machineRepository) {
+    public SessionServiceImpl(SessionRepository sessionRepository, ExerciseRepository exerciseRepository, MachineRepository machineRepository, UserCredentialsRepository userCredentialsRepository) {
         this.sessionRepository = sessionRepository;
         this.exerciseRepository = exerciseRepository;
         this.machineRepository = machineRepository;
+        this.userCredentialsRepository = userCredentialsRepository;
     }
 
     @Override
@@ -88,6 +93,12 @@ public class SessionServiceImpl implements SessionService {
     public Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime) {
         return sessionRepository.findByStartSessionAndEndSession(startTime, endTime)
                 .orElse(null);
+    }
+
+
+    public List<Session> getAllSessionsFromUser(String username){
+        UserCredentials user = userCredentialsRepository.findByUsernameOrEmail(username);
+        return sessionRepository.findAllSessionsFromUser(user.getUserId());
     }
 
 
