@@ -96,7 +96,7 @@ public class RoutineController {
     public String deleteRoutine(@PathVariable String username,
                                 @RequestParam("routineId") int routineId) {
         logger.info("Deleting routine with ID: {}", routineId);
-        routineService.removeRoutine(routineId);
+        routineService.removeRoutineById(routineId);
         return "redirect:/myroutines/" + username;
     }
 }

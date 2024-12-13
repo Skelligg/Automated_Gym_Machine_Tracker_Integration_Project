@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/GymGoer/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/RoutineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/RoutineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/routines/RoutineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/routines/RoutineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/routines/routines.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/routines/routines.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,42 +88,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Database Script.arduino.sql and 3 more.executor": "Run",
-    "Database Script.arduino.sql.executor": "Run",
-    "Database Script.exercise_list.sql and 2 more.executor": "Run",
-    "Database Script.machine.sql.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.Build JavaSpring.executor": "Run",
-    "Gradle.Build gym-accessory-project.executor": "Run",
-    "Gradle.JavaSpring [:be.kdg.integration3.easyrep.service.CsvImporter.main()].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.StartApplication.executor": "Run",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "git-widget-placeholder": "pastWorkouts",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/scripts/session.sql",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.data.views",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Database Script.arduino.sql and 3 more.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.arduino.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.exercise_list.sql and 2 more.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.machine.sql.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.Build JavaSpring.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build gym-accessory-project.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JavaSpring [:be.kdg.integration3.easyrep.service.CsvImporter.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StartApplication.executor&quot;: &quot;Run&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;pastWorkouts&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/scripts/session.sql&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.data.views&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "RunConfigurationTargetLRU": [
-      "56e55c86-abe5-4443-9639-ea48e943c5b1/database/\"postgres\"/schema/\"public\"",
-      "56e55c86-abe5-4443-9639-ea48e943c5b1/database/\"postgres\""
+  &quot;keyToStringList&quot;: {
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;56e55c86-abe5-4443-9639-ea48e943c5b1/database/\&quot;postgres\&quot;/schema/\&quot;public\&quot;&quot;,
+      &quot;56e55c86-abe5-4443-9639-ea48e943c5b1/database/\&quot;postgres\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\scripts" />
@@ -230,7 +229,8 @@
       <workItem from="1733959037994" duration="199000" />
       <workItem from="1734004299860" duration="5363000" />
       <workItem from="1734032856105" duration="838000" />
-      <workItem from="1734040242173" duration="9373000" />
+      <workItem from="1734040242173" duration="9615000" />
+      <workItem from="1734050150424" duration="1200000" />
     </task>
     <servers />
   </component>

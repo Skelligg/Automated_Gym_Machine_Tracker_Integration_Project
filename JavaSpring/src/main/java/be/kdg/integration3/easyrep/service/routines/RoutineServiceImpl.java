@@ -4,6 +4,7 @@ import be.kdg.integration3.easyrep.model.Gender;
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.Routine;
 import be.kdg.integration3.easyrep.repository.routines.RoutineRepository;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,15 @@ public class RoutineServiceImpl implements RoutineService {
     public void removeRoutine(int id) {
         logger.info("Removing Routine");
         Routine routine = routineRepository.findById(id);
+        logger.info("routine being removed {}", routine.toString());
         routineRepository.delete(routine);
+    }
+
+
+    @Override
+    @Transactional
+    public void removeRoutineById(int id){
+        routineRepository.removeRoutineById(id);
     }
 
     @Override

@@ -48,7 +48,7 @@
                     <button class="btn btn-md btn-outline-secondary me-2 py-2" title="Edit" style="height: 100%; padding: 0 1rem;">
                         <i class="fas fa-pen" style="font-size: 1.3rem;"></i>
                     </button>
-                    <form th:action="@{/myroutines/delete}" method="post" class="d-inline">
+                    <form th:action="@{/myroutines/{username}/delete(username=${user.username})}" method="post" class="d-inline">
                         <input type="hidden" name="routineId" th:value="${routine.getId()}">
                         <button type="submit" class="btn btn-md btn-outline-danger py-2" title="Delete">
                             <i class="fas fa-trash" style="font-size: 1.3rem;"></i>

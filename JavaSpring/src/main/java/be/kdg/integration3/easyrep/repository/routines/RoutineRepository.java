@@ -9,6 +9,9 @@ import jakarta.transaction.Transactional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -24,6 +27,11 @@ public interface RoutineRepository extends JpaRepository<Routine, Integer> {
     Routine findByRoutineName(String name);
 
     List<Routine> findAllByGymGoerId(GymGoer gymgoer);
+
+    @Transactional
+    @Modifying
+    @Query("DELETE FROM Routine r WHERE r.routine_id = :id")
+    void removeRoutineById(@Param("id") int id);
 
 
 //    private static final Logger log = LogManager.getLogger(RoutineRepository.class);
