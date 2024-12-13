@@ -49,8 +49,10 @@
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
+    padding-right: 20px;
 }
-.weight {
+.weight, .repeat{
     font-size: 18px;
     font-weight: bold;
 }
+

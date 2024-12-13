@@ -123,6 +123,13 @@ FROM exercise_set es
          JOIN exercise e ON es.exercise_id = e.exercise_id
          JOIN machine m ON e.machine_id = m.machine_id
          JOIN session s ON e.session_id = s.session_id
-WHERE s.user_id = 4
-  AND m.machine_id = 83
+WHERE s.user_id = 2
+  AND m.machine_id = 12
 ORDER BY es.start_time;
+
+
+select es.set_id, es.repetition_count, es.start_time, es.end_time, es.weight_count
+from exercise_set es
+join exercise e on es.exercise_id=e.exercise_id
+join machine m on e.machine_id = m.machine_id
+where m.machine_id = 12

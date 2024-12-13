@@ -82,6 +82,7 @@ public class StatisticsController {
             statisticsDataChart.put("date", formattedDate);
             //calculating the total repetition
             statisticsDataChart.put("repCount", exerciseSet.getRepetitionCount());
+            statisticsDataChart.put("volumeDataStats", exerciseSet.getWeightCount() * exerciseSet.getRepetitionCount());
 
             //adding it to the list
             statistics.add(statisticsDataChart);
