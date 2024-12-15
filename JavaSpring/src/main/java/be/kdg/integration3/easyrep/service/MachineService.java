@@ -8,6 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -52,17 +55,39 @@ public class MachineService{
         machineRepository.save(machine);
     }
 
-    public HashMap<String, Integer> findUsageOfMachineByIdPerDay(int machineId){
-        HashMap<String, Integer> machineUsage = new HashMap<>();
+    public HashMap<Integer, Integer> findUsageOfMachineByIdPerDay(int machineId){
+        HashMap<Integer, Integer> machineUsage = new HashMap<>();
         List<Object[]> result =machineRepository.findAllSetsByMachineId(machineId);
 
         for(Object[] row : result){
-            String date = (String) row[0];
+            long date = Long.parseLong((String) row[0]);
             Long usage = (Long) row[1];
-            machineUsage.put(date, usage.intValue());
+            machineUsage.put((int) date, usage.intValue());
+        }
+        // this will have to be 12 because otherwise will be showing just one month for january
+        LocalDate dateNow = LocalDate.now();
+        int monthNow = dateNow.getMonthValue();
+        monthNow = 12;
+        for (int i = 1; i <= monthNow; i++) {
+            if (!machineUsage.containsKey(i)) {
+                machineUsage.put(i, 0);
+            }
         }
 
         return machineUsage;
+    }
+
+    public HashMap<String, Integer> findUsageOfTopMachines(int gymId){
+        HashMap<String, Integer> topMachineUsage = new HashMap<>();
+        List<Object[]> result = machineRepository.findMostUseMachineId(gymId);
+
+        for(Object[] row : result){
+            String machineName = (String) row[0];
+            Long usage = (Long) row[1];
+            topMachineUsage.put(machineName, usage.intValue());
+        }
+
+        return topMachineUsage;
     }
 
     public List<Machine> findOurMachines() {

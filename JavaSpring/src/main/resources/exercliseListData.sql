@@ -12,10 +12,29 @@ INSERT INTO public.exercise_list (id, name) VALUES (11, 'Lat Pulldown');
 
 
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-05', 0, 'easyrep@student.kdg.be', 'easyrep', 'easyrep123');
-INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-05', 2, 'philipe.domingues@hotmail.com', 'PhChevico', '12345678');
+INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-04-01', 2, 'philipe.domingues@hotmail.com', 'PhChevico', '12345678');
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-05', 1, 'michael.lukyanov@gmail.com', 'michaeliftyanov', '12345678');
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-06', 3, 'benlancry@gmail.com', 'benlancry', 'jjjjjjjj');
 INSERT INTO public.user_credential (date_created, user_id, email, username, password) VALUES ('2024-12-06', 4, 'martin@email.com', 'martinivanov', 'P@ssw0rd');
+
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-05-02', 'user1@gmail.com', 'user1', 'user1');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-05-12', 'user2@gmail.com', 'user2', 'user2');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-06-01', 'user3@gmail.com', 'user3', 'user3');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-07-02', 'user4@gmail.com', 'user4', 'user4');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-07-03', 'user5@gmail.com', 'user5', 'user5');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-08-02', 'user6@gmail.com', 'user6', 'user6');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-09-02', 'user7@gmail.com', 'user7', 'user7');
+INSERT INTO public.user_credential (date_created, email, username, password) VALUES ('2024-10-02', 'user8@gmail.com', 'user8', 'user8');
+
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (5, 'MALE', 'user1', 'user1', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (6, 'FEMALE', 'user2', 'user2', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (7, 'MALE', 'user3', 'user3', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (8, 'FEMALE', 'user4', 'user4', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (9, 'FEMALE', 'user5', 'user5', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (10, 'MALE', 'user6', 'user6', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (11, 'FEMALE', 'user7', 'user7', 'Antwerp, Belgium');
+INSERT INTO public.gym_goer(user_id, gender, first_name, last_name, address) VALUES (12, 'MALE', 'user8', 'user8', 'Antwerp, Belgium');
+
 
 INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (2, 3, 'roo teen');
 INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (3, 3, 'too reen');

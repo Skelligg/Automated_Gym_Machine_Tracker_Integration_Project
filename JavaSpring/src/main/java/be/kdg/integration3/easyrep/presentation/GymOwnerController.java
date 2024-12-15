@@ -13,7 +13,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 @Controller
 @RequestMapping("/gymhome")
@@ -38,6 +41,48 @@ public class GymOwnerController {
     public String getGymOwnerView(@PathVariable String username, Model model) {
         UserCredentials user = userService.getUserCredentialsByUsername(username);
         model.addAttribute("user", user);
+
+        // Get the data for Machine Usage
+        List<Gym> gyms = userService.getGymStaffByUserId(user.getUserId()).getGymId();
+        int idGym = gyms.isEmpty() ? 0 : gyms.get(0).getGymId();
+        if (!gyms.isEmpty()) {
+
+            HashMap<String, Integer> topMachineUsage = new HashMap<>();
+            if (machineService.findUsageOfTopMachines(idGym) != null) {
+                topMachineUsage = machineService.findUsageOfTopMachines(idGym);
+                logger.info("Machine usage data: {}", topMachineUsage);
+            }
+            model.addAttribute("machineUsage", topMachineUsage);
+            List<String> machineUsageKeys = new ArrayList<>(topMachineUsage.keySet());
+            List<Integer> machineUsageValues = new ArrayList<>(topMachineUsage.values());
+
+            model.addAttribute("machineTopUsageKeys", machineUsageKeys);
+            model.addAttribute("machineTopUsageValues", machineUsageValues);
+
+            TreeMap<String, Integer> gymUsage = new TreeMap<>();
+            if (gymService.findUsageOfGymPerHour(idGym) != null) {
+                gymUsage = gymService.findUsageOfGymPerHour(idGym);
+                logger.info("Machine usage data: {}", gymUsage);
+            }
+            model.addAttribute("gymUsage", gymUsage);
+            List<String> gymUsageKeys = new ArrayList<>(gymUsage.keySet());
+            List<Integer> gymUsageValues = new ArrayList<>(gymUsage.values());
+
+            model.addAttribute("gymUsageKeys", gymUsageKeys);
+            model.addAttribute("gymUsageValues", gymUsageValues);
+
+            TreeMap<Integer, Integer> gymUsageMonthly = new TreeMap<>();
+            if (gymService.findMonthlyUsageOfGymPerDay(idGym) != null) {
+                gymUsageMonthly = gymService.findMonthlyUsageOfGymPerDay(idGym);
+                logger.info("Machine usage data: {}", gymUsageMonthly);
+            }
+            model.addAttribute("gymUsageMonthly", gymUsageMonthly);
+            List<Integer> gymUsageMonthlyKeys = new ArrayList<>(gymUsageMonthly.keySet());
+            List<Integer> gymUsageMonthlyValues = new ArrayList<>(gymUsageMonthly.values());
+
+            model.addAttribute("gymUsageMonthlyKeys", gymUsageMonthlyKeys);
+            model.addAttribute("gymUsageMonthlyValues", gymUsageMonthlyValues);
+        }
 
         logger.info("get Machine view");
         return "GymOwner/index-owner";

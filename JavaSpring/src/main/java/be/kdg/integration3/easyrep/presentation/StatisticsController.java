@@ -155,13 +155,13 @@ public class StatisticsController {
         logger.info("lastMainteinedDate: {}", lastMaintained);
 
         // Get the data for Machine Usage
-        HashMap<String, Integer> machineUsage = new HashMap<>();
+        HashMap<Integer, Integer> machineUsage = new HashMap<>();
         if (machineService.findUsageOfMachineByIdPerDay(idMachine) != null) {
             machineUsage = machineService.findUsageOfMachineByIdPerDay(idMachine);
             logger.info("Machine usage data: {}", machineUsage);
         }
         model.addAttribute("machineUsage", machineUsage);
-        List<String> machineUsageKeys = new ArrayList<>(machineUsage.keySet());
+        List<Integer> machineUsageKeys = new ArrayList<>(machineUsage.keySet());
         List<Integer> machineUsageValues = new ArrayList<>(machineUsage.values());
 
         model.addAttribute("machineUsageKeys", machineUsageKeys);
