@@ -17,8 +17,11 @@ public interface MachineRepository extends JpaRepository<Machine, Integer> {
     @Query("SELECT m FROM Machine m WHERE (m.machineId <= :LastId)")
     List<Machine> findByIdLessThan(@Param("LastId")int LastId);
 
-    @Query("SELECT To_char(s.endSession,'dd-MM') as date,count(e) as amount FROM Exercise e JOIN Session s ON (e.session.session_id = s.session_id) WHERE (e.machine.machineId = :machineId) GROUP BY s.endSession")
+   @Query("SELECT To_char(s.endSession,'mm') as date, count(e) as amount FROM Exercise e JOIN Session s ON (e.session.session_id = s.session_id) WHERE (e.machine.machineId = :machineId) AND (s.status = 'COMPLETED') GROUP BY date")
     List<Object[]> findAllSetsByMachineId(@Param("machineId") int machineId);
+
+   @Query("SELECT m.name as machineName, count(e.machine) as usage FROM Exercise e JOIN Machine m ON (m.machineId=e.machine.machineId) WHERE (m.gym.gymId = :gymId) GROUP BY m.machineId ORDER BY usage DESC  FETCH FIRST 10 ROWS ONLY")
+    List<Object[]> findMostUseMachineId(@Param("gymId") int gymId);
 
     Machine findByMachineId(int id);
 
