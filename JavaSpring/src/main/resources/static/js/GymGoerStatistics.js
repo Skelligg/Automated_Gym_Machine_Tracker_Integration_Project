@@ -1,18 +1,14 @@
-    let chart;
+let chart;
 
 
-function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
-    //hiding all tables
-    document.querySelectorAll('div[id$="Table"]').forEach(table=>{table.style.display = 'none';});
+function displayChart(chartType, clickedLabel,gymGoerId,machineId){
 
-    //show the selected table
-    document.getElementById(tableId).style.display ='block'
-    //remove active class
-    document.querySelectorAll('.btn').forEach(button => {button.classList.remove('active');});
-
+    //remove the active class from the the other button
+    document.querySelectorAll('.btn').forEach(button => button.classList.remove('active'));
 
     //adding the active class to the clicked one
     clickedLabel.classList.add('active');
+
     fetchChartData(chartType, gymGoerId, machineId);
 
     //fetching the chart and checking what type should it be
@@ -46,7 +42,7 @@ function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
 
             //getting the max value from the chart so it creates a border for better view
             const maxDataValue = Math.max(...chartData)
-            const yMax = maxDataValue + 14;
+            const yMax = maxDataValue + 15;
 
             // chart based on the pressed button
             const ctx = document.getElementById('chartCanvas').getContext('2d');
@@ -57,8 +53,8 @@ function showTable(tableId,chartType, clickedLabel,gymGoerId,machineId){
                     datasets: [{
                         label: getChartLabel(chartType),
                         data: chartData,
-                        borderColor: 'rgb(0, 0, 0)',
-                        backgroundColor: 'rgba(0, 0, 0)',
+                        borderColor: 'rgb(7,1,1)',
+                        backgroundColor: 'rgb(1,1,30)',
                         borderWidth: 2,
                         fill: false,
                         tension: 0.4

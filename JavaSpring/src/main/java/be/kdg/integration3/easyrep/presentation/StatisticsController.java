@@ -17,6 +17,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.List;
 import java.time.format.DateTimeFormatter;
@@ -68,6 +70,9 @@ public class StatisticsController {
         //to use the month and the day of the session
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd");
 
+        //tracks set number for each date
+        Map<String, Integer> dataSetsCount = new HashMap<>();
+
         for (ExerciseSet exerciseSet : exerciseSets) {
 
             //calling the session so it can display the date
@@ -76,13 +81,22 @@ public class StatisticsController {
 
             //formatting the date for the end screen to check from the session and then return the month and day
             String formattedDate = (session != null && session.getStartSession() != null) ? session.getStartSession().format(formatter) : "Null";
+            //increasing the number of sets for this specific date
+            int currentSetNumber = dataSetsCount.getOrDefault(formattedDate, 0) + 1;
+            dataSetsCount.put(formattedDate, currentSetNumber);
+
+            //calculating the volume
+            double volume = exerciseSet.getWeightCount() *exerciseSet.getRepetitionCount();
+            //rounding the data until 2 decimals
+            BigDecimal roundVolume = new BigDecimal(volume).setScale(2, RoundingMode.HALF_UP);
 
             Map<String, Object> statisticsDataChart = new HashMap<>();
+
             statisticsDataChart.put("weightCount", exerciseSet.getWeightCount());
             statisticsDataChart.put("date", formattedDate);
-            //calculating the total repetition
             statisticsDataChart.put("repCount", exerciseSet.getRepetitionCount());
-            statisticsDataChart.put("volumeDataStats", exerciseSet.getWeightCount() * exerciseSet.getRepetitionCount());
+            statisticsDataChart.put("volumeDataStats", roundVolume.doubleValue());
+            statisticsDataChart.put("setNumber", currentSetNumber);
 
             //adding it to the list
             statistics.add(statisticsDataChart);
@@ -98,9 +112,6 @@ public class StatisticsController {
         }
 
         //adding the statistics to the data
-
-
-
         logger.info("Statistics: {}", statistics);
         logger.info("Volume Data: {}", volumeData);
         logger.info("Machine Name: {}", machine.getName());
@@ -119,13 +130,6 @@ public class StatisticsController {
     @GetMapping("/getChartData/{chartType}")
     @ResponseBody
     public List<Map<String, Object>> getChartData(@PathVariable String chartType, @RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId) {
-//        logger.info("Choosing the data from which table should be displayed");
-
-//        logger.info("Fetching chart data for gymGoerId: " + gymGoerId + " and machineId: " + machineId);
-//        logger.info("Chart Type: {}, gymGoerId: {}, machineId: {}", chartType, gymGoerId, machineId);
-//        if (!List.of("reps", "weight", "volume").contains(chartType)) {
-//            throw new IllegalArgumentException("Invalid chartType");
-//        }
 
         return switch (chartType) {
             case "weights" ->  exerciseSetService.getWeightData(gymGoerId,machineId);
