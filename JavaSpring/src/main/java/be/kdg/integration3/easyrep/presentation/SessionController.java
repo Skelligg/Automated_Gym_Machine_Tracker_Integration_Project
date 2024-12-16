@@ -164,8 +164,8 @@ public class SessionController {
         session.setStatus("COMPLETED");
         sessionService.updateSession(session); // Persist the updated session
 
-        UserCredentials userC = userService.getUserCredentialsByUsername(username);
-        GymGoer user = userService.getGymGoerByUserId(userC.getUserId());
+        UserCredentials userCredentials = userService.getUserCredentialsByUsername(username);
+        GymGoer user = userService.getGymGoerByUserId(userCredentials.getUserId());
 
 
         //finding on which number workout the person is

@@ -1,5 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
+import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.UserCredentials;
 import be.kdg.integration3.easyrep.model.sessions.ExerciseSet;
 import be.kdg.integration3.easyrep.model.sessions.Session;
@@ -45,17 +46,19 @@ public class StatisticsController {
     }
 
 
-    @GetMapping("/GymGoer/statistics")
-    public String getPlayerStatistics(@RequestParam("gymGoerId") int gymGoerId, @RequestParam("machineId") int machineId ,Model model) {
+    @GetMapping("/{username}/statistics")
+    public String getPlayerStatistics(@PathVariable String username, @RequestParam("machineId") int machineId ,Model model) {
         logger.info("Opening the statistics for exercise for user");
-
 
         Machine machine = machineService.findMachineById(machineId);
         if (machine == null) {
             logger.error("Machine not found with ID {}", machineId);
         }
 
-        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoerId, machineId);
+        UserCredentials userCredentials = userService.getUserCredentialsByUsername(username);
+        GymGoer gymGoer = userService.getGymGoerByUserId(userCredentials.getUserId());
+
+        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoer.getUserId(), machineId);
         if (exerciseSets.size() == 0) {
             logger.error("No exercise sets found for user");
         }
@@ -121,7 +124,8 @@ public class StatisticsController {
         model.addAttribute("volumeData", volumeData);
         model.addAttribute("machineName", machine.getName());
         model.addAttribute("machineId",machineId);
-        model.addAttribute("userId",gymGoerId);
+        model.addAttribute("userId",gymGoer.getUserId());
+        model.addAttribute("userName",gymGoer.getUserCredentials().getUsername());
         model.addAttribute("sessionId", sessionId);
 
         return "GymGoer/statistics";
