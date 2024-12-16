@@ -15,7 +15,7 @@ public class Session {
     @Column(name="session_id")
     private int session_id;
 
-    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "session", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Exercise> exercises = new ArrayList<>();
 
     @ManyToOne

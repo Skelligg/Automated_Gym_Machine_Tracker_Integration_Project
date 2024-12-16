@@ -29,20 +29,17 @@
         </a>
     </div>
     <h3 class="text-center" th:utext="${machineName}"></h3>
-    <h4 class="text-center">Click to display</h4>
+    <h4 class="text-center">Choose what chart to see</h4>
     <div class="d-flex justify-content-center mt-3">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <!--            <label class="btn btn-light active" onclick="showTable('weightTable', 'weights', this)">-->
-            <label class="btn btn-light active"   th:onclick="|showTable('weightTable', 'weights', this, ${userId}, ${machineId})|">
+            <label class="btn btn-light active"   th:onclick="|displayChart('weights', this, ${userId}, ${machineId})|">
                 <input type="radio" name="options" id="option1" autocomplete="off" checked> By Weight
             </label>
-            <!--            <label class="btn btn-light" th:onclick="|showTable('volumeTable', 'volume', this, ${userId}, ${machineId})|" onclick="showTable('volumeTable', 'volume', this)">-->
-            <label class="btn btn-light" th:onclick="|showTable('volumeTable', 'volume', this, ${userId}, ${machineId})|">
+            <label class="btn btn-light" th:onclick="|displayChart('volume', this, ${userId}, ${machineId})|">
                 <input type="radio" name="options" id="option2" autocomplete="off"> By Volume
             </label>
-            <!--            <label class="btn btn-light" onclick="showTable('repsTable', 'reps', this, [[${userId}]], [[${machineId}]])">-->
             <label class="btn btn-light"
-                   th:onclick="|showTable('repsTable', 'reps', this, ${userId}, ${machineId})|">
+                   th:onclick="|displayChart('reps', this, ${userId}, ${machineId})|">
                 <input type="radio" name="options" id="option3" autocomplete="off"> By Reps
             </label>
         </div>
@@ -53,81 +50,28 @@
 
     <h4 class="text-center">History</h4>
 
-<!--this is the code for the table for data for weight-->
-    <div id="weightTable" style="display: none;">
+    <div>
         <table class="table">
             <thead>
             <tr>
+                <th>Set</th>
                 <th>Weight</th>
-                <th>Date</th>
-
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="stat : ${statistics} ">
-                <td th:text="${stat['weightCount']}"></td>
-                <td th:text="${stat['date']}"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-<!--this is the code for the table for data for volume-->
-    <div id="volumeTable" style="display: none;">
-        <table class="table">
-            <thead>
-            <tr>
+                <th>Reps</th>
                 <th>Volume</th>
                 <th>Date</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="data : ${volumeData}">
-                <td th:text="${data['volumeD']}"></td>
-                <td th:text="${data['date']}"></td>
+            <tr th:each="data1 : ${statistics}">
+                <td th:text="${data1['setNumber']}"></td>
+                <td th:text="${data1['weightCount']}"></td>
+                <td th:text="${data1['repCount']}"></td>
+                <td th:text="${data1['volumeDataStats']}"></td>
+                <td th:text="${data1['date']}"></td>
             </tr>
             </tbody>
         </table>
     </div>
-
-<!--&lt;!&ndash;this is the data for the total repeptitions&ndash;&gt;-->
-    <div id="repsTable" style="display: none;">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Reps</th>
-                <th>Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="data : ${statistics}">
-                <td th:text="${data['repCount']}"></td>
-                <td th:text="${data['date']}"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-<!--    <div>-->
-<!--        <table class="table">-->
-<!--            <thead>-->
-<!--            <tr>-->
-<!--                <th>Weight</th>-->
-<!--                <th>Reps</th>-->
-<!--                <th>Volume</th>-->
-<!--                <th>Date</th>-->
-<!--            </tr>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--            <tr th:each="data1 : ${statistics}">-->
-<!--                <td th:text="${data1['weightCount']}"></td>-->
-<!--                <td th:text="${data1['repCount']}"></td>-->
-<!--                <td th:text="${data1['volumeDataStats']}"></td>-->
-<!--                <td th:text="${data1['date']}"></td>-->
-<!--            </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
-<!--    </div>-->
 </div>
 
 </body>
