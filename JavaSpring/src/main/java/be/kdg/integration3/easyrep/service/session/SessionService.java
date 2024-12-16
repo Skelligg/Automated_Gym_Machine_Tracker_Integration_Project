@@ -18,6 +18,8 @@ public interface SessionService {
     int getSessionCountByUserId(int userId);
     String getTimeForSessionById(int sessionId);
 
+    List<Session> getLastSessionsByGymGoerId(int numberOfSessions, int id);
+
     Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime);
     List<Session> getAllSessionsFromUser(String username);
 }

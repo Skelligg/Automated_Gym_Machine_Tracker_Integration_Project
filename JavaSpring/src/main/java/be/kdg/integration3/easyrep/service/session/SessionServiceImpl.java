@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class SessionServiceImpl implements SessionService {
@@ -73,6 +74,19 @@ public class SessionServiceImpl implements SessionService {
         }
 
         return null ;
+    }
+
+    @Override
+    public List<Session> getLastSessionsByGymGoerId(int numberOfSessions, int id) {
+        List<Session> fullList = sessionRepository.findAllByGymGoerId(id);
+
+//        // order list correctly (not working because startSession is null)
+//        fullList.sort((s1, s2) -> s2.getStartSession().compareTo(s1.getStartSession()));
+//
+        // Limit the list to the specified number of sessions
+        return fullList.stream()
+                .limit(numberOfSessions)
+                .collect(Collectors.toList());
     }
 
     public Session getActiveSessionByMachineId(int machineId){

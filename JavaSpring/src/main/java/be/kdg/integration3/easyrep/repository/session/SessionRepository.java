@@ -3,6 +3,7 @@ package be.kdg.integration3.easyrep.repository.session;
 import be.kdg.integration3.easyrep.model.GymGoer;
 import be.kdg.integration3.easyrep.model.sessions.Session;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -29,4 +30,7 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
 
     @Query("SELECT s FROM Session s WHERE s.gymGoerId.userId = :userId")
     List<Session> findAllSessionsFromUser(int userId);
+
+    @Query("SELECT s FROM Session s WHERE s.gymGoerId.userId = :gymGoerId")
+    List<Session> findAllByGymGoerId(@Param("gymGoerId") int gymGoerId);
 }
