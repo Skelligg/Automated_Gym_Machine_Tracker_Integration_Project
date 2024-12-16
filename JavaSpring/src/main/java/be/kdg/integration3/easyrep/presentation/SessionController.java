@@ -18,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -79,6 +80,7 @@ public class SessionController {
 
         session.setExercises(exercises);
         session.setStatus("active");
+        session.setStartSession(LocalDateTime.now());
         sessionService.createSession(session);
 
         int machineId = exercises.get(0).getMachine().getMachineId();
@@ -92,19 +94,22 @@ public class SessionController {
     public String getNextExercise(@PathVariable String username,
                                   @RequestParam("sessionId") int sessionId,
                                   @RequestParam("exerciseIndex") int exerciseIndex,
-                                  @RequestParam("machineId") int machineId,
                                   Model model,
                                   HttpSession httpSession) {
+
+        model.addAttribute(username);
         // Fetch the session by ID
         Session session = sessionService.getSessionById(sessionId);
         // Get the current exercise
         Exercise currentExercise = session.getExercises().get(exerciseIndex);
 
+        int machineId = currentExercise.getMachine().getMachineId();
+
         httpSession.setAttribute("currentExerciseId", currentExercise.getExerciseId());
 
         List<ExerciseSet> sets = exerciseSetService.findExerciseSetsByExercise(currentExercise); // Fetch sets for this exercise
 
-        logger.info("Session found by machineID is {} ",sessionService.getActiveSessionByMachineId(machineId));
+        //logger.info("Session found by machineID is {} ",sessionService.getActiveSessionByMachineId(machineId));
 
         // Add attributes to the model
         model.addAttribute("exercise", currentExercise);
@@ -112,6 +117,7 @@ public class SessionController {
         model.addAttribute("sessionId", sessionId);
         model.addAttribute("sessionSize", session.getExercises().size());
         model.addAttribute("exerciseIndex", exerciseIndex);
+        model.addAttribute("machineId", machineId); // Add machineId to the model
 
         return "GymGoer/currentExercise";
     }
@@ -149,16 +155,21 @@ public class SessionController {
         exerciseSetService.createExerciseSet(set);
     }
 
-    @GetMapping("/end")
-    public String getSessionEnd(@RequestParam("sessionId") int sessionId ,@RequestParam("userId") int userId,Model model){
-        logger.info("loading the end page for session ID [{}] and user Id [{}]", sessionId, userId);
+    @GetMapping("/{username}/end")
+    public String getSessionEnd(@PathVariable String username,@RequestParam("sessionId") int sessionId,Model model){
+        logger.info("loading the end page for session ID [{}] and user [{}]", sessionId, username);
 
         Session session = sessionService.getSessionById(sessionId);
-        GymGoer user = userService.getGymGoerByUserId(userId);
+        session.setEndSession(LocalDateTime.now());
+        session.setStatus("COMPLETED");
+        sessionService.updateSession(session); // Persist the updated session
+
+        UserCredentials userC = userService.getUserCredentialsByUsername(username);
+        GymGoer user = userService.getGymGoerByUserId(userC.getUserId());
 
 
         //finding on which number workout the person is
-        int count = sessionService.getSessionCountByUserId(userId);
+        int count = sessionService.getSessionCountByUserId(user.getUserId());
         logger.info("The GymGoer is on workout number [{}]", count);
 
         //adding the suffix to the number

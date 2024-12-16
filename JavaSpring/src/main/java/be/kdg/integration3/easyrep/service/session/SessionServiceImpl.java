@@ -115,6 +115,9 @@ public class SessionServiceImpl implements SessionService {
         return sessionRepository.findAllSessionsFromUser(user.getUserId());
     }
 
+    public void updateSession(Session session){
+        sessionRepository.save(session);
+    }
 
 }
 

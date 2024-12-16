@@ -21,5 +21,8 @@ public interface SessionService {
     List<Session> getLastSessionsByGymGoerId(int numberOfSessions, int id);
 
     Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime);
+
+    void updateSession(Session session);
+
     List<Session> getAllSessionsFromUser(String username);
 }
