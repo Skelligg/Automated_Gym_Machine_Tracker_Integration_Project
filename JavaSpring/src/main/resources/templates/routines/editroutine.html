@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Routine</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+
+<div class="mobile-container">
+  <div class="container">
+    <h1 class="text-center mt-4">Edit Routine: <span th:text="${routine.routineName}"></span></h1>
+    <form method="post" th:action="@{/myroutines/{username}/edit(username=${user.username})}">
+      <input type="hidden" name="routineId" th:value="${routineId}" />
+
+      <div class="mb-3">
+        <h5>Available Exercises</h5>
+        <div class="row">
+          <div class="d-flex" style="max-height: 32vh; overflow-y: auto; padding: 20px;">
+            <!-- Left column -->
+            <div class="col-6 pe-2">
+              <ul id="availableExercisesLeft" class="list-group">
+                <li th:each="exercise : ${leftColumnExercises}"
+                    th:data-exercise-name="${exercise.getName()}"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                  <span th:text="${exercise.getName()}">Exercise Name</span>
+                  <i class="fas fa-plus text-primary"></i>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right column -->
+            <div class="col-6 ps-2">
+              <ul id="availableExercisesRight" class="list-group">
+                <li th:each="exercise : ${rightColumnExercises}"
+                    th:data-exercise-name="${exercise.getName()}"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                  <span th:text="${exercise.getName()}">Exercise Name</span>
+                  <i class="fas fa-plus text-primary"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Exercises -->
+      <h5>Selected Exercises</h5>
+      <div style="max-height: 38vh; overflow-y: auto; padding: 5px;">
+        <ul id="sortableExerciseList" class="list-group">
+          <li th:each="exercise : ${selectedExercises}"
+              th:data-exercise-name="${exercise.name}"
+              class="list-group-item d-flex justify-content-between align-items-center">
+            <span th:text="${exercise.name}"></span>
+            <button type="button" class="btn btn-danger btn-sm remove-exercise-btn">Remove</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hidden input to store exercise order -->
+      <input type="hidden" id="orderedExercises" name="exerciseNames" />
+
+      <button id="saveChangesButton" type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 text-white"
+              style="position: fixed; bottom: 75px; left: 50%; transform: translateX(-50%); z-index: 1050;" disabled>
+        Save Changes
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Navbar Fragment -->
+<div th:insert="~{fragments/navbar :: bottomNavbar(user=${user})}"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sortableExerciseList = document.getElementById('sortableExerciseList');
+    const orderedExercisesInput = document.getElementById('orderedExercises');
+    const saveChangesButton = document.getElementById('saveChangesButton');
+
+    const availableExerciseLists = [document.getElementById('availableExercisesLeft'), document.getElementById('availableExercisesRight')];
+
+    const sortable = new Sortable(sortableExerciseList, {
+      animation: 150,
+      onEnd: updateExerciseOrder
+    });
+
+    // Function to check if the list has any items
+    function updateSaveButtonState() {
+      if (sortableExerciseList.children.length > 0) {
+        saveChangesButton.disabled = false; // Enable button
+      } else {
+        saveChangesButton.disabled = true; // Disable button
+      }
+    }
+
+    // Add a MutationObserver to watch for changes in the list
+    const observer = new MutationObserver(updateSaveButtonState);
+
+    // Start observing the list for changes
+    observer.observe(sortableExerciseList, { childList: true });
+
+    // Initial check
+    updateSaveButtonState();
+
+    // Add click event to both lists
+    availableExerciseLists.forEach(list => {
+      list.addEventListener('click', (event) => {
+        const target = event.target.closest('li'); // Ensure we get the LI element
+        if (target) {
+          const exerciseName = target.dataset.exerciseName;
+
+          // Create a new list item for the selected exercise
+          const li = document.createElement('li');
+          li.className = 'list-group-item d-flex justify-content-between align-items-center';
+          li.dataset.exerciseName = exerciseName;
+          li.innerHTML = `
+          ${exerciseName}
+          <button type="button" class="btn btn-danger btn-sm remove-exercise-btn">Remove</button>
+        `;
+
+          // Add remove functionality
+          li.querySelector('.remove-exercise-btn').addEventListener('click', () => {
+            li.remove();
+            updateExerciseOrder();
+          });
+
+          // Append to the sortable list
+          sortableExerciseList.appendChild(li);
+          updateExerciseOrder();
+        }
+      });
+    });
+
+    function updateExerciseOrder() {
+      const exerciseNames = Array.from(sortableExerciseList.children).map(li => li.dataset.exerciseName);
+      orderedExercisesInput.value = exerciseNames.join(",");
+    }
+    // Add remove functionality
+    document.querySelectorAll('.remove-exercise-btn').forEach(btn => {
+      btn.addEventListener('click', event => {
+        event.target.closest('li').remove();
+        updateExerciseOrder();
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

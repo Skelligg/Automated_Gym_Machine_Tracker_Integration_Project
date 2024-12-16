@@ -92,6 +92,67 @@ public class RoutineController {
         return "redirect:/myroutines/" + username;
     }
 
+    @GetMapping("/edit")
+    public String editRoutine(@PathVariable String username,
+                              @RequestParam("routineId") int routineId,
+                              Model model) {
+        logger.debug("HELLO");
+        logger.debug("Editing routine with ID: {} for user: {}", routineId, username);
+
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
+        Routine routine = routineService.getRoutine(routineId);
+
+        // Fetch all exercises
+        List<ExerciseList> allExercises = exerciseListService.getAllExercises();
+        List<RoutineExercise> selectedExercises = routine.getExercises();
+
+        // Split all exercises into left and right columns
+        int midIndex = allExercises.size() / 2;
+        List<ExerciseList> leftColumnExercises = allExercises.subList(0, midIndex);
+        List<ExerciseList> rightColumnExercises = allExercises.subList(midIndex, allExercises.size());
+
+        model.addAttribute("user", user);
+        model.addAttribute("routine", routine);
+        model.addAttribute("routineId", routineId);
+        model.addAttribute("leftColumnExercises", leftColumnExercises);
+        model.addAttribute("rightColumnExercises", rightColumnExercises);
+        model.addAttribute("selectedExercises", selectedExercises);
+
+        return "/routines/editroutine";
+    }
+
+    @PostMapping("/edit")
+    public String updateRoutine(@PathVariable String username,
+                                @RequestParam("routineId") int routineId,
+                                @RequestParam("exerciseNames") String exerciseNames) {
+        logger.info("Updating routine ID: {} with exercises: {}", routineId, exerciseNames);
+
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
+        logger.info("The user is {}", user);
+        GymGoer gymGoer = userService.getGymGoerByUserId(user.getUserId());
+
+        Routine newRoutine = new Routine();
+        Routine oldRoutine = routineService.getRoutine(routineId);
+
+        newRoutine.setRoutineName(oldRoutine.getRoutineName());
+        newRoutine.setGymGoerId(gymGoer);
+        oldRoutine.getExercises().clear();
+
+        List<String> exerciseList = List.of(exerciseNames.split(","));
+        for (String exerciseName : exerciseList) {
+            RoutineExercise exercise = new RoutineExercise();
+            exercise.setName(exerciseName);
+            exercise.setRoutine(newRoutine);
+            newRoutine.addExercise(exercise);
+        }
+
+        logger.info("old: {} new: {}", oldRoutine, newRoutine);
+
+        routineService.removeRoutineById(routineId);
+        routineService.createRoutine(newRoutine);
+        return "redirect:/myroutines/" + username;
+    }
+
     @PostMapping("/delete")
     public String deleteRoutine(@PathVariable String username,
                                 @RequestParam("routineId") int routineId) {

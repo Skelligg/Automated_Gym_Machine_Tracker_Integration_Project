@@ -34,7 +34,7 @@
 
 <!--                <a th:href="@{/activesession/{username}/startSession(username=${user.username}, userRoutine=${routine.getId()})}"-->
                 <a th:href="@{/scanner/{username}/{userRoutine}(username=${user.username}, userRoutine=${routine.getId()})}"
-                   class="routine-item bg-gradient rounded p-3 text-decoration-none text-reset d-flex align-items-center flex-grow-1">
+                   class="routine-item bg-light bg-gradient rounded p-3 text-decoration-none text-reset d-flex align-items-center flex-grow-1">
                     <div class="info w-100 d-flex justify-content-between">
                         <div class="name fw-bold fs-5" th:text="${routine.routineName}">Chest Day</div>
                         <div class="view-arrow ms-3">
@@ -46,7 +46,9 @@
                 <!-- Action Buttons -->
                 <div class="actions d-flex ms-2 align-items-center">
                     <button class="btn btn-md btn-outline-secondary me-2 py-2" title="Edit" style="height: 100%; padding: 0 1rem;">
-                        <i class="fas fa-pen" style="font-size: 1.3rem;"></i>
+                        <a th:href="@{/myroutines/{username}/edit(routineId=${routine.id}, username=${user.username})}" class="text-reset">
+                            <i class="fas fa-pen" style="font-size: 1.3rem;"></i>
+                        </a>
                     </button>
                     <form th:action="@{/myroutines/{username}/delete(username=${user.username})}" method="post" class="d-inline">
                         <input type="hidden" name="routineId" th:value="${routine.getId()}">
