@@ -1,0 +1,12 @@
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (1, 2, 'my routine');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (2, 2, 'iso');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (4, 5, 'Anna');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (15, 4, 'ok');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (20, 4, 'tha');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (21, 4, 'pppp');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (26, 6, 'Arms');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (27, 65, 'test');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (28, 65, 'Chest Day');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (29, 65, 'another test');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (30, 65, 'final test');
+INSERT INTO public.routine (routine_id, user_id, routine_name) VALUES (39, 2, 'edit test');
