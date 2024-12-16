@@ -54,10 +54,23 @@
   <h6 class="mb-3">Completed Workouts</h6>
   <ul class="list-group">
     <li th:each="recentSession : ${lastSessions}" class="list-group-item d-flex justify-content-between align-items-center py-3">
+      <!-- Link for the session -->
       <a th:href="@{/home/aPreviousSession(sessionId=${recentSession.session_id}, userId=${user.userId})}"
          class="text-decoration-none text-dark d-flex justify-content-between align-items-center w-100">
-        <span class="fw-bold" th:text="'Session ID: ' + ${recentSession.session_id ?: '1'}">Session ID</span>
-        <span class="text-muted" th:text="${@dateTimeFormatterUtil.format(recentSession.startSession, 'yyyy-MM-dd') ?: 'Some Date'}">Session Date</span>
+        <!-- exercise text -->
+        <div>
+          <span th:each="exercise, iterStat : ${recentSession.exercises}"
+                th:if="${iterStat.index < 2}"
+                th:text="${exercise.exerciseName} + ', '"></span>
+          <!-- in case there are more than 2 exercises ... -->
+          <span th:if="${#lists.size(recentSession.exercises) > 2}">...</span>
+        </div>
+        <!-- date -->
+        <span class="text-muted mt-1"
+              th:if="${recentSession.startSession != null}"
+              th:text="${@dateTimeFormatterUtil.format(recentSession.startSession, 'yyyy-MM-dd')}">
+        </span>
+        <span class="text-muted mt-1" th:if="${recentSession.startSession == null}">Unknown Date</span>
       </a>
     </li>
   </ul>
