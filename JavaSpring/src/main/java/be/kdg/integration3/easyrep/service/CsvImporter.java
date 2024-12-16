@@ -29,7 +29,7 @@ import java.time.format.DateTimeParseException;
 import java.util.*;
 
 @Service
-public class CsvImporter implements CommandLineRunner {
+public class CsvImporter /*implements CommandLineRunner*/ {
 
     private static final Logger log = LoggerFactory.getLogger(CsvImporter.class);
     private final SessionService sessionService;
@@ -351,14 +351,15 @@ public void insertingExercisesAndSessions(String path) {
             log.error("Unexpected error occurred while processing sets", e);
         }
     }
-
-
-
-
-    @Override
-    public void run(String... args) {
-//        insertingMachinesAndArduino();
-//        insertingExercisesAndSessions(path);
-//        insertingExerciseSet(path);
-    }
 }
+
+
+
+
+//    @Override
+//    public void run(String... args) {
+////        insertingMachinesAndArduino();
+////        insertingExercisesAndSessions(path);
+////        insertingExerciseSet(path);
+//    }
+//}
