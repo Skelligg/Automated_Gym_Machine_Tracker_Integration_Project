@@ -34,4 +34,6 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
     Optional<Session> findByStartSessionAndEndSessionAndUserId(@Param("startSession") LocalDateTime startSession,
                                                                @Param("endSession") LocalDateTime endSession,
                                                                @Param("userId") int userId);
+
+//    List<Session> findAllByGymGoerId(int id);
 }

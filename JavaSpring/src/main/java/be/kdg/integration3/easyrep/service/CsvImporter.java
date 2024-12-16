@@ -359,6 +359,6 @@ public void insertingExercisesAndSessions(String path) {
     public void run(String... args) {
 //        insertingMachinesAndArduino();
 //        insertingExercisesAndSessions(path);
-        insertingExerciseSet(path);
+//        insertingExerciseSet(path);
     }
 }

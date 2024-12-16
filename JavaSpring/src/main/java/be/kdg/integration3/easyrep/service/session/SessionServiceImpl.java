@@ -78,7 +78,7 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     public List<Session> getLastSessionsByGymGoerId(int numberOfSessions, int id) {
-        List<Session> fullList = sessionRepository.findAllByGymGoerId(id);
+        List<Session> fullList = sessionRepository.findAllSessionsFromUser(id);
 
 //        // order list correctly (not working because startSession is null)
 //        fullList.sort((s1, s2) -> s2.getStartSession().compareTo(s1.getStartSession()));
