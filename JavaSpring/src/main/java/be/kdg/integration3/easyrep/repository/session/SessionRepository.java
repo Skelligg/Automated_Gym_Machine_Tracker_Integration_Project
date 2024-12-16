@@ -35,6 +35,7 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
                                                                @Param("endSession") LocalDateTime endSession,
                                                                @Param("userId") int userId);
 
-    @Query("SELECT s FROM Session s WHERE s.gymGoerId = :gymGoerID")
+    @Query("SELECT s FROM Session s WHERE s.gymGoerId.userId = :gymGoerId")
     List<Session> findAllByGymGoerId(@Param("gymGoerId") int gymGoerId);
+
 }
