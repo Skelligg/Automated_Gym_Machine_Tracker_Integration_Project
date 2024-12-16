@@ -17,6 +17,7 @@ public class ExerciseSet {
 
     private LocalTime startTime;
     private LocalTime endTime;
+    @Column(name = "set_number")
     private int setNumber;
 
     @Column(length = 50)
@@ -103,6 +104,7 @@ public class ExerciseSet {
     public void setWeightCount(double weightCount) {
         this.weightCount = weightCount;
     }
+
 
     @Override
     public String toString() {

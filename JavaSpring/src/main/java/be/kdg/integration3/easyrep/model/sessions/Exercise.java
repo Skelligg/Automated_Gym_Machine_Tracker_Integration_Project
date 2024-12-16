@@ -15,7 +15,7 @@ public class Exercise {
     @Column(name = "exercise_id")
     private int exerciseId;
 
-    @OneToMany(mappedBy = "exercise", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "exercise", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ExerciseSet> exerciseSets = new ArrayList<>();  // List of exercise sets associated with this exercise
 
     @Column(nullable = false, length = 50)
