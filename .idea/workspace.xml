@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/hevyData/michaelHevy.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/56e55c86-abe5-4443-9639-ea48e943c5b1/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/RoutineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/presentation/RoutineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/routines/RoutineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/routines/RoutineRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/routines/RoutineServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/routines/routines.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/resources/templates/routines/routines.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/repository/session/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/session/SessionServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,9 +106,9 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.StartApplication.executor&quot;: &quot;Run&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pastWorkouts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/scripts/session.sql&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/phili/OneDrive/Documentos/Philipe/Philipe/Kdg Computer Science/Integration 3/EasyRep/JavaSpring/src/main/resources/hevyData&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -126,8 +126,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\scripts" />
       <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\hevyData" />
+      <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\scripts" />
       <recent name="C:\Users\phili\OneDrive\Documentos\Philipe\Philipe\Kdg Computer Science\Integration 3\EasyRep\JavaSpring\src\main\resources\static\hevyData" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -231,6 +231,7 @@
       <workItem from="1734032856105" duration="838000" />
       <workItem from="1734040242173" duration="9615000" />
       <workItem from="1734050150424" duration="1200000" />
+      <workItem from="1734340520035" duration="8291000" />
     </task>
     <servers />
   </component>
