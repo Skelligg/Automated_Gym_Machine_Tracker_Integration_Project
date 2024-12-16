@@ -20,4 +20,6 @@ public interface SessionService {
 
     Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime);
     List<Session> getAllSessionsFromUser(String username);
+
+    Session findSessionByStartAndEndTimeAndUser(LocalDateTime startTime, LocalDateTime endTime, int userId);
 }

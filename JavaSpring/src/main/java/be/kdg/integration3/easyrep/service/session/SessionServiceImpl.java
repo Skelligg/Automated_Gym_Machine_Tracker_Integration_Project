@@ -95,6 +95,11 @@ public class SessionServiceImpl implements SessionService {
                 .orElse(null);
     }
 
+    public Session findSessionByStartAndEndTimeAndUser(LocalDateTime startTime, LocalDateTime endTime, int userId) {
+        return sessionRepository.findByStartSessionAndEndSessionAndUserId(startTime, endTime, userId)
+                .orElse(null);
+    }
+
 
     public List<Session> getAllSessionsFromUser(String username){
         UserCredentials user = userCredentialsRepository.findByUsernameOrEmail(username);
