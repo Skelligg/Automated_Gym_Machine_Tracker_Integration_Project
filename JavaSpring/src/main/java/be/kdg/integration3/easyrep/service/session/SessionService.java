@@ -19,5 +19,8 @@ public interface SessionService {
     String getTimeForSessionById(int sessionId);
 
     Session findSessionByStartAndEndTime(LocalDateTime startTime, LocalDateTime endTime);
+
+    void updateSession(Session session);
+
     List<Session> getAllSessionsFromUser(String username);
 }

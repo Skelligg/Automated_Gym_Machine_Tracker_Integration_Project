@@ -51,14 +51,14 @@
     <div class="text-center mt-4">
       <!-- Link for next exercise -->
       <a th:if="${exerciseIndex < sessionSize - 1}"
-         th:href="@{/activesession/{username}/nextExercise(sessionId=${sessionId}, exerciseIndex=${exerciseIndex + 1})}"
+         th:href="@{/activesession/{username}/nextExercise(sessionId=${sessionId}, exerciseIndex=${exerciseIndex + 1}, username=${username}, machineId=${machineId})}"
          class="btn btn-primary btn-lg rounded-pill px-5">
         Next Exercise
       </a>
 
       <!-- Link for end of session -->
       <a th:if="${exerciseIndex == sessionSize - 1}"
-         th:href="@{/activesession/{username}/end(sessionId=${sessionId})}"
+         th:href="@{/activesession/{username}/end(sessionId=${sessionId}, username=${username})}"
          class="btn btn-primary btn-lg rounded-pill px-5">
         End Session
       </a>
