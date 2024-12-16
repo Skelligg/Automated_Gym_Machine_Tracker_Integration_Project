@@ -80,33 +80,42 @@
     const sortableExerciseList = document.getElementById('sortableExerciseList');
     const orderedExercisesInput = document.getElementById('orderedExercises');
     const saveChangesButton = document.getElementById('saveChangesButton');
+    const availableExerciseLists = [
+      document.getElementById('availableExercisesLeft'),
+      document.getElementById('availableExercisesRight'),
+    ];
 
-    const availableExerciseLists = [document.getElementById('availableExercisesLeft'), document.getElementById('availableExercisesRight')];
+    // Store the original state of selected exercises
+    const originalExerciseOrder = Array.from(sortableExerciseList.children).map(li => li.dataset.exerciseName);
 
+    // Initialize Sortable
     const sortable = new Sortable(sortableExerciseList, {
       animation: 150,
       onEnd: updateExerciseOrder
     });
 
-    // Function to check if the list has any items
+    // Function to update the save button state
     function updateSaveButtonState() {
-      if (sortableExerciseList.children.length > 0) {
-        saveChangesButton.disabled = false; // Enable button
-      } else {
-        saveChangesButton.disabled = true; // Disable button
-      }
+      const currentExerciseOrder = Array.from(sortableExerciseList.children).map(li => li.dataset.exerciseName);
+      const isSameOrder = arraysEqual(originalExerciseOrder, currentExerciseOrder);
+
+      // Enable or disable the button based on differences
+      saveChangesButton.disabled = isSameOrder || currentExerciseOrder.length === 0;
     }
 
-    // Add a MutationObserver to watch for changes in the list
-    const observer = new MutationObserver(updateSaveButtonState);
+    // Helper function to compare two arrays
+    function arraysEqual(arr1, arr2) {
+      return arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+    }
 
-    // Start observing the list for changes
-    observer.observe(sortableExerciseList, { childList: true });
+    // Update the hidden input and save button state
+    function updateExerciseOrder() {
+      const exerciseNames = Array.from(sortableExerciseList.children).map(li => li.dataset.exerciseName);
+      orderedExercisesInput.value = exerciseNames.join(",");
+      updateSaveButtonState();
+    }
 
-    // Initial check
-    updateSaveButtonState();
-
-    // Add click event to both lists
+    // Add click event to both available exercise lists
     availableExerciseLists.forEach(list => {
       list.addEventListener('click', (event) => {
         const target = event.target.closest('li'); // Ensure we get the LI element
@@ -118,9 +127,9 @@
           li.className = 'list-group-item d-flex justify-content-between align-items-center';
           li.dataset.exerciseName = exerciseName;
           li.innerHTML = `
-          ${exerciseName}
-          <button type="button" class="btn btn-danger btn-sm remove-exercise-btn">Remove</button>
-        `;
+                    ${exerciseName}
+                    <button type="button" class="btn btn-danger btn-sm remove-exercise-btn">Remove</button>
+                `;
 
           // Add remove functionality
           li.querySelector('.remove-exercise-btn').addEventListener('click', () => {
@@ -135,17 +144,16 @@
       });
     });
 
-    function updateExerciseOrder() {
-      const exerciseNames = Array.from(sortableExerciseList.children).map(li => li.dataset.exerciseName);
-      orderedExercisesInput.value = exerciseNames.join(",");
-    }
-    // Add remove functionality
+    // Add remove functionality for existing exercises
     document.querySelectorAll('.remove-exercise-btn').forEach(btn => {
       btn.addEventListener('click', event => {
         event.target.closest('li').remove();
         updateExerciseOrder();
       });
     });
+
+    // Perform an initial check to set the button state
+    updateExerciseOrder();
   });
 </script>
 
