@@ -62,19 +62,17 @@
     <!-- Conditional Form for Next Exercise or End Session -->
     <div class="text-center mt-4">
 
-      <!-- Form for Next Exercise -->
-      <form th:if="${exerciseIndex < sessionSize - 1}"
-            th:action="@{/activesession/{username}/nextExercise(username=${username}, sessionId=${sessionId}, exerciseIndex=${exerciseIndex + 1}, machineId=${machineId})}"
-            method="get">
-        <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
-          Next Exercise
-        </button>
-      </form>
+      <!-- Link for Next Exercise -->
+      <a th:if="${exerciseIndex < sessionSize - 1}"
+         th:href="@{/activesession/{username}/nextExercise(sessionId=${sessionId}, exerciseIndex=${exerciseIndex + 1}, username=${username}, machineId=${machineId})}"
+         class="btn btn-primary btn-lg rounded-pill px-5">
+        Next Exercise
+      </a>
 
       <!-- Form for End Session -->
       <form th:if="${exerciseIndex == sessionSize - 1}"
-            th:action="@{/activesession/{username}/finalise(username=${username})}"
-            method="get">
+            th:action="@{/activesession/{username}/finalise(username=${username},sessionId=${sessionId})}"
+            method="post">
         <button type="submit" class="btn btn-danger btn-lg rounded-pill px-5">
           End Session
         </button>
