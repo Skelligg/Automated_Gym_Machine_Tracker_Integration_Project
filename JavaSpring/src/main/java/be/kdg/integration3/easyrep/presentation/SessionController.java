@@ -122,6 +122,8 @@ public class SessionController {
         return "GymGoer/currentExercise";
     }
 
+
+
     @GetMapping("/setInput")
     @ResponseBody
     public void inputSet(@RequestParam int machineId,
@@ -155,39 +157,40 @@ public class SessionController {
         exerciseSetService.createExerciseSet(set);
     }
 
-    @GetMapping("/{username}/end")
-    public String getSessionEnd(@PathVariable String username,@RequestParam("sessionId") int sessionId,Model model){
-        logger.info("loading the end page for session ID [{}] and user [{}]", sessionId, username);
 
+    @PostMapping("/{username}/finalise")
+    public String finaliseSessionAndRedirect(@PathVariable String username,
+                                             @RequestParam("sessionId") int sessionId) {
+        sessionService.finaliseSession(sessionId);
+        return "redirect:/activesession/" + username + "/end?sessionId=" + sessionId;
+    }
+
+    @GetMapping("/{username}/end")
+    public String getSessionEnd(@PathVariable String username,
+                                @RequestParam("sessionId") int sessionId,
+                                Model model) {
+        logger.info("Loading the end page for session ID [{}] and user [{}]", sessionId, username);
+
+        // Fetch session without updating
         Session session = sessionService.getSessionById(sessionId);
-        session.setEndSession(LocalDateTime.now());
-        session.setStatus("COMPLETED");
-        sessionService.updateSession(session); // Persist the updated session
 
         UserCredentials userCredentials = userService.getUserCredentialsByUsername(username);
         GymGoer user = userService.getGymGoerByUserId(userCredentials.getUserId());
 
-
-        //finding on which number workout the person is
         int count = sessionService.getSessionCountByUserId(user.getUserId());
         logger.info("The GymGoer is on workout number [{}]", count);
 
-        //adding the suffix to the number
-        String endNumberSuffix = getNumberEndAnnotation(count);
-
-        //getting the duration of the session
+        String endNumberSuffix = sessionService.getNumberEndAnnotation(count);
         String duration = sessionService.getTimeForSessionById(sessionId);
 
-        //getting name of the exercise and the weight for each set
         List<Object[]> dataFromExerciseSession = exerciseSetService.getExerciseSetsNameAndWeightBySessionId(sessionId);
-            if (dataFromExerciseSession == null || dataFromExerciseSession.isEmpty()) {
-                logger.warn("No exercise data found in session ID [{}]",sessionId);
-            }
+        if (dataFromExerciseSession == null || dataFromExerciseSession.isEmpty()) {
+            logger.warn("No exercise data found in session ID [{}]", sessionId);
+        }
 
-         //group the first column (exercise name)
-        Map<Object, List<Object[]>> groupedData = dataFromExerciseSession.stream().collect(Collectors.groupingBy(entry->entry[0]));
+        Map<Object, List<Object[]>> groupedData = dataFromExerciseSession.stream()
+                .collect(Collectors.groupingBy(entry -> entry[0]));
 
-        //adding the attributes to the model
         model.addAttribute("endNumberCount", count);
         model.addAttribute("endNumberSuffix", endNumberSuffix);
         model.addAttribute("duration", duration);
@@ -195,18 +198,7 @@ public class SessionController {
         model.addAttribute("userName", user.getUserCredentials().getUsername());
         model.addAttribute("userId", user.getUserId());
 
-
         return "GymGoer/end_screen_session";
-    }
-    //going among the numbers and seeing if they are supposed to end on 'st', 'nd' etc.
-    private String getNumberEndAnnotation(int number) {
-        if (number % 100 >= 11 && number % 100 <= 13) return "th"; // for evey number that end on 'th'
-        return switch (number %10){
-            case 1 -> "st"; //for the first
-            case 2 -> "nd"; // for the second
-            case 3 -> "rd"; // for the third
-            default -> "th";
-        };
     }
 
 

@@ -125,5 +125,24 @@ public class SessionServiceImpl implements SessionService {
         sessionRepository.save(session);
     }
 
+    public void finaliseSession(int sessionId) {
+        Session session = sessionRepository.findById(sessionId);
+        if (!"COMPLETED".equals(session.getStatus())) { // Prevent double finalization
+            session.setEndSession(LocalDateTime.now());
+            session.setStatus("COMPLETED");
+            sessionRepository.save(session);
+        }
+    }
+
+    public String getNumberEndAnnotation(int number) {
+        if (number % 100 >= 11 && number % 100 <= 13) return "th"; // for evey number that end on 'th'
+        return switch (number %10){
+            case 1 -> "st"; //for the first
+            case 2 -> "nd"; // for the second
+            case 3 -> "rd"; // for the third
+            default -> "th";
+        };
+    }
+
 }
 

@@ -27,4 +27,8 @@ public interface SessionService {
     List<Session> getAllSessionsFromUser(String username);
 
     Session findSessionByStartAndEndTimeAndUser(LocalDateTime startTime, LocalDateTime endTime, int userId);
+
+    void finaliseSession(int sessionId);
+
+    String getNumberEndAnnotation(int number);
 }

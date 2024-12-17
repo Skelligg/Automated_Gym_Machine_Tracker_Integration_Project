@@ -16,14 +16,15 @@
 <body th:object="${exercise}">
 
 <div class="d-flex justify-content-end me-3">
-  <a th:href="@{/activesession/{username}/end(sessionId=${sessionId}, username=${username})}">
-    <button type="button" class="btn d-flex flex-column align-items-center">
+  <form th:action="@{/activesession/{username}/finalise(username=${username})}" method="post">
+    <input type="hidden" name="sessionId" th:value="${sessionId}" />
+    <button type="submit" class="btn d-flex flex-column align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0-.708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
       </svg>
       <span class="mt-1">End Workout</span>
     </button>
-  </a>
+  </form>
 </div>
 
 
@@ -58,24 +59,29 @@
       </div>
     </div>
 
-    <!-- Next Exercise Button -->
-    <!-- Next Exercise Button -->
+    <!-- Conditional Form for Next Exercise or End Session -->
     <div class="text-center mt-4">
-      <!-- Link for next exercise -->
-      <a th:if="${exerciseIndex < sessionSize - 1}"
-         th:href="@{/activesession/{username}/nextExercise(sessionId=${sessionId}, exerciseIndex=${exerciseIndex + 1}, username=${username}, machineId=${machineId})}"
-         class="btn btn-primary btn-lg rounded-pill px-5">
-        Next Exercise
-      </a>
 
-      <!-- Link for end of session -->
-      <a th:if="${exerciseIndex == sessionSize - 1}"
-         th:href="@{/activesession/{username}/end(sessionId=${sessionId}, username=${username})}"
-         class="btn btn-primary btn-lg rounded-pill px-5">
-        End Session
-      </a>
+      <!-- Form for Next Exercise -->
+      <form th:if="${exerciseIndex < sessionSize - 1}"
+            th:action="@{/activesession/{username}/nextExercise(username=${username}, sessionId=${sessionId}, exerciseIndex=${exerciseIndex + 1}, machineId=${machineId})}"
+            method="get">
+        <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+          Next Exercise
+        </button>
+      </form>
+
+      <!-- Form for End Session -->
+      <form th:if="${exerciseIndex == sessionSize - 1}"
+            th:action="@{/activesession/{username}/finalise(username=${username})}"
+            method="get">
+        <button type="submit" class="btn btn-danger btn-lg rounded-pill px-5">
+          End Session
+        </button>
+      </form>
 
     </div>
+
 
 </body>
 </html>
