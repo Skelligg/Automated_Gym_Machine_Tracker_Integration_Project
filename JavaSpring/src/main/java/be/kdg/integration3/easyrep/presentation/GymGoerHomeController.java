@@ -44,20 +44,17 @@ public class GymGoerHomeController {
         return "GymGoer/profile"; // The view for the user's homepage
     }
 
-    @GetMapping("/aPreviousSession")
-    public String getSessionEnd(@RequestParam("sessionId") int sessionId , @RequestParam("userId") int userId, Model model){
-        logger.info("loading the fireless end page for session ID [{}] and user Id [{}]", sessionId, userId);
+    @GetMapping("/{username}/sessions")
+    public String getPastSession(@PathVariable String username,@RequestParam("sessionId") int sessionId,Model model){
+        logger.info("loading the end page for session ID [{}] and user [{}]", sessionId, username);
 
+        UserCredentials userCredentials = userService.getUserCredentialsByUsername(username);
+        GymGoer user = userService.getGymGoerByUserId(userCredentials.getUserId());
         Session session = sessionService.getSessionById(sessionId);
-        GymGoer user = userService.getGymGoerByUserId(userId);
-
 
         //finding on which number workout the person is
-        int count = sessionService.getSessionCountByUserId(userId);
-        logger.info("The GymGoer is on workout number [{}]", count);
+        int sessionNumber = sessionService.getSessionSequenceForUser(user.getUserId(),sessionId);
 
-        //adding the suffix to the number
-        String endNumberSuffix = getNumberEndAnnotation(count);
 
         //getting the duration of the session
         String duration = sessionService.getTimeForSessionById(sessionId);
@@ -72,25 +69,18 @@ public class GymGoerHomeController {
         Map<Object, List<Object[]>> groupedData = dataFromExerciseSession.stream().collect(Collectors.groupingBy(entry->entry[0]));
 
         //adding the attributes to the model
-        model.addAttribute("endNumberCount", count);
-        model.addAttribute("endNumberSuffix", endNumberSuffix);
+//        model.addAttribute("endNumberCount", count);
         model.addAttribute("duration", duration);
         model.addAttribute("exerciseData", groupedData);
         model.addAttribute("userName", user.getUserCredentials().getUsername());
         model.addAttribute("userId", user.getUserId());
+        model.addAttribute("sessionId", sessionId);
+        model.addAttribute("sessionNumber", sessionNumber);
 
 
-        return "GymGoer/end_screen_session_fireless";
+
+        return "GymGoer/past_session";
     }
 
-    //going among the numbers and seeing if they are supposed to end on 'st', 'nd' etc.
-    private String getNumberEndAnnotation(int number) {
-        if (number % 100 >= 11 && number % 100 <= 13) return "th"; // for evey number that end on 'th'
-        return switch (number %10){
-            case 1 -> "st"; //for the first
-            case 2 -> "nd"; // for the second
-            case 3 -> "rd"; // for the third
-            default -> "th";
-        };
-    }
+
 }

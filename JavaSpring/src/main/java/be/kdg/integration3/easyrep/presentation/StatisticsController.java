@@ -143,6 +143,82 @@ public class StatisticsController {
         };
     }
 
+    @GetMapping("/pastSession/{username}/statistics")
+    public String getPastSessionExercise(@PathVariable String username, @RequestParam("machineId") int machineId, @RequestParam("sessionId") int sessionId ,Model model) {
+        logger.info("Opening the statistics for exercise for user");
+
+        Machine machine = machineService.findMachineById(machineId);
+        if (machine == null) {
+            logger.error("Machine not found with ID {}", machineId);
+        }
+
+        UserCredentials userCredentials = userService.getUserCredentialsByUsername(username);
+        GymGoer gymGoer = userService.getGymGoerByUserId(userCredentials.getUserId());
+
+        List<ExerciseSet> exerciseSets = exerciseSetService.getProgressForSpecificUser(gymGoer.getUserId(), machineId);
+        if (exerciseSets.size() == 0) {
+            logger.error("No exercise sets found for user");
+        }
+
+
+//        Integer sessionId = null;
+//        Integer sessionNumber = null;
+
+        //the data for the charts
+        List<Map<String, Object>> statistics = new ArrayList<>();
+
+        //to use the month and the day of the session
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd");
+
+        //tracks set number for each date
+        Map<String, Integer> dataSetsCount = new HashMap<>();
+
+        for (ExerciseSet exerciseSet : exerciseSets) {
+
+            //calling the session so it can display the date
+            Session session = exerciseSet.getExercise().getSession();
+//            sessionId = session.getSession_id();
+
+            //formatting the date for the end screen to check from the session and then return the month and day
+            String formattedDate = (session != null && session.getStartSession() != null) ? session.getStartSession().format(formatter) : "Null";
+            //increasing the number of sets for this specific date
+            int currentSetNumber = dataSetsCount.getOrDefault(formattedDate, 0) + 1;
+            dataSetsCount.put(formattedDate, currentSetNumber);
+
+            //calculating the volume
+            double volume = exerciseSet.getWeightCount() *exerciseSet.getRepetitionCount();
+            //rounding the data until 2 decimals
+            BigDecimal roundVolume = new BigDecimal(volume).setScale(2, RoundingMode.HALF_UP);
+
+            Map<String, Object> statisticsDataChart = new HashMap<>();
+
+            statisticsDataChart.put("weightCount", exerciseSet.getWeightCount());
+            statisticsDataChart.put("date", formattedDate);
+            statisticsDataChart.put("repCount", exerciseSet.getRepetitionCount());
+            statisticsDataChart.put("volumeDataStats", roundVolume.doubleValue());
+            statisticsDataChart.put("setNumber", currentSetNumber);
+
+            //adding it to the list
+            statistics.add(statisticsDataChart);
+
+
+        }
+
+        //adding the statistics to the data
+        logger.info("Statistics: {}", statistics);
+        logger.info("Machine Name: {}", machine.getName());
+        //adding the attributes to the model
+        model.addAttribute("exerciseSets", exerciseSets);
+        model.addAttribute("statistics", statistics);
+        model.addAttribute("machineName", machine.getName());
+        model.addAttribute("machineId",machineId);
+        model.addAttribute("userId",gymGoer.getUserId());
+        model.addAttribute("userName",gymGoer.getUserCredentials().getUsername());
+        model.addAttribute("sessionId", sessionId);
+
+        return "GymGoer/specific_past_statistics";
+    }
+
     @GetMapping("/gymhome/{username}/machines/{gymID}/machineReview")
     public String viewReviewMachine(@PathVariable String username, @PathVariable int gymID, @RequestParam("idMachine") Integer idMachine, Model model) {
         UserCredentials user = userService.getUserCredentialsByUsername(username);

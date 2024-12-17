@@ -31,4 +31,6 @@ public interface SessionService {
     void finaliseSession(int sessionId);
 
     String getNumberEndAnnotation(int number);
+
+    int getSessionSequenceForUser(int userId, int sessionId);
 }
