@@ -115,6 +115,11 @@ public class SessionServiceImpl implements SessionService {
                 .orElse(null);
     }
 
+    @Override
+    public int getSessionSequenceForUser(int userId, int sessionId) {
+        return sessionRepository.getSessionSequenceForUser(userId, sessionId);
+    }
+
 
     public List<Session> getAllSessionsFromUser(String username){
         UserCredentials user = userCredentialsRepository.findByUsernameOrEmail(username);

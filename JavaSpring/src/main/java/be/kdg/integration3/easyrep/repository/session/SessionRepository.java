@@ -38,4 +38,9 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
     @Query("SELECT s FROM Session s WHERE s.gymGoerId.userId = :gymGoerId")
     List<Session> findAllByGymGoerId(@Param("gymGoerId") int gymGoerId);
 
+    //find the number of the session that was
+    @Query("SELECT COUNT(s) FROM Session s WHERE s.gymGoerId.userId = :userId AND s.startSession <= (SELECT startSession FROM Session WHERE session_id = :sessionId)")
+    int getSessionSequenceForUser(@Param("userId") int userId, @Param("sessionId") int sessionId);
+
+
 }

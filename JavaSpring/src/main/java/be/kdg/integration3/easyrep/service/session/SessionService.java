@@ -1,6 +1,7 @@
 package be.kdg.integration3.easyrep.service.session;
 
 import be.kdg.integration3.easyrep.model.sessions.Session;
+import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,4 +28,6 @@ public interface SessionService {
     List<Session> getAllSessionsFromUser(String username);
 
     Session findSessionByStartAndEndTimeAndUser(LocalDateTime startTime, LocalDateTime endTime, int userId);
+
+    int getSessionSequenceForUser(int userId, int sessionId);
 }
