@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d0537-22ec-4e01-9553-f853cb2d9a8f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSpring/src/main/java/be/kdg/integration3/easyrep/service/CsvImporter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,6 +226,8 @@
       <workItem from="1734040242173" duration="9615000" />
       <workItem from="1734050150424" duration="1200000" />
       <workItem from="1734340520035" duration="8291000" />
+      <workItem from="1734422340978" duration="536000" />
+      <workItem from="1734520818869" duration="4005000" />
     </task>
     <servers />
   </component>
