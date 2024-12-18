@@ -1,3 +1,11 @@
+.mobile-container {
+    width: 90vw;
+    max-width: 414px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 .exercise-table {
     width: 100%;
     font-family: Arial, sans-serif;
@@ -55,4 +63,6 @@
     font-size: 18px;
     font-weight: bold;
 }
-
+.container {
+    max-width: 100% !important;
+    padding: 0 15px; }

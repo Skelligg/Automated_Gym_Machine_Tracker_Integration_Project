@@ -21,3 +21,11 @@
 .btn-group .btn.active {
     color: black;
 }
+.mobile-container {
+    width: 90vw;
+    max-width: 414px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
