@@ -63,22 +63,17 @@ public class GymServiceImpl implements GymService {
 
         //list of hours that will be show in the graphic
         TreeMap<String, Integer> gymUsageStart = new TreeMap<>();
-        TreeMap<String, Integer> gymUsageEnd = new TreeMap<>();
         int openHour = 7;
         int closedHour = 22;
         for (int hour = openHour; hour < closedHour; hour++) {
             gymUsageStart.put(String.format("%02d:00", hour), 0);
-            gymUsageEnd.put(String.format("%02d:00", hour), 0);
         }
 
         for(Object[] row : result){
             LocalDateTime startTime = (LocalDateTime) row[0];
-            LocalDateTime endTime = (LocalDateTime) row[1];
             int start =  startTime.getHour();
-            int end =  endTime.getHour();
 
             gymUsageStart.put(String.format("%02d:00", start), gymUsageStart.getOrDefault(String.format("%02d:00", start),0) + 1);
-            gymUsageEnd.put(String.format("%02d:00", end), gymUsageEnd.getOrDefault(String.format("%02d:00", end),0) + 1);
         }
 
         return gymUsageStart;
