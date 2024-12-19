@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -52,8 +54,10 @@ public class GymGoerHomeController {
         GymGoer user = userService.getGymGoerByUserId(userCredentials.getUserId());
         Session session = sessionService.getSessionById(sessionId);
 
-        //finding on which number workout the person is
-        int sessionNumber = sessionService.getSessionSequenceForUser(user.getUserId(),sessionId);
+        //get the date of the end session
+        int daySessionEnd = session.getEndSession().getDayOfMonth();
+        int monthSessionEnd = session.getEndSession().getMonthValue();
+        int yearSessionEnd = session.getEndSession().getYear();
 
 
         //getting the duration of the session
@@ -75,10 +79,9 @@ public class GymGoerHomeController {
         model.addAttribute("userName", user.getUserCredentials().getUsername());
         model.addAttribute("userId", user.getUserId());
         model.addAttribute("sessionId", sessionId);
-        model.addAttribute("sessionNumber", sessionNumber);
-
-
-
+        model.addAttribute("daySessionEnd", daySessionEnd);
+        model.addAttribute("monthSessionEnd", monthSessionEnd);
+        model.addAttribute("yearSessionEnd", yearSessionEnd);
         return "GymGoer/past_session";
     }
 
