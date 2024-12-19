@@ -51,7 +51,15 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
 
     @Override
     public LocalTime stringToLocalTime(String time) {
-        return LocalTime.parse(time);
+        try {
+            // Parse the time as an integer (assumes time is in seconds)
+            int seconds = Integer.parseInt(time);
+
+            // Convert seconds to LocalTime
+            return LocalTime.of(0, 0, seconds);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Invalid time format: " + time + ". Expected an integer in seconds.", e);
+        }
     }
 
     @Override
@@ -104,4 +112,16 @@ public class ExerciseSetServiceImpl implements ExerciseSetService {
     public List<Map<String, Object>> getRepetitionData(int gymGoerId,int machineId) {
         return exerciseSetRepository.findRepetitionData(machineId,gymGoerId);
     }
+
+    @Override
+    public double convertWeightToKilograms(double weightInGrams) {
+        // Convert grams to kilograms
+        double weightInKilograms = weightInGrams / 1000.0;
+
+        // Round to the nearest 0.25
+        weightInKilograms = Math.round(weightInKilograms * 4) / 4.0;
+
+        return weightInKilograms;
+    }
+
 }

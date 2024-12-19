@@ -130,7 +130,7 @@ public class SessionController {
                          @RequestParam int setNumber,
                          @RequestParam String setTime,
                          @RequestParam int repCount,
-                         @RequestParam float weightCount) {
+                         @RequestParam double weightCount) {
         logger.debug("Processing set input for machineId: {}", machineId);
 
         Session activeSession = sessionService.getActiveSessionByMachineId(machineId);
@@ -147,11 +147,14 @@ public class SessionController {
             throw new IllegalStateException("No active exercise found for machine ID: " + machineId);
         }
 
+        double newWeight = exerciseSetService.convertWeightToKilograms(weightCount);
+        logger.debug("!!!Converted weight is {}", newWeight);
+
         ExerciseSet set = new ExerciseSet();
         set.setSetNumber(setNumber);
         set.setEndTime(exerciseSetService.stringToLocalTime(setTime));
         set.setRepetitionCount(repCount);
-        set.setWeightCount(weightCount);
+        set.setWeightCount(newWeight);
         set.setExercise(currentExercise);
 
         exerciseSetService.createExerciseSet(set);

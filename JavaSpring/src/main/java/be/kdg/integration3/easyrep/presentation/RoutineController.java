@@ -118,7 +118,7 @@ public class RoutineController {
         model.addAttribute("rightColumnExercises", rightColumnExercises);
         model.addAttribute("selectedExercises", selectedExercises);
 
-        return "/routines/editroutine";
+        return "routines/editroutine";
     }
 
     @PostMapping("/edit")
