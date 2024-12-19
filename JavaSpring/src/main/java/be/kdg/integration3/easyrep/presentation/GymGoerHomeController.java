@@ -82,5 +82,17 @@ public class GymGoerHomeController {
         return "GymGoer/past_session";
     }
 
+    @GetMapping("/{username}/workouts")
+    public String userWorkouts(@PathVariable String username, Model model) {
+        // fetch user and sessions
+        UserCredentials user = userService.getUserCredentialsByUsername(username);
+        List<Session> lastSessions = sessionService.getLastSessionsByGymGoerId(250, user.getUserId());
 
+        logger.debug("Workouts page sessions: " + lastSessions);
+
+        // Add attributes to the model
+        model.addAttribute("user", user);
+        model.addAttribute("lastSessions", lastSessions);
+        return "GymGoer/workouts";
+    }
 }
