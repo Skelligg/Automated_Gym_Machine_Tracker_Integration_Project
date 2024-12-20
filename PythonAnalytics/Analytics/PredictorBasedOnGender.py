@@ -41,6 +41,8 @@ user_summary['user_dedication'] = np.where((user_summary['avg_days_between_sessi
 # analyze by gender
 gender_summary = user_summary.groupby('gender').user_dedication.value_counts(normalize=True).unstack()*100
 
+gender_summary.to_json('gender_summary.json',orient='table')
+
  # plot it
 plt.figure(figsize=(10,8))
 gender_summary.plot(kind='bar',stacked=True,colormap='coolwarm',figsize=(10,8))

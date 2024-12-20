@@ -1,0 +1,1 @@
+{"schema":{"fields":[{"name":"gender","type":"string"},{"name":"Dedicated","type":"number"},{"name":"Likely to Give up","type":"number"}],"primaryKey":["gender"],"pandas_version":"1.4.0"},"data":[{"gender":"FEMALE","Dedicated":87.5,"Likely to Give up":12.5},{"gender":"MALE","Dedicated":90.0,"Likely to Give up":10.0},{"gender":"OTHER","Dedicated":100.0,"Likely to Give up":null}]}

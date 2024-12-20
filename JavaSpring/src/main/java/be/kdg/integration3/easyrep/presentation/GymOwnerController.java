@@ -3,11 +3,14 @@ package be.kdg.integration3.easyrep.presentation;
 import be.kdg.integration3.easyrep.model.*;
 import be.kdg.integration3.easyrep.presentation.viewModels.MachineViewModel;
 import be.kdg.integration3.easyrep.service.ArduinoService;
+import be.kdg.integration3.easyrep.service.GenderAnalyticsService;
 import be.kdg.integration3.easyrep.service.GymService;
 import be.kdg.integration3.easyrep.service.MachineService;
 import be.kdg.integration3.easyrep.service.users.UserService;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -29,12 +32,15 @@ public class GymOwnerController {
     private MachineService machineService;
     private ArduinoService arduinoService;
     private GymService gymService;
+    private GenderAnalyticsService genderAnalyticsService;
 
-    public GymOwnerController(MachineService machineService, ArduinoService arduinoService, GymService gymService, UserService userService) {
+    @Autowired
+    public GymOwnerController(UserService userService, MachineService machineService, ArduinoService arduinoService, GymService gymService, GenderAnalyticsService genderAnalyticsService) {
         this.userService = userService;
         this.machineService = machineService;
         this.arduinoService = arduinoService;
         this.gymService = gymService;
+        this.genderAnalyticsService = genderAnalyticsService;
     }
 
     @GetMapping("/{username}")
@@ -82,7 +88,12 @@ public class GymOwnerController {
 
             model.addAttribute("gymUsageMonthlyKeys", gymUsageMonthlyKeys);
             model.addAttribute("gymUsageMonthlyValues", gymUsageMonthlyValues);
+
         }
+
+        JSONObject genderSummary = genderAnalyticsService.getGenderAnalyticsData();
+        model.addAttribute("genderSummary", genderSummary.toMap());
+        logger.info("Gender Summary Data: {}", genderSummary.toMap());
 
         logger.info("get Machine view");
         return "GymOwner/index-owner";

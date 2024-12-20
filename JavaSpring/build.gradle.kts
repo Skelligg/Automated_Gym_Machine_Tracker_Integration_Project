@@ -26,6 +26,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.webjars:bootstrap:5.3.2")
     runtimeOnly("org.postgresql:postgresql")
+    //JSONObject dependencies
+    implementation ("org.json:json:20210307")
     // TensorFlow dependencies
     implementation("org.tensorflow:tensorflow-core-platform:0.5.0")
 
