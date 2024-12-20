@@ -64,4 +64,9 @@ public class ExerciseServiceImpl implements ExerciseService {
                 .orElse(null);
     }
 
+    @Override
+    public Integer findNextExerciseId() {
+        return exerciseRepository.findNextExerciseId();
+    }
+
 }
