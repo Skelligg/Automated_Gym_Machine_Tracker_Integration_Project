@@ -87,6 +87,7 @@ public class SessionController {
         session.setExercises(exercises);
         session.setStatus("active");
         session.setStartSession(LocalDateTime.now());
+        session.setEndSession(LocalDateTime.now());
         sessionService.createSession(session);
 
         int machineId = exercises.get(0).getMachine().getMachineId();
