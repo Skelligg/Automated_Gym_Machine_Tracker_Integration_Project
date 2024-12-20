@@ -30,6 +30,8 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
     @Query("select e from Exercise e where e.session.gymGoerId.userId = :gymGoerId and e.machine.machineId = :machineId")
     List<Exercise> findExerciseByUserAndMachine(@Param("gymGoerId") int gymGoerId, @Param("machineId") int machineId);
 
+    @Query("SELECT count(e)+1 FROM Exercise e JOIN ExerciseSet es ON (e.exerciseId = es.exercise.exerciseId) WHERE e.machine.name like 'Iso-Lateral Row (Machine)' OR e.machine.name like 'Iso-Lateral Machine Row'")
+    Integer findNextExerciseId();
     //    private static final Logger log = LoggerFactory.getLogger(ExerciseRepository.class);
 //    private static List<Exercise> exercises = new ArrayList<Exercise>();
 //

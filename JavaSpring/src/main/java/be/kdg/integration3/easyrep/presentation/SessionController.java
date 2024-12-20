@@ -7,6 +7,7 @@ import be.kdg.integration3.easyrep.model.sessions.Session;
 import be.kdg.integration3.easyrep.service.ExerciseSetService;
 import be.kdg.integration3.easyrep.service.GymService;
 import be.kdg.integration3.easyrep.service.MachineService;
+import be.kdg.integration3.easyrep.service.TensorFlowService;
 import be.kdg.integration3.easyrep.service.routines.RoutineService;
 import be.kdg.integration3.easyrep.service.session.ExerciseService;
 import be.kdg.integration3.easyrep.service.session.SessionService;
@@ -14,10 +15,13 @@ import be.kdg.integration3.easyrep.service.users.UserService;
 import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,9 +40,9 @@ public class SessionController {
     private final ExerciseSetService exerciseSetService;
     private final RoutineService routineService;
     private final ExerciseService exerciseService;
+    private final TensorFlowService tensorFlowService;
 
-
-    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService, UserService userService, ExerciseService exerciseService, GymService gymService, MachineService machineService) {
+    public SessionController(SessionService sessionService, ExerciseSetService exerciseSetService, RoutineService routineService, UserService userService, ExerciseService exerciseService, GymService gymService, MachineService machineService, TensorFlowService tensorFlowService) {
         this.sessionService = sessionService;
         this.exerciseSetService = exerciseSetService;
         this.routineService = routineService;
@@ -46,6 +50,8 @@ public class SessionController {
         this.exerciseService = exerciseService;
         this.gymService = gymService;
         this.machineService = machineService;
+        this.tensorFlowService = tensorFlowService;
+
     }
 
     @GetMapping("/{username}/startSession")
@@ -95,6 +101,21 @@ public class SessionController {
                                   @RequestParam("machineId") int machineId,
                                   Model model,
                                   HttpSession httpSession) {
+        // Enter predictions
+        GymGoer user = userService.getGymGoerByUserId(userService.getUserCredentialsByUsername(username).getUserId()) ;
+        float user_id = user.getUserId(); //find user id
+        float tenRep = 1;
+        float exercise_id = exerciseService.findNextExerciseId();
+        float onePrediction = tensorFlowService.predict(exercise_id, tenRep, user_id);
+        NumberFormat formatter = new DecimalFormat("0.00");
+        String predictionString = formatter.format(onePrediction);
+        model.addAttribute("onePrediction", predictionString);
+
+        float oneRepMax = 10;
+        float prediction = tensorFlowService.predict(exercise_id, oneRepMax, user_id);
+        String predictionStringTen = formatter.format(prediction);
+        model.addAttribute("tenPrediction", predictionStringTen);
+
         // Fetch the session by ID
         Session session = sessionService.getSessionById(sessionId);
         // Get the current exercise
