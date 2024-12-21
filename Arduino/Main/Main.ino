@@ -9,12 +9,13 @@
 const char* ssid = "KdG-iDev";
 const char* password = "Gdpc9Swt3phH9ujG";
 
-WebServer server(80);  // Set up web server on port 80
+//WebServer server(80);  // Set up web server on port 80
 //WebServer server(8080);
 
-String serverName = "http://10.134.178.163:80/setInput";  
+String serverName = "http://10.134.178.163:80/activesession/setInput";  
 //String serverName = "http://localhost:8080/setInput";  
 float _tare = 0;
+int machineId = 3;
 
 // Timer variables
 unsigned long lastTime = 0;
@@ -135,7 +136,7 @@ void sendPostRequest(int setNumber, int setTime, int repCount, float maxWeight) 
   HTTPClient http;
 
   //String serverPath = serverName + "?setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount);
-   String serverPath = serverName + "?setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount) + "&weightCount=" + String(maxWeight);
+   String serverPath = serverName + "?machineId=" + String(machineId) + "&setNumber=" + String(setNumber) + "&setTime=" + String(setTime) + "&repCount=" + String(repCount) + "&weightCount=" + String(maxWeight);
  
   // Your Domain name with URL path or IP address with path
   http.begin(serverPath.c_str());
@@ -207,31 +208,6 @@ void runRestOfProgram() {
     //Michael Code
     //sendPostRequest(setNumber,(elapsedSetTime / 1000),lastRepCount);
     //Anna Code
-    //sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount);
-    sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount, ws.getWeight());
-
-    Serial.print("Weight: ");
-    Serial.println(ws.getWeight());
-    Serial.printf("Set %d sent",setNumber);
-    setNumber++;
-    rt.resetRepCount();
-    ws.resetWeight();
-    currentRepCount = 0;
-    firstRound = true;
-    lastRepChangeTime = millis();  // Reset the last change time after sending the POST
-  }
-}
-}
-
-void loop() {
-  // Handle incoming client requests
-  server.handleClient();
-
-  // If the flag is true, run the program logic
-  if (readyToRun) {
-    runRestOfProgram();
-  }
-}
     //sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount);
     sendPostRequest(setNumber,((lastRepChangeTime-startTime) / 1000),lastRepCount, ws.getWeight());
 
