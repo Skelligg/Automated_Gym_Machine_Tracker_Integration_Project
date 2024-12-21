@@ -160,9 +160,6 @@ public class GymOwnerController {
         Machine newMachine = new Machine(selectedMachine.getGym(), arduino, selectedMachine.getName(), LocalDate.now().atStartOfDay());
         machineService.createMachine(newMachine);
 
-        //add code to also create or access to the arduino ID
-
-        //logger.info("Machine '{}' with Arduino '{}' added successfully", newMachine.getName(), arduino);
 
         return "redirect:/GymOwner/machines";
     }

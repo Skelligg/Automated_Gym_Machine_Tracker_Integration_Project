@@ -56,7 +56,7 @@
             <a href="machine_review.html"  th:href="@{'/gymhome/' + ${user.username} + '/machines/' + ${idGym}+ '/machineReview?idMachine=' + ${machine.machineId} }"
                class="text-decoration-none">
                 <div class="card text-center h-100" style="cursor: pointer; min-height: 170px;">
-                    <img th:src="${machine.getImageUrl()}" class="card-img-top" alt="machine image">
+                    <img th:src="${machine.getImageUrl()}" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title"  th:text="${machine.getName()}">Machine</h5>
                         <p class="card-text text-danger">• Attention Required</p>
