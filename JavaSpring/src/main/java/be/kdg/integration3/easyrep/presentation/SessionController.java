@@ -108,15 +108,11 @@ public class SessionController {
         // Enter predictions
         GymGoer user = userService.getGymGoerByUserId(userService.getUserCredentialsByUsername(username).getUserId()) ;
         float user_id = user.getUserId(); //find user id
-        float tenRep = 1;
+        float tenRep = 10;
         float exercise_id = exerciseService.findNextExerciseId();
-        float onePrediction = tensorFlowService.predict(exercise_id, tenRep, user_id);
         NumberFormat formatter = new DecimalFormat("0.00");
-        String predictionString = formatter.format(onePrediction);
-        model.addAttribute("onePrediction", predictionString);
 
-        float oneRepMax = 10;
-        float prediction = tensorFlowService.predict(exercise_id, oneRepMax, user_id);
+        float prediction = tensorFlowService.predict(exercise_id, tenRep, user_id);
         String predictionStringTen = formatter.format(prediction);
         model.addAttribute("tenPrediction", predictionStringTen);
 
