@@ -1,13 +1,19 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const { username, routineId } = window.qrScannerConfig;
 
     let hasScanned = false; // Flag to ensure a QR code is processed only once
 
     function onScanSuccess(decodedText) {
-        if (hasScanned) return; // Ignore further scans if already processed
-        hasScanned = true; // Set the flag to prevent reprocessing
+        if (hasScanned) return;
 
+        // checks if the QR code is valid
+        if (!decodedText || typeof decodedText !== "string" || decodedText.trim() === "") {
+            console.warn("Invalid or empty QR code detected. Ignoring scan.");
+            document.getElementById("scan-result").innerText = "No valid QR code detected. Please try again.";
+            return; // Exit early if the QR code result is invalid
+        }
+
+        hasScanned = true; // Set the flag to prevent reprocessing
         document.getElementById("scan-result").innerText = `Scanned: ${decodedText}`;
         console.log(`Scanned QR Code: ${decodedText}`);
 
@@ -16,57 +22,68 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(apiUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ qrCode: decodedText })
+            body: JSON.stringify({ qrCode: decodedText }),
         })
-            .then(response => {
+            .then((response) => {
                 if (response.ok) {
                     window.location.href = response.url; // Redirect if the backend provides a URL
                 } else {
-                    response.text().then(text => alert(`Failed: ${text}`));
+                    response.text().then((text) => alert(`Failed: ${text}`));
                 }
             })
-            .catch(err => {
-                console.error("Error:", err);
+            .catch((err) => {
+                console.error('Error processing the QR Code:', err);
                 alert('An error occurred while processing the QR Code.');
             })
             .finally(() => {
                 // Optionally reset the flag after a delay
                 setTimeout(() => {
                     hasScanned = false;
-                }, 5000); // Allow scanning another QR code after 5 seconds
+                }, 5000);
             });
     }
 
     let html5QrCode = new Html5Qrcode("reader");
-    html5QrCode.start({ facingMode: "environment" }, { fps: 10, qrbox: 250 }, onScanSuccess);
+
+    // Start QR Code scanning with error handling
+    html5QrCode
+        .start({ facingMode: 'environment' }, { fps: 10, qrbox: 250 },
+            onScanSuccess).catch((err) => {
+            console.error('Camera access failed:', err);
+            document.getElementById('scan-result').innerText =
+                'Camera access failed. Please try manual entry.';
+        });
+
+    // Event listener to toggle manual entry form visibility
+    const manualEntryForm = document.getElementById('manual-entry-form');
 
     // Event listener for manual entry form submission
-    document.getElementById('manual-entry-form').addEventListener('submit', function(event) {
+    manualEntryForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const gymId = document.getElementById('gym-id').value;
+
+        if (!gymId) {
+            alert('Gym ID cannot be empty.');
+            return;
+        }
 
         // Send to backend via POST
         const apiUrl = `/scanner/${username}/${routineId}/manual`;
         fetch(apiUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ gymId: gymId })
+            body: JSON.stringify({ gymId: gymId }),
         })
-            .then(response => {
+            .then((response) => {
                 if (response.ok) {
                     window.location.href = response.url; // Redirect if the backend provides a URL
                 } else {
-                    response.text().then(text => alert(`Failed: ${text}`));
+                    response.text().then((text) => alert(`Failed: ${text}`));
                 }
             })
-            .catch(err => {
-                console.error("Error:", err);
-                alert('An error occurred while submitting the Gym ID.');
-            });
     });
-
 });
