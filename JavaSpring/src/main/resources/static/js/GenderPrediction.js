@@ -2,7 +2,6 @@
 const data = rawData.data || [];
 
 const labels = data.map(entry=>entry.gender || 'Unknown')
-
 const dedicated = data.map(entry => entry.Dedicated || 0);
 
 const likelyToGiveUp = data.map(entry => entry["Likely to Give up"] || 0);
