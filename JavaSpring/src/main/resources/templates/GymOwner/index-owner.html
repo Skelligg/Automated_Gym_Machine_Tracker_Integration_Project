@@ -124,8 +124,7 @@
         },
         options: {
             responsive: true,
-            // Enforce height constraint on the canvas
-            maintainAspectRatio: false, // Allow flexible height based on container
+            maintainAspectRatio: false,
             scales: {
                 x: {
                     title: {
@@ -153,7 +152,7 @@
 
     const ctx3 = document.getElementById('subscriptionsChart').getContext('2d');
     new Chart(ctx3, {
-        type: 'line',  // Canvia 'scatter' a 'line' per afegir una línia que connecti els punts
+        type: 'line',
         data: {
             labels: labels_3,
             datasets: [
@@ -161,11 +160,11 @@
                     label: 'Membership',
                     data: data_3,
                     backgroundColor: 'rgba(128, 128, 128, 1)',
-                    borderColor: 'rgba(128, 128, 128, 1)',  // Color de la línia
+                    borderColor: 'rgba(128, 128, 128, 1)',
                     borderWidth: 2,
                     pointBackgroundColor: 'rgba(128, 128, 128, 1)',
-                    pointRadius: 5,  // Mida dels punts
-                    fill: false      // Assegura que la zona sota la línia no es relleni
+                    pointRadius: 5,
+                    fill: false
                 },
             ]
         },

@@ -126,43 +126,4 @@ public class GymOwnerController {
 
     }
 
-
-    @GetMapping("/{username}/machines/{gymID}/add")
-    public String showAddMachine(@PathVariable String username,@PathVariable int gymID, Model model) {
-        UserCredentials user = userService.getUserCredentialsByUsername(username);
-        model.addAttribute("user", user);
-        model.addAttribute("gym", gymService.findGymById(gymID));
-        logger.info("Accessing page to create new Machine");
-        //get out machines with ID from 1 to 20
-        //create query to retrieve them
-        List<Machine> ourMachines = machineService.findOurMachines();
-
-        model.addAttribute("ourMachines", ourMachines);
-
-        //model.addAttribute("arduino", arduinoService.findAllArduinos());
-        model.addAttribute("machineViewModel", new MachineViewModel());
-        return "GymOwner/machine_add";
-    }
-
-
-    @PostMapping("/{username}/machines/{gymID}/add")
-    public String addMachine(@PathVariable String username, @PathVariable int gymID, @ModelAttribute("machineViewModel") MachineViewModel machineViewModel, Model model) {
-        logger.info("Creating machine with ID '{}', Arduino IP '{}'", machineViewModel.getMachineId(), machineViewModel.getArduinoId());
-        UserCredentials user = userService.getUserCredentialsByUsername(username);
-        model.addAttribute("user", user);
-        //find our machines by id
-        Machine selectedMachine = machineService.findMachineById(machineViewModel.getMachineId());
-        //retrieve the arduino, the arduino id has to be written and check if exist and then we get the arduino from it.
-        Arduino arduino = new Arduino();
-        selectedMachine.setArduino(arduino);
-        selectedMachine.setGym(gymService.findGymById(gymID));
-        //Gym gym, Arduino arduinoId, String name, LocalDateTime lastTimeChecked
-        Machine newMachine = new Machine(selectedMachine.getGym(), arduino, selectedMachine.getName(), LocalDate.now().atStartOfDay());
-        machineService.createMachine(newMachine);
-
-
-        return "redirect:/GymOwner/machines";
-    }
-
-
 }
