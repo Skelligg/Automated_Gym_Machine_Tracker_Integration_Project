@@ -1,11 +1,6 @@
 
 const data = rawData.data || [];
 
-// Machine Usage Data
-console.log('rawData:', rawData);
-console.log('rawData.data:', rawData.data);
-
-
 const labels = data.map(entry=>entry.gender || 'Unknown')
 const dedicated = data.map(entry => entry.Dedicated || 0);
 
