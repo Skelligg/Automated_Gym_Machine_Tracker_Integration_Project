@@ -84,15 +84,15 @@ public class ScannerController {
         String gymIdStr = payload.get("gymId");
         if (gymIdStr == null || gymIdStr.isEmpty()) {
             logger.error("Gym ID is empty or null");
-            return "Invalid Gym ID";
+            return "error";
         }
 
         int gymId;
         try {
             gymId = Integer.parseInt(gymIdStr);
         } catch (NumberFormatException e) {
-            logger.error("Gym ID is not a valid long integer: {}", gymIdStr);
-            return "Invalid Gym ID format";
+            logger.error("Gym ID is not a valid integer: {}", gymIdStr);
+            return "error";
         }
 
         Gym gym = gymService.findGymById(gymId);
@@ -106,7 +106,7 @@ public class ScannerController {
             );
         } else {
             logger.warn("No gym found for Gym ID: {}", gymId);
-            return "No gym found for Gym ID: " + gymId;
+            return "error";
         }
     }
 
