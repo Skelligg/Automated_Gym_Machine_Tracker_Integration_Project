@@ -10,6 +10,14 @@
         #reader {
             width: 500px;
         }
+        #manual-entry-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #back-button-container {
+            margin-top: 50px; /* Move the back button lower down */
+        }
     </style>
 </head>
 <body>
@@ -18,57 +26,26 @@
     <div id="reader" class="mb-3"></div>
     <p id="scan-result" class="text-center"></p>
 
-    <div class="mt-3">
+    <form id="manual-entry-form" class="mt-3" action="/scanner/${username}/${routineId}/manual" method="POST">
+        <input type="number" id="gym-id" name="gymId" placeholder="Enter Gym ID" class="form-control mb-2 w-75">
+        <button type="submit" class="btn btn-primary btn-md rounded-pill shadow-sm px-4">Submit</button>
+    </form>
+
+    <div id="back-button-container">
         <a href="javascript:history.back()" class="btn btn-secondary btn-md rounded-pill shadow-sm px-4">Back</a>
     </div>
 </div>
 
-<!--Navbar (not working atm)-->
 
+<!--</script>-->
 <script th:inline="javascript">
-    const username = /*[[${username}]]*/ 'defaultUser';
-    const routineId = /*[[${routineId}]]*/ 0;
-
-    let hasScanned = false; // Flag to ensure a QR code is processed only once
-
-    function onScanSuccess(decodedText) {
-        if (hasScanned) return; // Ignore further scans if already processed
-        hasScanned = true; // Set the flag to prevent reprocessing
-
-        document.getElementById("scan-result").innerText = `Scanned: ${decodedText}`;
-        console.log(`Scanned QR Code: ${decodedText}`);
-
-        // Send to backend via POST
-        const apiUrl = `/scanner/${username}/${routineId}`;
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ qrCode: decodedText })
-        })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = response.url; // Redirect if the backend provides a URL
-                } else {
-                    response.text().then(text => alert(`Failed: ${text}`));
-                }
-            })
-            .catch(err => {
-                console.error("Error:", err);
-                alert('An error occurred while processing the QR Code.');
-            })
-            .finally(() => {
-                // Optionally reset the flag after a delay
-                setTimeout(() => {
-                    hasScanned = false;
-                }, 5000); // Allow scanning another QR code after 5 seconds
-            });
-    }
-
-    let html5QrCode = new Html5Qrcode("reader");
-    html5QrCode.start({ facingMode: "environment" }, { fps: 10, qrbox: 250 }, onScanSuccess);
+    /*<![CDATA[*/
+    window.qrScannerConfig = {
+        username: /*[[${username}]]*/,
+        routineId: /*[[${routineId}]]*/
+    };
+    /*]]>*/
 </script>
-
+<script src="/js/Scanner.js"></script>
 </body>
 </html>
