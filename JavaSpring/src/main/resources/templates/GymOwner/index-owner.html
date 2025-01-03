@@ -27,13 +27,20 @@
 
 <div class="container mt-4">
     <div class="row">
-        <!-- Notifications Panel -->
+        <!-- maintenance panel -->
         <div class="col-md-5">
-            <h3>Notifications</h3>
-            <ul class="list-group" style="max-height: 300px; overflow-y: auto;">
-                <li class="list-group-item">Cable Row is out of order <span class="badge bg-primary">New</span></li>
-                <li class="list-group-item">Shoulder Press is due for maintenance <span class="badge bg-primary">New</span></li>
-                <li class="list-group-item">Welcome to your dashboard!</li>
+            <h3>Maintenance Required</h3>
+            <ul class="list-group" style="max-height: 23vh; overflow-y: auto;">
+                <li th:each="machine : ${overdueMachines}" class="list-group-item p-0">
+                    <a href="machine_review.html"
+                       th:href="@{'/gymhome/' + ${user.username} + '/machines/' + ${idGym} + '/machineReview?idMachine=' + ${machine.machineId} }"
+                       class="text-decoration-none d-block px-3 py-2 text-dark">
+                        <span th:text="${machine.name} + ' is due for maintenance'"></span>
+                    </a>
+                </li>
+                <li class="list-group-item" th:if="${overdueMachines.size() == 0}">
+                    All machines are in good condition!
+                </li>
             </ul>
         </div>
 

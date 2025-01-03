@@ -3,16 +3,16 @@ package be.kdg.integration3.easyrep.service;
 import be.kdg.integration3.easyrep.model.Machine;
 import be.kdg.integration3.easyrep.repository.MachineRepository;
 import be.kdg.integration3.easyrep.service.routines.RoutineServiceImpl;
-import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MachineService{
@@ -95,7 +95,29 @@ public class MachineService{
         return machineRepository.findByIdLessThan(ourMachines);
     }
 
+    public List<Machine> findOverdueMachinesForGym(int gymId) {
+        return machineRepository.findOverdueMachinesForGym(gymId)
+                .stream()
+                .filter(machine -> machine.getGym().getGymId() == gymId)
+                .collect(Collectors.toList());
+    }
 
+    public boolean maintenanceRequired(int machineId) {
+        Machine machine = machineRepository.findByMachineId(machineId);
+        LocalDateTime lastTimeChecked = machine.getLastTimeChecked();
+
+        if (lastTimeChecked == null) {
+            return true;
+        }
+
+        // Convert LocalDateTime to LocalDate for comparison
+        LocalDate lastCheckedDate = lastTimeChecked.toLocalDate();
+        int maintenancePeriodInDays = machine.getMaintenancePeriodInDays();
+
+        // Calculate the number of days since the last check
+        long daysSinceLastCheck = ChronoUnit.DAYS.between(lastCheckedDate, LocalDate.now());
+        return daysSinceLastCheck >= maintenancePeriodInDays;
+    }
 
 
 

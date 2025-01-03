@@ -1,7 +1,6 @@
 package be.kdg.integration3.easyrep.presentation;
 
 import be.kdg.integration3.easyrep.model.*;
-import be.kdg.integration3.easyrep.presentation.viewModels.MachineViewModel;
 import be.kdg.integration3.easyrep.service.ArduinoService;
 import be.kdg.integration3.easyrep.service.GenderAnalyticsService;
 import be.kdg.integration3.easyrep.service.GymService;
@@ -16,11 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TreeMap;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/gymhome")
@@ -53,6 +50,9 @@ public class GymOwnerController {
         List<Gym> gyms = userService.getGymStaffByUserId(user.getUserId()).getGymId();
         int idGym = gyms.isEmpty() ? 0 : gyms.get(0).getGymId();
         if (!gyms.isEmpty()) {
+            model.addAttribute("idGym", idGym);
+            List<Machine> overdueMachines = machineService.findOverdueMachinesForGym(idGym);
+            model.addAttribute("overdueMachines", overdueMachines);
 
             HashMap<String, Integer> topMachineUsage = new HashMap<>();
             if (machineService.findUsageOfTopMachines(idGym) != null) {
@@ -129,9 +129,25 @@ public class GymOwnerController {
         if (idGym == null && gyms.isEmpty()) {
             return "GymOwner/index-owner"; //If there is no gyms yet get back to dashboard,
         }
+
+        Gym selectedGym = gymService.findGymById(idGym);
         model.addAttribute("idGym", idGym);
-        model.addAttribute("gymSelected", gymService.findGymById(idGym));
-        model.addAttribute("machines", gymService.findGymById(idGym).getMachines());
+        model.addAttribute("gymSelected", selectedGym);
+
+        List<Machine> machines = selectedGym.getMachines();
+
+        // Find overdue machines
+        List<Machine> overdueMachines = machineService.findOverdueMachinesForGym(idGym);
+
+        // Mark machines that need attention
+        Map<Integer, Boolean> machineAttentionMap = machines.stream()
+                .collect(Collectors.toMap(
+                        Machine::getMachineId,
+                        overdueMachines::contains
+                ));
+
+        model.addAttribute("machines", machines);
+        model.addAttribute("machineAttentionMap", machineAttentionMap);
 
         return "GymOwner/machines-overview";
 

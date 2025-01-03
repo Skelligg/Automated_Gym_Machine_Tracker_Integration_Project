@@ -35,17 +35,48 @@
     <div class="col-md-6">
       <img th:src="${machine.getImageUrl()}" class="card-img-top" alt="machine image">
 
-
       <h4>Status</h4>
-      <div class="alert alert-warning">
-        <strong>Due for Maintenance</strong><br>
-        <small>Last Maintained: <span th:text="${lastMainteinedDate}"></span></small>
+      <div th:if="${maintenanceRequired}" class="alert alert-warning d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Due for Maintenance</strong><br>
+          <small>Last Maintained: <span th:text="${lastMainteinedDate}"></span></small>
+        </div>
+        <form th:action="@{/gymhome/{username}/machines/{gymID}/machine-maintenance-done(username=${user.username}, gymID=${gym.gymId})}" method="post">
+          <input type="hidden" name="idMachine" th:value="${machine.machineId}" />
+          <button type="submit" class="btn btn-primary maintenance-done-btn">Maintenance Done</button>
+        </form>
+      </div>
+      <div th:if="${!maintenanceRequired}" class="alert alert-success d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Maintenance Not Required</strong><br>
+          <small>Last Maintained: <span th:text="${lastMainteinedDate}"></span></small>
+        </div>
+        <form th:action="@{/gymhome/{username}/machines/{gymID}/machine-maintenance-done(username=${user.username}, gymID=${gym.gymId})}" method="post">
+          <input type="hidden" name="idMachine" th:value="${machine.machineId}" />
+          <button type="submit" class="btn btn-primary maintenance-done-btn">Maintenance Done</button>
+        </form>
       </div>
     </div>
 
     <div class="col-md-6">
       <h4>Machine Usage</h4>
       <canvas id="usageChart" width="400" height="200"></canvas>
+
+      <div class="mt-4 d-flex justify-content-between align-items-center">
+        <div>
+          <h5>Maintenance Period (days)</h5>
+          <div class="d-flex align-items-center">
+            <span class="me-2">Current:</span>
+            <form th:action="@{/gymhome/{username}/machines/{gymID}/set-maintenance-period(username=${user.username}, gymID=${gym.gymId})}" method="post" class="d-flex align-items-center">
+              <input type="hidden" name="idMachine" th:value="${machine.machineId}" />
+              <input type="number" class="form-control w-50 me-2" id="maintenance-period" name="maintenancePeriod" th:value="${machine.maintenancePeriodInDays}" />
+              <button type="submit" class="btn btn-secondary" id="set-maintenance-period">Set</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>

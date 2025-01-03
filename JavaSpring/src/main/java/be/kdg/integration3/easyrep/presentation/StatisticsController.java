@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -238,6 +239,13 @@ public class StatisticsController {
         model.addAttribute("lastMainteinedDate", lastMaintained);
         logger.info("lastMainteinedDate: {}", lastMaintained);
 
+        if (machineService.maintenanceRequired(idMachine)) {
+            model.addAttribute("maintenanceRequired", true);
+        } else {
+            model.addAttribute("maintenanceRequired", false);
+        }
+
+
         // Get the data for Machine Usage
         HashMap<Integer, Integer> machineUsage = new HashMap<>();
         if (machineService.findUsageOfMachineByIdPerDay(idMachine) != null) {
@@ -254,6 +262,33 @@ public class StatisticsController {
         return "GymOwner/machine_review";
     }
 
+    @PostMapping("/gymhome/{username}/machines/{gymID}/machine-maintenance-done")
+    public String updateMachineLastChecked(@PathVariable String username,
+                                           @PathVariable int gymID,
+                                           @RequestParam("idMachine") Integer idMachine) {
+        Machine machine = machineService.findMachineById(idMachine);
 
+        machine.setLastTimeChecked(LocalDateTime.now());
+        machineService.updateMachine(machine);
+
+        logger.info("Updated machine lastTimeChecked to: {}", machine.getLastTimeChecked());
+
+        return "redirect:/gymhome/" + username + "/machines/" + gymID + "/machineReview?idMachine=" + idMachine;
+    }
+
+    @PostMapping("/gymhome/{username}/machines/{gymID}/set-maintenance-period")
+    public String setMaintenancePeriod(@PathVariable String username,
+                                       @PathVariable int gymID,
+                                       @RequestParam("idMachine") Integer idMachine,
+                                       @RequestParam("maintenancePeriod") Integer maintenancePeriod) {
+        Machine machine = machineService.findMachineById(idMachine);
+
+        machine.setMaintenancePeriodInDays(maintenancePeriod);
+        machineService.updateMachine(machine);
+
+        logger.info("Updated {} maintenance period to {}", machine.getName(), machine.getMaintenancePeriodInDays());
+
+        return "redirect:/gymhome/" + username + "/machines/" + gymID + "/machineReview?idMachine=" + idMachine;
+    }
 
 }

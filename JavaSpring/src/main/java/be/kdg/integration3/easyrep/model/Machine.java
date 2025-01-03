@@ -25,25 +25,30 @@ public class Machine {
     @Column(nullable = false,length = 100)
     private String name;
 
+    @Column(name = "last_time_checked")
     private LocalDateTime lastTimeChecked;
 
+    @Column(name = "maintenance_period_in_days")
+    private Integer maintenancePeriodInDays;
 
     public Machine() {
     }
 
-    public Machine(int machineId, Gym gym, Arduino arduino, String name, LocalDateTime lastTimeChecked) {
+    public Machine(int machineId, Gym gym, Arduino arduino, String name, LocalDateTime lastTimeChecked, Integer maintenancePeriodInDays) {
         this.machineId = machineId;
         this.gym = gym;
         this.arduino = arduino;
         this.name = name;
         this.lastTimeChecked = lastTimeChecked;
+        this.maintenancePeriodInDays = maintenancePeriodInDays;
     }
 
-    public Machine(Gym gym, Arduino arduino, String name, LocalDateTime lastTimeChecked) {
+    public Machine(Gym gym, Arduino arduino, String name, LocalDateTime lastTimeChecked, Integer maintenancePeriodInDays) {
         this.gym = gym;
         this.arduino = arduino;
         this.name = name;
         this.lastTimeChecked = lastTimeChecked;
+        this.maintenancePeriodInDays = maintenancePeriodInDays;
     }
 
     public int getMachineId() {
@@ -89,5 +94,13 @@ public class Machine {
 
     public void setLastTimeChecked(LocalDateTime lastTimeChecked) {
         this.lastTimeChecked = lastTimeChecked;
+    }
+
+    public void setMaintenancePeriodInDays(Integer maintenancePeriodInDays) {
+        this.maintenancePeriodInDays = maintenancePeriodInDays;
+    }
+
+    public Integer getMaintenancePeriodInDays() {
+        return maintenancePeriodInDays;
     }
 }
