@@ -13,6 +13,7 @@
 Michael worked on 
 - Bluetooth rep tracking
 - Configuration of sending the data to the Java Spring Boot application.
+
 Anna worked on 
 - Weight tracking sensor 
 - Wiring for the ESP32 device with the sensor.
@@ -41,3 +42,5 @@ We used
 - <HX711_ADC.h>
 - <EEPROM.h>
 
+![](images/arduino.jpeg)
+![](images/sensors.jpeg)

@@ -1,5 +1,7 @@
 package be.kdg.integration3.easyrep.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
@@ -17,26 +19,28 @@ import java.util.stream.Stream;
 @Service
 public class TensorFlowService {
     private final SavedModelBundle model;
+    private Logger logger = LoggerFactory.getLogger(TensorFlowService.class);
+
 
     public TensorFlowService(ResourceLoader resourceLoader) throws IOException {
-        // Carrega la carpeta del model des del classpath
+        // Upload the model folder to the classpath
         Resource modelResource = resourceLoader.getResource("classpath:dataAI/model_regression");
 
-        // Crea un directori temporal per al model
+        // Create a temporal directory for the model
         Path tempDir = Files.createTempDirectory("tf_model");
 
-        // Copia tots els fitxers del model a la carpeta temporal
+        // Copy model files to the temporary directory
         copyResourceRecursively(modelResource, tempDir);
 
-        // Carrega el model des del directori temporal
+        // Upload directory from temporal
         String modelPath = tempDir.toString();
-        System.out.println("Loading model from: " + modelPath);
+        logger.debug("Loading model from: " + modelPath);
 
         model = SavedModelBundle.load(modelPath);
 
-        // Imprimeix els noms de les operacions disponibles
+        // Print operations that aare available
         model.graph().operations().forEachRemaining(op ->
-                System.out.println("Operation: " + op.name())
+                logger.debug("Operation: " + op.name())
         );
     }
 
@@ -45,7 +49,7 @@ public class TensorFlowService {
             throw new IOException("Resource not found: " + resource);
         }
 
-        // Camí absolut dins del JAR o sistema de fitxers
+        // Absolute path of the files
         URI resourceUri = resource.getURI();
 
         try (FileSystem fileSystem = (resourceUri.getScheme().equals("jar")) ?
